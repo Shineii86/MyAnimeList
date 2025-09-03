@@ -1,14 +1,10 @@
-# MyAnimeList Portfolio 🎌
-
-
-![Header Banner](https://github.com/your-username/MyAnimeList/blob/main/assets/banner.gif?raw=true) <!-- Replace with your own banner GIF -->
-
-A comprehensive, visually appealing showcase of my anime journey from A to Z. This repository dynamically displays my watched anime collection with statistics, ratings, and personalized recommendations.
-
+<div align="center"><a href="https://shineii86.github.io/AniList"><img src="https://raw.githubusercontent.com/Shineii86/MyAnimeList/refs/heads/main/assets/logo.png" LOGO" width="200" height="200"/></a>
+  
 ![Anime Count](https://img.shields.io/badge/Anime%20Watched-250+-blueviolet?style=for-the-badge) <!-- Update count -->
 ![Days Watched](https://img.shields.io/badge/Days%20Watched-2+-important?style=for-the-badge) <!-- Update count -->
-![GitHub stars](https://img.shields.io/github/stars/Shineii86/MyAnimeList?style=for-the-badge&color=gold)
+[![GitHub Stars](https://img.shields.io/github/stars/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/stargazers) [![GitHub Forks](https://img.shields.io/github/forks/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/fork)
 
+</div>
 
 ## 📊 Dynamic Statistics
 
@@ -64,8 +60,6 @@ This project is open source and available under the [MIT License](LICENSE).
 [![Gmail Badge](https://img.shields.io/badge/-Gmail-D14836?style=flat&logo=Gmail&logoColor=white)](mailto:ikx7a@hotmail.com "Send an Email")
 
   <sup><b>Copyright © 2025 <a href="https://telegram.me/Shineii86">Shinei Nouzen</a> All Rights Reserved</b></sup>
-
-*Made With ❤️ And Too Much Free Time*
 
 ![Last Commit](https://img.shields.io/github/last-commit/Shineii86/MyAnimeList?style=for-the-badge)
 
