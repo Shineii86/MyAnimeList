@@ -42,8 +42,6 @@ I'm always looking for new anime to watch! Feel free to:
 
 This project is open source and available under the [MIT License](LICENSE).
 
-*Last Updated: 03 September 2025 10:32:06 IST*
-
 ---
 
 ## 💕 Loved My Work?
@@ -69,6 +67,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 *Made With ❤️ And Too Much Free Time*
 
-![Last Commit](https://img.shields.io/github/last-commit/Shineii86/AniList?style=for-the-badge)
+![Last Commit](https://img.shields.io/github/last-commit/Shineii86/MyAnimeList?style=for-the-badge)
 
 </div>
