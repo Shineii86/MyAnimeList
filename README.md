@@ -8,11 +8,11 @@
 [![GitHub Stars](https://img.shields.io/github/stars/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/fork)
 
-WELCOME TO MY ANIME JOURNEY!
+### WELCOME TO MY ANIME JOURNEY!
 
 </div>
 
-I began my anime-watching journey in **2020**, and since then I have watched and completed over **100 anime titles**, ranging from the most popular shounen series to niche dramas, psychological thrillers, and unforgettable movies. This repository serves as a **comprehensive archive** of everything I’ve experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
+> I began my anime-watching journey in **2020**, and since then I have watched and completed over **100+ Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I’ve experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
 
 
 ## 📋 Table of Contents
