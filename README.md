@@ -3,17 +3,17 @@
 <img src="https://raw.githubusercontent.com/Shineii86/MyAnimeList/refs/heads/main/assets/logo.png" alt="LOGO" width="200" height="200"/>
 </a>
 
-WELCOME TO MY ANIME JOURNEY!
-
-I started watching anime seriously in **2020**, and since then I’ve completed **300+ series, movies, and OVAs**. From classics like **Naruto** and **Death Note** to modern hits like **Jujutsu Kaisen** and **Demon Slayer**, this is my personal archive.
-
-
 ![Anime Count](https://img.shields.io/badge/Anime%20Watched-300+-blueviolet?style=for-the-badge)
 ![Days Watched](https://img.shields.io/badge/Days%20Watched-3.5+-important?style=for-the-badge)
 [![GitHub Stars](https://img.shields.io/github/stars/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/fork)
 
+WELCOME TO MY ANIME JOURNEY!
+
 </div>
+
+I began my anime-watching journey in **2020**, and since then I have watched and completed over **100 anime titles**, ranging from the most popular shounen series to niche dramas, psychological thrillers, and unforgettable movies. This repository serves as a **comprehensive archive** of everything I’ve experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
+
 
 ## 📋 Table of Contents
 - [📊 Statistics](#-statistics)
@@ -28,10 +28,10 @@ I started watching anime seriously in **2020**, and since then I’ve completed 
 
 | Statistic | Value |
 |-----------|-------|
-| Total Anime | 300+ |
-| Total Episodes | 8,240+ |
-| Movies Watched | 45+ |
-| OVAs/Specials | 75+ |
+| Total Anime | 100+ |
+| Total Episodes | 1,240+ |
+| Movies Watched | 10+ |
+| OVAs/Specials | 5+ |
 | Average Score | 8.2 |
 | Completion Rate | 87% |
 
