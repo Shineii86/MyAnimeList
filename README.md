@@ -50,8 +50,8 @@ These are my personal 10/10 masterpieces:
 ## 📺 Complete Anime List (A-Z)
 
 ### A
-- [**A Silent Voice**](https://myanimelist.net/anime/28851/Koe_no_Katachi) - Movie ⭐ 9.5 | 💔 Drama
-- [**Attack on Titan**](https://myanimelist.net/anime/16498/Shingeki_no_Kyojin) - TV ⭐ 10 | 🔥 Action, Drama
+- [**A Silent Voice**](https://anilist.co/anime/20954/Koe-no-Katachi) - Movie ⭐ 9.5 | 💔 Drama
+- [**Attack on Titan**](https://anilist.co/anime/16498/Shingeki-no-Kyojin) - TV ⭐ 10 | 🔥 Action, Drama
 - [**Another**](https://myanimelist.net/anime/11111/Another) - TV ⭐ 7.5 | 🎭 Horror, Mystery
 - [**Assassination Classroom**](https://myanimelist.net/anime/24833/Ansatsu_Kyoushitsu) - TV ⭐ 8.5 | 🎓 Comedy, Action
 
