@@ -288,6 +288,7 @@ These are my personal 10/10 masterpieces:
 - [**The Disastrous Life of Saiki K.**](https://anilist.co/anime/21273) - TV ⭐ 8.3 | 😄 Comedy, Supernatural
 - [**Tokyo Revengers**](https://anilist.co/anime/124194) - TV ⭐ 7.8 | 🔥 Action, Drama
 - [**The Rising of the Shield Hero**](https://anilist.co/anime/101348) - TV ⭐ 7.5 | ⚔️ Action, Fantasy
+- [**The Water Magician**](https://anilist.co/anime/186052) - TV ⭐ 8.6 | 🌊 Adventure, Fantasy
 
 ### U
 - [**Usagi Drop**](https://anilist.co/anime/10165) - TV ⭐ 8.3 | 😄 Comedy, Slice of Life
