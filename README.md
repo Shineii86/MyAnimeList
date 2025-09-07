@@ -1,6 +1,6 @@
 <div align="center">
 <a href="https://shineii86.github.io/AniList">
-<img src="https://raw.githubusercontent.com/Shineii86/MyAnimeList/refs/heads/main/assets/logo.png" alt="LOGO" width="200" height="200"/>
+<img src="https://raw.githubusercontent.com/Shineii86/MyAnimeList/refs/heads/main/assets/image.png" alt="LOGO" width="200" height="200"/>
 </a>
 
 ![Anime Count](https://img.shields.io/badge/Anime%20Watched-300+-blueviolet?style=for-the-badge)
