@@ -209,6 +209,7 @@ These are my personal 10/10 masterpieces:
 - [**Megalobox**](https://anilist.co/anime/100243) - TV ⭐ 7.8 | 🥊 Sports, Sci-Fi
 - [**Miss Kobayashi's Dragon Maid**](https://anilist.co/anime/101291) - TV ⭐ 8.0 | 😄 Comedy, Fantasy
 - [**My Teen Romantic Comedy SNAFU**](https://anilist.co/anime/14813) - TV ⭐ 8.1 | 😄 Comedy, Romance
+- [**My Roommate is a Cat**](https://anilist.co/anime/103874) - TV ⭐ 9.3 | 😃 Comedy, Slice of Life
 
 ### N
 - [**Naruto Shippuden**](https://anilist.co/anime/1735) - TV ⭐ 8.2 | ⚔️ Action, Adventure
