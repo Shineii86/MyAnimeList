@@ -185,6 +185,7 @@ These are my personal 10/10 masterpieces:
 - [**Kabaneri of the Iron Fortress**](https://anilist.co/anime/21167) - TV ⭐ 7.3 | 🔥 Action, Horror
 - [**Kiznaiver**](https://anilist.co/anime/21507) - TV ⭐ 7.2 | 🔬 Sci-Fi, Drama
 - [**Katanagatari**](https://anilist.co/anime/6594) - TV ⭐ 8.3 | ⚔️ Action, Adventure
+- [**Kaiju No.8**](https://anilist.co/anime/153288) - TV ⭐ 9.2 • | ⚔️ Action, Sci-Fi
 
 ### L
 - [**Love is War**](https://anilist.co/anime/101291) - TV ⭐ 8.7 | 💕 Romance, Comedy
