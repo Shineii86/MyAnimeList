@@ -89,6 +89,7 @@ These are my personal 10/10 masterpieces:
 - [**Cautious Hero**](https://anilist.co/anime/105333) - TV ⭐ 7.8 | 💕 Comedy, Fantasy
 - [**Cells at Work!**](https://anilist.co/anime/100243) - TV ⭐ 7.6 | 🔬 Sci-Fi, Comedy
 - [**Carole & Tuesday**](https://anilist.co/anime/104578) - TV ⭐ 8.0 | 🎵 Music, Sci-Fi
+- [**Clevatess: The King of Devil BeastsThe Baby and the Brave of Undead**](https://anilist.co/anime/178869) - TV ⭐ 9.1 | ⚔️ Action, Fantasy
 
 ### D
 - [**Death Note**](https://anilist.co/anime/1535) - TV ⭐ 8.6 | 🧠 Psychological, Thriller
