@@ -181,7 +181,7 @@ These are my personal 10/10 masterpieces:
 - [**K-On!**](https://anilist.co/anime/5680) - TV ⭐ 8.0 | 🎵 Music, Slice of Life
 - [**Kill la Kill**](https://anilist.co/anime/18689) - TV ⭐ 7.9 | 🔥 Action, Comedy
 - [**Kaichou wa Maid-sama!**](https://anilist.co/anime/7054) - TV ⭐ 8.2 | 💕 Romance, Comedy
-- [**Kuroko's Basketball**](https://anilist.co/anime/11771) - TV ⭐ 8.2 | 🏀 Sports, Comedy
+- [**Kuroko's Basketball**](https://anilist.co/anime/11771) - TV ⭐ 9.2 | 🏀 Sports, Comedy
 - [**Kakegurui**](https://anilist.co/anime/98314) - TV ⭐ 7.3 | 🧠 Psychological, Drama
 - [**Kabaneri of the Iron Fortress**](https://anilist.co/anime/21167) - TV ⭐ 7.3 | 🔥 Action, Horror
 - [**Kiznaiver**](https://anilist.co/anime/21507) - TV ⭐ 7.2 | 🔬 Sci-Fi, Drama
