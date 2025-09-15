@@ -10,7 +10,7 @@
 
 ### WELCOME TO MY ANIME JOURNEY!
 
-</div>
+</div> 
 
 > I began my anime-watching journey in **2020**, and since then I have watched and completed over **100+ Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I’ve experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
 
