@@ -471,4 +471,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ![Last Commit](https://img.shields.io/github/last-commit/Shineii86/MyAnimeList?style=for-the-badge)
 
-</div> 
+</div>
