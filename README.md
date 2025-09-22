@@ -174,6 +174,7 @@ These are my personal 10/10 masterpieces:
 - [**Jaku-Chara Tomozaki-kun**](https://anilist.co/anime/124194) - TV ⭐ 7.5 | 😄 Comedy, Drama
 - [**Juni Taisen: Zodiac War**](https://anilist.co/anime/98438) - TV ⭐ 6.5 | 🔥 Action, Supernatural
 - [**Jibaku Shounen Hanako-kun**](https://anilist.co/anime/107922) - TV ⭐ 8.1 | 😄 Comedy, Supernatural
+- [**Joker Game**](https://anilist.co/anime/21291) - TV ⭐ 8.2 | 🕵️ Mystery, Psychological
 
 ### K
 - [**Kimetsu no Yaiba**](https://anilist.co/anime/101922) - TV ⭐ 8.5 | ⚔️ Action, Fantasy
