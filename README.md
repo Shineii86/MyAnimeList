@@ -18,9 +18,7 @@
 ## 📋 Table of Contents
 - [📊 Statistics](#-statistics)
 - [🏆 Top Recommendations](#-top-recommendations)
-- [⭐ Recently Added](#-recently-added)
 - [📺 Complete Anime List](#-complete-anime-list)
-- [🎭 Anime by Genre](#-anime-by-genre)
 - [🤝 Recommendations](#-recommendations-welcome)
 - [📝 License](#-license)
 
@@ -44,13 +42,6 @@ These are my personal 10/10 masterpieces:
 - [**Steins;Gate**](https://anilist.co/anime/9253) - Mind-bending time travel masterpiece
 - [**Your Name**](https://anilist.co/anime/21519) - Visually stunning emotional journey
 - [**Hunter x Hunter (2011)**](https://anilist.co/anime/11061) - Best shounen battle system and character development
-
-## ⭐ Recently Added
-
-- [**Oshi no Ko**](https://anilist.co/anime/145064) (2023) - ⭐9.0 | 🎭 Drama, Supernatural
-- [**Jujutsu Kaisen Season 2**](https://anilist.co/anime/145064) (2023) - ⭐9.2 | 🔥 Action, Horror
-- [**Frieren: Beyond Journey's End**](https://anilist.co/anime/154587) (2023) - ⭐9.1 | 🗡️ Adventure, Fantasy
-- [**Vinland Saga Season 2**](https://anilist.co/anime/131681) (2023) - ⭐9.0 | ⚔️ Action, Drama
 
 ## 📺 Complete Anime List (A-Z)
 
@@ -361,68 +352,6 @@ These are my personal 10/10 masterpieces:
 - [**Z/X Ignition**](https://anilist.co/anime/20787) - TV ⭐ 5.5 | ⚔️ Action, Fantasy
 - [**Zombie Powder**](https://anilist.co/anime/20787) - TV ⭐ 5.0 | ⚔️ Action, Supernatural
 
-## 🎭 Anime by Genre
-
-### 🔥 Action
-- Attack on Titan
-- Demon Slayer
-- Jujutsu Kaisen
-- One Punch Man
-- My Hero Academia
-- Chainsaw Man
-- Bleach
-- Naruto Shippuden
-- One Piece
-- Hunter x Hunter
-
-### 🧠 Psychological
-- Death Note
-- Steins;Gate
-- Psycho-Pass
-- Parasyte
-- Monster
-- Neon Genesis Evangelion
-- Code Geass
-- Perfect Blue
-- Serial Experiments Lain
-- Paranoia Agent
-
-### 💕 Romance
-- Your Name
-- Horimiya
-- Kaguya-sama: Love is War
-- Clannad
-- Toradora!
-- Fruits Basket
-- Your Lie in April
-- Rascal Does Not Dream of Bunny Girl Senpai
-- Nana
-- Golden Time
-
-### 🗡️ Adventure
-- Hunter x Hunter
-- One Piece
-- Made in Abyss
-- Fullmetal Alchemist: Brotherhood
-- Vinland Saga
-- Samurai Champloo
-- Spice and Wolf
-- Mushishi
-- JoJo's Bizarre Adventure
-- Dragon Ball Z
-
-### 😄 Comedy
-- Gintama
-- Spy x Family
-- Kaguya-sama: Love is War
-- One Punch Man
-- The Disastrous Life of Saiki K.
-- Nichijou
-- Daily Lives of High School Boys
-- Ouran High School Host Club
-- Azumanga Daioh
-- Haven't You Heard? I'm Sakamoto
-
 ## 🤝 Recommendations Welcome!
 
 I'm always looking for new anime to watch! Feel free to:
@@ -431,16 +360,6 @@ I'm always looking for new anime to watch! Feel free to:
 2. Suggest improvements to this README
 3. Discuss any of the anime on my list
 4. Share your own favorites!
-
-### Currently Watching:
-- Frieren: Beyond Journey's End
-- Solo Leveling
-- Delicious in Dungeon
-
-### Plan to Watch:
-- Monster
-- Legend of the Galactic Heroes
-- March Comes in Like a Lion
 
 ## 📝 License
 
