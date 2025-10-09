@@ -56,6 +56,7 @@ These are my personal 10/10 masterpieces:
 - [**Angel Beats!**](https://anilist.co/anime/6547) - TV ⭐ 8.0 | 💔 Drama, Action
 - [**Akame ga Kill!**](https://anilist.co/anime/20787) - TV ⭐ 7.5 | ⚔️ Action, Fantasy
 - [**A Certain Scientific Railgun**](https://anilist.co/anime/6213) - TV ⭐ 8.2 | 🔬 Sci-Fi, Action
+- [**Alderamin on the Sky**](https://anilist.co/anime/21410) - TV ⭐ 8.6 | ⚔️ Action, Adventure
 
 ### B
 - [**Bakemonogatari**](https://anilist.co/anime/5081) - TV ⭐ 8.5 | 🧠 Psychological, Supernatural
