@@ -94,6 +94,7 @@ These are my personal 10/10 masterpieces:
 - [**Daily Lives of High School Boys**](https://anilist.co/anime/11843) - TV ⭐ 8.3 | 😄 Comedy, Slice of Life
 - [**Darker Than Black**](https://anilist.co/anime/2025) - TV ⭐ 7.8 | 🔥 Action, Sci-Fi
 - [**Drifters**](https://anilist.co/anime/21877) - TV ⭐ 7.8 | ⚔️ Action, Fantasy
+- [**Dealing with Mikadono Sisters Is a Breeze**](https://anilist.co/anime/178886) - TV ⭐ 9.3 | 😄 Comedy, Romance
 
 ### E
 - [**Erased**](https://anilist.co/anime/21273) - TV ⭐ 8.3 | 🕰️ Mystery, Psychological
