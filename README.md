@@ -143,7 +143,7 @@ These are my personal 10/10 masterpieces:
 - [**Hajime no Ippo**](https://anilist.co/anime/263) - TV ⭐ 8.7 | 🥊 Sports, Comedy
 - [**Houseki no Kuni**](https://anilist.co/anime/98438) - TV ⭐ 8.4 | 🔥 Action, Fantasy
 - [**Highschool of the Dead**](https://anilist.co/anime/8074) - TV ⭐ 6.9 | 🔥 Action, Ecchi
-- [**HELL MODE: The Hardcore Gamer Dominates in Another World with Garbage Balancing**](https://anilist.co/anime/185262)
+- [**HELL MODE: The Hardcore Gamer Dominates in Another World with Garbage Balancing**](https://anilist.co/anime/185262) - TV ⭐ 6.7 | 🔥 Action, Adventure, Fantasy
 
 ### I
 - [**Inuyasha**](https://anilist.co/anime/249) - TV ⭐ 7.8 | 🗡️ Adventure, Romance
