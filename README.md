@@ -46,17 +46,17 @@ These are my personal 10/10 masterpieces:
 ## 📺 Complete Anime List (A-Z)
 
 ### A
-- [**A Silent Voice**](https://anilist.co/anime/20954)
-- [**Attack on Titan**](https://anilist.co/anime/16498)
-- [**Another**](https://anilist.co/anime/11111)
-- [**Assassination Classroom**](https://anilist.co/anime/20755)
-- [**Anohana: The Flower We Saw That Day**](https://anilist.co/anime/10165)
-- [**A Place Further Than The Universe**](https://anilist.co/anime/100876)
-- [**Akira**](https://anilist.co/anime/47)
-- [**Angel Beats!**](https://anilist.co/anime/6547)
-- [**Akame ga Kill!**](https://anilist.co/anime/20787)
-- [**A Certain Scientific Railgun**](https://anilist.co/anime/6213)
-- [**Alderamin on the Sky**](https://anilist.co/anime/21410)
+- [**A Silent Voice**](https://anilist.co/anime/20954) - Movie ⭐ 9.5 | 💔 Drama
+- [**Attack on Titan**](https://anilist.co/anime/16498) - TV ⭐ 10 | 🔥 Action, Drama
+- [**Another**](https://anilist.co/anime/11111) - TV ⭐ 7.5 | 🎭 Horror, Mystery
+- [**Assassination Classroom**](https://anilist.co/anime/20755) - TV ⭐ 8.5 | 🎓 Comedy, Action
+- [**Anohana: The Flower We Saw That Day**](https://anilist.co/anime/10165) - TV ⭐ 8.5 | 💔 Drama, Supernatural
+- [**A Place Further Than The Universe**](https://anilist.co/anime/100876) - TV ⭐ 8.8 | 🗡️ Adventure, Comedy
+- [**Akira**](https://anilist.co/anime/47) - Movie ⭐ 8.3 | 🔬 Sci-Fi, Action
+- [**Angel Beats!**](https://anilist.co/anime/6547) - TV ⭐ 8.0 | 💔 Drama, Action
+- [**Akame ga Kill!**](https://anilist.co/anime/20787) - TV ⭐ 7.5 | ⚔️ Action, Fantasy
+- [**A Certain Scientific Railgun**](https://anilist.co/anime/6213) - TV ⭐ 8.2 | 🔬 Sci-Fi, Action
+- [**Alderamin on the Sky**](https://anilist.co/anime/21410) - TV ⭐ 8.6 | ⚔️ Action, Adventure
 
 ### B
 - [**Bakemonogatari**](https://anilist.co/anime/5081) - TV ⭐ 8.5 | 🧠 Psychological, Supernatural
@@ -143,7 +143,7 @@ These are my personal 10/10 masterpieces:
 - [**Hajime no Ippo**](https://anilist.co/anime/263) - TV ⭐ 8.7 | 🥊 Sports, Comedy
 - [**Houseki no Kuni**](https://anilist.co/anime/98438) - TV ⭐ 8.4 | 🔥 Action, Fantasy
 - [**Highschool of the Dead**](https://anilist.co/anime/8074) - TV ⭐ 6.9 | 🔥 Action, Ecchi
-- [**HELL MODE: The Hardcore Gamer Dominates in Another World with Garbage Balancing**](https://anilist.co/anime/185262)
+- [**HELL MODE: The Hardcore Gamer Dominates in Another World with Garbage Balancing**](https://anilist.co/anime/185262) - TV ⭐ 6.7 | 🔥 Action, Adventure, Fantasy
 
 ### I
 - [**Inuyasha**](https://anilist.co/anime/249) - TV ⭐ 7.8 | 🗡️ Adventure, Romance
