@@ -107,6 +107,7 @@ These are my personal 10/10 masterpieces:
 - [**Ef: A Tale of Memories**](https://anilist.co/anime/2922) - TV ⭐ 7.8 | 💕 Romance, Drama
 - [**Emma: A Victorian Romance**](https://anilist.co/anime/457) - TV ⭐ 7.8 | 💕 Romance, Historical
 - [**Eromanga Sensei**](https://anilist.co/anime/21856) - TV ⭐ 6.5 | 💕 Romance, Comedy
+- [**Easygoing Territory Defense by the Optimistic Lord**](https://anilist.co/anime/191205) - TV ⭐ 7.0 | 🎯 Adventure, Fantasy
 
 ### F
 - [**Fullmetal Alchemist: Brotherhood**](https://anilist.co/anime/5114) - TV ⭐ 10 | ⚔️ Action, Adventure
@@ -143,7 +144,7 @@ These are my personal 10/10 masterpieces:
 - [**Hajime no Ippo**](https://anilist.co/anime/263) - TV ⭐ 8.7 | 🥊 Sports, Comedy
 - [**Houseki no Kuni**](https://anilist.co/anime/98438) - TV ⭐ 8.4 | 🔥 Action, Fantasy
 - [**Highschool of the Dead**](https://anilist.co/anime/8074) - TV ⭐ 6.9 | 🔥 Action, Ecchi
-- [**HELL MODE: The Hardcore Gamer Dominates in Another World with Garbage Balancing**](https://anilist.co/anime/185262) - TV ⭐ 6.7 | 🔥 Action, Adventure, Fantasy
+- [**HELL MODE: The Hardcore Gamer Dominates in Another World with Garbage Balancing**](https://anilist.co/anime/185262) - TV ⭐ 6.7 | 🔥 Action, Adventurer
 
 ### I
 - [**Inuyasha**](https://anilist.co/anime/249) - TV ⭐ 7.8 | 🗡️ Adventure, Romance
