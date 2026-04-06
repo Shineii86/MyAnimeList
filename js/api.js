@@ -1,6 +1,12 @@
 // API Configuration
 const ANILIST_API = 'https://graphql.anilist.co';
-const GITHUB_RAW = 'https://raw.githubusercontent.com/Shineii86/MyAnimeList/main/README.md';
+
+// CORS Proxy fallbacks for GitHub
+const CORS_PROXIES = [
+    'https://api.allorigins.win/raw?url=',
+    'https://corsproxy.io/?',
+    'https://api.codetabs.com/v1/proxy?quest='
+];
 
 // GraphQL Queries
 const queries = {
@@ -78,10 +84,24 @@ const queries = {
     `
 };
 
-// Fetch with error handling
+// Fetch with error handling and retries
+async function fetchWithRetry(url, options = {}, retries = 3) {
+    for (let i = 0; i < retries; i++) {
+        try {
+            const response = await fetch(url, options);
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            return response;
+        } catch (error) {
+            if (i === retries - 1) throw error;
+            await new Promise(resolve => setTimeout(resolve, 1000 * (i + 1)));
+        }
+    }
+}
+
+// Fetch GraphQL with error handling
 async function fetchGraphQL(query, variables = {}) {
     try {
-        const response = await fetch(ANILIST_API, {
+        const response = await fetchWithRetry(ANILIST_API, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -89,8 +109,6 @@ async function fetchGraphQL(query, variables = {}) {
             },
             body: JSON.stringify({ query, variables })
         });
-        
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
         
         const data = await response.json();
         if (data.errors) throw new Error(data.errors[0].message);
@@ -100,6 +118,39 @@ async function fetchGraphQL(query, variables = {}) {
         console.error('API Error:', error);
         throw error;
     }
+}
+
+// Fetch GitHub README with CORS fallback
+export async function fetchGitHubReadme() {
+    const targetUrl = 'https://raw.githubusercontent.com/Shineii86/MyAnimeList/main/README.md';
+    const errors = [];
+    
+    // Try direct fetch first (might work in some environments)
+    try {
+        const response = await fetch(targetUrl);
+        if (response.ok) return await response.text();
+    } catch (e) {
+        errors.push(`Direct: ${e.message}`);
+    }
+    
+    // Try CORS proxies
+    for (const proxy of CORS_PROXIES) {
+        try {
+            const response = await fetchWithRetry(`${proxy}${encodeURIComponent(targetUrl)}`);
+            if (response.ok) {
+                const text = await response.text();
+                // Verify we got markdown content
+                if (text.includes('##') || text.includes('Anime')) {
+                    return text;
+                }
+            }
+        } catch (e) {
+            errors.push(`${proxy}: ${e.message}`);
+        }
+    }
+    
+    console.error('All fetch attempts failed:', errors);
+    throw new Error('Unable to fetch README. CORS restrictions may apply.');
 }
 
 // Public API functions
@@ -119,20 +170,15 @@ export async function fetchAnimeDetails(id) {
     return data.Media;
 }
 
-export async function fetchGitHubReadme() {
-    try {
-        const response = await fetch(GITHUB_RAW);
-        if (!response.ok) throw new Error('Failed to fetch README');
-        return await response.text();
-    } catch (error) {
-        console.error('GitHub Fetch Error:', error);
-        throw error;
-    }
-}
-
 // Local Storage helpers for favorites
 export const Favorites = {
-    get: () => JSON.parse(localStorage.getItem('animeFavorites') || '[]'),
+    get: () => {
+        try {
+            return JSON.parse(localStorage.getItem('animeFavorites') || '[]');
+        } catch {
+            return [];
+        }
+    },
     add: (id) => {
         const favs = Favorites.get();
         if (!favs.includes(id)) {
@@ -152,6 +198,35 @@ export const Favorites = {
         } else {
             Favorites.add(id);
             return true;
+        }
+    }
+};
+
+// Cache helper
+export const Cache = {
+    get: (key) => {
+        try {
+            const item = localStorage.getItem(`cache_${key}`);
+            if (!item) return null;
+            const { data, expiry } = JSON.parse(item);
+            if (Date.now() > expiry) {
+                localStorage.removeItem(`cache_${key}`);
+                return null;
+            }
+            return data;
+        } catch {
+            return null;
+        }
+    },
+    set: (key, data, ttlMinutes = 60) => {
+        try {
+            const item = {
+                data,
+                expiry: Date.now() + (ttlMinutes * 60 * 1000)
+            };
+            localStorage.setItem(`cache_${key}`, JSON.stringify(item));
+        } catch (e) {
+            console.warn('Cache write failed:', e);
         }
     }
 };
