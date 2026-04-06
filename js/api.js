@@ -1,138 +1,121 @@
 /**
- * AniLab API Integration
- * Handles all API requests to AniLab and caching
+ * AniLab API Service
  */
 
-const ANILAB_API_BASE = 'https://api.anilab.to/anime';
-const CACHE_DURATION = 60 * 60 * 1000; // 1 hour
+import { storage, slugify, showToast } from './utils.js';
 
-// Cache utilities
-const Cache = {
-    get(key) {
-        try {
-            const item = localStorage.getItem(`anilab_${key}`);
-            if (!item) return null;
-            const { data, timestamp } = JSON.parse(item);
-            if (Date.now() - timestamp > CACHE_DURATION) {
-                localStorage.removeItem(`anilab_${key}`);
-                return null;
-            }
-            return data;
-        } catch {
-            return null;
-        }
-    },
-    
-    set(key, data) {
-        try {
-            localStorage.setItem(`anilab_${key}`, JSON.stringify({
-                data,
-                timestamp: Date.now()
-            }));
-        } catch (e) {
-            console.warn('Cache write failed:', e);
-        }
-    }
-};
+const API_BASE = 'https://api.anilab.to/anime';
+const CACHE_TTL = 24; // hours
 
-// Fetch with retry logic
-async function fetchWithRetry(url, options = {}, retries = 3) {
-    for (let i = 0; i < retries; i++) {
-        try {
-            const response = await fetch(url, options);
-            if (!response.ok) throw new Error(`HTTP ${response.status}`);
-            return await response.json();
-        } catch (error) {
-            if (i === retries - 1) throw error;
-            await new Promise(resolve => setTimeout(resolve, 1000 * (i + 1)));
-        }
-    }
-}
-
-// Search anime by name
-export async function searchAniLab(query, limit = 10) {
-    if (!query || query.length < 2) return [];
-    
-    const cacheKey = `search_${query.toLowerCase().replace(/\s+/g, '_')}`;
-    const cached = Cache.get(cacheKey);
-    if (cached) return cached;
-    
+export const AniLabAPI = {
+  // Search anime by query
+  async search(query, limit = 10) {
     try {
-        const data = await fetchWithRetry(
-            `${ANILAB_API_BASE}/search?q=${encodeURIComponent(query)}&limit=${limit}`
-        );
-        Cache.set(cacheKey, data.results || []);
-        return data.results || [];
+      const cacheKey = `anilab_search_${slugify(query)}_${limit}`;
+      const cached = storage.get(cacheKey);
+      
+      if (cached) return cached;
+      
+      const url = `${API_BASE}/search?q=${encodeURIComponent(query)}&limit=${limit}`;
+      const response = await fetch(url);
+      
+      if (!response.ok) {
+        throw new Error(`API Error: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      storage.set(cacheKey, data, CACHE_TTL);
+      
+      return data.results || data;
     } catch (error) {
-        console.error('AniLab Search Error:', error);
-        throw error;
+      console.error('Search error:', error);
+      showToast('Failed to fetch search results', 'error');
+      return [];
     }
-}
-
-// Get anime details by ID
-export async function getAnimeDetails(id) {
-    const cacheKey = `details_${id}`;
-    const cached = Cache.get(cacheKey);
-    if (cached) return cached;
-    
+  },
+  
+  // Get anime details by ID
+  async getDetails(id) {
     try {
-        const data = await fetchWithRetry(`${ANILAB_API_BASE}/${id}`);
-        Cache.set(cacheKey, data);
-        return data;
+      const cacheKey = `anilab_details_${id}`;
+      const cached = storage.get(cacheKey);
+      
+      if (cached) return cached;
+      
+      const response = await fetch(`${API_BASE}/${id}`);
+      
+      if (!response.ok) {
+        throw new Error(`API Error: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      storage.set(cacheKey, data, CACHE_TTL);
+      
+      return data;
     } catch (error) {
-        console.error('AniLab Details Error:', error);
-        throw error;
+      console.error('Details fetch error:', error);
+      return null;
     }
-}
-
-// Get trending/popular anime
-export async function getTrendingAnime(limit = 12) {
-    const cacheKey = 'trending';
-    const cached = Cache.get(cacheKey);
-    if (cached) return cached;
-    
+  },
+  
+  // Get anime by title (search + first result details)
+  async getByTitle(title) {
     try {
-        const data = await fetchWithRetry(`${ANILAB_API_BASE}/trending?limit=${limit}`);
-        Cache.set(cacheKey, data.results || []);
-        return data.results || [];
+      const cacheKey = `anilab_title_${slugify(title)}`;
+      const cached = storage.get(cacheKey);
+      
+      if (cached) return cached;
+      
+      const results = await this.search(title, 1);
+      if (!results || results.length === 0) {
+        return null;
+      }
+      
+      const first = results[0];
+      const details = first.id 
+        ? await this.getDetails(first.id) 
+        : first;
+      
+      storage.set(cacheKey, details, CACHE_TTL);
+      return details;
     } catch (error) {
-        console.error('AniLab Trending Error:', error);
-        throw error;
+      console.error('GetByTitle error:', error);
+      return null;
     }
-}
-
-// Favorites management
-export const Favorites = {
-    get: () => {
-        try {
-            return JSON.parse(localStorage.getItem('anitrack_favorites') || '[]');
-        } catch {
-            return [];
+  },
+  
+  // Fetch multiple anime with concurrency limit
+  async fetchBatch(titles, concurrency = 5) {
+    const results = [];
+    const queue = [...titles];
+    const inProgress = new Set();
+    
+    return new Promise((resolve) => {
+      const next = async () => {
+        if (queue.length === 0 && inProgress.size === 0) {
+          resolve(results);
+          return;
         }
-    },
-    
-    add: (id) => {
-        const favs = Favorites.get();
-        if (!favs.includes(id)) {
-            favs.push(id);
-            localStorage.setItem('anitrack_favorites', JSON.stringify(favs));
+        
+        while (inProgress.size < concurrency && queue.length > 0) {
+          const title = queue.shift();
+          const promise = this.getByTitle(title)
+            .then(data => {
+              results.push({ title, data });
+              inProgress.delete(promise);
+              next();
+            })
+            .catch(() => {
+              results.push({ title,  null, error: true });
+              inProgress.delete(promise);
+              next();
+            });
+          
+          inProgress.add(promise);
         }
-    },
-    
-    remove: (id) => {
-        const favs = Favorites.get().filter(fav => fav !== id);
-        localStorage.setItem('anitrack_favorites', JSON.stringify(favs));
-    },
-    
-    isFav: (id) => Favorites.get().includes(id),
-    
-    toggle: (id) => {
-        if (Favorites.isFav(id)) {
-            Favorites.remove(id);
-            return false;
-        } else {
-            Favorites.add(id);
-            return true;
-        }
-    }
+      };
+      
+      next();
+    });
+  }
 };
