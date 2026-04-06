@@ -1,243 +1,189 @@
-import { 
-    fetchTrendingAnime, 
-    fetchGitHubReadme, 
-    fetchAnimeDetails,
-    searchAnime,
-    Cache 
-} from './api.js';
-import { parseAnimeList, Sorters, calculateStats, searchLocalAnime } from './parser.js';
-import { 
-    createAnimeCard, 
-    createModalContent, 
-    createSearchItem,
-    showNotification,
-    initScrollReveal,
-    initParticles,
-    updateSyncBadge 
-} from './ui.js';
+/**
+ * Main Application Controller
+ * Orchestrates GitHub sync, API calls, and UI updates
+ */
 
-// State
+import { fetchGitHubReadme } from './github.js';
+import { parseAnimeList, Sorters, filterByGenre, filterByStatus, calculateStats } from './parser.js';
+import { searchAniLab, getAnimeDetails, getTrendingAnime } from './api.js';
+import { createAnimeCard, createSearchItem, showNotification, updateHeroStats, openModal, closeModal } from './ui.js';
+
+// State management
 const state = {
-    myAnime: [],
-    trending: [],
+    githubAnime: [],      // Raw titles from README
+    enrichedAnime: [],    // Full data from AniLab
+    filteredAnime: [],    // Currently displayed
     currentView: 'grid',
-    currentSort: 'rating',
-    searchTimeout: null,
-    isLoading: false
+    currentSort: 'rating_desc',
+    currentGenre: 'all',
+    currentStatus: 'all',
+    isLoading: false,
+    searchTimeout: null
 };
 
 // DOM Elements
 const elements = {
-    trendingGrid: document.getElementById('trendingGrid'),
-    showcaseGrid: document.getElementById('showcaseGrid'),
-    trendingError: document.getElementById('trendingError'),
-    showcaseError: document.getElementById('showcaseError'),
-    modal: document.getElementById('animeModal'),
-    modalBody: document.getElementById('modalBody'),
-    modalClose: document.getElementById('modalClose'),
-    searchContainer: document.getElementById('searchContainer'),
-    searchToggle: document.getElementById('searchToggle'),
-    searchClose: document.getElementById('searchClose'),
+    grid: document.getElementById('animeGrid'),
+    emptyState: document.getElementById('emptyState'),
     searchInput: document.getElementById('globalSearch'),
     searchDropdown: document.getElementById('searchDropdown'),
-    themeToggle: document.getElementById('themeToggle'),
     sortSelect: document.getElementById('sortSelect'),
-    syncBtn: document.getElementById('syncReadme'),
-    retryGithub: document.getElementById('retryGithub'),
+    genreFilter: document.getElementById('genreFilter'),
+    statusFilter: document.getElementById('statusFilter'),
     viewToggles: document.querySelectorAll('.toggle-btn'),
-    mobileMenuBtn: document.getElementById('mobileMenuBtn'),
-    navLinks: document.getElementById('navLinks'),
-    stats: {
-        total: document.getElementById('totalAnime'),
-        rating: document.getElementById('avgRating'),
-        episodes: document.getElementById('totalEpisodes'),
-        completion: document.getElementById('completionRate')
-    }
+    syncBtn: document.getElementById('syncGithubBtn'),
+    modal: document.getElementById('animeModal'),
+    modalClose: document.getElementById('modalClose'),
+    heroCount: document.getElementById('heroCount'),
+    heroRating: document.getElementById('heroRating'),
+    loader: document.getElementById('mainLoader')
 };
 
-// Initialize
+// Initialize app
 async function init() {
-    try {
-        initParticles();
-        setupEventListeners();
-        setupTheme();
-        setupExpandableSearch();
-        
-        await Promise.all([
-            loadTrending(),
-            loadMyAnime()
-        ]);
-    } catch (error) {
-        console.error('Init error:', error);
+    setupEventListeners();
+    setupTheme();
+    updateHeroStats();
+    
+    // Load from cache or fetch fresh
+    const cached = localStorage.getItem('anitrack_data');
+    if (cached) {
+        state.enrichedAnime = JSON.parse(cached);
+        applyFilters();
+        updateStats();
+    } else {
+        await syncWithGitHub();
     }
 }
 
-// Setup Expandable Search
-function setupExpandableSearch() {
-    // Open search
-    elements.searchToggle.addEventListener('click', () => {
-        elements.searchContainer.classList.add('active');
-        setTimeout(() => elements.searchInput.focus(), 100);
-    });
-    
-    // Close search
-    elements.searchClose.addEventListener('click', closeSearch);
-    
-    // Close on escape
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeSearch();
-    });
-    
-    // Close when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.search-container')) {
-            closeSearch();
-        }
-    });
-}
-
-function closeSearch() {
-    elements.searchContainer.classList.remove('active');
-    elements.searchInput.value = '';
-    elements.searchDropdown.classList.remove('active');
-}
-
-// Load Trending
-async function loadTrending() {
-    try {
-        const cached = Cache.get('trending');
-        if (cached) {
-            state.trending = cached;
-            renderTrending();
-            return;
-        }
-        
-        elements.trendingGrid.innerHTML = Array(6).fill('<div class="skeleton-card"></div>').join('');
-        elements.trendingError.style.display = 'none';
-        
-        state.trending = await fetchTrendingAnime(1, 12);
-        Cache.set('trending', state.trending, 30);
-        renderTrending();
-    } catch (error) {
-        console.error('Trending error:', error);
-        elements.trendingGrid.innerHTML = '';
-        elements.trendingError.style.display = 'block';
-    }
-}
-
-function renderTrending() {
-    elements.trendingGrid.innerHTML = '';
-    state.trending.forEach(anime => {
-        elements.trendingGrid.appendChild(createAnimeCard(anime));
-    });
-    initScrollReveal();
-}
-
-// Load My Anime
-async function loadMyAnime(forceRefresh = false) {
+// Sync with GitHub README
+async function syncWithGitHub() {
     if (state.isLoading) return;
     state.isLoading = true;
     
-    updateSyncBadge('syncing', 'Fetching...');
-    elements.showcaseError.style.display = 'none';
+    showLoader(true);
+    updateSyncStatus('syncing');
     
     try {
-        if (!forceRefresh) {
-            const cached = Cache.get('myAnime');
-            if (cached && cached.length > 0) {
-                state.myAnime = cached;
-                updateSyncBadge('synced', `${cached.length} anime`);
-                updateStats();
-                renderMyAnime();
-                state.isLoading = false;
-                return;
+        // Fetch README
+        const readme = await fetchGitHubReadme();
+        const parsed = parseAnimeList(readme);
+        state.githubAnime = parsed;
+        
+        showNotification(`Found ${parsed.length} anime in README. Fetching details...`, 'info');
+        
+        // Enrich with AniLab data (batch processing with delay to avoid rate limits)
+        const enriched = [];
+        for (let i = 0; i < parsed.length; i++) {
+            const item = parsed[i];
+            try {
+                const searchResults = await searchAniLab(item.title, 1);
+                if (searchResults.length > 0) {
+                    const details = await getAnimeDetails(searchResults[0].id);
+                    enriched.push({
+                        ...details,
+                        githubSource: true
+                    });
+                }
+                
+                // Update progress every 5 items
+                if (i % 5 === 0) {
+                    showNotification(`Enriched ${i}/${parsed.length} anime...`, 'info');
+                }
+                
+                // Small delay to be nice to the API
+                await new Promise(r => setTimeout(r, 200));
+            } catch (e) {
+                console.warn(`Failed to enrich ${item.title}:`, e);
+                // Add basic info even if API fails
+                enriched.push({
+                    id: `local_${i}`,
+                    title: item.title,
+                    githubSource: true,
+                    rating: 0
+                });
             }
         }
         
-        elements.showcaseGrid.innerHTML = `
-            <div class="loading-state" style="grid-column: 1/-1;">
-                <div class="spinner"></div>
-                <p>Connecting to GitHub...</p>
-                <small>Fetching README.md</small>
-            </div>
-        `;
+        state.enrichedAnime = enriched;
+        localStorage.setItem('anitrack_data', JSON.stringify(enriched));
         
-        const readme = await fetchGitHubReadme();
-        state.myAnime = parseAnimeList(readme);
-        
-        if (state.myAnime.length === 0) {
-            throw new Error('No anime parsed');
-        }
-        
-        Cache.set('myAnime', state.myAnime, 60);
-        updateSyncBadge('synced', `${state.myAnime.length} anime`);
+        applyFilters();
         updateStats();
-        renderMyAnime();
-        showNotification(`Loaded ${state.myAnime.length} anime!`, 'success');
+        populateGenreFilter();
+        
+        showNotification(`Successfully synced ${enriched.length} anime!`, 'success');
+        updateSyncStatus('synced');
         
     } catch (error) {
-        console.error('GitHub error:', error);
-        updateSyncBadge('error', 'Failed');
-        
-        // Try cache even if expired
-        const expired = localStorage.getItem('cache_myAnime');
-        if (expired) {
-            try {
-                const { data } = JSON.parse(expired);
-                if (data?.length > 0) {
-                    state.myAnime = data;
-                    updateStats();
-                    renderMyAnime();
-                    showNotification('Using cached data', 'warning');
-                    state.isLoading = false;
-                    return;
-                }
-            } catch (e) {}
-        }
-        
-        elements.showcaseGrid.innerHTML = '';
-        elements.showcaseError.style.display = 'block';
+        console.error('Sync error:', error);
+        showNotification('Sync failed. Using cached data if available.', 'error');
+        updateSyncStatus('error');
     } finally {
         state.isLoading = false;
+        showLoader(false);
     }
 }
 
-function renderMyAnime() {
-    const sorter = Sorters[state.currentSort] || Sorters.rating;
-    const sorted = [...state.myAnime].sort(sorter);
+// Apply filters and sorting
+function applyFilters() {
+    let result = [...state.enrichedAnime];
     
-    elements.showcaseGrid.innerHTML = '';
-    elements.showcaseGrid.className = `anime-grid ${state.currentView === 'list' ? 'list-view' : ''}`;
+    // Genre filter
+    result = filterByGenre(result, state.currentGenre);
     
-    if (sorted.length === 0) {
-        elements.showcaseGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">No anime found</p>';
+    // Status filter
+    result = filterByStatus(result, state.currentStatus);
+    
+    // Sort
+    const sorter = Sorters[state.currentSort] || Sorters.rating_desc;
+    result.sort(sorter);
+    
+    state.filteredAnime = result;
+    renderGrid();
+}
+
+// Render anime grid
+function renderGrid() {
+    elements.grid.innerHTML = '';
+    
+    if (state.filteredAnime.length === 0) {
+        elements.grid.style.display = 'none';
+        elements.emptyState.style.display = 'block';
         return;
     }
     
-    sorted.forEach(anime => {
-        const enhanced = {
-            ...anime,
-            title: { romaji: anime.title },
-            coverImage: { 
-                large: anime.anilistId ? `https://img.anili.st/media/${anime.anilistId}` : null 
-            },
-            averageScore: anime.rating * 10
-        };
-        elements.showcaseGrid.appendChild(createAnimeCard(enhanced, state.currentView));
+    elements.grid.style.display = 'grid';
+    elements.emptyState.style.display = 'none';
+    
+    state.filteredAnime.forEach((anime, index) => {
+        const card = createAnimeCard(anime, state.currentView);
+        card.style.animationDelay = `${index * 0.05}s`;
+        elements.grid.appendChild(card);
+    });
+}
+
+// Update statistics
+function updateStats() {
+    const stats = calculateStats(state.enrichedAnime);
+    elements.heroCount.textContent = stats.total;
+    elements.heroRating.textContent = stats.avgRating;
+    updateHeroStats();
+}
+
+// Populate genre filter dropdown
+function populateGenreFilter() {
+    const genres = new Set();
+    state.enrichedAnime.forEach(anime => {
+        anime.genres?.forEach(g => genres.add(g));
     });
     
-    initScrollReveal();
+    const sortedGenres = Array.from(genres).sort();
+    elements.genreFilter.innerHTML = '<option value="all">All Genres</option>' +
+        sortedGenres.map(g => `<option value="${g}">${g}</option>`).join('');
 }
 
-function updateStats() {
-    const stats = calculateStats(state.myAnime);
-    elements.stats.total.textContent = stats.total;
-    elements.stats.rating.textContent = stats.avgRating;
-    elements.stats.episodes.textContent = stats.estimatedEpisodes + '+';
-    elements.stats.completion.textContent = stats.completionRate;
-}
-
-// Search with Debounce
+// Search functionality
 function handleSearch(e) {
     clearTimeout(state.searchTimeout);
     const query = e.target.value.trim();
@@ -249,32 +195,18 @@ function handleSearch(e) {
     
     state.searchTimeout = setTimeout(async () => {
         try {
-            const results = await searchAnime(query, 5);
+            const results = await searchAniLab(query, 5);
             elements.searchDropdown.innerHTML = '';
             
-            if (results.length === 0 && state.myAnime.length > 0) {
-                // Fallback to local
-                const local = searchLocalAnime(state.myAnime, query).slice(0, 3);
-                local.forEach(anime => {
-                    elements.searchDropdown.appendChild(createSearchItem({
-                        ...anime,
-                        title: { romaji: anime.title },
-                        coverImage: { medium: `https://img.anili.st/media/${anime.anilistId}` }
-                    }, (selected) => {
-                        openModal(selected.anilistId || selected);
-                        closeSearch();
-                    }));
+            results.forEach(anime => {
+                const item = createSearchItem(anime, (selected) => {
+                    openModal(selected);
+                    closeSearch();
                 });
-            } else {
-                results.forEach(anime => {
-                    elements.searchDropdown.appendChild(createSearchItem(anime, (selected) => {
-                        openModal(selected.id);
-                        closeSearch();
-                    }));
-                });
-            }
+                elements.searchDropdown.appendChild(item);
+            });
             
-            if (elements.searchDropdown.children.length > 0) {
+            if (results.length > 0) {
                 elements.searchDropdown.classList.add('active');
             }
         } catch (error) {
@@ -283,106 +215,133 @@ function handleSearch(e) {
     }, 300);
 }
 
-// Modal
-async function openModal(animeOrId) {
-    try {
-        let anime = animeOrId;
-        
-        if (typeof animeOrId === 'number' || typeof animeOrId === 'string') {
-            elements.modalBody.innerHTML = '<div class="loading-state"><div class="spinner"></div></div>';
-            elements.modal.classList.add('active');
-            anime = await fetchAnimeDetails(parseInt(animeOrId));
-        } else if (animeOrId.anilistId && !animeOrId.description) {
-            elements.modalBody.innerHTML = '<div class="loading-state"><div class="spinner"></div></div>';
-            elements.modal.classList.add('active');
-            try {
-                anime = await fetchAnimeDetails(animeOrId.anilistId);
-            } catch (e) {
-                anime = animeOrId;
-            }
-        }
-        
-        elements.modalBody.innerHTML = createModalContent(anime);
-        elements.modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    } catch (error) {
-        showNotification('Failed to load details', 'error');
-        closeModal();
-    }
-}
-
-function closeModal() {
-    elements.modal.classList.remove('active');
-    document.body.style.overflow = '';
-}
-
-// Theme
-function setupTheme() {
-    const saved = localStorage.getItem('theme') || 'dark';
-    document.documentElement.dataset.theme = saved;
-    updateThemeIcon(saved);
-}
-
-function toggleTheme() {
-    const current = document.documentElement.dataset.theme;
-    const next = current === 'dark' ? 'light' : 'dark';
-    document.documentElement.dataset.theme = next;
-    localStorage.setItem('theme', next);
-    updateThemeIcon(next);
-}
-
-function updateThemeIcon(theme) {
-    const icon = elements.themeToggle.querySelector('i');
-    icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-}
-
-// Event Listeners
+// Event listeners
 function setupEventListeners() {
-    elements.themeToggle.addEventListener('click', toggleTheme);
+    // Search
     elements.searchInput.addEventListener('input', handleSearch);
-    elements.modalClose.addEventListener('click', closeModal);
-    elements.modal.querySelector('.modal-overlay').addEventListener('click', closeModal);
+    document.getElementById('searchToggle').addEventListener('click', () => {
+        document.getElementById('searchContainer').classList.toggle('active');
+        if (document.getElementById('searchContainer').classList.contains('active')) {
+            setTimeout(() => elements.searchInput.focus(), 100);
+        }
+    });
+    document.getElementById('searchClose').addEventListener('click', closeSearch);
     
-    window.addEventListener('animeSelect', (e) => openModal(e.detail));
+    // Filters
+    elements.sortSelect.addEventListener('change', (e) => {
+        state.currentSort = e.target.value;
+        applyFilters();
+    });
     
+    elements.genreFilter.addEventListener('change', (e) => {
+        state.currentGenre = e.target.value;
+        applyFilters();
+    });
+    
+    elements.statusFilter.addEventListener('change', (e) => {
+        state.currentStatus = e.target.value;
+        applyFilters();
+    });
+    
+    // View toggle
     elements.viewToggles.forEach(btn => {
         btn.addEventListener('click', () => {
             elements.viewToggles.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             state.currentView = btn.dataset.view;
-            renderMyAnime();
+            elements.grid.className = `anime-grid ${state.currentView === 'list' ? 'list-view' : ''}`;
         });
     });
     
-    elements.sortSelect.addEventListener('change', (e) => {
-        state.currentSort = e.target.value;
-        renderMyAnime();
+    // Sync button
+    elements.syncBtn.addEventListener('click', syncWithGitHub);
+    
+    // Modal
+    elements.modalClose.addEventListener('click', closeModal);
+    elements.modal.querySelector('.modal-overlay').addEventListener('click', closeModal);
+    
+    // Close search on outside click
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.search-container')) {
+            closeSearch();
+        }
     });
     
-    elements.syncBtn.addEventListener('click', () => loadMyAnime(true));
-    elements.retryGithub?.addEventListener('click', () => loadMyAnime(true));
-    
-    document.getElementById('refreshTrending')?.addEventListener('click', () => {
-        Cache.set('trending', null, 0);
-        loadTrending();
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeModal();
+            closeSearch();
+        }
     });
     
-    elements.mobileMenuBtn?.addEventListener('click', () => {
-        elements.navLinks.classList.toggle('active');
-    });
-    
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-                elements.navLinks.classList.remove('active');
-            }
-        });
+    // Mobile menu
+    document.getElementById('mobileMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.toggle('active');
     });
 }
 
-// Start
+// Helper functions
+function closeSearch() {
+    document.getElementById('searchContainer').classList.remove('active');
+    elements.searchDropdown.classList.remove('active');
+    elements.searchInput.value = '';
+}
+
+function showLoader(show) {
+    elements.loader.style.display = show ? 'flex' : 'none';
+}
+
+function updateSyncStatus(status) {
+    const dot = document.querySelector('.sync-dot');
+    const text = document.querySelector('.sync-text');
+    
+    if (status === 'syncing') {
+        dot.style.background = '#f59e0b';
+        dot.style.boxShadow = '0 0 10px #f59e0b';
+        text.textContent = 'Syncing...';
+    } else if (status === 'synced') {
+        dot.style.background = '#10b981';
+        dot.style.boxShadow = '0 0 10px #10b981';
+        text.textContent = 'Live Sync';
+    } else {
+        dot.style.background = '#ef4444';
+        dot.style.boxShadow = '0 0 10px #ef4444';
+        text.textContent = 'Sync Failed';
+    }
+}
+
+// Theme toggle
+function setupTheme() {
+    const toggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    
+    toggle.addEventListener('click', () => {
+        const current = html.dataset.theme;
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.dataset.theme = next;
+        localStorage.setItem('theme', next);
+        updateThemeIcon(next);
+    });
+    
+    // Load saved theme
+    const saved = localStorage.getItem('theme') || 'dark';
+    html.dataset.theme = saved;
+    updateThemeIcon(saved);
+}
+
+function updateThemeIcon(theme) {
+    const icon = document.querySelector('#themeToggle i');
+    icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+}
+
+// Global functions for onclick handlers
+window.toggleFavoriteFromModal = (id) => {
+    const isFav = Favorites.toggle(id);
+    showNotification(isFav ? 'Added to favorites!' : 'Removed from favorites', 'success');
+    updateHeroStats();
+    applyFilters(); // Refresh grid to show updated heart icons
+};
+
+// Start the app
 document.addEventListener('DOMContentLoaded', init);
