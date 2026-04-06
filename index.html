@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shinei's Anime Sanctuary | Otaku Developer Portfolio</title>
-    <meta name="description" content="A curated collection of 100+ anime watched by a code-loving otaku. Built with passion, caffeine, and late-night coding sessions.">
+    <title>AniTrack | Anime Sanctuary</title>
+    <meta name="description" content="A curated anime collection powered by AniLab API and GitHub integration">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,10 +17,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="gradient-bg">
-        <div class="gradient-blur"></div>
-        <div class="particles" id="particles"></div>
+    <!-- Animated RGB Gradient Background -->
+    <div class="aurora-bg">
+        <div class="aurora-layer layer-1"></div>
+        <div class="aurora-layer layer-2"></div>
+        <div class="aurora-layer layer-3"></div>
+        <div class="noise-overlay"></div>
     </div>
 
     <!-- Navigation -->
@@ -29,20 +31,19 @@
             <a href="#" class="logo">
                 <span class="logo-icon">あ</span>
                 <div class="logo-text-wrapper">
-                    <span class="logo-text">AniTrack</span>
-                    <span class="logo-subtitle">by Shinei</span>
+                    <span class="logo-text">Ani</span>
+                    <span class="logo-subtitle">Track</span>
                 </div>
             </a>
             
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#collection" class="nav-link">My Collection</a></li>
                 <li><a href="#trending" class="nav-link">Trending</a></li>
-                <li><a href="#showcase" class="nav-link">My List</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
             </ul>
 
             <div class="nav-actions">
-                <!-- Expandable Search -->
                 <div class="search-container" id="searchContainer">
                     <button class="search-toggle" id="searchToggle" aria-label="Search">
                         <i class="fas fa-search"></i>
@@ -54,7 +55,7 @@
                     <div class="search-dropdown" id="searchDropdown"></div>
                 </div>
                 
-                <button id="themeToggle" class="icon-btn glass-btn" aria-label="Toggle theme">
+                <button id="themeToggle" class="icon-btn glass-btn neon-glow" aria-label="Toggle theme">
                     <i class="fas fa-sun"></i>
                 </button>
                 
@@ -73,251 +74,196 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-badge">
-                <span class="pulse"></span>
-                <span>＜/＞ Developer & Otaku</span>
+                <span class="pulse-ring"></span>
+                <span class="badge-text">✨ Now with AniLab API</span>
             </div>
             <h1 class="hero-title">
-                Coding by Day,
-                <span class="gradient-text">Anime by Night</span>
+                Track Your
+                <span class="gradient-text-rgb">Anime Journey</span>
             </h1>
             <p class="hero-subtitle">
-                Welcome to my digital sanctuary where code meets culture. I'm Shinei, a full-stack developer who believes that debugging code and binge-watching anime require the same level of dedication. 100+ titles, countless all-nighters, and a never-ending watchlist.
+                A premium sanctuary for otaku. Seamlessly integrated with GitHub and powered by AniLab's extensive database. Experience anime tracking reimagined with glassmorphism aesthetics.
             </p>
             <div class="hero-stats">
-                <div class="hero-stat">
-                    <span class="hero-stat-value">100+</span>
-                    <span class="hero-stat-label">Anime Completed</span>
+                <div class="hero-stat glass-stat">
+                    <span class="stat-icon"><i class="fas fa-database"></i></span>
+                    <span class="hero-stat-value" id="heroCount">0</span>
+                    <span class="hero-stat-label">Titles Tracked</span>
                 </div>
-                <div class="hero-stat">
-                    <span class="hero-stat-value">8.6</span>
+                <div class="hero-stat glass-stat">
+                    <span class="stat-icon"><i class="fas fa-star"></i></span>
+                    <span class="hero-stat-value" id="heroRating">0.0</span>
                     <span class="hero-stat-label">Avg Rating</span>
                 </div>
-                <div class="hero-stat">
-                    <span class="hero-stat-value">∞</span>
-                    <span class="hero-stat-label">Waifu Count</span>
+                <div class="hero-stat glass-stat">
+                    <span class="stat-icon"><i class="fas fa-heart"></i></span>
+                    <span class="hero-stat-value" id="heroFavs">0</span>
+                    <span class="hero-stat-label">Favorites</span>
                 </div>
             </div>
             <div class="hero-actions">
-                <a href="#trending" class="btn btn-primary">
+                <a href="#collection" class="btn btn-neon">
                     <i class="fas fa-play"></i>
                     Explore Collection
                 </a>
-                <a href="https://github.com/Shineii86" target="_blank" class="btn btn-glass">
+                <button id="syncGithubBtn" class="btn btn-glass-rgb">
                     <i class="fab fa-github"></i>
-                    View Code
-                </a>
-            </div>
-            
-            <!-- Floating Cards Preview -->
-            <div class="floating-cards">
-                <div class="float-card card-1">
-                    <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-73IhOXpJZiMF.jpg" alt="AOT" loading="lazy">
-                    <div class="float-card-info">
-                        <span class="float-title">Attack on Titan</span>
-                        <span class="float-score">⭐ 10</span>
-                    </div>
-                </div>
-                <div class="float-card card-2">
-                    <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5114-4CpuT22PVL52.png" alt="FMAB" loading="lazy">
-                    <div class="float-card-info">
-                        <span class="float-title">FMA: Brotherhood</span>
-                        <span class="float-score">⭐ 10</span>
-                    </div>
-                </div>
-                <div class="float-card card-3">
-                    <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9253-7pdcVzQSkKxT.jpg" alt="Steins;Gate" loading="lazy">
-                    <div class="float-card-info">
-                        <span class="float-title">Steins;Gate</span>
-                        <span class="float-score">⭐ 10</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Developer Note Section -->
-    <section class="section dev-note">
-        <div class="container">
-            <div class="glass-card dev-card">
-                <div class="dev-icon">
-                    <i class="fas fa-terminal"></i>
-                </div>
-                <div class="dev-content">
-                    <h3>console.log("Hello, Anime!");</h3>
-                    <p>This isn't just a list—it's a <strong>React-free, Vanilla JS powerhouse</strong> that parses Markdown in real-time. Built with pure HTML/CSS/JS because frameworks are great, but understanding the fundamentals is what separates shinobi from genin. The GitHub integration? That's fetching raw README.md, parsing it with Regex (yes, I battle-tested the patterns), and rendering glassmorphic cards. All client-side, zero backend costs, maximum weeb efficiency.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag"><i class="fab fa-js"></i> ES6+</span>
-                        <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
-                        <span class="tech-tag"><i class="fab fa-html5"></i> HTML5</span>
-                        <span class="tech-tag"><i class="fas fa-database"></i> LocalStorage</span>
-                        <span class="tech-tag"><i class="fas fa-bolt"></i> AniList API</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trending Section -->
-    <section id="trending" class="section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-title-wrapper">
-                    <h2 class="section-title">Trending Now</h2>
-                    <p class="section-subtitle">Global top anime this season • Data from AniList</p>
-                </div>
-                <button class="btn btn-outline" id="refreshTrending">
-                    <i class="fas fa-sync-alt"></i>
-                    Refresh
+                    Sync README
                 </button>
             </div>
-            
-            <div class="anime-grid" id="trendingGrid">
-                <!-- Skeleton Loading -->
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
+        </div>
+        
+        <!-- Floating 3D Cards -->
+        <div class="floating-cards-container">
+            <div class="float-card tilt-card" data-tilt>
+                <img src="https://via.placeholder.com/200x300/6366f1/ffffff?text=Anime+1" alt="Featured" class="float-img">
+                <div class="float-glow"></div>
             </div>
-            
-            <div class="error-state" id="trendingError" style="display: none;">
-                <i class="fas fa-exclamation-circle"></i>
-                <p>Failed to load trending anime. <button class="text-btn" onclick="location.reload()">Retry</button></p>
+            <div class="float-card tilt-card" data-tilt>
+                <img src="https://via.placeholder.com/200x300/ec4899/ffffff?text=Anime+2" alt="Featured" class="float-img">
+                <div class="float-glow"></div>
+            </div>
+            <div class="float-card tilt-card" data-tilt>
+                <img src="https://via.placeholder.com/200x300/06b6d4/ffffff?text=Anime+3" alt="Featured" class="float-img">
+                <div class="float-glow"></div>
             </div>
         </div>
     </section>
 
-    <!-- My Anime Showcase -->
-    <section id="showcase" class="section showcase-section">
+    <!-- Controls Bar -->
+    <section class="controls-section" id="collection">
         <div class="container">
-            <div class="showcase-header glass-card">
-                <div class="showcase-title-area">
-                    <div class="sync-badge" id="syncBadge">
-                        <i class="fas fa-sync"></i>
-                        <span>Live Sync</span>
-                    </div>
-                    <h2 class="section-title">The Collection</h2>
-                    <p class="section-subtitle">Every anime I've watched since 2020, parsed directly from my GitHub README</p>
-                </div>
-                
-                <div class="showcase-controls">
+            <div class="controls-bar glass-panel">
+                <div class="controls-group">
                     <div class="view-toggle">
-                        <button class="toggle-btn active" data-view="grid" aria-label="Grid view">
-                            <i class="fas fa-th"></i>
+                        <button class="toggle-btn active" data-view="grid" title="Grid View">
+                            <i class="fas fa-th-large"></i>
                         </button>
-                        <button class="toggle-btn" data-view="list" aria-label="List view">
+                        <button class="toggle-btn" data-view="list" title="List View">
                             <i class="fas fa-list"></i>
                         </button>
                     </div>
                     
-                    <select id="sortSelect" class="glass-select">
-                        <option value="rating">Top Rated</option>
-                        <option value="az">A-Z</option>
-                        <option value="recent">Recent</option>
-                    </select>
-                    
-                    <button id="syncReadme" class="btn btn-primary btn-sm">
-                        <i class="fas fa-code-branch"></i>
-                        Sync
-                    </button>
+                    <div class="filter-group">
+                        <select id="sortSelect" class="glass-select neon-focus">
+                            <option value="rating_desc">⭐ Highest Rated</option>
+                            <option value="rating_asc">⭐ Lowest Rated</option>
+                            <option value="name_az">A → Z</option>
+                            <option value="name_za">Z → A</option>
+                            <option value="recent">📅 Recently Added</option>
+                        </select>
+                        
+                        <select id="genreFilter" class="glass-select neon-focus">
+                            <option value="all">All Genres</option>
+                        </select>
+                        
+                        <select id="statusFilter" class="glass-select neon-focus">
+                            <option value="all">All Status</option>
+                            <option value="completed">✅ Completed</option>
+                            <option value="ongoing">📺 Airing</option>
+                            <option value="upcoming">⏳ Upcoming</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="sync-status" id="syncStatus">
+                    <span class="sync-dot"></span>
+                    <span class="sync-text">Live Sync</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Collection -->
+    <section class="section collection-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title gradient-text-purple">My Collection</h2>
+                    <p class="section-subtitle">Sourced from GitHub README • Enriched by AniLab</p>
+                </div>
+                <div class="loading-indicator" id="mainLoader">
+                    <div class="spinner-neon"></div>
+                    <span>Fetching anime data...</span>
                 </div>
             </div>
 
-            <div class="stats-bar glass-card" id="statsBar">
-                <div class="stat-item">
-                    <span class="stat-value" id="totalAnime">0</span>
-                    <span class="stat-label">Titles</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value" id="avgRating">0.0</span>
-                    <span class="stat-label">Avg Score</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value" id="totalEpisodes">0</span>
-                    <span class="stat-label">Episodes</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value" id="completionRate">87%</span>
-                    <span class="stat-label">Completed</span>
-                </div>
+            <div class="anime-grid" id="animeGrid">
+                <!-- Skeleton Loading -->
+                <div class="skeleton-card glass-skeleton"></div>
+                <div class="skeleton-card glass-skeleton"></div>
+                <div class="skeleton-card glass-skeleton"></div>
+                <div class="skeleton-card glass-skeleton"></div>
+                <div class="skeleton-card glass-skeleton"></div>
+                <div class="skeleton-card glass-skeleton"></div>
             </div>
 
-            <div class="anime-grid" id="showcaseGrid">
-                <div class="loading-state" style="grid-column: 1/-1;">
-                    <div class="spinner"></div>
-                    <p>Connecting to GitHub...</p>
-                    <small style="color: var(--text-muted); margin-top: 0.5rem; display: block;">Fetching README.md</small>
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <div class="empty-icon">
+                    <i class="fas fa-ghost"></i>
                 </div>
-            </div>
-            
-            <div class="error-state" id="showcaseError" style="display: none; grid-column: 1/-1;">
-                <i class="fas fa-wifi"></i>
-                <p>Connection failed. GitHub might be rate-limiting or CORS is acting up.</p>
-                <button class="btn btn-primary btn-sm" id="retryGithub" style="margin-top: 1rem;">
-                    <i class="fas fa-redo"></i> Try Again
+                <h3>No anime found</h3>
+                <p>Try adjusting your filters or sync with GitHub</p>
+                <button class="btn btn-neon" onclick="location.reload()">
+                    <i class="fas fa-sync"></i> Refresh
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- About/Otaku Section -->
+    <!-- About Section -->
     <section id="about" class="section about-section">
         <div class="container">
             <div class="about-grid">
-                <div class="about-content">
-                    <h2 class="section-title">About This Weeb</h2>
+                <div class="about-content glass-card-deep">
+                    <h2 class="section-title">About <span class="gradient-text-cyan">AniTrack</span></h2>
                     <p class="about-text">
-                        Started my anime journey in 2020 (yes, pandemic otaku), and since then I've traversed over 100+ different worlds—from the trenches of Paradis Island to the labs of the Future Gadget Laboratory.
+                        Built for otaku by otaku. AniTrack combines the power of GitHub's version control with AniLab's comprehensive anime database.
                     </p>
-                    <p class="about-text">
-                        <strong>My Philosophy:</strong> Just like clean code requires dedication, appreciating anime requires patience. Whether it's the animation sakuga of Ufotable or the mind-bending narratives of Urobuchi, every frame is a commit in the repository of storytelling.
-                    </p>
-                    <div class="about-stats-grid">
-                        <div class="about-stat-item">
-                            <i class="fas fa-fire"></i>
-                            <span>Favorite Genre: Psychological</span>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-bolt text-yellow"></i>
+                            <span>AniLab API Integration</span>
                         </div>
-                        <div class="about-stat-item">
-                            <i class="fas fa-heart"></i>
-                            <span>Best Girl: Makise Kurisu</span>
+                        <div class="feature-item">
+                            <i class="fas fa-code-branch text-blue"></i>
+                            <span>GitHub README Sync</span>
                         </div>
-                        <div class="about-stat-item">
-                            <i class="fas fa-trophy"></i>
-                            <span>Top Studio: MAPPA/Ufotable</span>
+                        <div class="feature-item">
+                            <i class="fas fa-layer-group text-purple"></i>
+                            <span>Glassmorphism UI</span>
                         </div>
                     </div>
                 </div>
-                <div class="about-visual glass-card">
-                    <div class="code-block">
-                        <pre><code>
-<span class="code-comment">// MyAnimeList.js</span>
-<span class="code-keyword">const</span> otaku = {
-  name: <span class="code-string">"Shinei"</span>,
-  watchTime: <span class="code-string">"∞ hours"</span>,
-  favorites: [
-    <span class="code-string">"Steins;Gate"</span>,
-    <span class="code-string">"AOT"</span>,
-    <span class="code-string">"FMAB"</span>
-  ],
-  currentlyWatching: <span class="code-string">"Too many..."</span>
-};
-                        </code></pre>
+                <div class="code-visual glass-card-deep">
+                    <div class="code-header">
+                        <div class="code-dot red"></div>
+                        <div class="code-dot yellow"></div>
+                        <div class="code-dot green"></div>
+                        <span class="code-filename">github.js</span>
                     </div>
+                    <pre class="code-block"><code class="language-javascript">
+<span class="code-keyword">async function</span> <span class="code-function">fetchGitHubReadme</span>() {
+  <span class="code-keyword">const</span> url = <span class="code-string">'https://raw.githubusercontent.com/...'</span>;
+  <span class="code-keyword">const</span> response = <span class="code-keyword">await</span> <span class="code-function">fetch</span>(url);
+  <span class="code-keyword">const</span> data = <span class="code-keyword">await</span> response.<span class="code-function">text</span>();
+  <span class="code-keyword">return</span> <span class="code-function">parseAnimeList</span>(data);
+}
+                    </code></pre>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Anime Detail Modal -->
+    <!-- Modal -->
     <div class="modal" id="animeModal" role="dialog" aria-modal="true">
         <div class="modal-overlay"></div>
-        <div class="modal-content glass-card">
-            <button class="modal-close" id="modalClose" aria-label="Close modal">
+        <div class="modal-content glass-card-xl">
+            <button class="modal-close neon-hover" id="modalClose">
                 <i class="fas fa-times"></i>
             </button>
             <div class="modal-body" id="modalBody">
-                <!-- Dynamic content -->
+                <!-- Dynamic Content -->
             </div>
         </div>
     </div>
@@ -326,55 +272,47 @@
     <div id="toastContainer"></div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer glass-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
                     <span class="logo-icon">あ</span>
                     <div>
                         <h3>AniTrack Universe</h3>
-                        <p class="footer-tagline">Built with <i class="fas fa-coffee"></i> and <i class="fas fa-heart"></i></p>
+                        <p class="footer-tagline">Built with <i class="fas fa-heart text-pink"></i> and <i class="fas fa-code text-cyan"></i></p>
                     </div>
                 </div>
                 
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Navigation</h4>
-                        <a href="#home">Home</a>
-                        <a href="#trending">Trending</a>
-                        <a href="#showcase">My List</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Connect</h4>
-                        <a href="https://github.com/Shineii86" target="_blank" rel="noopener">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://telegram.me/Shineii86" target="_blank" rel="noopener">
-                            <i class="fab fa-telegram"></i> Telegram
-                        </a>
-                        <a href="mailto:ikx7a@hotmail.com">
-                            <i class="fas fa-envelope"></i> Email
-                        </a>
-                    </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/Shineii86" target="_blank" class="social-link glass-btn">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://telegram.me/Shineii86" target="_blank" class="social-link glass-btn">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://instagram.com/ikx7.a" target="_blank" class="social-link glass-btn">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com/@ikx7a" target="_blank" class="social-link glass-btn">
+                        <i class="fab fa-youtube"></i>
+                    </a>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2026 Shinei Nouzen. All rights reserved.</p>
+                <p>&copy; 2026 <span class="text-gradient">Shinei Nouzen</span>. All Rights Reserved.</p>
                 <p class="made-with">
-                    <span class="code-comment">// Build with</span> 
-                    <i class="fas fa-heart"></i> 
-                    <span class="code-keyword">by</span> 
-                    <span class="code-string">Shinei_Nouzen</span>
+                    <span class="code-comment">[>_] Crafted with Love</span>
                 </p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script type="module" src="js/api.js"></script>
-    <script type="module" src="js/parser.js"></script>
-    <script type="module" src="js/ui.js"></script>
-    <script type="module" src="js/main.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/github.js"></script>
+    <script src="js/parser.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
