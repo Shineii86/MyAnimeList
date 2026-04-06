@@ -1,347 +1,267 @@
 /**
- * Main Application Controller
- * Orchestrates GitHub sync, API calls, and UI updates
+ * AniTrack - Main Application
  */
 
-import { fetchGitHubReadme } from './github.js';
-import { parseAnimeList, Sorters, filterByGenre, filterByStatus, calculateStats } from './parser.js';
-import { searchAniLab, getAnimeDetails, getTrendingAnime } from './api.js';
-import { createAnimeCard, createSearchItem, showNotification, updateHeroStats, openModal, closeModal } from './ui.js';
+import { GitHubParser } from './github.js';
+import { AniLabAPI } from './api.js';
+import { UI } from './ui.js';
+import { Search } from './search.js';
+import { Filters } from './filters.js';
+import { debounce, showToast, storage, smoothScroll } from './utils.js';
 
-// State management
-const state = {
-    githubAnime: [],      // Raw titles from README
-    enrichedAnime: [],    // Full data from AniLab
-    filteredAnime: [],    // Currently displayed
-    currentView: 'grid',
-    currentSort: 'rating_desc',
-    currentGenre: 'all',
-    currentStatus: 'all',
-    isLoading: false,
-    searchTimeout: null
+// App State
+const AppState = {
+  animeList: [],
+  favorites: JSON.parse(localStorage.getItem('anitrack_favorites') || '[]'),
+  config: {
+    github: {
+      username: 'Shineii86',  // TODO: Configure or get from URL params
+      repo: 'MyAnimeList',
+      branch: 'main'
+    }
+  }
 };
 
 // DOM Elements
-const elements = {
-    grid: document.getElementById('animeGrid'),
-    emptyState: document.getElementById('emptyState'),
-    searchInput: document.getElementById('globalSearch'),
-    searchDropdown: document.getElementById('searchDropdown'),
-    sortSelect: document.getElementById('sortSelect'),
-    genreFilter: document.getElementById('genreFilter'),
-    statusFilter: document.getElementById('statusFilter'),
-    viewToggles: document.querySelectorAll('.toggle-btn'),
-    syncBtn: document.getElementById('syncGithubBtn'),
-    modal: document.getElementById('animeModal'),
-    modalClose: document.getElementById('modalClose'),
-    heroCount: document.getElementById('heroCount'),
-    heroRating: document.getElementById('heroRating'),
-    loader: document.getElementById('mainLoader')
+const DOM = {
+  loadBtn: null,
+  retryBtn: null,
+  grid: null,
+  modal: null,
+  themeToggle: null
 };
 
-// Initialize app
+// Initialize App
 async function init() {
-    setupEventListeners();
-    setupTheme();
-    updateHeroStats();
+  // Cache DOM references
+  DOM.loadBtn = document.getElementById('load-readme-btn');
+  DOM.retryBtn = document.getElementById('retry-btn');
+  DOM.grid = document.getElementById('anime-grid');
+  DOM.modal = document.getElementById('anime-modal');
+  DOM.themeToggle = document.getElementById('theme-toggle');
+  
+  // Initialize subsystems
+  Search.init();
+  Filters.init();
+  initThemeToggle();
+  initModal();
+  initCardInteractions();
+  initNavigation();
+  
+  // Load favorites badge
+  updateFavoritesUI();
+  
+  // Event Listeners
+  DOM.loadBtn?.addEventListener('click', handleLoadReadme);
+  DOM.retryBtn?.addEventListener('click', handleLoadReadme);
+  
+  // Listen for filter changes
+  window.addEventListener('filters:changed', handleFilterChange);
+  
+  // Initial load if config is set
+  if (AppState.config.github.username && AppState.config.github.repo) {
+    await handleLoadReadme();
+  }
+}
+
+// Theme Toggle
+function initThemeToggle() {
+  // Check saved preference or system preference
+  const saved = localStorage.getItem('anitrack_theme');
+  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = saved || (systemDark ? 'dark' : 'light');
+  
+  document.documentElement.setAttribute('data-theme', theme);
+  
+  DOM.themeToggle?.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
     
-    // Load from cache or fetch fresh
-    const cached = localStorage.getItem('anitrack_data');
-    if (cached) {
-        state.enrichedAnime = JSON.parse(cached);
-        applyFilters();
-        updateStats();
-    } else {
-        await syncWithGitHub();
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('anitrack_theme', next);
+    
+    showToast(`Switched to ${next} mode`, 'info', 2000);
+  });
+}
+
+// Modal Handling
+function initModal() {
+  const modal = document.getElementById('anime-modal');
+  if (!modal) return;
+  
+  // Close on backdrop click
+  modal.querySelectorAll('[data-close-modal]').forEach(el => {
+    el.addEventListener('click', () => UI.closeModal());
+  });
+  
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.hasAttribute('open')) {
+      UI.closeModal();
     }
+  });
+  
+  // Favorite button
+  document.getElementById('favorite-btn')?.addEventListener('click', handleFavoriteToggle);
 }
 
-// Sync with GitHub README
-async function syncWithGitHub() {
-    if (state.isLoading) return;
-    state.isLoading = true;
+// Card Interactions
+function initCardInteractions() {
+  // Event delegation for dynamic cards
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('.anime-card');
+    const viewBtn = e.target.closest('.view-details');
     
-    showLoader(true);
-    updateSyncStatus('syncing');
-    
-    try {
-        // Fetch README
-        const readme = await fetchGitHubReadme();
-        const parsed = parseAnimeList(readme);
-        state.githubAnime = parsed;
-        
-        showNotification(`Found ${parsed.length} anime in README. Fetching details...`, 'info');
-        
-        // Enrich with AniLab data (batch processing with delay to avoid rate limits)
-        const enriched = [];
-        for (let i = 0; i < parsed.length; i++) {
-            const item = parsed[i];
-            try {
-                const searchResults = await searchAniLab(item.title, 1);
-                if (searchResults.length > 0) {
-                    const details = await getAnimeDetails(searchResults[0].id);
-                    enriched.push({
-                        ...details,
-                        githubSource: true
-                    });
-                }
-                
-                // Update progress every 5 items
-                if (i % 5 === 0) {
-                    showNotification(`Enriched ${i}/${parsed.length} anime...`, 'info');
-                }
-                
-                // Small delay to be nice to the API
-                await new Promise(r => setTimeout(r, 200));
-            } catch (e) {
-                console.warn(`Failed to enrich ${item.title}:`, e);
-                // Add basic info even if API fails
-                enriched.push({
-                    id: `local_${i}`,
-                    title: item.title,
-                    githubSource: true,
-                    rating: 0
-                });
-            }
-        }
-        
-        state.enrichedAnime = enriched;
-        localStorage.setItem('anitrack_data', JSON.stringify(enriched));
-        
-        applyFilters();
-        updateStats();
-        populateGenreFilter();
-        
-        showNotification(`Successfully synced ${enriched.length} anime!`, 'success');
-        updateSyncStatus('synced');
-        
-    } catch (error) {
-        console.error('Sync error:', error);
-        showNotification('Sync failed. Using cached data if available.', 'error');
-        updateSyncStatus('error');
-    } finally {
-        state.isLoading = false;
-        showLoader(false);
+    if (viewBtn && card) {
+      e.stopPropagation();
+      const animeId = card.dataset.animeId;
+      const anime = AppState.animeList.find(a => a.id === animeId);
+      if (anime) UI.openModal(anime);
+    } else if (card) {
+      const animeId = card.dataset.animeId;
+      const anime = AppState.animeList.find(a => a.id === animeId);
+      if (anime) UI.openModal(anime);
     }
-}
-
-// Apply filters and sorting
-function applyFilters() {
-    let result = [...state.enrichedAnime];
-    
-    // Genre filter
-    result = filterByGenre(result, state.currentGenre);
-    
-    // Status filter
-    result = filterByStatus(result, state.currentStatus);
-    
-    // Sort
-    const sorter = Sorters[state.currentSort] || Sorters.rating_desc;
-    result.sort(sorter);
-    
-    state.filteredAnime = result;
-    renderGrid();
-}
-
-// Render anime grid
-function renderGrid() {
-    elements.grid.innerHTML = '';
-    
-    if (state.filteredAnime.length === 0) {
-        elements.grid.style.display = 'none';
-        elements.emptyState.style.display = 'block';
-        return;
+  });
+  
+  // Keyboard support
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      const card = document.activeElement?.closest('.anime-card');
+      if (card) {
+        e.preventDefault();
+        const animeId = card.dataset.animeId;
+        const anime = AppState.animeList.find(a => a.id === animeId);
+        if (anime) UI.openModal(anime);
+      }
     }
-    
-    elements.grid.style.display = 'grid';
-    elements.emptyState.style.display = 'none';
-    
-    state.filteredAnime.forEach((anime, index) => {
-        const card = createAnimeCard(anime, state.currentView);
-        card.style.animationDelay = `${index * 0.05}s`;
-        elements.grid.appendChild(card);
-    });
+  });
 }
 
-// Update statistics
-function updateStats() {
-    const stats = calculateStats(state.enrichedAnime);
-    elements.heroCount.textContent = stats.total;
-    elements.heroRating.textContent = stats.avgRating;
-    updateHeroStats();
-}
-
-// Populate genre filter dropdown
-function populateGenreFilter() {
-    const genres = new Set();
-    state.enrichedAnime.forEach(anime => {
-        anime.genres?.forEach(g => genres.add(g));
-    });
-    
-    const sortedGenres = Array.from(genres).sort();
-    elements.genreFilter.innerHTML = '<option value="all">All Genres</option>' +
-        sortedGenres.map(g => `<option value="${g}">${g}</option>`).join('');
-}
-
-// Search functionality
-function handleSearch(e) {
-    clearTimeout(state.searchTimeout);
-    const query = e.target.value.trim();
-    
-    if (query.length < 2) {
-        elements.searchDropdown.classList.remove('active');
-        return;
-    }
-    
-    state.searchTimeout = setTimeout(async () => {
-        try {
-            const results = await searchAniLab(query, 5);
-            elements.searchDropdown.innerHTML = '';
-            
-            results.forEach(anime => {
-                const item = createSearchItem(anime, (selected) => {
-                    openModal(selected);
-                    closeSearch();
-                });
-                elements.searchDropdown.appendChild(item);
-            });
-            
-            if (results.length > 0) {
-                elements.searchDropdown.classList.add('active');
-            }
-        } catch (error) {
-            console.error('Search error:', error);
-        }
-    }, 300);
-}
-
-// Event listeners
-function setupEventListeners() {
-    // Search
-    elements.searchInput.addEventListener('input', handleSearch);
-    document.getElementById('searchToggle').addEventListener('click', () => {
-        document.getElementById('searchContainer').classList.toggle('active');
-        if (document.getElementById('searchContainer').classList.contains('active')) {
-            setTimeout(() => elements.searchInput.focus(), 100);
-        }
-    });
-    document.getElementById('searchClose').addEventListener('click', closeSearch);
-    
-    // Filters
-    elements.sortSelect.addEventListener('change', (e) => {
-        state.currentSort = e.target.value;
-        applyFilters();
-    });
-    
-    elements.genreFilter.addEventListener('change', (e) => {
-        state.currentGenre = e.target.value;
-        applyFilters();
-    });
-    
-    elements.statusFilter.addEventListener('change', (e) => {
-        state.currentStatus = e.target.value;
-        applyFilters();
-    });
-    
-    // View toggle
-    elements.viewToggles.forEach(btn => {
-        btn.addEventListener('click', () => {
-            elements.viewToggles.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            state.currentView = btn.dataset.view;
-            elements.grid.className = `anime-grid ${state.currentView === 'list' ? 'list-view' : ''}`;
+// Navigation
+function initNavigation() {
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      if (href !== '#') {
+        e.preventDefault();
+        smoothScroll(href);
+        
+        // Update active nav
+        document.querySelectorAll('.navbar__link').forEach(nav => {
+          nav.classList.toggle('active', nav.dataset.nav === href.slice(1));
         });
+      }
     });
-    
-    // Sync button
-    elements.syncBtn.addEventListener('click', syncWithGitHub);
-    
-    // Modal
-    elements.modalClose.addEventListener('click', closeModal);
-    elements.modal.querySelector('.modal-overlay').addEventListener('click', closeModal);
-    
-    // Close search on outside click
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.search-container')) {
-            closeSearch();
-        }
-    });
-    
-    // Keyboard shortcuts
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            closeModal();
-            closeSearch();
-        }
-    });
-    
-    // Mobile menu
-    document.getElementById('mobileMenuBtn')?.addEventListener('click', () => {
-        document.getElementById('navLinks').classList.toggle('active');
-    });
+  });
+  
+  // Mobile menu toggle
+  const mobileToggle = document.getElementById('mobile-menu-toggle');
+  const navbarMenu = document.getElementById('navbar-menu');
+  
+  mobileToggle?.addEventListener('click', () => {
+    const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+    mobileToggle.setAttribute('aria-expanded', !expanded);
+    navbarMenu?.classList.toggle('active');
+  });
 }
 
-// Helper functions
-function closeSearch() {
-    document.getElementById('searchContainer').classList.remove('active');
-    elements.searchDropdown.classList.remove('active');
-    elements.searchInput.value = '';
-}
-
-function showLoader(show) {
-    elements.loader.style.display = show ? 'flex' : 'none';
-}
-
-function updateSyncStatus(status) {
-    const dot = document.querySelector('.sync-dot');
-    const text = document.querySelector('.sync-text');
+// Load README & Fetch Anime
+async function handleLoadReadme() {
+  const { username, repo, branch } = AppState.config.github;
+  
+  if (!username || !repo) {
+    showToast('Please configure GitHub username and repo', 'error');
+    return;
+  }
+  
+  UI.showLoading(true);
+  
+  try {
+    // 1. Parse README
+    const titles = await GitHubParser.getAnimeList(username, repo, branch);
     
-    if (status === 'syncing') {
-        dot.style.background = '#f59e0b';
-        dot.style.boxShadow = '0 0 10px #f59e0b';
-        text.textContent = 'Syncing...';
-    } else if (status === 'synced') {
-        dot.style.background = '#10b981';
-        dot.style.boxShadow = '0 0 10px #10b981';
-        text.textContent = 'Live Sync';
-    } else {
-        dot.style.background = '#ef4444';
-        dot.style.boxShadow = '0 0 10px #ef4444';
-        text.textContent = 'Sync Failed';
+    if (titles.length === 0) {
+      UI.showEmpty();
+      showToast('No anime titles found in README', 'info');
+      return;
     }
-}
-
-// Theme toggle
-function setupTheme() {
-    const toggle = document.getElementById('themeToggle');
-    const html = document.documentElement;
     
-    toggle.addEventListener('click', () => {
-        const current = html.dataset.theme;
-        const next = current === 'dark' ? 'light' : 'dark';
-        html.dataset.theme = next;
-        localStorage.setItem('theme', next);
-        updateThemeIcon(next);
-    });
+    // 2. Fetch from AniLab with concurrency
+    const results = await AniLabAPI.fetchBatch(titles, 5);
     
-    // Load saved theme
-    const saved = localStorage.getItem('theme') || 'dark';
-    html.dataset.theme = saved;
-    updateThemeIcon(saved);
+    // 3. Filter successful fetches
+    const animeList = results
+      .filter(r => r.data && !r.error)
+      .map(r => r.data);
+    
+    if (animeList.length === 0) {
+      UI.showError('Could not fetch anime data. Please try again.');
+      return;
+    }
+    
+    // 4. Store and render
+    AppState.animeList = animeList;
+    applyFiltersAndRender();
+    
+    showToast(`Loaded ${animeList.length} anime`, 'success');
+    
+  } catch (error) {
+    console.error('Load error:', error);
+    UI.showError('Failed to load anime list. Check your GitHub settings.');
+  }
 }
 
-function updateThemeIcon(theme) {
-    const icon = document.querySelector('#themeToggle i');
-    icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+// Handle Filter Changes
+function handleFilterChange() {
+  applyFiltersAndRender();
 }
 
-// Global functions for onclick handlers
-window.toggleFavoriteFromModal = (id) => {
-    const isFav = Favorites.toggle(id);
-    showNotification(isFav ? 'Added to favorites!' : 'Removed from favorites', 'success');
-    updateHeroStats();
-    applyFilters(); // Refresh grid to show updated heart icons
-};
+// Apply filters and re-render
+function applyFiltersAndRender() {
+  const filtered = Filters.apply(AppState.animeList);
+  UI.renderCards(filtered);
+}
 
-// Start the app
+// Toggle Favorites
+function handleFavoriteToggle() {
+  const modal = document.getElementById('anime-modal');
+  if (!modal) return;
+  
+  const animeId = modal.querySelector('.modal__cover')?.alt; // Fallback
+  // Better: store anime ID in modal dataset
+  const anime = AppState.animeList.find(a => a.title === document.getElementById('modal-title')?.textContent);
+  
+  if (!anime?.id) return;
+  
+  const index = AppState.favorites.indexOf(anime.id);
+  const isFavorited = index > -1;
+  
+  if (isFavorited) {
+    AppState.favorites.splice(index, 1);
+    showToast('Removed from favorites', 'info');
+  } else {
+    AppState.favorites.push(anime.id);
+    showToast('Added to favorites', 'success');
+  }
+  
+  // Save and update UI
+  localStorage.setItem('anitrack_favorites', JSON.stringify(AppState.favorites));
+  UI.updateFavoriteButton(anime.id, !isFavorited);
+  updateFavoritesUI();
+}
+
+// Update favorites UI indicators
+function updateFavoritesUI() {
+  // Could add heart badges to cards, etc.
+  console.log('Favorites count:', AppState.favorites.length);
+}
+
+// Start App
 document.addEventListener('DOMContentLoaded', init);
+
+// Export for testing/debugging
+if (typeof window !== 'undefined') {
+  window.AniTrack = { AppState, UI, Filters, Search };
+}
