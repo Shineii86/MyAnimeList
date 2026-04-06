@@ -1,318 +1,404 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AniTrack | Anime Sanctuary</title>
-    <meta name="description" content="A curated anime collection powered by AniLab API and GitHub integration">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AniTrack — Your curated anime universe, powered by GitHub + AniLab" />
+  <meta name="theme-color" content="#8B5CF6" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  
+  <title>AniTrack • MyAnimeList Showcase</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for Icons (CDN fallback) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+  
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://api.anilab.to">
+  <link rel="preconnect" href="https://raw.githubusercontent.com">
 </head>
 <body>
-    <!-- Animated RGB Gradient Background -->
-    <div class="aurora-bg">
-        <div class="aurora-layer layer-1"></div>
-        <div class="aurora-layer layer-2"></div>
-        <div class="aurora-layer layer-3"></div>
-        <div class="noise-overlay"></div>
+  <!-- Animated Gradient Background -->
+  <div class="gradient-background" aria-hidden="true"></div>
+  
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navbar -->
+  <header class="navbar glass" role="navigation" aria-label="Main navigation">
+    <div class="navbar__container">
+      <a href="/" class="navbar__logo" aria-label="AniTrack Home">
+        <svg class="logo__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/>
+          <path d="M8 4v16M16 4v16M4 10h16M4 14h16"/>
+        </svg>
+        <span class="logo__text">AniTrack</span>
+      </a>
+      
+      <nav class="navbar__menu" id="navbar-menu">
+        <ul class="navbar__list">
+          <li><a href="#my-anime" class="navbar__link active" data-nav="my-anime">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            My Anime
+          </a></li>
+          <li><a href="#search" class="navbar__link" data-nav="search">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            Search
+          </a></li>
+          <li><a href="https://github.com" target="_blank" rel="noopener" class="navbar__link">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar__actions">
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+          </svg>
+        </button>
+        <button class="btn-icon mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-menu">
+          <svg class="hamburger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+          <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" hidden>
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
     </div>
+  </header>
 
-    <!-- Navigation -->
-    <nav class="navbar glass-nav">
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <span class="logo-icon">あ</span>
-                <div class="logo-text-wrapper">
-                    <span class="logo-text">AniTrack</span>
-                    <span class="logo-subtitle">By Shinei Nouzen</span>
-                </div>
-            </a>
-            
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#collection" class="nav-link">My Collection</a></li>
-                <li><a href="#trending" class="nav-link">Trending</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-            </ul>
+  <!-- Hero Section -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__content">
+      <h1 id="hero-title" class="hero__title">AniTrack</h1>
+      <p class="hero__subtitle">Your curated anime universe, powered by <strong>GitHub</strong> + <strong>AniLab</strong></p>
+      <div class="hero__actions">
+        <button id="load-readme-btn" class="btn btn--primary btn--glow">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+          </svg>
+          Load My List
+        </button>
+        <a href="#search" class="btn btn--secondary">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+          </svg>
+          Explore Anime
+        </a>
+      </div>
+      <div class="hero__hint">
+        <small>
+          <svg class="hint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/>
+          </svg>
+          Add anime to your GitHub README.md to get started
+        </small>
+      </div>
+    </div>
+    <div class="hero__orb orb--1" aria-hidden="true"></div>
+    <div class="hero__orb orb--2" aria-hidden="true"></div>
+  </section>
 
-            <div class="nav-actions">
-                <div class="search-container" id="searchContainer">
-                    <button class="search-toggle" id="searchToggle" aria-label="Search">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <input type="text" id="globalSearch" placeholder="Search anime..." class="search-input" autocomplete="off">
-                    <button class="search-close" id="searchClose" aria-label="Close search">
-                        <i class="fas fa-times"></i>
-                    </button>
-                    <div class="search-dropdown" id="searchDropdown"></div>
-                </div>
-                
-                <button id="themeToggle" class="icon-btn glass-btn neon-glow" aria-label="Toggle theme">
-                    <i class="fas fa-sun"></i>
-                </button>
-                
-                <a href="https://github.com/Shineii86" target="_blank" class="github-link glass-btn" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="pulse-ring"></span>
-                <span class="badge-text">✨ Now with AniLab API</span>
-            </div>
-            <h1 class="hero-title">
-                Track Your
-                <span class="gradient-text-rgb">Anime Journey</span>
-            </h1>
-            <p class="hero-subtitle">
-                A premium sanctuary for otaku. Seamlessly integrated with GitHub and powered by AniLab's extensive database. Experience anime tracking reimagined with glassmorphism aesthetics.
-            </p>
-            <div class="hero-stats">
-                <div class="hero-stat glass-stat">
-                    <span class="stat-icon"><i class="fas fa-database"></i></span>
-                    <span class="hero-stat-value" id="heroCount">0</span>
-                    <span class="hero-stat-label">Titles Tracked</span>
-                </div>
-                <div class="hero-stat glass-stat">
-                    <span class="stat-icon"><i class="fas fa-star"></i></span>
-                    <span class="hero-stat-value" id="heroRating">0.0</span>
-                    <span class="hero-stat-label">Avg Rating</span>
-                </div>
-                <div class="hero-stat glass-stat">
-                    <span class="stat-icon"><i class="fas fa-heart"></i></span>
-                    <span class="hero-stat-value" id="heroFavs">0</span>
-                    <span class="hero-stat-label">Favorites</span>
-                </div>
-            </div>
-            <div class="hero-actions">
-                <a href="#collection" class="btn btn-neon">
-                    <i class="fas fa-play"></i>
-                    Explore Collection
-                </a>
-                <button id="syncGithubBtn" class="btn btn-glass-rgb">
-                    <i class="fab fa-github"></i>
-                    Sync README
-                </button>
-            </div>
+  <!-- Search & Filters -->
+  <section id="search" class="search-section glass-panel" aria-labelledby="search-title">
+    <div class="search__container">
+      <h2 id="search-title" class="section-title">
+        <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+        </svg>
+        Smart Search
+      </h2>
+      
+      <div class="search__wrapper">
+        <div class="search__input-group">
+          <svg class="search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+          </svg>
+          <input 
+            type="search" 
+            id="anime-search" 
+            class="search__input" 
+            placeholder="Search anime titles, genres, studios..." 
+            aria-label="Search anime"
+            autocomplete="off"
+          >
+          <button class="search__clear" id="search-clear" aria-label="Clear search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
         </div>
         
-        <!-- Floating 3D Cards -->
-        <div class="floating-cards-container">
-            <div class="float-card tilt-card" data-tilt>
-                <img src="https://via.placeholder.com/200x300/6366f1/ffffff?text=Anime+1" alt="Featured" class="float-img">
-                <div class="float-glow"></div>
-            </div>
-            <div class="float-card tilt-card" data-tilt>
-                <img src="https://via.placeholder.com/200x300/ec4899/ffffff?text=Anime+2" alt="Featured" class="float-img">
-                <div class="float-glow"></div>
-            </div>
-            <div class="float-card tilt-card" data-tilt>
-                <img src="https://via.placeholder.com/200x300/06b6d4/ffffff?text=Anime+3" alt="Featured" class="float-img">
-                <div class="float-glow"></div>
-            </div>
+        <div id="search-suggestions" class="search__suggestions glass" role="listbox" aria-label="Search suggestions" hidden>
+          <!-- Dynamically populated -->
         </div>
-    </section>
+      </div>
 
-    <!-- Controls Bar -->
-    <section class="controls-section" id="collection">
-        <div class="container">
-            <div class="controls-bar glass-panel">
-                <div class="controls-group">
-                    <div class="view-toggle">
-                        <button class="toggle-btn active" data-view="grid" title="Grid View">
-                            <i class="fas fa-th-large"></i>
-                        </button>
-                        <button class="toggle-btn" data-view="list" title="List View">
-                            <i class="fas fa-list"></i>
-                        </button>
-                    </div>
-                    
-                    <div class="filter-group">
-                        <select id="sortSelect" class="glass-select neon-focus">
-                            <option value="rating_desc">⭐ Highest Rated</option>
-                            <option value="rating_asc">⭐ Lowest Rated</option>
-                            <option value="name_az">A → Z</option>
-                            <option value="name_za">Z → A</option>
-                            <option value="recent">📅 Recently Added</option>
-                        </select>
-                        
-                        <select id="genreFilter" class="glass-select neon-focus">
-                            <option value="all">All Genres</option>
-                        </select>
-                        
-                        <select id="statusFilter" class="glass-select neon-focus">
-                            <option value="all">All Status</option>
-                            <option value="completed">✅ Completed</option>
-                            <option value="ongoing">📺 Airing</option>
-                            <option value="upcoming">⏳ Upcoming</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <div class="sync-status" id="syncStatus">
-                    <span class="sync-dot"></span>
-                    <span class="sync-text">Live Sync</span>
-                </div>
-            </div>
+      <!-- Filters Panel -->
+      <div class="filters__panel" id="filters-panel">
+        <div class="filters__group">
+          <label for="sort-select" class="filters__label">Sort by</label>
+          <select id="sort-select" class="filters__select">
+            <option value="az">A → Z</option>
+            <option value="za">Z → A</option>
+            <option value="rating-high">Rating: High to Low</option>
+            <option value="rating-low">Rating: Low to High</option>
+            <option value="recent">Recently Added</option>
+          </select>
         </div>
-    </section>
-
-    <!-- Main Collection -->
-    <section class="section collection-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-title-wrapper">
-                    <h2 class="section-title gradient-text-purple">My Collection</h2>
-                    <p class="section-subtitle">Sourced from GitHub README • Enriched by AniLab</p>
-                </div>
-                <div class="loading-indicator" id="mainLoader">
-                    <div class="spinner-neon"></div>
-                    <span>Fetching anime data...</span>
-                </div>
-            </div>
-
-            <div class="anime-grid" id="animeGrid">
-                <!-- Skeleton Loading -->
-                <div class="skeleton-card glass-skeleton"></div>
-                <div class="skeleton-card glass-skeleton"></div>
-                <div class="skeleton-card glass-skeleton"></div>
-                <div class="skeleton-card glass-skeleton"></div>
-                <div class="skeleton-card glass-skeleton"></div>
-                <div class="skeleton-card glass-skeleton"></div>
-            </div>
-
-            <div class="empty-state" id="emptyState" style="display: none;">
-                <div class="empty-icon">
-                    <i class="fas fa-ghost"></i>
-                </div>
-                <h3>No anime found</h3>
-                <p>Try adjusting your filters or sync with GitHub</p>
-                <button class="btn btn-neon" onclick="location.reload()">
-                    <i class="fas fa-sync"></i> Refresh
-                </button>
-            </div>
+        
+        <div class="filters__group">
+          <label class="filters__label">Status</label>
+          <div class="filters__chips" role="group" aria-label="Filter by status">
+            <button class="chip chip--active" data-filter="status" data-value="all">All</button>
+            <button class="chip" data-filter="status" data-value="ongoing">Ongoing</button>
+            <button class="chip" data-filter="status" data-value="completed">Completed</button>
+            <button class="chip" data-filter="status" data-value="upcoming">Upcoming</button>
+          </div>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about-section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content glass-card-deep">
-                    <h2 class="section-title">About <span class="gradient-text-cyan">AniTrack</span></h2>
-                    <p class="about-text">
-                        Built for otaku by otaku. AniTrack combines the power of GitHub's version control with AniLab's comprehensive anime database.
-                    </p>
-                    <div class="feature-list">
-                        <div class="feature-item">
-                            <i class="fas fa-bolt text-yellow"></i>
-                            <span>AniLab API Integration</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-code-branch text-blue"></i>
-                            <span>GitHub README Sync</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-layer-group text-purple"></i>
-                            <span>Glassmorphism UI</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="code-visual glass-card-deep">
-                    <div class="code-header">
-                        <div class="code-dot red"></div>
-                        <div class="code-dot yellow"></div>
-                        <div class="code-dot green"></div>
-                        <span class="code-filename">github.js</span>
-                    </div>
-                    <pre class="code-block"><code class="language-javascript">
-<span class="code-keyword">async function</span> <span class="code-function">fetchGitHubReadme</span>() {
-  <span class="code-keyword">const</span> url = <span class="code-string">'https://raw.githubusercontent.com/...'</span>;
-  <span class="code-keyword">const</span> response = <span class="code-keyword">await</span> <span class="code-function">fetch</span>(url);
-  <span class="code-keyword">const</span> data = <span class="code-keyword">await</span> response.<span class="code-function">text</span>();
-  <span class="code-keyword">return</span> <span class="code-function">parseAnimeList</span>(data);
-}
-                    </code></pre>
-                </div>
-            </div>
+        <div class="filters__group">
+          <label class="filters__label">Genres</label>
+          <div class="filters__chips" id="genre-chips" role="group" aria-label="Filter by genre">
+            <button class="chip" data-filter="genre" data-value="Action">Action</button>
+            <button class="chip" data-filter="genre" data-value="Fantasy">Fantasy</button>
+            <button class="chip" data-filter="genre" data-value="Romance">Romance</button>
+            <button class="chip" data-filter="genre" data-value="Comedy">Comedy</button>
+            <button class="chip" data-filter="genre" data-value="Drama">Drama</button>
+          </div>
         </div>
-    </section>
-
-    <!-- Modal -->
-    <div class="modal" id="animeModal" role="dialog" aria-modal="true">
-        <div class="modal-overlay"></div>
-        <div class="modal-content glass-card-xl">
-            <button class="modal-close neon-hover" id="modalClose">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="modal-body" id="modalBody">
-                <!-- Dynamic Content -->
-            </div>
-        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Toast Container -->
-    <div id="toastContainer"></div>
+  <!-- Main Content -->
+  <main id="main-content" class="main" role="main" aria-labelledby="my-anime-title">
+    <section id="my-anime" class="anime-section" aria-labelledby="my-anime-title">
+      <div class="section-header">
+        <h2 id="my-anime-title" class="section-title">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/>
+            <path d="M8 4v16M16 4v16M4 10h16M4 14h16"/>
+          </svg>
+          My Anime Collection
+        </h2>
+        <span class="section-count" id="anime-count" aria-live="polite">0 titles</span>
+      </div>
 
-    <!-- Footer -->
-    <footer class="footer glass-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="logo-icon">あ</span>
-                    <div>
-                        <h3>AniTrack Universe</h3>
-                        <p class="footer-tagline">Built with <i class="fas fa-heart text-pink"></i> and <i class="fas fa-code text-cyan"></i></p>
-                    </div>
-                </div>
-                
-                <div class="footer-socials">
-                    <a href="https://github.com/Shineii86" target="_blank" class="social-link glass-btn">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://telegram.me/Shineii86" target="_blank" class="social-link glass-btn">
-                        <i class="fab fa-telegram"></i>
-                    </a>
-                    <a href="https://instagram.com/ikx7.a" target="_blank" class="social-link glass-btn">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://youtube.com/@ikx7a" target="_blank" class="social-link glass-btn">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
+      <!-- Loading State -->
+      <div id="loading-state" class="loading-grid" hidden>
+        <article class="anime-card skeleton" aria-hidden="true">
+          <div class="card__image skeleton__image"></div>
+          <div class="card__content">
+            <div class="skeleton__title"></div>
+            <div class="skeleton__meta"></div>
+            <div class="skeleton__description"></div>
+            <div class="skeleton__genres"></div>
+          </div>
+        </article>
+        <article class="anime-card skeleton" aria-hidden="true">
+          <div class="card__image skeleton__image"></div>
+          <div class="card__content">
+            <div class="skeleton__title"></div>
+            <div class="skeleton__meta"></div>
+            <div class="skeleton__description"></div>
+            <div class="skeleton__genres"></div>
+          </div>
+        </article>
+        <article class="anime-card skeleton" aria-hidden="true">
+          <div class="card__image skeleton__image"></div>
+          <div class="card__content">
+            <div class="skeleton__title"></div>
+            <div class="skeleton__meta"></div>
+            <div class="skeleton__description"></div>
+            <div class="skeleton__genres"></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Error State -->
+      <div id="error-state" class="error-state" hidden role="alert">
+        <svg class="error__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <p class="error__message" id="error-message">Failed to load anime data.</p>
+        <button class="btn btn--small btn--retry" id="retry-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/>
+          </svg>
+          Try Again
+        </button>
+      </div>
+
+      <!-- Empty State -->
+      <div id="empty-state" class="empty-state" hidden>
+        <svg class="empty__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        <h3>No anime found</h3>
+        <p>Add titles to your GitHub README.md or use search to discover new anime.</p>
+        <a href="#search" class="btn btn--primary">Start Searching</a>
+      </div>
+
+      <!-- Anime Grid -->
+      <div id="anime-grid" class="anime-grid" role="list" aria-live="polite">
+        <!-- Cards injected by JS -->
+      </div>
+
+      <!-- Load More -->
+      <div id="load-more-container" class="load-more" hidden>
+        <button id="load-more-btn" class="btn btn--secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+          Load More
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Details Modal -->
+  <dialog id="anime-modal" class="modal glass-modal" aria-labelledby="modal-title">
+    <div class="modal__backdrop" data-close-modal aria-hidden="true"></div>
+    <div class="modal__content">
+      <button class="modal__close" data-close-modal aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      
+      <div class="modal__body">
+        <div class="modal__header">
+          <img id="modal-cover" class="modal__cover" src="" alt="" loading="lazy">
+          <div class="modal__meta">
+            <h3 id="modal-title" class="modal__title"></h3>
+            <div class="modal__badges">
+              <span id="modal-rating" class="badge badge--rating">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+                <span class="rating-value">0.0</span>
+              </span>
+              <span id="modal-status" class="badge badge--status"></span>
+              <span id="modal-year" class="badge badge--year"></span>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 <span class="text-gradient">Shinei Nouzen</span>. All Rights Reserved.</p>
-                <p class="made-with">
-                    <span class="code-comment">[>_] Crafted with Love</span>
-                </p>
-            </div>
+            <p id="modal-description" class="modal__description"></p>
+          </div>
         </div>
-    </footer>
+        
+        <div class="modal__details">
+          <div class="detail-row">
+            <span class="detail-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              Episodes:
+            </span>
+            <span id="modal-episodes" class="detail-value"></span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
+              </svg>
+              Genres:
+            </span>
+            <div id="modal-genres" class="detail-genres"></div>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+              Studio:
+            </span>
+            <span id="modal-studio" class="detail-value"></span>
+          </div>
+        </div>
 
-    <!-- Scripts -->
-    <script src="js/api.js"></script>
-    <script src="js/github.js"></script>
-    <script src="js/parser.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/main.js"></script>
+        <div class="modal__actions">
+          <button id="favorite-btn" class="btn btn--outline btn--favorite" data-action="toggle">
+            <svg class="favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+            </svg>
+            <svg class="favorite-icon-filled" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" hidden>
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+            </svg>
+            <span class="favorite-text">Add to Favorites</span>
+          </button>
+          <a id="modal-link" href="#" target="_blank" rel="noopener" class="btn btn--primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            View on AniLab
+          </a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Footer -->
+  <footer class="footer glass" role="contentinfo">
+    <div class="footer__container">
+      <div class="footer__social">
+        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </a>
+        <a href="https://t.me" target="_blank" rel="noopener" aria-label="Telegram" class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M11.944 17.97L4.58 13.62 19.54 3l-5.35 18.99-.248-.02zm12.02-5.78l-2.82 1.66-7.25-4.27 10.07-7.13z"/>
+          </svg>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube" class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+        </a>
+      </div>
+      
+      <p class="footer__copyright">© 2026 AniTrack – All Rights Reserved.</p>
+      <p class="footer__tagline">Build with <svg class="heart-icon" viewBox="0 0 24 24" fill="currentColor" aria-label="love"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg> by Shinei Nouzen</p>
+      
+      <div class="footer__links">
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+        <a href="https://github.com" target="_blank" rel="noopener">Source Code</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- JavaScript Modules -->
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
