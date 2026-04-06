@@ -1,46 +1,39 @@
+/**
+ * UI Components and Renderers
+ * Creates DOM elements for anime cards, modals, and notifications
+ */
+
 import { Favorites } from './api.js';
 
+// Create anime card element
 export function createAnimeCard(anime, viewMode = 'grid') {
-    const isFav = Favorites.isFav(anime.id);
     const card = document.createElement('div');
     card.className = 'anime-card';
-    card.dataset.id = anime.id;
+    card.style.animationDelay = `${Math.random() * 0.2}s`;
     
-    // Better image handling with fallbacks
-    let image = anime.coverImage?.large || anime.coverImage?.medium;
-    
-    // If no image but has anilistId, construct AniList CDN URL
-    if (!image && anime.anilistId) {
-        image = `https://img.anili.st/media/${anime.anilistId}`;
-    }
-    
-    // Final fallback
-    if (!image) {
-        image = `https://via.placeholder.com/230x345/1e1e2e/f8fafc?text=${encodeURIComponent(anime.title?.charAt(0) || 'A')}`;
-    }
-    
-    const title = anime.title?.romaji || anime.title?.english || anime.title;
-    const score = anime.averageScore ? (anime.averageScore / 10).toFixed(1) : (anime.rating || 'N/A');
-    const format = anime.format || 'TV';
-    const episodes = anime.episodes ? `• ${anime.episodes} eps` : '';
+    const isFav = Favorites.isFav(anime.id);
+    const image = anime.coverImage || anime.image || `https://via.placeholder.com/300x450/1e1e2e/f8fafc?text=${encodeURIComponent(anime.title?.charAt(0) || 'A')}`;
+    const rating = anime.rating || (anime.averageScore ? (anime.averageScore / 10).toFixed(1) : 'N/A');
     
     card.innerHTML = `
         <div class="anime-card-image">
-            <img src="${image}" 
-                 alt="${title}" 
-                 loading="lazy" 
-                 onerror="this.src='https://via.placeholder.com/230x345/1e1e2e/f8fafc?text=${encodeURIComponent(title?.charAt(0) || 'A')}'">
+            <img src="${image}" alt="${anime.title}" loading="lazy" 
+                 onerror="this.src='https://via.placeholder.com/300x450/1e1e2e/f8fafc?text=No+Image'">
+            <div class="anime-rating-badge">
+                <i class="fas fa-star"></i> ${rating}
+            </div>
             <button class="favorite-btn ${isFav ? 'active' : ''}" data-id="${anime.id}">
                 <i class="${isFav ? 'fas' : 'far'} fa-heart"></i>
             </button>
+            <div class="anime-card-overlay">
+                <span class="btn btn-sm btn-neon">View Details</span>
+            </div>
         </div>
         <div class="anime-card-content">
-            <h3 class="anime-title" title="${title}">${title}</h3>
+            <h3 class="anime-title" title="${anime.title}">${anime.title}</h3>
             <div class="anime-meta">
-                <span>${format} ${episodes}</span>
-                <span class="anime-score">
-                    <i class="fas fa-star"></i> ${score}
-                </span>
+                <span>${anime.format || 'TV'} ${anime.episodes ? `• ${anime.episodes} eps` : ''}</span>
+                <span>${anime.year || ''}</span>
             </div>
             ${anime.genres?.length ? `
                 <div class="anime-genres">
@@ -50,6 +43,7 @@ export function createAnimeCard(anime, viewMode = 'grid') {
         </div>
     `;
     
+    // Favorite button handler
     const favBtn = card.querySelector('.favorite-btn');
     favBtn.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -57,108 +51,77 @@ export function createAnimeCard(anime, viewMode = 'grid') {
         favBtn.classList.toggle('active', nowFav);
         favBtn.innerHTML = `<i class="${nowFav ? 'fas' : 'far'} fa-heart"></i>`;
         showNotification(nowFav ? 'Added to favorites!' : 'Removed from favorites', 'success');
+        updateHeroStats();
     });
     
+    // Card click handler
     card.addEventListener('click', () => {
-        window.dispatchEvent(new CustomEvent('animeSelect', { detail: anime }));
+        openModal(anime);
     });
     
     return card;
 }
 
+// Create modal content
 export function createModalContent(anime) {
-    const banner = anime.bannerImage || 
-                   anime.coverImage?.large || 
-                   (anime.anilistId ? `https://img.anili.st/media/${anime.anilistId}` : null) ||
-                   'https://via.placeholder.com/900x400/1e1e2e/f8fafc?text=No+Image';
-    
-    const title = anime.title?.romaji || anime.title?.english || anime.title;
-    const englishTitle = anime.title?.english && anime.title.english !== title ? anime.title.english : '';
-    
-    let dateStr = 'Unknown';
-    if (anime.startDate?.year) {
-        dateStr = `${anime.startDate.year}${anime.startDate.month ? '-' + String(anime.startDate.month).padStart(2, '0') : ''}`;
-    } else if (anime.year) {
-        dateStr = String(anime.year);
-    }
-    
-    const characters = anime.characters?.edges?.slice(0, 6) || [];
+    const image = anime.bannerImage || anime.coverImage || anime.image || '';
+    const genres = anime.genres || [];
     
     return `
-        <div class="modal-banner" style="background-image: url('${banner}'); background-size: cover; background-position: center;"></div>
+        <div class="modal-banner">
+            <img src="${image}" alt="${anime.title}" onerror="this.style.display='none'">
+            <div class="modal-gradient-overlay"></div>
+        </div>
         <div class="modal-info">
-            <h2>${title}</h2>
-            ${englishTitle ? `<p style="color: var(--text-muted); font-style: italic; margin-bottom: 1rem;">${englishTitle}</p>` : ''}
+            <h2 class="modal-title">${anime.title}</h2>
+            ${anime.titleEnglish && anime.titleEnglish !== anime.title ? 
+                `<p style="color: var(--text-secondary); margin-bottom: 1rem; font-style: italic;">${anime.titleEnglish}</p>` : ''}
             
             <div class="modal-meta">
-                <span class="meta-tag"><i class="fas fa-star"></i> ${anime.averageScore ? (anime.averageScore / 10).toFixed(1) : (anime.rating || 'N/A')}</span>
-                <span class="meta-tag">${anime.format || 'TV'}</span>
-                <span class="meta-tag">${anime.status || 'Unknown'}</span>
-                <span class="meta-tag">${dateStr}</span>
-                ${anime.episodes ? `<span class="meta-tag">${anime.episodes} eps</span>` : ''}
+                <span class="meta-badge"><i class="fas fa-star"></i> ${anime.rating || 'N/A'}</span>
+                <span class="meta-badge"><i class="fas fa-tv"></i> ${anime.format || 'TV'}</span>
+                <span class="meta-badge"><i class="fas fa-calendar"></i> ${anime.year || 'Unknown'}</span>
+                <span class="meta-badge"><i class="fas fa-film"></i> ${anime.episodes || '?'} eps</span>
+                <span class="meta-badge"><i class="fas fa-circle"></i> ${anime.status || 'Unknown'}</span>
             </div>
             
             <div class="modal-description">
-                ${anime.description ? anime.description.replace(/<[^>]*>/g, '').substring(0, 300) + '...' : 'No description available.'}
+                ${anime.description || 'No description available.'}
             </div>
             
-            ${characters.length > 0 ? `
-                <h3 style="margin-bottom: 1rem; font-family: var(--font-heading);">Characters</h3>
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
-                    ${characters.map(char => `
-                        <div style="text-align: center; width: 80px;">
-                            <img src="${char.node.image.medium}" 
-                                 style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; border: 2px solid var(--glass-border);"
-                                 onerror="this.style.display='none'">
-                            <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem;">${char.node.name.full}</p>
-                        </div>
-                    `).join('')}
+            ${genres.length ? `
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem; color: var(--text-primary);">Genres</h4>
+                    <div class="anime-genres">
+                        ${genres.map(g => `<span class="genre-tag">${g}</span>`).join('')}
+                    </div>
                 </div>
             ` : ''}
             
-            ${anime.trailer?.site === 'youtube' ? `
-                <div style="margin-top: 1rem;">
-                    <h3 style="margin-bottom: 1rem; font-family: var(--font-heading);">Trailer</h3>
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/${anime.trailer.id}" 
+            ${anime.trailer ? `
+                <div style="margin-top: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">Trailer</h4>
+                    <iframe width="100%" height="250" src="${anime.trailer}" 
                             frameborder="0" allowfullscreen style="border-radius: var(--radius-md);"></iframe>
                 </div>
             ` : ''}
             
-            ${anime.url ? `
-                <div style="margin-top: 1.5rem;">
-                    <a href="${anime.url}" target="_blank" class="btn btn-primary" style="text-decoration: none;">
-                        <i class="fas fa-external-link-alt"></i> View on AniList
-                    </a>
-                </div>
-            ` : ''}
-        </div>
-    `;
-}
-
-export function createSearchItem(anime, onClick) {
-    const div = document.createElement('div');
-    div.className = 'search-item';
-    const title = anime.title?.romaji || anime.title?.english || 'Unknown';
-    const image = anime.coverImage?.medium || 
-                  (anime.anilistId ? `https://img.anili.st/media/${anime.anilistId}` : null) ||
-                  'https://via.placeholder.com/50x75';
-    
-    div.innerHTML = `
-        <img src="${image}" alt="${title}" onerror="this.src='https://via.placeholder.com/50x75'">
-        <div style="flex: 1; min-width: 0;">
-            <div style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${title}</div>
-            <div style="font-size: 0.85rem; color: var(--text-muted);">
-                ${anime.format || 'TV'} • ⭐ ${anime.averageScore ? (anime.averageScore / 10).toFixed(1) : 'N/A'}
+            <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                <a href="${anime.url || '#'}" target="_blank" class="btn btn-neon" style="text-decoration: none;">
+                    <i class="fas fa-external-link-alt"></i> View on AniLab
+                </a>
+                <button class="btn btn-glass-rgb" onclick="toggleFavoriteFromModal('${anime.id}')">
+                    <i class="${Favorites.isFav(anime.id) ? 'fas' : 'far'} fa-heart"></i> 
+                    ${Favorites.isFav(anime.id) ? 'Favorited' : 'Add to Favorites'}
+                </button>
             </div>
         </div>
     `;
-    
-    div.addEventListener('click', () => onClick(anime));
-    return div;
 }
 
+// Show notification toast
 export function showNotification(message, type = 'info') {
-    const container = document.getElementById('toastContainer') || createToastContainer();
+    const container = document.getElementById('toastContainer');
     
     const toast = document.createElement('div');
     toast.className = `toast ${type}`;
@@ -166,7 +129,6 @@ export function showNotification(message, type = 'info') {
     const icons = {
         success: 'fa-check-circle',
         error: 'fa-exclamation-circle',
-        warning: 'fa-exclamation-triangle',
         info: 'fa-info-circle'
     };
     
@@ -174,70 +136,50 @@ export function showNotification(message, type = 'info') {
     container.appendChild(toast);
     
     setTimeout(() => {
-        toast.style.animation = 'slideIn 0.3s ease reverse';
-        setTimeout(() => toast.remove(), 300);
+        toast.style.animation = 'toast-enter 0.4s ease reverse';
+        setTimeout(() => toast.remove(), 400);
     }, 3000);
 }
 
-function createToastContainer() {
-    const container = document.createElement('div');
-    container.id = 'toastContainer';
-    document.body.appendChild(container);
-    return container;
+// Update hero statistics
+export function updateHeroStats() {
+    const favorites = Favorites.get();
+    document.getElementById('heroFavs').textContent = favorites.length;
 }
 
-export function initScrollReveal() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
+// Modal functions
+export function openModal(anime) {
+    const modal = document.getElementById('animeModal');
+    const modalBody = document.getElementById('modalBody');
     
-    document.querySelectorAll('.anime-card').forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = `opacity 0.6s ease ${index * 0.05}s, transform 0.6s ease ${index * 0.05}s`;
-        observer.observe(card);
-    });
+    modalBody.innerHTML = createModalContent(anime);
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
 }
 
-export function initParticles() {
-    const container = document.getElementById('particles');
-    if (!container) return;
-    
-    container.innerHTML = '';
-    for (let i = 0; i < 30; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 20 + 's';
-        particle.style.animationDuration = (15 + Math.random() * 10) + 's';
-        particle.style.width = (Math.random() * 4 + 2) + 'px';
-        particle.style.height = particle.style.width;
-        container.appendChild(particle);
-    }
+export function closeModal() {
+    const modal = document.getElementById('animeModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
 }
 
-export function updateSyncBadge(status, message) {
-    const badge = document.getElementById('syncBadge');
-    if (!badge) return;
+// Create search dropdown item
+export function createSearchItem(anime, onClick) {
+    const div = document.createElement('div');
+    div.className = 'search-item';
+    div.style.cssText = 'padding: 1rem; display: flex; align-items: center; gap: 1rem; cursor: pointer; border-bottom: 1px solid var(--glass-border); transition: background 0.2s;';
+    div.innerHTML = `
+        <img src="${anime.image || anime.coverImage || ''}" style="width: 50px; height: 75px; object-fit: cover; border-radius: 8px;" onerror="this.style.display='none'">
+        <div style="flex: 1;">
+            <div style="font-weight: 600; color: var(--text-primary);">${anime.title}</div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary);">${anime.format || 'TV'} • ${anime.year || 'Unknown'}</div>
+        </div>
+        <span style="color: #fbbf24; font-weight: 700;"><i class="fas fa-star"></i> ${anime.rating || 'N/A'}</span>
+    `;
     
-    const icon = badge.querySelector('i');
-    const text = badge.querySelector('span');
+    div.addEventListener('click', () => onClick(anime));
+    div.addEventListener('mouseenter', () => div.style.background = 'rgba(255,255,255,0.05)');
+    div.addEventListener('mouseleave', () => div.style.background = 'transparent');
     
-    badge.className = `sync-badge ${status}`;
-    
-    if (status === 'syncing') {
-        icon.className = 'fas fa-sync fa-spin';
-    } else if (status === 'synced') {
-        icon.className = 'fas fa-check';
-    } else if (status === 'error') {
-        icon.className = 'fas fa-exclamation-triangle';
-    }
-    
-    text.textContent = message;
+    return div;
 }
