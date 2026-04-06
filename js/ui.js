@@ -1,185 +1,204 @@
 /**
- * UI Components and Renderers
- * Creates DOM elements for anime cards, modals, and notifications
+ * UI Rendering & Interactions
  */
 
-import { Favorites } from './api.js';
+import { truncate, isInViewport, smoothScroll } from './utils.js';
 
-// Create anime card element
-export function createAnimeCard(anime, viewMode = 'grid') {
-    const card = document.createElement('div');
-    card.className = 'anime-card';
-    card.style.animationDelay = `${Math.random() * 0.2}s`;
+export const UI = {
+  // Create anime card HTML
+  createCard(anime) {
+    if (!anime) return null;
     
-    const isFav = Favorites.isFav(anime.id);
-    const image = anime.coverImage || anime.image || `https://via.placeholder.com/300x450/1e1e2e/f8fafc?text=${encodeURIComponent(anime.title?.charAt(0) || 'A')}`;
-    const rating = anime.rating || (anime.averageScore ? (anime.averageScore / 10).toFixed(1) : 'N/A');
+    const {
+      title = 'Unknown',
+      coverImage = '',
+      rating = 0,
+      episodes = 0,
+      status = 'unknown',
+      description = '',
+      genres = [],
+      id = ''
+    } = anime;
     
-    card.innerHTML = `
-        <div class="anime-card-image">
-            <img src="${image}" alt="${anime.title}" loading="lazy" 
-                 onerror="this.src='https://via.placeholder.com/300x450/1e1e2e/f8fafc?text=No+Image'">
-            <div class="anime-rating-badge">
-                <i class="fas fa-star"></i> ${rating}
-            </div>
-            <button class="favorite-btn ${isFav ? 'active' : ''}" data-id="${anime.id}">
-                <i class="${isFav ? 'fas' : 'far'} fa-heart"></i>
-            </button>
-            <div class="anime-card-overlay">
-                <span class="btn btn-sm btn-neon">View Details</span>
-            </div>
-        </div>
-        <div class="anime-card-content">
-            <h3 class="anime-title" title="${anime.title}">${anime.title}</h3>
-            <div class="anime-meta">
-                <span>${anime.format || 'TV'} ${anime.episodes ? `• ${anime.episodes} eps` : ''}</span>
-                <span>${anime.year || ''}</span>
-            </div>
-            ${anime.genres?.length ? `
-                <div class="anime-genres">
-                    ${anime.genres.slice(0, 3).map(g => `<span class="genre-tag">${g}</span>`).join('')}
-                </div>
-            ` : ''}
-        </div>
-    `;
-    
-    // Favorite button handler
-    const favBtn = card.querySelector('.favorite-btn');
-    favBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const nowFav = Favorites.toggle(anime.id);
-        favBtn.classList.toggle('active', nowFav);
-        favBtn.innerHTML = `<i class="${nowFav ? 'fas' : 'far'} fa-heart"></i>`;
-        showNotification(nowFav ? 'Added to favorites!' : 'Removed from favorites', 'success');
-        updateHeroStats();
-    });
-    
-    // Card click handler
-    card.addEventListener('click', () => {
-        openModal(anime);
-    });
-    
-    return card;
-}
-
-// Create modal content
-export function createModalContent(anime) {
-    const image = anime.bannerImage || anime.coverImage || anime.image || '';
-    const genres = anime.genres || [];
+    const placeholder = 'https://via.placeholder.com/300x450/1a1033/8B5CF6?text=No+Image';
     
     return `
-        <div class="modal-banner">
-            <img src="${image}" alt="${anime.title}" onerror="this.style.display='none'">
-            <div class="modal-gradient-overlay"></div>
+      <article class="anime-card reveal" data-anime-id="${id}" role="listitem" tabindex="0">
+        <div class="card__image">
+          <img src="${coverImage || placeholder}" alt="${title}" loading="lazy" onerror="this.src='${placeholder}'">
+          ${status ? `<span class="status-badge ${status}">${status}</span>` : ''}
         </div>
-        <div class="modal-info">
-            <h2 class="modal-title">${anime.title}</h2>
-            ${anime.titleEnglish && anime.titleEnglish !== anime.title ? 
-                `<p style="color: var(--text-secondary); margin-bottom: 1rem; font-style: italic;">${anime.titleEnglish}</p>` : ''}
-            
-            <div class="modal-meta">
-                <span class="meta-badge"><i class="fas fa-star"></i> ${anime.rating || 'N/A'}</span>
-                <span class="meta-badge"><i class="fas fa-tv"></i> ${anime.format || 'TV'}</span>
-                <span class="meta-badge"><i class="fas fa-calendar"></i> ${anime.year || 'Unknown'}</span>
-                <span class="meta-badge"><i class="fas fa-film"></i> ${anime.episodes || '?'} eps</span>
-                <span class="meta-badge"><i class="fas fa-circle"></i> ${anime.status || 'Unknown'}</span>
-            </div>
-            
-            <div class="modal-description">
-                ${anime.description || 'No description available.'}
-            </div>
-            
-            ${genres.length ? `
-                <div style="margin-bottom: 2rem;">
-                    <h4 style="margin-bottom: 1rem; color: var(--text-primary);">Genres</h4>
-                    <div class="anime-genres">
-                        ${genres.map(g => `<span class="genre-tag">${g}</span>`).join('')}
-                    </div>
-                </div>
-            ` : ''}
-            
-            ${anime.trailer ? `
-                <div style="margin-top: 2rem;">
-                    <h4 style="margin-bottom: 1rem;">Trailer</h4>
-                    <iframe width="100%" height="250" src="${anime.trailer}" 
-                            frameborder="0" allowfullscreen style="border-radius: var(--radius-md);"></iframe>
-                </div>
-            ` : ''}
-            
-            <div style="margin-top: 2rem; display: flex; gap: 1rem;">
-                <a href="${anime.url || '#'}" target="_blank" class="btn btn-neon" style="text-decoration: none;">
-                    <i class="fas fa-external-link-alt"></i> View on AniLab
-                </a>
-                <button class="btn btn-glass-rgb" onclick="toggleFavoriteFromModal('${anime.id}')">
-                    <i class="${Favorites.isFav(anime.id) ? 'fas' : 'far'} fa-heart"></i> 
-                    ${Favorites.isFav(anime.id) ? 'Favorited' : 'Add to Favorites'}
-                </button>
-            </div>
+        <div class="card__content">
+          <h3 class="anime-title">${title}</h3>
+          <div class="card__meta">
+            ${rating ? `<span class="rating"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>${rating}</span>` : ''}
+            ${episodes ? `<span>${episodes} eps</span>` : ''}
+          </div>
+          <p class="description">${truncate(description)}</p>
+          ${genres.length ? `<div class="genres">${genres.slice(0, 3).map(g => `<span class="genre-tag">${g}</span>`).join('')}</div>` : ''}
         </div>
+        <div class="card__overlay">
+          <button class="view-details">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Details
+          </button>
+        </div>
+      </article>
     `;
-}
-
-// Show notification toast
-export function showNotification(message, type = 'info') {
-    const container = document.getElementById('toastContainer');
+  },
+  
+  // Render cards to grid
+  renderCards(animeList, containerId = 'anime-grid') {
+    const container = document.getElementById(containerId);
+    if (!container) return;
     
-    const toast = document.createElement('div');
-    toast.className = `toast ${type}`;
+    if (!animeList || animeList.length === 0) {
+      container.innerHTML = '';
+      return;
+    }
     
-    const icons = {
-        success: 'fa-check-circle',
-        error: 'fa-exclamation-circle',
-        info: 'fa-info-circle'
-    };
+    const html = animeList
+      .map(anime => this.createCard(anime))
+      .filter(Boolean)
+      .join('');
     
-    toast.innerHTML = `<i class="fas ${icons[type]}"></i><span>${message}</span>`;
-    container.appendChild(toast);
+    container.innerHTML = html;
     
-    setTimeout(() => {
-        toast.style.animation = 'toast-enter 0.4s ease reverse';
-        setTimeout(() => toast.remove(), 400);
-    }, 3000);
-}
-
-// Update hero statistics
-export function updateHeroStats() {
-    const favorites = Favorites.get();
-    document.getElementById('heroFavs').textContent = favorites.length;
-}
-
-// Modal functions
-export function openModal(anime) {
-    const modal = document.getElementById('animeModal');
-    const modalBody = document.getElementById('modalBody');
+    // Update count
+    const countEl = document.getElementById('anime-count');
+    if (countEl) {
+      countEl.textContent = `${animeList.length} title${animeList.length !== 1 ? 's' : ''}`;
+    }
     
-    modalBody.innerHTML = createModalContent(anime);
-    modal.classList.add('active');
+    // Initialize reveal animations
+    this.initRevealAnimations();
+  },
+  
+  // Initialize scroll reveal
+  initRevealAnimations() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    
+    document.querySelectorAll('.reveal').forEach(el => {
+      observer.observe(el);
+    });
+  },
+  
+  // Show/hide states
+  showLoading(show) {
+    const loading = document.getElementById('loading-state');
+    const grid = document.getElementById('anime-grid');
+    const empty = document.getElementById('empty-state');
+    const error = document.getElementById('error-state');
+    
+    if (show) {
+      loading?.classList.remove('hidden');
+      loading?.setAttribute('hidden', null);
+      grid?.classList.add('hidden');
+      empty?.classList.add('hidden');
+      error?.classList.add('hidden');
+    } else {
+      loading?.classList.add('hidden');
+      loading?.setAttribute('hidden', 'hidden');
+    }
+  },
+  
+  showError(message) {
+    const error = document.getElementById('error-state');
+    const msg = document.getElementById('error-message');
+    const loading = document.getElementById('loading-state');
+    const grid = document.getElementById('anime-grid');
+    
+    if (msg) msg.textContent = message;
+    error?.classList.remove('hidden');
+    error?.removeAttribute('hidden');
+    loading?.classList.add('hidden');
+    grid?.classList.add('hidden');
+  },
+  
+  showEmpty() {
+    const empty = document.getElementById('empty-state');
+    const loading = document.getElementById('loading-state');
+    const grid = document.getElementById('anime-grid');
+    
+    empty?.classList.remove('hidden');
+    empty?.removeAttribute('hidden');
+    loading?.classList.add('hidden');
+    grid?.classList.add('hidden');
+  },
+  
+  // Modal handling
+  openModal(anime) {
+    const modal = document.getElementById('anime-modal');
+    if (!modal || !anime) return;
+    
+    // Populate modal content
+    document.getElementById('modal-title').textContent = anime.title || 'Unknown';
+    document.getElementById('modal-cover').src = anime.coverImage || '';
+    document.getElementById('modal-cover').alt = anime.title || 'Anime cover';
+    document.getElementById('modal-rating').querySelector('.rating-value').textContent = anime.rating || 'N/A';
+    document.getElementById('modal-status').textContent = anime.status || '';
+    document.getElementById('modal-status').className = `badge badge--status ${anime.status || ''}`;
+    document.getElementById('modal-year').textContent = anime.year || '';
+    document.getElementById('modal-description').textContent = anime.description || '';
+    document.getElementById('modal-episodes').textContent = anime.episodes || 'N/A';
+    document.getElementById('modal-studio').textContent = anime.studio || 'Unknown';
+    
+    // Genres
+    const genresContainer = document.getElementById('modal-genres');
+    if (genresContainer && anime.genres?.length) {
+      genresContainer.innerHTML = anime.genres.map(g => 
+        `<span class="genre-tag">${g}</span>`
+      ).join('');
+    }
+    
+    // Link
+    const link = document.getElementById('modal-link');
+    if (link && anime.id) {
+      link.href = `https://anilab.to/anime/${anime.id}`;
+    }
+    
+    // Favorites check
+    const favBtn = document.getElementById('favorite-btn');
+    const favorites = JSON.parse(localStorage.getItem('anitrack_favorites') || '[]');
+    const isFavorited = favorites.includes(anime.id);
+    
+    if (favBtn) {
+      favBtn.dataset.favorited = isFavorited;
+      favBtn.querySelector('.favorite-text').textContent = 
+        isFavorited ? 'Remove from Favorites' : 'Add to Favorites';
+    }
+    
+    // Show modal
+    modal.setAttribute('open', 'open');
     document.body.style.overflow = 'hidden';
-}
-
-export function closeModal() {
-    const modal = document.getElementById('animeModal');
-    modal.classList.remove('active');
+    
+    // Focus trap
+    const closeBtn = modal.querySelector('[data-close-modal]');
+    closeBtn?.focus();
+  },
+  
+  closeModal() {
+    const modal = document.getElementById('anime-modal');
+    if (!modal) return;
+    
+    modal.removeAttribute('open');
     document.body.style.overflow = '';
-}
-
-// Create search dropdown item
-export function createSearchItem(anime, onClick) {
-    const div = document.createElement('div');
-    div.className = 'search-item';
-    div.style.cssText = 'padding: 1rem; display: flex; align-items: center; gap: 1rem; cursor: pointer; border-bottom: 1px solid var(--glass-border); transition: background 0.2s;';
-    div.innerHTML = `
-        <img src="${anime.image || anime.coverImage || ''}" style="width: 50px; height: 75px; object-fit: cover; border-radius: 8px;" onerror="this.style.display='none'">
-        <div style="flex: 1;">
-            <div style="font-weight: 600; color: var(--text-primary);">${anime.title}</div>
-            <div style="font-size: 0.85rem; color: var(--text-secondary);">${anime.format || 'TV'} • ${anime.year || 'Unknown'}</div>
-        </div>
-        <span style="color: #fbbf24; font-weight: 700;"><i class="fas fa-star"></i> ${anime.rating || 'N/A'}</span>
-    `;
+  },
+  
+  // Update favorites button state
+  updateFavoriteButton(animeId, isFavorited) {
+    const btn = document.getElementById('favorite-btn');
+    if (!btn) return;
     
-    div.addEventListener('click', () => onClick(anime));
-    div.addEventListener('mouseenter', () => div.style.background = 'rgba(255,255,255,0.05)');
-    div.addEventListener('mouseleave', () => div.style.background = 'transparent');
-    
-    return div;
-}
+    btn.dataset.favorited = isFavorited;
+    btn.querySelector('.favorite-text').textContent = 
+      isFavorited ? 'Remove from Favorites' : 'Add to Favorites';
+  }
+};
