@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniTrack Universe | Premium Anime Tracking</title>
+    <meta name="description" content="Track your anime journey with style">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="gradient-bg">
+        <div class="gradient-blur"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">あ</span>
+                <span class="logo-text">MyAnimeList</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#trending" class="nav-link">Trending</a></li>
+                <li><a href="#showcase" class="nav-link">My List</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="search-container">
+                    <input type="text" id="globalSearch" placeholder="Search anime..." class="search-input glass-input">
+                    <i class="fas fa-search search-icon"></i>
+                    <div class="search-dropdown" id="searchDropdown"></div>
+                </div>
+                
+                <button id="themeToggle" class="icon-btn glass-btn">
+                    <i class="fas fa-sun"></i>
+                </button>
+                
+                <a href="https://github.com/Shineii86" target="_blank" class="github-link glass-btn">
+                    <i class="fab fa-github"></i>
+                </a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse"></span>
+                <span>Live Synced with GitHub</span>
+            </div>
+            <h1 class="hero-title">
+                Track Your
+                <span class="gradient-text">Anime Universe</span>
+            </h1>
+            <p class="hero-subtitle">
+                Discover, track, and showcase your anime journey with a next-generation interface designed for true otakus.
+            </p>
+            <div class="hero-actions">
+                <a href="#trending" class="btn btn-primary">
+                    <i class="fas fa-compass"></i>
+                    Explore Anime
+                </a>
+                <a href="#showcase" class="btn btn-glass">
+                    <i class="fas fa-list"></i>
+                    My Collection
+                </a>
+            </div>
+            
+            <!-- Floating Cards Preview -->
+            <div class="floating-cards">
+                <div class="float-card card-1">
+                    <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-73IhOXpJZiMF.jpg" alt="AOT">
+                    <div class="float-card-info">
+                        <span class="float-title">Attack on Titan</span>
+                        <span class="float-score">⭐ 10</span>
+                    </div>
+                </div>
+                <div class="float-card card-2">
+                    <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5114-4CpuT22PVL52.png" alt="FMAB">
+                    <div class="float-card-info">
+                        <span class="float-title">FMA: Brotherhood</span>
+                        <span class="float-score">⭐ 10</span>
+                    </div>
+                </div>
+                <div class="float-card card-3">
+                    <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9253-7pdcVzQSkKxT.jpg" alt="Steins;Gate">
+                    <div class="float-card-info">
+                        <span class="float-title">Steins;Gate</span>
+                        <span class="float-score">⭐ 10</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section id="trending" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">Trending Now</h2>
+                    <p class="section-subtitle">Global top anime this season</p>
+                </div>
+                <button class="btn btn-outline" id="refreshTrending">
+                    <i class="fas fa-sync-alt"></i>
+                    Refresh
+                </button>
+            </div>
+            
+            <div class="anime-grid" id="trendingGrid">
+                <!-- Skeleton Loading -->
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Anime Showcase -->
+    <section id="showcase" class="section showcase-section">
+        <div class="container">
+            <div class="showcase-header glass-card">
+                <div class="showcase-title-area">
+                    <div class="sync-badge">
+                        <i class="fas fa-sync"></i>
+                        <span>Synced with GitHub</span>
+                    </div>
+                    <h2 class="section-title">My Anime Collection</h2>
+                    <p class="section-subtitle">100+ titles curated from my personal journey</p>
+                </div>
+                
+                <div class="showcase-controls">
+                    <div class="view-toggle">
+                        <button class="toggle-btn active" data-view="grid">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button class="toggle-btn" data-view="list">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                    
+                    <select id="sortSelect" class="glass-select">
+                        <option value="az">A-Z</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="recent">Recently Added</option>
+                    </select>
+                    
+                    <button id="syncReadme" class="btn btn-primary btn-sm">
+                        <i class="fas fa-code-branch"></i>
+                        Sync Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="stats-bar glass-card" id="statsBar">
+                <div class="stat-item">
+                    <span class="stat-value" id="totalAnime">500+</span>
+                    <span class="stat-label">Anime</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="avgRating">8.6</span>
+                    <span class="stat-label">Avg Rating</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="totalEpisodes">1,200+</span>
+                    <span class="stat-label">Episodes</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">95%</span>
+                    <span class="stat-label">Completion</span>
+                </div>
+            </div>
+
+            <div class="anime-grid" id="showcaseGrid">
+                <div class="loading-state">
+                    <div class="spinner"></div>
+                    <p>Fetching from GitHub...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anime Detail Modal -->
+    <div class="modal" id="animeModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content glass-card">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">あ</span>
+                    <h3>AniTrack Universe</h3>
+                    <p>My Personal Anime Sanctuary</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <a href="#home">Home</a>
+                        <a href="#trending">Trending</a>
+                        <a href="#showcase">My List</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <a href="https://github.com/Shineii86" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://telegram.me/Shineii86" target="_blank">
+                            <i class="fab fa-telegram"></i> Telegram
+                        </a>
+                        <a href="https://instagram.com/ikx7.a" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="mailto:ikx7a@hotmail.com">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shinei Nouzen. All Rights Reserved.</p>
+                <p class="made-with">Build with <i class="fas fa-heart"></i> by Shinei Nouzen</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="js/api.js"></script>
+    <script type="module" src="js/parser.js"></script>
+    <script type="module" src="js/ui.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
