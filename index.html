@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyAnimeList | AniTrack Universe | Anime Tracking</title>
-    <meta name="description" content="Track your anime journey with style">
+    <title>Shinei's Anime Sanctuary | Otaku Developer Portfolio</title>
+    <meta name="description" content="A curated collection of 100+ anime watched by a code-loving otaku. Built with passion, caffeine, and late-night coding sessions.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,10 @@
         <div class="nav-container">
             <a href="#" class="logo">
                 <span class="logo-icon">あ</span>
-                <span class="logo-text">AniTrack</span>
+                <div class="logo-text-wrapper">
+                    <span class="logo-text">AniTrack</span>
+                    <span class="logo-subtitle">by Shinei</span>
+                </div>
             </a>
             
             <ul class="nav-links" id="navLinks">
@@ -39,9 +42,15 @@
             </ul>
 
             <div class="nav-actions">
-                <div class="search-container">
-                    <input type="text" id="globalSearch" placeholder="Search anime..." class="search-input glass-input" autocomplete="off">
-                    <i class="fas fa-search search-icon"></i>
+                <!-- Expandable Search -->
+                <div class="search-container" id="searchContainer">
+                    <button class="search-toggle" id="searchToggle" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <input type="text" id="globalSearch" placeholder="Search anime..." class="search-input" autocomplete="off">
+                    <button class="search-close" id="searchClose" aria-label="Close search">
+                        <i class="fas fa-times"></i>
+                    </button>
                     <div class="search-dropdown" id="searchDropdown"></div>
                 </div>
                 
@@ -65,23 +74,37 @@
         <div class="hero-content">
             <div class="hero-badge">
                 <span class="pulse"></span>
-                <span>Live Synced with GitHub</span>
+                <span>＜/＞ Developer & Otaku</span>
             </div>
             <h1 class="hero-title">
-                Track Your
-                <span class="gradient-text">Anime Universe</span>
+                Coding by Day,
+                <span class="gradient-text">Anime by Night</span>
             </h1>
             <p class="hero-subtitle">
-                Discover, track, and showcase your anime journey with a next-generation interface designed for true otakus.
+                Welcome to my digital sanctuary where code meets culture. I'm Shinei, a full-stack developer who believes that debugging code and binge-watching anime require the same level of dedication. 100+ titles, countless all-nighters, and a never-ending watchlist.
             </p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-value">100+</span>
+                    <span class="hero-stat-label">Anime Completed</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">8.6</span>
+                    <span class="hero-stat-label">Avg Rating</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">∞</span>
+                    <span class="hero-stat-label">Waifu Count</span>
+                </div>
+            </div>
             <div class="hero-actions">
                 <a href="#trending" class="btn btn-primary">
-                    <i class="fas fa-compass"></i>
-                    Explore Anime
+                    <i class="fas fa-play"></i>
+                    Explore Collection
                 </a>
-                <a href="#showcase" class="btn btn-glass">
-                    <i class="fas fa-list"></i>
-                    My Collection
+                <a href="https://github.com/Shineii86" target="_blank" class="btn btn-glass">
+                    <i class="fab fa-github"></i>
+                    View Code
                 </a>
             </div>
             
@@ -112,13 +135,35 @@
         </div>
     </section>
 
+    <!-- Developer Note Section -->
+    <section class="section dev-note">
+        <div class="container">
+            <div class="glass-card dev-card">
+                <div class="dev-icon">
+                    <i class="fas fa-terminal"></i>
+                </div>
+                <div class="dev-content">
+                    <h3>console.log("Hello, Anime!");</h3>
+                    <p>This isn't just a list—it's a <strong>React-free, Vanilla JS powerhouse</strong> that parses Markdown in real-time. Built with pure HTML/CSS/JS because frameworks are great, but understanding the fundamentals is what separates shinobi from genin. The GitHub integration? That's fetching raw README.md, parsing it with Regex (yes, I battle-tested the patterns), and rendering glassmorphic cards. All client-side, zero backend costs, maximum weeb efficiency.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag"><i class="fab fa-js"></i> ES6+</span>
+                        <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="tech-tag"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="tech-tag"><i class="fas fa-database"></i> LocalStorage</span>
+                        <span class="tech-tag"><i class="fas fa-bolt"></i> AniList API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Trending Section -->
     <section id="trending" class="section">
         <div class="container">
             <div class="section-header">
                 <div class="section-title-wrapper">
                     <h2 class="section-title">Trending Now</h2>
-                    <p class="section-subtitle">Global top anime this season</p>
+                    <p class="section-subtitle">Global top anime this season • Data from AniList</p>
                 </div>
                 <button class="btn btn-outline" id="refreshTrending">
                     <i class="fas fa-sync-alt"></i>
@@ -150,10 +195,10 @@
                 <div class="showcase-title-area">
                     <div class="sync-badge" id="syncBadge">
                         <i class="fas fa-sync"></i>
-                        <span>Synced with GitHub</span>
+                        <span>Live Sync</span>
                     </div>
-                    <h2 class="section-title">My Anime Collection</h2>
-                    <p class="section-subtitle">100+ titles curated from my personal journey</p>
+                    <h2 class="section-title">The Collection</h2>
+                    <p class="section-subtitle">Every anime I've watched since 2020, parsed directly from my GitHub README</p>
                 </div>
                 
                 <div class="showcase-controls">
@@ -167,51 +212,99 @@
                     </div>
                     
                     <select id="sortSelect" class="glass-select">
+                        <option value="rating">Top Rated</option>
                         <option value="az">A-Z</option>
-                        <option value="rating">Highest Rated</option>
-                        <option value="recent">Recently Added</option>
+                        <option value="recent">Recent</option>
                     </select>
                     
                     <button id="syncReadme" class="btn btn-primary btn-sm">
                         <i class="fas fa-code-branch"></i>
-                        Sync Now
+                        Sync
                     </button>
                 </div>
             </div>
 
             <div class="stats-bar glass-card" id="statsBar">
                 <div class="stat-item">
-                    <span class="stat-value" id="totalAnime">500+</span>
-                    <span class="stat-label">Anime</span>
+                    <span class="stat-value" id="totalAnime">0</span>
+                    <span class="stat-label">Titles</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-value" id="avgRating">8.6</span>
-                    <span class="stat-label">Avg Rating</span>
+                    <span class="stat-value" id="avgRating">0.0</span>
+                    <span class="stat-label">Avg Score</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-value" id="totalEpisodes">1,200+</span>
+                    <span class="stat-value" id="totalEpisodes">0</span>
                     <span class="stat-label">Episodes</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-value" id="completionRate">95%</span>
-                    <span class="stat-label">Completion</span>
+                    <span class="stat-value" id="completionRate">87%</span>
+                    <span class="stat-label">Completed</span>
                 </div>
             </div>
 
             <div class="anime-grid" id="showcaseGrid">
                 <div class="loading-state" style="grid-column: 1/-1;">
                     <div class="spinner"></div>
-                    <p>Fetching from GitHub...</p>
-                    <small style="color: var(--text-muted); margin-top: 0.5rem; display: block;">This may take a few seconds</small>
+                    <p>Connecting to GitHub...</p>
+                    <small style="color: var(--text-muted); margin-top: 0.5rem; display: block;">Fetching README.md</small>
                 </div>
             </div>
             
             <div class="error-state" id="showcaseError" style="display: none; grid-column: 1/-1;">
-                <i class="fas fa-exclamation-triangle"></i>
-                <p>Failed to load from GitHub.</p>
+                <i class="fas fa-wifi"></i>
+                <p>Connection failed. GitHub might be rate-limiting or CORS is acting up.</p>
                 <button class="btn btn-primary btn-sm" id="retryGithub" style="margin-top: 1rem;">
                     <i class="fas fa-redo"></i> Try Again
                 </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Otaku Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title">About This Weeb</h2>
+                    <p class="about-text">
+                        Started my anime journey in 2020 (yes, pandemic otaku), and since then I've traversed over 100+ different worlds—from the trenches of Paradis Island to the labs of the Future Gadget Laboratory.
+                    </p>
+                    <p class="about-text">
+                        <strong>My Philosophy:</strong> Just like clean code requires dedication, appreciating anime requires patience. Whether it's the animation sakuga of Ufotable or the mind-bending narratives of Urobuchi, every frame is a commit in the repository of storytelling.
+                    </p>
+                    <div class="about-stats-grid">
+                        <div class="about-stat-item">
+                            <i class="fas fa-fire"></i>
+                            <span>Favorite Genre: Psychological</span>
+                        </div>
+                        <div class="about-stat-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Best Girl: Makise Kurisu</span>
+                        </div>
+                        <div class="about-stat-item">
+                            <i class="fas fa-trophy"></i>
+                            <span>Top Studio: MAPPA/Ufotable</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual glass-card">
+                    <div class="code-block">
+                        <pre><code>
+<span class="code-comment">// MyAnimeList.js</span>
+<span class="code-keyword">const</span> otaku = {
+  name: <span class="code-string">"Shinei"</span>,
+  watchTime: <span class="code-string">"∞ hours"</span>,
+  favorites: [
+    <span class="code-string">"Steins;Gate"</span>,
+    <span class="code-string">"AOT"</span>,
+    <span class="code-string">"FMAB"</span>
+  ],
+  currentlyWatching: <span class="code-string">"Too many..."</span>
+};
+                        </code></pre>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -229,8 +322,8 @@
         </div>
     </div>
 
-    <!-- Toast Notification Container -->
-    <div id="toastContainer" style="position: fixed; bottom: 2rem; right: 2rem; z-index: 3000;"></div>
+    <!-- Toast Container -->
+    <div id="toastContainer"></div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -238,13 +331,15 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <span class="logo-icon">あ</span>
-                    <h3>AniTrack Universe</h3>
-                    <p>My personal anime sanctuary</p>
+                    <div>
+                        <h3>AniTrack Universe</h3>
+                        <p class="footer-tagline">Built with <i class="fas fa-coffee"></i> and <i class="fas fa-heart"></i></p>
+                    </div>
                 </div>
                 
                 <div class="footer-links">
                     <div class="footer-column">
-                        <h4>Quick Links</h4>
+                        <h4>Navigation</h4>
                         <a href="#home">Home</a>
                         <a href="#trending">Trending</a>
                         <a href="#showcase">My List</a>
@@ -265,8 +360,13 @@
             </div>
             
             <div class="footer-bottom">
-                <p class="made-with">Build with <i class="fas fa-heart"></i> by Shinei Nouzen</p>
                 <p>&copy; 2026 Shinei Nouzen. All rights reserved.</p>
+                <p class="made-with">
+                    <span class="code-comment">// Build with</span> 
+                    <i class="fas fa-heart"></i> 
+                    <span class="code-keyword">by</span> 
+                    <span class="code-string">Shinei_Nouzen</span>
+                </p>
             </div>
         </div>
     </footer>
