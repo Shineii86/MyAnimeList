@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AniTrack Universe | Premium Anime Tracking</title>
+    <title>MyAnimeList | AniTrack Universe | Anime Tracking</title>
     <meta name="description" content="Track your anime journey with style">
     
     <!-- Fonts -->
@@ -28,10 +28,10 @@
         <div class="nav-container">
             <a href="#" class="logo">
                 <span class="logo-icon">あ</span>
-                <span class="logo-text">MyAnimeList</span>
+                <span class="logo-text">AniTrack</span>
             </a>
             
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#trending" class="nav-link">Trending</a></li>
                 <li><a href="#showcase" class="nav-link">My List</a></li>
@@ -40,20 +40,20 @@
 
             <div class="nav-actions">
                 <div class="search-container">
-                    <input type="text" id="globalSearch" placeholder="Search anime..." class="search-input glass-input">
+                    <input type="text" id="globalSearch" placeholder="Search anime..." class="search-input glass-input" autocomplete="off">
                     <i class="fas fa-search search-icon"></i>
                     <div class="search-dropdown" id="searchDropdown"></div>
                 </div>
                 
-                <button id="themeToggle" class="icon-btn glass-btn">
+                <button id="themeToggle" class="icon-btn glass-btn" aria-label="Toggle theme">
                     <i class="fas fa-sun"></i>
                 </button>
                 
-                <a href="https://github.com/Shineii86" target="_blank" class="github-link glass-btn">
+                <a href="https://github.com/Shineii86" target="_blank" class="github-link glass-btn" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
                 
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -88,21 +88,21 @@
             <!-- Floating Cards Preview -->
             <div class="floating-cards">
                 <div class="float-card card-1">
-                    <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-73IhOXpJZiMF.jpg" alt="AOT">
+                    <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-73IhOXpJZiMF.jpg" alt="AOT" loading="lazy">
                     <div class="float-card-info">
                         <span class="float-title">Attack on Titan</span>
                         <span class="float-score">⭐ 10</span>
                     </div>
                 </div>
                 <div class="float-card card-2">
-                    <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5114-4CpuT22PVL52.png" alt="FMAB">
+                    <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5114-4CpuT22PVL52.png" alt="FMAB" loading="lazy">
                     <div class="float-card-info">
                         <span class="float-title">FMA: Brotherhood</span>
                         <span class="float-score">⭐ 10</span>
                     </div>
                 </div>
                 <div class="float-card card-3">
-                    <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9253-7pdcVzQSkKxT.jpg" alt="Steins;Gate">
+                    <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9253-7pdcVzQSkKxT.jpg" alt="Steins;Gate" loading="lazy">
                     <div class="float-card-info">
                         <span class="float-title">Steins;Gate</span>
                         <span class="float-score">⭐ 10</span>
@@ -132,6 +132,13 @@
                 <div class="skeleton-card"></div>
                 <div class="skeleton-card"></div>
                 <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+            </div>
+            
+            <div class="error-state" id="trendingError" style="display: none;">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>Failed to load trending anime. <button class="text-btn" onclick="location.reload()">Retry</button></p>
             </div>
         </div>
     </section>
@@ -141,7 +148,7 @@
         <div class="container">
             <div class="showcase-header glass-card">
                 <div class="showcase-title-area">
-                    <div class="sync-badge">
+                    <div class="sync-badge" id="syncBadge">
                         <i class="fas fa-sync"></i>
                         <span>Synced with GitHub</span>
                     </div>
@@ -151,10 +158,10 @@
                 
                 <div class="showcase-controls">
                     <div class="view-toggle">
-                        <button class="toggle-btn active" data-view="grid">
+                        <button class="toggle-btn active" data-view="grid" aria-label="Grid view">
                             <i class="fas fa-th"></i>
                         </button>
-                        <button class="toggle-btn" data-view="list">
+                        <button class="toggle-btn" data-view="list" aria-label="List view">
                             <i class="fas fa-list"></i>
                         </button>
                     </div>
@@ -186,25 +193,34 @@
                     <span class="stat-label">Episodes</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-value">95%</span>
+                    <span class="stat-value" id="completionRate">95%</span>
                     <span class="stat-label">Completion</span>
                 </div>
             </div>
 
             <div class="anime-grid" id="showcaseGrid">
-                <div class="loading-state">
+                <div class="loading-state" style="grid-column: 1/-1;">
                     <div class="spinner"></div>
                     <p>Fetching from GitHub...</p>
+                    <small style="color: var(--text-muted); margin-top: 0.5rem; display: block;">This may take a few seconds</small>
                 </div>
+            </div>
+            
+            <div class="error-state" id="showcaseError" style="display: none; grid-column: 1/-1;">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>Failed to load from GitHub.</p>
+                <button class="btn btn-primary btn-sm" id="retryGithub" style="margin-top: 1rem;">
+                    <i class="fas fa-redo"></i> Try Again
+                </button>
             </div>
         </div>
     </section>
 
     <!-- Anime Detail Modal -->
-    <div class="modal" id="animeModal">
+    <div class="modal" id="animeModal" role="dialog" aria-modal="true">
         <div class="modal-overlay"></div>
         <div class="modal-content glass-card">
-            <button class="modal-close" id="modalClose">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">
                 <i class="fas fa-times"></i>
             </button>
             <div class="modal-body" id="modalBody">
@@ -213,6 +229,9 @@
         </div>
     </div>
 
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" style="position: fixed; bottom: 2rem; right: 2rem; z-index: 3000;"></div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -220,7 +239,7 @@
                 <div class="footer-brand">
                     <span class="logo-icon">あ</span>
                     <h3>AniTrack Universe</h3>
-                    <p>My Personal Anime Sanctuary</p>
+                    <p>My personal anime sanctuary</p>
                 </div>
                 
                 <div class="footer-links">
@@ -232,14 +251,11 @@
                     </div>
                     <div class="footer-column">
                         <h4>Connect</h4>
-                        <a href="https://github.com/Shineii86" target="_blank">
+                        <a href="https://github.com/Shineii86" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i> GitHub
                         </a>
-                        <a href="https://telegram.me/Shineii86" target="_blank">
+                        <a href="https://telegram.me/Shineii86" target="_blank" rel="noopener">
                             <i class="fab fa-telegram"></i> Telegram
-                        </a>
-                        <a href="https://instagram.com/ikx7.a" target="_blank">
-                            <i class="fab fa-instagram"></i> Instagram
                         </a>
                         <a href="mailto:ikx7a@hotmail.com">
                             <i class="fas fa-envelope"></i> Email
@@ -249,8 +265,8 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2026 Shinei Nouzen. All Rights Reserved.</p>
                 <p class="made-with">Build with <i class="fas fa-heart"></i> by Shinei Nouzen</p>
+                <p>&copy; 2026 Shinei Nouzen. All rights reserved.</p>
             </div>
         </div>
     </footer>
