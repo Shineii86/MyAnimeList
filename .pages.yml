@@ -1,0 +1,50 @@
+# .pages.yml
+media:
+  # Create this folder in your repo to store uploaded images (like screenshots).
+  input: assets/media
+  output: /assets/media
+
+content:
+  - name: anime_list
+    label: Anime Entries
+    path: /README.md
+    type: file
+    format: code
+    fields:
+      - name: title # The field's machine name
+        label: Anime Title # The label shown in the CMS
+        type: string # A single line of text
+        required: true
+      - name: anilist_url
+        label: AniList URL
+        type: string
+        required: true
+        pattern: # Optional: Validates that it looks like a URL
+          regex: '^(https?:\/\/)?[\w\-]+(\.[\w\-]+)+[/#?]?.*$'
+          message: 'Must be a valid URL'
+      - name: type
+        label: Type
+        type: select
+        options: # Creates a dropdown list
+          - label: "TV"
+            value: "TV"
+          - label: "Movie"
+            value: "Movie"
+          - label: "OVA"
+            value: "OVA"
+          - label: "Special"
+            value: "Special"
+        required: true
+      - name: rating
+        label: My Rating
+        type: number
+        required: true
+        options: # Optional settings for the number field
+          min: 0
+          max: 10
+          step: 0.1 # Allows ratings like 8.5
+      - name: genres
+        label: Genres
+        type: string
+        list: true # Allows adding multiple genres
+        required: false
