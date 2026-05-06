@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
@@ -17,9 +17,51 @@ export default function AddAnime({ showToast }) {
   const [anilistQuery, setAnilistQuery] = useState('');
   const [anilistResults, setAnilistResults] = useState([]);
   const [searching, setSearching] = useState(false);
+  const [urlDetected, setUrlDetected] = useState(false);
+  const [fetchingUrl, setFetchingUrl] = useState(false);
+
+  // Detect AniList URL paste and auto-fetch
+  useEffect(() => {
+    const urlMatch = form.anilistUrl.match(/anilist\.co\/anime\/(\d+)/);
+    if (urlMatch && !urlDetected) {
+      autoFetchFromUrl(urlMatch[1]);
+    }
+  }, [form.anilistUrl]);
+
+  async function autoFetchFromUrl(anilistId) {
+    setFetchingUrl(true);
+    setUrlDetected(true);
+    try {
+      const res = await fetch(`/api/anilist/search?id=${anilistId}`);
+      if (res.ok) {
+        const data = await res.json();
+        if (data.results?.[0]) {
+          const anime = data.results[0];
+          setForm({
+            title: anime.titleEnglish || anime.titleRomaji || '',
+            anilistUrl: anime.anilistUrl || `https://anilist.co/anime/${anilistId}`,
+            anilistId: String(anime.anilistId || anilistId),
+            type: anime.type || 'TV',
+            score: anime.score || '',
+            genres: (anime.genres || []).join(', '),
+            episodes: anime.episodes ? String(anime.episodes) : ''
+          });
+          showToast?.(`Auto-fetched: ${anime.titleEnglish || anime.titleRomaji}`, 'success');
+        }
+      }
+    } catch {
+      showToast?.('Failed to fetch from AniList', 'error');
+    } finally {
+      setFetchingUrl(false);
+    }
+  }
 
   function handleChange(e) {
-    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    setForm(prev => ({ ...prev, [name]: value }));
+    if (name === 'anilistUrl') {
+      setUrlDetected(false);
+    }
   }
 
   async function searchAniList() {
@@ -42,9 +84,9 @@ export default function AddAnime({ showToast }) {
 
   function importFromAniList(anime) {
     setForm({
-      title: anime.title || anime.titleEnglish || anime.titleRomaji,
-      anilistUrl: anime.anilistUrl,
-      anilistId: String(anime.anilistId),
+      title: anime.titleEnglish || anime.titleRomaji || '',
+      anilistUrl: anime.anilistUrl || '',
+      anilistId: String(anime.anilistId || ''),
       type: anime.type || 'TV',
       score: anime.score || '',
       genres: (anime.genres || []).join(', '),
@@ -52,7 +94,7 @@ export default function AddAnime({ showToast }) {
     });
     setAnilistResults([]);
     setAnilistQuery('');
-    showToast?.(`Imported: ${anime.title}`, 'success');
+    showToast?.(`Imported: ${anime.titleEnglish || anime.titleRomaji}`, 'success');
   }
 
   async function handleSubmit(e) {
@@ -79,6 +121,23 @@ export default function AddAnime({ showToast }) {
       });
 
       if (res.ok) {
+        // Auto-push if enabled
+        try {
+          const settings = JSON.parse(localStorage.getItem('mal_admin_settings') || '{}');
+          if (settings.autoPush && settings.githubToken) {
+            fetch('/api/push', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                action: 'push',
+                github_token: settings.githubToken,
+                owner: settings.owner || 'Shineii86',
+                repo: settings.repo || 'MyAnimeList'
+              })
+            }).catch(() => {});
+          }
+        } catch {}
+
         showToast?.(`Added: ${form.title}`, 'success');
         router.push('/anime');
       } else {
@@ -139,8 +198,21 @@ export default function AddAnime({ showToast }) {
       <div className="card">
         <div className="card-header">
           <h2 className="card-title">✏️ Manual Entry</h2>
+          {fetchingUrl && <span style={{ color: 'var(--accent-light)', fontSize: 13 }}><div className="spinner" style={{ display: 'inline-block', width: 14, height: 14, marginRight: 6 }} />Fetching from AniList...</span>}
         </div>
         <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label className="form-label">AniList URL <span style={{ color: 'var(--text-muted)', fontWeight: 400 }}>(paste to auto-fill)</span></label>
+            <input 
+              className="form-input" 
+              name="anilistUrl" 
+              value={form.anilistUrl} 
+              onChange={handleChange} 
+              placeholder="https://anilist.co/anime/16498 — paste a URL and all fields auto-fill!" 
+              style={urlDetected ? { borderColor: 'var(--success)', boxShadow: '0 0 0 3px rgba(16, 185, 129, 0.2)' } : {}}
+            />
+          </div>
+
           <div className="form-group">
             <label className="form-label">Title *</label>
             <input className="form-input" name="title" value={form.title} onChange={handleChange} placeholder="e.g., Attack on Titan" required />
@@ -148,16 +220,9 @@ export default function AddAnime({ showToast }) {
 
           <div className="form-row">
             <div className="form-group">
-              <label className="form-label">AniList URL</label>
-              <input className="form-input" name="anilistUrl" value={form.anilistUrl} onChange={handleChange} placeholder="https://anilist.co/anime/..." />
-            </div>
-            <div className="form-group">
               <label className="form-label">AniList ID</label>
               <input className="form-input" name="anilistId" value={form.anilistId} onChange={handleChange} placeholder="e.g., 16498" />
             </div>
-          </div>
-
-          <div className="form-row">
             <div className="form-group">
               <label className="form-label">Type</label>
               <select className="form-input" name="type" value={form.type} onChange={handleChange}>
@@ -168,25 +233,26 @@ export default function AddAnime({ showToast }) {
                 <option value="Special">Special</option>
               </select>
             </div>
-            <div className="form-group">
-              <label className="form-label">Score (0-10)</label>
-              <input className="form-input" name="score" type="number" min="0" max="10" step="0.1" value={form.score} onChange={handleChange} placeholder="e.g., 8.5" />
-            </div>
           </div>
 
           <div className="form-row">
             <div className="form-group">
+              <label className="form-label">Score (0-10)</label>
+              <input className="form-input" name="score" type="number" min="0" max="10" step="0.1" value={form.score} onChange={handleChange} placeholder="e.g., 8.5" />
+            </div>
+            <div className="form-group">
               <label className="form-label">Episodes</label>
               <input className="form-input" name="episodes" type="number" min="0" value={form.episodes} onChange={handleChange} placeholder="e.g., 24" />
             </div>
-            <div className="form-group">
-              <label className="form-label">Genres (comma separated)</label>
-              <input className="form-input" name="genres" value={form.genres} onChange={handleChange} placeholder="e.g., Action, Drama, Fantasy" />
-            </div>
+          </div>
+
+          <div className="form-group">
+            <label className="form-label">Genres (comma separated)</label>
+            <input className="form-input" name="genres" value={form.genres} onChange={handleChange} placeholder="e.g., Action, Drama, Fantasy" />
           </div>
 
           <div className="form-actions">
-            <button type="submit" className="btn btn-primary" disabled={loading}>
+            <button type="submit" className="btn btn-primary" disabled={loading || fetchingUrl}>
               {loading ? <><div className="spinner" /> Adding...</> : '➕ Add Anime'}
             </button>
             <button type="button" className="btn btn-outline" onClick={() => router.push('/anime')}>Cancel</button>

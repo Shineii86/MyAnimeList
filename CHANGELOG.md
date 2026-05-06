@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-06] - Admin Panel v1.1.0 — Smart Features
+
+### Added
+- **Auto-Push Toggle** — Enable in Settings to auto-commit & push every add/edit/delete to GitHub
+- **AniList URL Auto-Fetch** — Paste any `anilist.co/anime/XXXX` URL and all fields auto-fill instantly
+- **Visual Analytics** — Score distribution bar chart, genre breakdown, type donut chart, letter distribution, highest rated leaderboard
+- **Bulk Import** — Paste multiple AniList URLs or search-and-add in batch; select all/deselect all; one-click import queue
+- **Backup & Restore** — Export entire collection as JSON; import from backup file with validation
+- **Settings Page** — Configure auto-push (GitHub token, owner, repo), display defaults, and manage backups
+- **Sidebar Enhancements** — New nav items for Bulk Import, Analytics, Settings; live auto-push status indicator
+
+### Changed
+- Add Anime page now auto-fetches all details when an AniList URL is pasted
+- Delete and Edit operations trigger auto-push when enabled in settings
+- Sidebar reorganized with Main and Tools sections
+
+### Technical
+- Client-side localStorage for settings persistence
+- Auto-push fires-and-forgets after mutations (non-blocking)
+- Import API endpoint for bulk data replacement
+- SVG-based charts (zero external dependencies)
+
 ## [2026-05-06] - Admin Panel v1.0.0
 
 ### Added

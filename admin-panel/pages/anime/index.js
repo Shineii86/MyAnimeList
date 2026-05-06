@@ -58,6 +58,17 @@ export default function AnimeList({ showToast }) {
       if (res.ok) {
         setAnime(prev => prev.filter(a => a.id !== id));
         showToast?.('Anime deleted successfully', 'success');
+        // Auto-push if enabled
+        try {
+          const settings = JSON.parse(localStorage.getItem('mal_admin_settings') || '{}');
+          if (settings.autoPush && settings.githubToken) {
+            fetch('/api/push', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ action: 'push', github_token: settings.githubToken, owner: settings.owner || 'Shineii86', repo: settings.repo || 'MyAnimeList' })
+            }).catch(() => {});
+          }
+        } catch {}
       } else {
         showToast?.('Failed to delete', 'error');
       }
