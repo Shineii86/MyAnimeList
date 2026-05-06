@@ -36,73 +36,22 @@
   ],
   "anime": [
     {
-      "id": 20954,
-      "title": "A Silent Voice",
-      "anilistUrl": "https://anilist.co/anime/20954",
-      "anilistId": 20954,
-      "type": "Movie",
-      "score": 9.5,
-      "genres": [
-        "Drama"
-      ],
-      "letter": "A",
-      "addedAt": "2026-05-06T15:26:54.150Z"
-    },
-    {
-      "id": 16498,
-      "title": "Attack on Titan",
-      "anilistUrl": "https://anilist.co/anime/16498",
-      "anilistId": 16498,
+      "id": 6213,
+      "title": "A Certain Scientific Railgun",
+      "anilistUrl": "https://anilist.co/anime/6213",
+      "anilistId": 6213,
       "type": "TV",
-      "score": 10,
+      "score": 8.2,
       "genres": [
-        "Action",
-        "Drama"
-      ],
-      "letter": "A",
-      "addedAt": "2026-05-06T15:26:54.150Z"
-    },
-    {
-      "id": 11111,
-      "title": "Another",
-      "anilistUrl": "https://anilist.co/anime/11111",
-      "anilistId": 11111,
-      "type": "TV",
-      "score": 7.5,
-      "genres": [
-        "Horror",
-        "Mystery"
-      ],
-      "letter": "A",
-      "addedAt": "2026-05-06T15:26:54.150Z"
-    },
-    {
-      "id": 20755,
-      "title": "Assassination Classroom",
-      "anilistUrl": "https://anilist.co/anime/20755",
-      "anilistId": 20755,
-      "type": "TV",
-      "score": 8.5,
-      "genres": [
-        "Comedy",
+        "Sci-Fi",
         "Action"
       ],
       "letter": "A",
-      "addedAt": "2026-05-06T15:26:54.150Z"
-    },
-    {
-      "id": 10165,
-      "title": "Anohana: The Flower We Saw That Day",
-      "anilistUrl": "https://anilist.co/anime/10165",
-      "anilistId": 10165,
-      "type": "TV",
-      "score": 8.5,
-      "genres": [
-        "Drama",
-        "Supernatural"
-      ],
-      "letter": "A",
-      "addedAt": "2026-05-06T15:26:54.150Z"
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z"
     },
     {
       "id": 100876,
@@ -116,7 +65,46 @@
         "Comedy"
       ],
       "letter": "A",
-      "addedAt": "2026-05-06T15:26:54.150Z"
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z"
+    },
+    {
+      "id": 20954,
+      "title": "A Silent Voice",
+      "anilistUrl": "https://anilist.co/anime/20954",
+      "anilistId": 20954,
+      "type": "Movie",
+      "score": 9.5,
+      "genres": [
+        "Drama"
+      ],
+      "letter": "A",
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z"
+    },
+    {
+      "id": 20787,
+      "title": "Akame ga Kill!",
+      "anilistUrl": "https://anilist.co/anime/20613",
+      "anilistId": 20613,
+      "type": "TV",
+      "score": 7.5,
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "letter": "A",
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z"
     },
     {
       "id": 47,
@@ -130,49 +118,11 @@
         "Action"
       ],
       "letter": "A",
-      "addedAt": "2026-05-06T15:26:54.150Z"
-    },
-    {
-      "id": 6547,
-      "title": "Angel Beats!",
-      "anilistUrl": "https://anilist.co/anime/6547",
-      "anilistId": 6547,
-      "type": "TV",
-      "score": 8,
-      "genres": [
-        "Drama",
-        "Action"
-      ],
-      "letter": "A",
-      "addedAt": "2026-05-06T15:26:54.150Z"
-    },
-    {
-      "id": 20787,
-      "title": "Akame ga Kill!",
-      "anilistUrl": "https://anilist.co/anime/20787",
-      "anilistId": 20787,
-      "type": "TV",
-      "score": 7.5,
-      "genres": [
-        "Action",
-        "Fantasy"
-      ],
-      "letter": "A",
-      "addedAt": "2026-05-06T15:26:54.150Z"
-    },
-    {
-      "id": 6213,
-      "title": "A Certain Scientific Railgun",
-      "anilistUrl": "https://anilist.co/anime/6213",
-      "anilistId": 6213,
-      "type": "TV",
-      "score": 8.2,
-      "genres": [
-        "Sci-Fi",
-        "Action"
-      ],
-      "letter": "A",
-      "addedAt": "2026-05-06T15:26:54.150Z"
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z"
     },
     {
       "id": 21410,
@@ -186,7 +136,101 @@
         "Adventure"
       ],
       "letter": "A",
-      "addedAt": "2026-05-06T15:26:54.150Z"
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z"
+    },
+    {
+      "id": 6547,
+      "title": "Angel Beats!",
+      "anilistUrl": "https://anilist.co/anime/6547",
+      "anilistId": 6547,
+      "type": "TV",
+      "score": 8,
+      "genres": [
+        "Drama",
+        "Action"
+      ],
+      "letter": "A",
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z"
+    },
+    {
+      "id": 10165,
+      "title": "Anohana: The Flower We Saw That Day",
+      "anilistUrl": "https://anilist.co/anime/9989",
+      "anilistId": 9989,
+      "type": "TV",
+      "score": 8.5,
+      "genres": [
+        "Drama",
+        "Supernatural"
+      ],
+      "letter": "A",
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z"
+    },
+    {
+      "id": 11111,
+      "title": "Another",
+      "anilistUrl": "https://anilist.co/anime/11111",
+      "anilistId": 11111,
+      "type": "TV",
+      "score": 7.5,
+      "genres": [
+        "Horror",
+        "Mystery"
+      ],
+      "letter": "A",
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z"
+    },
+    {
+      "id": 20755,
+      "title": "Assassination Classroom",
+      "anilistUrl": "https://anilist.co/anime/20755",
+      "anilistId": 20755,
+      "type": "TV",
+      "score": 8.5,
+      "genres": [
+        "Comedy",
+        "Action"
+      ],
+      "letter": "A",
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z"
+    },
+    {
+      "id": 16498,
+      "title": "Attack on Titan",
+      "anilistUrl": "https://anilist.co/anime/16498",
+      "anilistId": 16498,
+      "type": "TV",
+      "score": 10,
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "letter": "A",
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z"
     },
     {
       "id": 5081,
@@ -200,83 +244,17 @@
         "Supernatural"
       ],
       "letter": "B",
-      "addedAt": "2026-05-06T15:26:54.150Z"
-    },
-    {
-      "id": 33,
-      "title": "Berserk",
-      "anilistUrl": "https://anilist.co/anime/33",
-      "anilistId": 33,
-      "type": "TV",
-      "score": 8,
-      "genres": [
-        "Adventure",
-        "Horror"
-      ],
-      "letter": "B",
-      "addedAt": "2026-05-06T15:26:54.150Z"
-    },
-    {
-      "id": 269,
-      "title": "Bleach",
-      "anilistUrl": "https://anilist.co/anime/269",
-      "anilistId": 269,
-      "type": "TV",
-      "score": 7.8,
-      "genres": [
-        "Action",
-        "Supernatural"
-      ],
-      "letter": "B",
-      "addedAt": "2026-05-06T15:26:54.150Z"
-    },
-    {
-      "id": 139893,
-      "title": "Blue Lock",
-      "anilistUrl": "https://anilist.co/anime/139893",
-      "anilistId": 139893,
-      "type": "TV",
-      "score": 8.2,
-      "genres": [
-        "Sports",
-        "Psychological"
-      ],
-      "letter": "B",
-      "addedAt": "2026-05-06T15:26:54.150Z"
-    },
-    {
-      "id": 97940,
-      "title": "Black Clover",
-      "anilistUrl": "https://anilist.co/anime/97940",
-      "anilistId": 97940,
-      "type": "TV",
-      "score": 7.5,
-      "genres": [
-        "Action",
-        "Fantasy"
-      ],
-      "letter": "B",
-      "addedAt": "2026-05-06T15:26:54.150Z"
-    },
-    {
-      "id": 144802,
-      "title": "Bocchi the Rock!",
-      "anilistUrl": "https://anilist.co/anime/144802",
-      "anilistId": 144802,
-      "type": "TV",
-      "score": 8.5,
-      "genres": [
-        "Music",
-        "Comedy"
-      ],
-      "letter": "B",
-      "addedAt": "2026-05-06T15:26:54.150Z"
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z"
     },
     {
       "id": 21473,
       "title": "Banana Fish",
-      "anilistUrl": "https://anilist.co/anime/21473",
-      "anilistId": 21473,
+      "anilistUrl": "https://anilist.co/anime/100388",
+      "anilistId": 100388,
       "type": "TV",
       "score": 8.7,
       "genres": [
@@ -284,7 +262,11 @@
         "Drama"
       ],
       "letter": "B",
-      "addedAt": "2026-05-06T15:26:54.150Z"
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z"
     },
     {
       "id": 103897,
@@ -298,7 +280,65 @@
         "Psychological"
       ],
       "letter": "B",
-      "addedAt": "2026-05-06T15:26:54.150Z"
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z"
+    },
+    {
+      "id": 33,
+      "title": "Berserk",
+      "anilistUrl": "https://anilist.co/anime/33",
+      "anilistId": 33,
+      "type": "TV",
+      "score": 8,
+      "genres": [
+        "Adventure",
+        "Horror"
+      ],
+      "letter": "B",
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z"
+    },
+    {
+      "id": 97940,
+      "title": "Black Clover",
+      "anilistUrl": "https://anilist.co/anime/97940",
+      "anilistId": 97940,
+      "type": "TV",
+      "score": 7.5,
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "letter": "B",
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z"
+    },
+    {
+      "id": 269,
+      "title": "Bleach",
+      "anilistUrl": "https://anilist.co/anime/269",
+      "anilistId": 269,
+      "type": "TV",
+      "score": 7.8,
+      "genres": [
+        "Action",
+        "Supernatural"
+      ],
+      "letter": "B",
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z"
     },
     {
       "id": 99147,
@@ -312,7 +352,47 @@
         "Supernatural"
       ],
       "letter": "B",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 139893,
+      "title": "Blue Lock",
+      "anilistUrl": "https://anilist.co/anime/139893",
+      "anilistId": 139893,
+      "type": "TV",
+      "score": 8.2,
+      "genres": [
+        "Sports",
+        "Psychological"
+      ],
+      "letter": "B",
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z"
+    },
+    {
+      "id": 144802,
+      "title": "Bocchi the Rock!",
+      "anilistUrl": "https://anilist.co/anime/144802",
+      "anilistId": 144802,
+      "type": "TV",
+      "score": 8.5,
+      "genres": [
+        "Music",
+        "Comedy"
+      ],
+      "letter": "B",
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z"
     },
     {
       "id": 13599,
@@ -326,133 +406,11 @@
         "Psychological"
       ],
       "letter": "B",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 1575,
-      "title": "Code Geass",
-      "anilistUrl": "https://anilist.co/anime/1575",
-      "anilistId": 1575,
-      "type": "TV",
-      "score": 9,
-      "genres": [
-        "Mecha",
-        "Psychological"
-      ],
-      "letter": "C",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 4181,
-      "title": "Clannad: After Story",
-      "anilistUrl": "https://anilist.co/anime/4181",
-      "anilistId": 4181,
-      "type": "TV",
-      "score": 9.1,
-      "genres": [
-        "Drama",
-        "Romance"
-      ],
-      "letter": "C",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 133445,
-      "title": "Chainsaw Man",
-      "anilistUrl": "https://anilist.co/anime/133445",
-      "anilistId": 133445,
-      "type": "TV",
-      "score": 8.6,
-      "genres": [
-        "Action",
-        "Horror"
-      ],
-      "letter": "C",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 1,
-      "title": "Cowboy Bebop",
-      "anilistUrl": "https://anilist.co/anime/1",
-      "anilistId": 1,
-      "type": "TV",
-      "score": 8.7,
-      "genres": [
-        "Action",
-        "Sci-Fi"
-      ],
-      "letter": "C",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 140933,
-      "title": "Cyberpunk: Edgerunners",
-      "anilistUrl": "https://anilist.co/anime/140933",
-      "anilistId": 140933,
-      "type": "TV",
-      "score": 8.7,
-      "genres": [
-        "Sci-Fi",
-        "Action"
-      ],
-      "letter": "C",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 98659,
-      "title": "Classroom of the Elite",
-      "anilistUrl": "https://anilist.co/anime/98659",
-      "anilistId": 98659,
-      "type": "TV",
-      "score": 8,
-      "genres": [
-        "Psychological",
-        "Drama"
-      ],
-      "letter": "C",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 20787,
-      "title": "Charlotte",
-      "anilistUrl": "https://anilist.co/anime/20787",
-      "anilistId": 20787,
-      "type": "TV",
-      "score": 7.5,
-      "genres": [
-        "Sci-Fi",
-        "Drama"
-      ],
-      "letter": "C",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 105333,
-      "title": "Cautious Hero",
-      "anilistUrl": "https://anilist.co/anime/105333",
-      "anilistId": 105333,
-      "type": "TV",
-      "score": 7.8,
-      "genres": [
-        "Comedy",
-        "Fantasy"
-      ],
-      "letter": "C",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 100243,
-      "title": "Cells at Work!",
-      "anilistUrl": "https://anilist.co/anime/100243",
-      "anilistId": 100243,
-      "type": "TV",
-      "score": 7.6,
-      "genres": [
-        "Sci-Fi",
-        "Comedy"
-      ],
-      "letter": "C",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 104578,
@@ -466,7 +424,119 @@
         "Sci-Fi"
       ],
       "letter": "C",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 105333,
+      "title": "Cautious Hero",
+      "anilistUrl": "https://anilist.co/anime/105156",
+      "anilistId": 105156,
+      "type": "TV",
+      "score": 7.8,
+      "genres": [
+        "Comedy",
+        "Fantasy"
+      ],
+      "letter": "C",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 100243,
+      "title": "Cells at Work!",
+      "anilistUrl": "https://anilist.co/anime/100977",
+      "anilistId": 100977,
+      "type": "TV",
+      "score": 7.6,
+      "genres": [
+        "Sci-Fi",
+        "Comedy"
+      ],
+      "letter": "C",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 133445,
+      "title": "Chainsaw Man",
+      "anilistUrl": "https://anilist.co/anime/133445",
+      "anilistId": 133445,
+      "type": "TV",
+      "score": 8.6,
+      "genres": [
+        "Action",
+        "Horror"
+      ],
+      "letter": "C",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 20787,
+      "title": "Charlotte",
+      "anilistUrl": "https://anilist.co/anime/20997",
+      "anilistId": 20997,
+      "type": "TV",
+      "score": 7.5,
+      "genres": [
+        "Sci-Fi",
+        "Drama"
+      ],
+      "letter": "C",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 4181,
+      "title": "Clannad: After Story",
+      "anilistUrl": "https://anilist.co/anime/4181",
+      "anilistId": 4181,
+      "type": "TV",
+      "score": 9.1,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "letter": "C",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 98659,
+      "title": "Classroom of the Elite",
+      "anilistUrl": "https://anilist.co/anime/98659",
+      "anilistId": 98659,
+      "type": "TV",
+      "score": 8,
+      "genres": [
+        "Psychological",
+        "Drama"
+      ],
+      "letter": "C",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 178869,
@@ -480,105 +550,65 @@
         "Fantasy"
       ],
       "letter": "C",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 1535,
-      "title": "Death Note",
-      "anilistUrl": "https://anilist.co/anime/1535",
-      "anilistId": 1535,
+      "id": 1575,
+      "title": "Code Geass",
+      "anilistUrl": "https://anilist.co/anime/1575",
+      "anilistId": 1575,
       "type": "TV",
-      "score": 8.6,
-      "genres": [
-        "Psychological",
-        "Thriller"
-      ],
-      "letter": "D",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 101922,
-      "title": "Demon Slayer",
-      "anilistUrl": "https://anilist.co/anime/101922",
-      "anilistId": 101922,
-      "type": "TV",
-      "score": 8.5,
-      "genres": [
-        "Action",
-        "Fantasy"
-      ],
-      "letter": "D",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 105333,
-      "title": "Dr. Stone",
-      "anilistUrl": "https://anilist.co/anime/105333",
-      "anilistId": 105333,
-      "type": "TV",
-      "score": 8.2,
-      "genres": [
-        "Adventure",
-        "Sci-Fi"
-      ],
-      "letter": "D",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 20832,
-      "title": "Death Parade",
-      "anilistUrl": "https://anilist.co/anime/20832",
-      "anilistId": 20832,
-      "type": "TV",
-      "score": 8.2,
-      "genres": [
-        "Psychological",
-        "Drama"
-      ],
-      "letter": "D",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 99423,
-      "title": "Darling in the Franxx",
-      "anilistUrl": "https://anilist.co/anime/99423",
-      "anilistId": 99423,
-      "type": "TV",
-      "score": 7.5,
+      "score": 9,
       "genres": [
         "Mecha",
-        "Romance"
+        "Psychological"
       ],
-      "letter": "D",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "C",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 103786,
-      "title": "Dorohedoro",
-      "anilistUrl": "https://anilist.co/anime/103786",
-      "anilistId": 103786,
+      "id": 1,
+      "title": "Cowboy Bebop",
+      "anilistUrl": "https://anilist.co/anime/1",
+      "anilistId": 1,
       "type": "TV",
-      "score": 8.2,
+      "score": 8.7,
       "genres": [
         "Action",
-        "Fantasy"
+        "Sci-Fi"
       ],
-      "letter": "D",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "C",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 20996,
-      "title": "Devilman Crybaby",
-      "anilistUrl": "https://anilist.co/anime/20996",
-      "anilistId": 20996,
+      "id": 140933,
+      "title": "Cyberpunk: Edgerunners",
+      "anilistUrl": "https://anilist.co/anime/140933",
+      "anilistId": 140933,
       "type": "TV",
-      "score": 7.8,
+      "score": 8.7,
       "genres": [
-        "Action",
-        "Horror"
+        "Sci-Fi",
+        "Action"
       ],
-      "letter": "D",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "C",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 11843,
@@ -592,7 +622,11 @@
         "Slice of Life"
       ],
       "letter": "D",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 2025,
@@ -606,21 +640,29 @@
         "Sci-Fi"
       ],
       "letter": "D",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 21877,
-      "title": "Drifters",
-      "anilistUrl": "https://anilist.co/anime/21877",
-      "anilistId": 21877,
+      "id": 99423,
+      "title": "Darling in the Franxx",
+      "anilistUrl": "https://anilist.co/anime/99423",
+      "anilistId": 99423,
       "type": "TV",
-      "score": 7.8,
+      "score": 7.5,
       "genres": [
-        "Action",
-        "Fantasy"
+        "Mecha",
+        "Romance"
       ],
       "letter": "D",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 178886,
@@ -634,147 +676,137 @@
         "Romance"
       ],
       "letter": "D",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 21273,
-      "title": "Erased",
-      "anilistUrl": "https://anilist.co/anime/21273",
-      "anilistId": 21273,
+      "id": 1535,
+      "title": "Death Note",
+      "anilistUrl": "https://anilist.co/anime/1535",
+      "anilistId": 1535,
       "type": "TV",
-      "score": 8.3,
+      "score": 8.6,
       "genres": [
-        "Mystery",
-        "Psychological"
+        "Psychological",
+        "Thriller"
       ],
-      "letter": "E",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "D",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 226,
-      "title": "Elfen Lied",
-      "anilistUrl": "https://anilist.co/anime/226",
-      "anilistId": 226,
+      "id": 20832,
+      "title": "Death Parade",
+      "anilistUrl": "https://anilist.co/anime/20931",
+      "anilistId": 20931,
       "type": "TV",
-      "score": 7.5,
+      "score": 8.2,
       "genres": [
-        "Drama",
-        "Horror"
+        "Psychological",
+        "Drama"
       ],
-      "letter": "E",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "D",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 131586,
-      "title": "Eighty-Six",
-      "anilistUrl": "https://anilist.co/anime/131586",
-      "anilistId": 131586,
+      "id": 101922,
+      "title": "Demon Slayer",
+      "anilistUrl": "https://anilist.co/anime/21612",
+      "anilistId": 21612,
       "type": "TV",
       "score": 8.5,
       "genres": [
-        "Mecha",
-        "Drama"
+        "Action",
+        "Fantasy"
       ],
-      "letter": "E",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "D",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 237,
-      "title": "Eureka Seven",
-      "anilistUrl": "https://anilist.co/anime/237",
-      "anilistId": 237,
-      "type": "TV",
-      "score": 8,
-      "genres": [
-        "Mecha",
-        "Adventure"
-      ],
-      "letter": "E",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 134,
-      "title": "Excel Saga",
-      "anilistUrl": "https://anilist.co/anime/134",
-      "anilistId": 134,
-      "type": "TV",
-      "score": 6.9,
-      "genres": [
-        "Comedy",
-        "Parody"
-      ],
-      "letter": "E",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 32,
-      "title": "End of Evangelion",
-      "anilistUrl": "https://anilist.co/anime/32",
-      "anilistId": 32,
-      "type": "Movie",
-      "score": 8.8,
-      "genres": [
-        "Mecha",
-        "Psychological"
-      ],
-      "letter": "E",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 5630,
-      "title": "Eden of the East",
-      "anilistUrl": "https://anilist.co/anime/5630",
-      "anilistId": 5630,
-      "type": "TV",
-      "score": 7.7,
-      "genres": [
-        "Mystery",
-        "Thriller"
-      ],
-      "letter": "E",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 2922,
-      "title": "Ef: A Tale of Memories",
-      "anilistUrl": "https://anilist.co/anime/2922",
-      "anilistId": 2922,
+      "id": 20996,
+      "title": "Devilman Crybaby",
+      "anilistUrl": "https://anilist.co/anime/20996",
+      "anilistId": 20996,
       "type": "TV",
       "score": 7.8,
       "genres": [
-        "Romance",
-        "Drama"
+        "Action",
+        "Horror"
       ],
-      "letter": "E",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "D",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 457,
-      "title": "Emma: A Victorian Romance",
-      "anilistUrl": "https://anilist.co/anime/457",
-      "anilistId": 457,
+      "id": 103786,
+      "title": "Dorohedoro",
+      "anilistUrl": "https://anilist.co/anime/103786",
+      "anilistId": 103786,
+      "type": "TV",
+      "score": 8.2,
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "letter": "D",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 105333,
+      "title": "Dr. Stone",
+      "anilistUrl": "https://anilist.co/anime/105333",
+      "anilistId": 105333,
+      "type": "TV",
+      "score": 8.2,
+      "genres": [
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "letter": "D",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 21877,
+      "title": "Drifters",
+      "anilistUrl": "https://anilist.co/anime/21877",
+      "anilistId": 21877,
       "type": "TV",
       "score": 7.8,
       "genres": [
-        "Romance",
-        "Historical"
+        "Action",
+        "Fantasy"
       ],
-      "letter": "E",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 21856,
-      "title": "Eromanga Sensei",
-      "anilistUrl": "https://anilist.co/anime/21856",
-      "anilistId": 21856,
-      "type": "TV",
-      "score": 6.5,
-      "genres": [
-        "Romance",
-        "Comedy"
-      ],
-      "letter": "E",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "D",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 191205,
@@ -788,119 +820,191 @@
         "Fantasy"
       ],
       "letter": "E",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 5114,
-      "title": "Fullmetal Alchemist: Brotherhood",
-      "anilistUrl": "https://anilist.co/anime/5114",
-      "anilistId": 5114,
-      "type": "TV",
-      "score": 10,
-      "genres": [
-        "Action",
-        "Adventure"
-      ],
-      "letter": "F",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 10087,
-      "title": "Fate/Zero",
-      "anilistUrl": "https://anilist.co/anime/10087",
-      "anilistId": 10087,
-      "type": "TV",
-      "score": 8.9,
-      "genres": [
-        "Action",
-        "Fantasy"
-      ],
-      "letter": "F",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 104581,
-      "title": "Fire Force",
-      "anilistUrl": "https://anilist.co/anime/104581",
-      "anilistId": 104581,
+      "id": 5630,
+      "title": "Eden of the East",
+      "anilistUrl": "https://anilist.co/anime/5630",
+      "anilistId": 5630,
       "type": "TV",
       "score": 7.7,
       "genres": [
-        "Action",
-        "Supernatural"
+        "Mystery",
+        "Thriller"
       ],
-      "letter": "F",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "E",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 7525,
-      "title": "Fruits Basket",
-      "anilistUrl": "https://anilist.co/anime/7525",
-      "anilistId": 7525,
+      "id": 2922,
+      "title": "Ef: A Tale of Memories",
+      "anilistUrl": "https://anilist.co/anime/2922",
+      "anilistId": 2922,
+      "type": "TV",
+      "score": 7.8,
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "letter": "E",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 131586,
+      "title": "Eighty-Six",
+      "anilistUrl": "https://anilist.co/anime/131586",
+      "anilistId": 131586,
       "type": "TV",
       "score": 8.5,
       "genres": [
+        "Mecha",
+        "Drama"
+      ],
+      "letter": "E",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 226,
+      "title": "Elfen Lied",
+      "anilistUrl": "https://anilist.co/anime/226",
+      "anilistId": 226,
+      "type": "TV",
+      "score": 7.5,
+      "genres": [
+        "Drama",
+        "Horror"
+      ],
+      "letter": "E",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 457,
+      "title": "Emma: A Victorian Romance",
+      "anilistUrl": "https://anilist.co/anime/345",
+      "anilistId": 345,
+      "type": "TV",
+      "score": 7.8,
+      "genres": [
         "Romance",
-        "Supernatural"
+        "Historical"
       ],
-      "letter": "F",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "E",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 22297,
-      "title": "Fate/stay night: Unlimited Blade Works",
-      "anilistUrl": "https://anilist.co/anime/22297",
-      "anilistId": 22297,
-      "type": "TV",
-      "score": 8.2,
+      "id": 32,
+      "title": "End of Evangelion",
+      "anilistUrl": "https://anilist.co/anime/32",
+      "anilistId": 32,
+      "type": "Movie",
+      "score": 8.8,
       "genres": [
-        "Action",
-        "Fantasy"
+        "Mecha",
+        "Psychological"
       ],
-      "letter": "F",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "E",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 21087,
-      "title": "Food Wars!",
-      "anilistUrl": "https://anilist.co/anime/21087",
-      "anilistId": 21087,
-      "type": "TV",
-      "score": 8,
-      "genres": [
-        "Comedy",
-        "Ecchi"
-      ],
-      "letter": "F",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 13125,
-      "title": "From the New World",
-      "anilistUrl": "https://anilist.co/anime/13125",
-      "anilistId": 13125,
+      "id": 21273,
+      "title": "Erased",
+      "anilistUrl": "https://anilist.co/anime/21234",
+      "anilistId": 21234,
       "type": "TV",
       "score": 8.3,
       "genres": [
-        "Sci-Fi",
-        "Horror"
+        "Mystery",
+        "Psychological"
       ],
-      "letter": "F",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "E",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 227,
-      "title": "FLCL",
-      "anilistUrl": "https://anilist.co/anime/227",
-      "anilistId": 227,
+      "id": 21856,
+      "title": "Eromanga Sensei",
+      "anilistUrl": "https://anilist.co/anime/21685",
+      "anilistId": 21685,
       "type": "TV",
-      "score": 7.7,
+      "score": 6.5,
       "genres": [
-        "Mecha",
+        "Romance",
         "Comedy"
       ],
-      "letter": "F",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "E",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 237,
+      "title": "Eureka Seven",
+      "anilistUrl": "https://anilist.co/anime/237",
+      "anilistId": 237,
+      "type": "TV",
+      "score": 8,
+      "genres": [
+        "Mecha",
+        "Adventure"
+      ],
+      "letter": "E",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 134,
+      "title": "Excel Saga",
+      "anilistUrl": "https://anilist.co/anime/134",
+      "anilistId": 134,
+      "type": "TV",
+      "score": 6.9,
+      "genres": [
+        "Comedy",
+        "Parody"
+      ],
+      "letter": "E",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 6702,
@@ -914,7 +1018,155 @@
         "Adventure"
       ],
       "letter": "F",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 22297,
+      "title": "Fate/stay night: Unlimited Blade Works",
+      "anilistUrl": "https://anilist.co/anime/22297",
+      "anilistId": 22297,
+      "type": "TV",
+      "score": 8.2,
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "letter": "F",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 10087,
+      "title": "Fate/Zero",
+      "anilistUrl": "https://anilist.co/anime/10087",
+      "anilistId": 10087,
+      "type": "TV",
+      "score": 8.9,
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "letter": "F",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 104581,
+      "title": "Fire Force",
+      "anilistUrl": "https://anilist.co/anime/104581",
+      "anilistId": 104581,
+      "type": "TV",
+      "score": 7.7,
+      "genres": [
+        "Action",
+        "Supernatural"
+      ],
+      "letter": "F",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 227,
+      "title": "FLCL",
+      "anilistUrl": "https://anilist.co/anime/227",
+      "anilistId": 227,
+      "type": "TV",
+      "score": 7.7,
+      "genres": [
+        "Mecha",
+        "Comedy"
+      ],
+      "letter": "F",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 21087,
+      "title": "Food Wars!",
+      "anilistUrl": "https://anilist.co/anime/20923",
+      "anilistId": 20923,
+      "type": "TV",
+      "score": 8,
+      "genres": [
+        "Comedy",
+        "Ecchi"
+      ],
+      "letter": "F",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 13125,
+      "title": "From the New World",
+      "anilistUrl": "https://anilist.co/anime/13125",
+      "anilistId": 13125,
+      "type": "TV",
+      "score": 8.3,
+      "genres": [
+        "Sci-Fi",
+        "Horror"
+      ],
+      "letter": "F",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 7525,
+      "title": "Fruits Basket",
+      "anilistUrl": "https://anilist.co/anime/7525",
+      "anilistId": 7525,
+      "type": "TV",
+      "score": 8.5,
+      "genres": [
+        "Romance",
+        "Supernatural"
+      ],
+      "letter": "F",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 5114,
+      "title": "Fullmetal Alchemist: Brotherhood",
+      "anilistUrl": "https://anilist.co/anime/5114",
+      "anilistId": 5114,
+      "type": "TV",
+      "score": 10,
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "letter": "F",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 10620,
@@ -928,105 +1180,11 @@
         "Thriller"
       ],
       "letter": "F",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 918,
-      "title": "Gintama",
-      "anilistUrl": "https://anilist.co/anime/918",
-      "anilistId": 918,
-      "type": "TV",
-      "score": 9,
-      "genres": [
-        "Comedy",
-        "Action"
-      ],
-      "letter": "G",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 2001,
-      "title": "Gurren Lagann",
-      "anilistUrl": "https://anilist.co/anime/2001",
-      "anilistId": 2001,
-      "type": "TV",
-      "score": 8.6,
-      "genres": [
-        "Mecha",
-        "Action"
-      ],
-      "letter": "G",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 43,
-      "title": "Ghost in the Shell",
-      "anilistUrl": "https://anilist.co/anime/43",
-      "anilistId": 43,
-      "type": "Movie",
-      "score": 8.3,
-      "genres": [
-        "Sci-Fi",
-        "Psychological"
-      ],
-      "letter": "G",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 17827,
-      "title": "Golden Time",
-      "anilistUrl": "https://anilist.co/anime/17827",
-      "anilistId": 17827,
-      "type": "TV",
-      "score": 7.8,
-      "genres": [
-        "Romance",
-        "Comedy"
-      ],
-      "letter": "G",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 245,
-      "title": "Great Teacher Onizuka",
-      "anilistUrl": "https://anilist.co/anime/245",
-      "anilistId": 245,
-      "type": "TV",
-      "score": 8.8,
-      "genres": [
-        "Comedy",
-        "Drama"
-      ],
-      "letter": "G",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 10793,
-      "title": "Guilty Crown",
-      "anilistUrl": "https://anilist.co/anime/10793",
-      "anilistId": 10793,
-      "type": "TV",
-      "score": 7.3,
-      "genres": [
-        "Mecha",
-        "Action"
-      ],
-      "letter": "G",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 16782,
-      "title": "Garden of Words",
-      "anilistUrl": "https://anilist.co/anime/16782",
-      "anilistId": 16782,
-      "type": "Movie",
-      "score": 8.2,
-      "genres": [
-        "Romance",
-        "Drama"
-      ],
-      "letter": "G",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 239,
@@ -1040,21 +1198,83 @@
         "Drama"
       ],
       "letter": "G",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 21327,
-      "title": "Grimgar of Fantasy and Ash",
-      "anilistUrl": "https://anilist.co/anime/21327",
-      "anilistId": 21327,
-      "type": "TV",
-      "score": 7.6,
+      "id": 16782,
+      "title": "Garden of Words",
+      "anilistUrl": "https://anilist.co/anime/16782",
+      "anilistId": 16782,
+      "type": "Movie",
+      "score": 8.2,
       "genres": [
-        "Adventure",
+        "Romance",
         "Drama"
       ],
       "letter": "G",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 43,
+      "title": "Ghost in the Shell",
+      "anilistUrl": "https://anilist.co/anime/43",
+      "anilistId": 43,
+      "type": "Movie",
+      "score": 8.3,
+      "genres": [
+        "Sci-Fi",
+        "Psychological"
+      ],
+      "letter": "G",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 918,
+      "title": "Gintama",
+      "anilistUrl": "https://anilist.co/anime/918",
+      "anilistId": 918,
+      "type": "TV",
+      "score": 9,
+      "genres": [
+        "Comedy",
+        "Action"
+      ],
+      "letter": "G",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 17827,
+      "title": "Golden Time",
+      "anilistUrl": "https://anilist.co/anime/17827",
+      "anilistId": 17827,
+      "type": "TV",
+      "score": 7.8,
+      "genres": [
+        "Romance",
+        "Comedy"
+      ],
+      "letter": "G",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 8425,
@@ -1068,21 +1288,83 @@
         "Romance"
       ],
       "letter": "G",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 11061,
-      "title": "Hunter x Hunter (2011)",
-      "anilistUrl": "https://anilist.co/anime/11061",
-      "anilistId": 11061,
+      "id": 245,
+      "title": "Great Teacher Onizuka",
+      "anilistUrl": "https://anilist.co/anime/245",
+      "anilistId": 245,
       "type": "TV",
-      "score": 10,
+      "score": 8.8,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "letter": "G",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 21327,
+      "title": "Grimgar of Fantasy and Ash",
+      "anilistUrl": "https://anilist.co/anime/21428",
+      "anilistId": 21428,
+      "type": "TV",
+      "score": 7.6,
       "genres": [
         "Adventure",
+        "Drama"
+      ],
+      "letter": "G",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 10793,
+      "title": "Guilty Crown",
+      "anilistUrl": "https://anilist.co/anime/10793",
+      "anilistId": 10793,
+      "type": "TV",
+      "score": 7.3,
+      "genres": [
+        "Mecha",
         "Action"
       ],
-      "letter": "H",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "G",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 2001,
+      "title": "Gurren Lagann",
+      "anilistUrl": "https://anilist.co/anime/2001",
+      "anilistId": 2001,
+      "type": "TV",
+      "score": 8.6,
+      "genres": [
+        "Mecha",
+        "Action"
+      ],
+      "letter": "G",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 20583,
@@ -1096,77 +1378,11 @@
         "Comedy"
       ],
       "letter": "H",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 124194,
-      "title": "Horimiya",
-      "anilistUrl": "https://anilist.co/anime/124194",
-      "anilistId": 124194,
-      "type": "TV",
-      "score": 8.3,
-      "genres": [
-        "Romance",
-        "Comedy"
-      ],
-      "letter": "H",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 12189,
-      "title": "Hyouka",
-      "anilistUrl": "https://anilist.co/anime/12189",
-      "anilistId": 12189,
-      "type": "TV",
-      "score": 8.1,
-      "genres": [
-        "Mystery",
-        "Slice of Life"
-      ],
-      "letter": "H",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 777,
-      "title": "Hellsing Ultimate",
-      "anilistUrl": "https://anilist.co/anime/777",
-      "anilistId": 777,
-      "type": "OVA",
-      "score": 8.3,
-      "genres": [
-        "Action",
-        "Horror"
-      ],
-      "letter": "H",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 12189,
-      "title": "Hyouka",
-      "anilistUrl": "https://anilist.co/anime/12189",
-      "anilistId": 12189,
-      "type": "TV",
-      "score": 8.1,
-      "genres": [
-        "Mystery",
-        "Slice of Life"
-      ],
-      "letter": "H",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 101291,
-      "title": "Hinamatsuri",
-      "anilistUrl": "https://anilist.co/anime/101291",
-      "anilistId": 101291,
-      "type": "TV",
-      "score": 8.3,
-      "genres": [
-        "Comedy",
-        "Supernatural"
-      ],
-      "letter": "H",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 263,
@@ -1180,35 +1396,11 @@
         "Comedy"
       ],
       "letter": "H",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 98438,
-      "title": "Houseki no Kuni",
-      "anilistUrl": "https://anilist.co/anime/98438",
-      "anilistId": 98438,
-      "type": "TV",
-      "score": 8.4,
-      "genres": [
-        "Action",
-        "Fantasy"
-      ],
-      "letter": "H",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 8074,
-      "title": "Highschool of the Dead",
-      "anilistUrl": "https://anilist.co/anime/8074",
-      "anilistId": 8074,
-      "type": "TV",
-      "score": 6.9,
-      "genres": [
-        "Action",
-        "Ecchi"
-      ],
-      "letter": "H",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 185262,
@@ -1222,27 +1414,143 @@
         "Adventurer"
       ],
       "letter": "H",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 249,
-      "title": "Inuyasha",
-      "anilistUrl": "https://anilist.co/anime/249",
-      "anilistId": 249,
+      "id": 777,
+      "title": "Hellsing Ultimate",
+      "anilistUrl": "https://anilist.co/anime/777",
+      "anilistId": 777,
+      "type": "OVA",
+      "score": 8.3,
+      "genres": [
+        "Action",
+        "Horror"
+      ],
+      "letter": "H",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 8074,
+      "title": "Highschool of the Dead",
+      "anilistUrl": "https://anilist.co/anime/8074",
+      "anilistId": 8074,
       "type": "TV",
-      "score": 7.8,
+      "score": 6.9,
+      "genres": [
+        "Action",
+        "Ecchi"
+      ],
+      "letter": "H",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 101291,
+      "title": "Hinamatsuri",
+      "anilistUrl": "https://anilist.co/anime/100077",
+      "anilistId": 100077,
+      "type": "TV",
+      "score": 8.3,
+      "genres": [
+        "Comedy",
+        "Supernatural"
+      ],
+      "letter": "H",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 124194,
+      "title": "Horimiya",
+      "anilistUrl": "https://anilist.co/anime/124080",
+      "anilistId": 124080,
+      "type": "TV",
+      "score": 8.3,
+      "genres": [
+        "Romance",
+        "Comedy"
+      ],
+      "letter": "H",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 98438,
+      "title": "Houseki no Kuni",
+      "anilistUrl": "https://anilist.co/anime/98707",
+      "anilistId": 98707,
+      "type": "TV",
+      "score": 8.4,
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "letter": "H",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 11061,
+      "title": "Hunter x Hunter (2011)",
+      "anilistUrl": "https://anilist.co/anime/11061",
+      "anilistId": 11061,
+      "type": "TV",
+      "score": 10,
       "genres": [
         "Adventure",
-        "Romance"
+        "Action"
       ],
-      "letter": "I",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "H",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 12189,
+      "title": "Hyouka",
+      "anilistUrl": "https://anilist.co/anime/12189",
+      "anilistId": 12189,
+      "type": "TV",
+      "score": 8.1,
+      "genres": [
+        "Mystery",
+        "Slice of Life"
+      ],
+      "letter": "H",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 101291,
       "title": "I Want to Eat Your Pancreas",
-      "anilistUrl": "https://anilist.co/anime/101291",
-      "anilistId": 101291,
+      "anilistUrl": "https://anilist.co/anime/99750",
+      "anilistId": 99750,
       "type": "Movie",
       "score": 8.7,
       "genres": [
@@ -1250,41 +1558,17 @@
         "Romance"
       ],
       "letter": "I",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 20657,
-      "title": "Is It Wrong to Try to Pick Up Girls in a Dungeon?",
-      "anilistUrl": "https://anilist.co/anime/20657",
-      "anilistId": 20657,
-      "type": "TV",
-      "score": 7.6,
-      "genres": [
-        "Action",
-        "Fantasy"
-      ],
-      "letter": "I",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 20787,
-      "title": "Iron-Blooded Orphans",
-      "anilistUrl": "https://anilist.co/anime/20787",
-      "anilistId": 20787,
-      "type": "TV",
-      "score": 8.1,
-      "genres": [
-        "Mecha",
-        "Action"
-      ],
-      "letter": "I",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 108465,
       "title": "ID: Invaded",
-      "anilistUrl": "https://anilist.co/anime/108465",
-      "anilistId": 108465,
+      "anilistUrl": "https://anilist.co/anime/110350",
+      "anilistId": 110350,
       "type": "TV",
       "score": 7.9,
       "genres": [
@@ -1292,13 +1576,35 @@
         "Mystery"
       ],
       "letter": "I",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 108465,
+      "title": "Ikebukuro West Gate Park",
+      "anilistUrl": "https://anilist.co/anime/111324",
+      "anilistId": 111324,
+      "type": "TV",
+      "score": 6.9,
+      "genres": [
+        "Drama",
+        "Mystery"
+      ],
+      "letter": "I",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 108465,
       "title": "In/Spectre",
-      "anilistUrl": "https://anilist.co/anime/108465",
-      "anilistId": 108465,
+      "anilistUrl": "https://anilist.co/anime/107201",
+      "anilistId": 107201,
       "type": "TV",
       "score": 7.3,
       "genres": [
@@ -1306,7 +1612,11 @@
         "Supernatural"
       ],
       "letter": "I",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 9041,
@@ -1320,27 +1630,35 @@
         "Harem"
       ],
       "letter": "I",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 101291,
-      "title": "Iroduku: The World in Colors",
-      "anilistUrl": "https://anilist.co/anime/101291",
-      "anilistId": 101291,
+      "id": 249,
+      "title": "Inuyasha",
+      "anilistUrl": "https://anilist.co/anime/249",
+      "anilistId": 249,
       "type": "TV",
-      "score": 7.5,
+      "score": 7.8,
       "genres": [
-        "Romance",
-        "Fantasy"
+        "Adventure",
+        "Romance"
       ],
       "letter": "I",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 98438,
       "title": "Inuyashiki",
-      "anilistUrl": "https://anilist.co/anime/98438",
-      "anilistId": 98438,
+      "anilistUrl": "https://anilist.co/anime/97922",
+      "anilistId": 97922,
       "type": "TV",
       "score": 7.8,
       "genres": [
@@ -1348,91 +1666,101 @@
         "Drama"
       ],
       "letter": "I",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 108465,
-      "title": "Ikebukuro West Gate Park",
-      "anilistUrl": "https://anilist.co/anime/108465",
-      "anilistId": 108465,
+      "id": 101291,
+      "title": "Iroduku: The World in Colors",
+      "anilistUrl": "https://anilist.co/anime/101316",
+      "anilistId": 101316,
       "type": "TV",
-      "score": 6.9,
-      "genres": [
-        "Drama",
-        "Mystery"
-      ],
-      "letter": "I",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 107922,
-      "title": "Jujutsu Kaisen",
-      "anilistUrl": "https://anilist.co/anime/107922",
-      "anilistId": 107922,
-      "type": "TV",
-      "score": 8.7,
-      "genres": [
-        "Action",
-        "Horror"
-      ],
-      "letter": "J",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 14719,
-      "title": "JoJo's Bizarre Adventure",
-      "anilistUrl": "https://anilist.co/anime/14719",
-      "anilistId": 14719,
-      "type": "TV",
-      "score": 8,
-      "genres": [
-        "Action",
-        "Supernatural"
-      ],
-      "letter": "J",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 12413,
-      "title": "Jormungand",
-      "anilistUrl": "https://anilist.co/anime/12413",
-      "anilistId": 12413,
-      "type": "TV",
-      "score": 7.8,
-      "genres": [
-        "Action",
-        "Seinen"
-      ],
-      "letter": "J",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 98438,
-      "title": "Just Because!",
-      "anilistUrl": "https://anilist.co/anime/98438",
-      "anilistId": 98438,
-      "type": "TV",
-      "score": 7.2,
+      "score": 7.5,
       "genres": [
         "Romance",
-        "Drama"
+        "Fantasy"
       ],
-      "letter": "J",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "I",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 20787,
+      "title": "Iron-Blooded Orphans",
+      "anilistUrl": "https://anilist.co/anime/21268",
+      "anilistId": 21268,
+      "type": "TV",
+      "score": 8.1,
+      "genres": [
+        "Mecha",
+        "Action"
+      ],
+      "letter": "I",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 20657,
+      "title": "Is It Wrong to Try to Pick Up Girls in a Dungeon?",
+      "anilistUrl": "https://anilist.co/anime/20657",
+      "anilistId": 20657,
+      "type": "TV",
+      "score": 7.6,
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "letter": "I",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 124194,
-      "title": "Josee, the Tiger and the Fish",
-      "anilistUrl": "https://anilist.co/anime/124194",
-      "anilistId": 124194,
-      "type": "Movie",
-      "score": 8.4,
+      "title": "Jaku-Chara Tomozaki-kun",
+      "anilistUrl": "https://anilist.co/anime/112443",
+      "anilistId": 112443,
+      "type": "TV",
+      "score": 7.5,
       "genres": [
-        "Romance",
+        "Comedy",
         "Drama"
       ],
       "letter": "J",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 107922,
+      "title": "Jibaku Shounen Hanako-kun",
+      "anilistUrl": "https://anilist.co/anime/108463",
+      "anilistId": 108463,
+      "type": "TV",
+      "score": 8.1,
+      "genres": [
+        "Comedy",
+        "Supernatural"
+      ],
+      "letter": "J",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 1012,
@@ -1446,63 +1774,29 @@
         "Psychological"
       ],
       "letter": "J",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 98438,
-      "title": "Junji Ito Collection",
-      "anilistUrl": "https://anilist.co/anime/98438",
-      "anilistId": 98438,
+      "id": 14719,
+      "title": "JoJo's Bizarre Adventure",
+      "anilistUrl": "https://anilist.co/anime/14719",
+      "anilistId": 14719,
       "type": "TV",
-      "score": 6.2,
-      "genres": [
-        "Horror",
-        "Supernatural"
-      ],
-      "letter": "J",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 124194,
-      "title": "Jaku-Chara Tomozaki-kun",
-      "anilistUrl": "https://anilist.co/anime/124194",
-      "anilistId": 124194,
-      "type": "TV",
-      "score": 7.5,
-      "genres": [
-        "Comedy",
-        "Drama"
-      ],
-      "letter": "J",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 98438,
-      "title": "Juni Taisen: Zodiac War",
-      "anilistUrl": "https://anilist.co/anime/98438",
-      "anilistId": 98438,
-      "type": "TV",
-      "score": 6.5,
+      "score": 8,
       "genres": [
         "Action",
         "Supernatural"
       ],
       "letter": "J",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 107922,
-      "title": "Jibaku Shounen Hanako-kun",
-      "anilistUrl": "https://anilist.co/anime/107922",
-      "anilistId": 107922,
-      "type": "TV",
-      "score": 8.1,
-      "genres": [
-        "Comedy",
-        "Supernatural"
-      ],
-      "letter": "J",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 21291,
@@ -1516,35 +1810,119 @@
         "Psychological"
       ],
       "letter": "J",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 101922,
-      "title": "Kimetsu no Yaiba",
-      "anilistUrl": "https://anilist.co/anime/101922",
-      "anilistId": 101922,
+      "id": 12413,
+      "title": "Jormungand",
+      "anilistUrl": "https://anilist.co/anime/12413",
+      "anilistId": 12413,
       "type": "TV",
-      "score": 8.5,
+      "score": 7.8,
       "genres": [
         "Action",
-        "Fantasy"
+        "Seinen"
       ],
-      "letter": "K",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "J",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 101291,
-      "title": "Kaguya-sama: Love is War",
-      "anilistUrl": "https://anilist.co/anime/101291",
-      "anilistId": 101291,
+      "id": 124194,
+      "title": "Josee, the Tiger and the Fish",
+      "anilistUrl": "https://anilist.co/anime/113596",
+      "anilistId": 113596,
+      "type": "Movie",
+      "score": 8.4,
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "letter": "J",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 107922,
+      "title": "Jujutsu Kaisen",
+      "anilistUrl": "https://anilist.co/anime/113415",
+      "anilistId": 113415,
       "type": "TV",
       "score": 8.7,
       "genres": [
-        "Romance",
-        "Comedy"
+        "Action",
+        "Horror"
       ],
-      "letter": "K",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "J",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 98438,
+      "title": "Juni Taisen: Zodiac War",
+      "anilistUrl": "https://anilist.co/anime/98443",
+      "anilistId": 98443,
+      "type": "TV",
+      "score": 6.5,
+      "genres": [
+        "Action",
+        "Supernatural"
+      ],
+      "letter": "J",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 98438,
+      "title": "Junji Ito Collection",
+      "anilistUrl": "https://anilist.co/anime/99940",
+      "anilistId": 99940,
+      "type": "TV",
+      "score": 6.2,
+      "genres": [
+        "Horror",
+        "Supernatural"
+      ],
+      "letter": "J",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 98438,
+      "title": "Just Because!",
+      "anilistUrl": "https://anilist.co/anime/98820",
+      "anilistId": 98820,
+      "type": "TV",
+      "score": 7.2,
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "letter": "J",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 5680,
@@ -1558,63 +1936,11 @@
         "Slice of Life"
       ],
       "letter": "K",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 18689,
-      "title": "Kill la Kill",
-      "anilistUrl": "https://anilist.co/anime/18689",
-      "anilistId": 18689,
-      "type": "TV",
-      "score": 7.9,
-      "genres": [
-        "Action",
-        "Comedy"
-      ],
-      "letter": "K",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 7054,
-      "title": "Kaichou wa Maid-sama!",
-      "anilistUrl": "https://anilist.co/anime/7054",
-      "anilistId": 7054,
-      "type": "TV",
-      "score": 8.2,
-      "genres": [
-        "Romance",
-        "Comedy"
-      ],
-      "letter": "K",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 11771,
-      "title": "Kuroko's Basketball",
-      "anilistUrl": "https://anilist.co/anime/11771",
-      "anilistId": 11771,
-      "type": "TV",
-      "score": 9.2,
-      "genres": [
-        "Sports",
-        "Comedy"
-      ],
-      "letter": "K",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 98314,
-      "title": "Kakegurui",
-      "anilistUrl": "https://anilist.co/anime/98314",
-      "anilistId": 98314,
-      "type": "TV",
-      "score": 7.3,
-      "genres": [
-        "Psychological",
-        "Drama"
-      ],
-      "letter": "K",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 21167,
@@ -1628,35 +1954,47 @@
         "Horror"
       ],
       "letter": "K",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 21507,
-      "title": "Kiznaiver",
-      "anilistUrl": "https://anilist.co/anime/21507",
-      "anilistId": 21507,
+      "id": 101291,
+      "title": "Kaguya-sama: Love is War",
+      "anilistUrl": "https://anilist.co/anime/101921",
+      "anilistId": 101921,
       "type": "TV",
-      "score": 7.2,
+      "score": 8.7,
       "genres": [
-        "Sci-Fi",
-        "Drama"
+        "Romance",
+        "Comedy"
       ],
       "letter": "K",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 6594,
-      "title": "Katanagatari",
-      "anilistUrl": "https://anilist.co/anime/6594",
-      "anilistId": 6594,
+      "id": 7054,
+      "title": "Kaichou wa Maid-sama!",
+      "anilistUrl": "https://anilist.co/anime/7054",
+      "anilistId": 7054,
       "type": "TV",
-      "score": 8.3,
+      "score": 8.2,
       "genres": [
-        "Action",
-        "Adventure"
+        "Romance",
+        "Comedy"
       ],
       "letter": "K",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 153288,
@@ -1670,119 +2008,119 @@
         "Sci-Fi"
       ],
       "letter": "K",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 101291,
-      "title": "Love is War",
-      "anilistUrl": "https://anilist.co/anime/101291",
-      "anilistId": 101291,
+      "id": 98314,
+      "title": "Kakegurui",
+      "anilistUrl": "https://anilist.co/anime/98314",
+      "anilistId": 98314,
       "type": "TV",
-      "score": 8.7,
+      "score": 7.3,
       "genres": [
-        "Romance",
+        "Psychological",
+        "Drama"
+      ],
+      "letter": "K",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 6594,
+      "title": "Katanagatari",
+      "anilistUrl": "https://anilist.co/anime/6594",
+      "anilistId": 6594,
+      "type": "TV",
+      "score": 8.3,
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "letter": "K",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 18689,
+      "title": "Kill la Kill",
+      "anilistUrl": "https://anilist.co/anime/18689",
+      "anilistId": 18689,
+      "type": "TV",
+      "score": 7.9,
+      "genres": [
+        "Action",
         "Comedy"
       ],
-      "letter": "L",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "K",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 98438,
-      "title": "Land of the Lustrous",
-      "anilistUrl": "https://anilist.co/anime/98438",
-      "anilistId": 98438,
+      "id": 101922,
+      "title": "Kimetsu no Yaiba",
+      "anilistUrl": "https://anilist.co/anime/101922",
+      "anilistId": 101922,
       "type": "TV",
-      "score": 8.4,
+      "score": 8.5,
       "genres": [
         "Action",
         "Fantasy"
       ],
-      "letter": "L",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 17265,
-      "title": "Log Horizon",
-      "anilistUrl": "https://anilist.co/anime/17265",
-      "anilistId": 17265,
-      "type": "TV",
-      "score": 7.9,
-      "genres": [
-        "Adventure",
-        "Fantasy"
-      ],
-      "letter": "L",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "K",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 21507,
-      "title": "Little Witch Academia",
-      "anilistUrl": "https://anilist.co/anime/21507",
-      "anilistId": 21507,
+      "title": "Kiznaiver",
+      "anilistUrl": "https://anilist.co/anime/21421",
+      "anilistId": 21421,
       "type": "TV",
-      "score": 7.8,
-      "genres": [
-        "Fantasy",
-        "Comedy"
-      ],
-      "letter": "L",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 1887,
-      "title": "Lucky Star",
-      "anilistUrl": "https://anilist.co/anime/1887",
-      "anilistId": 1887,
-      "type": "TV",
-      "score": 7.4,
-      "genres": [
-        "Comedy",
-        "Slice of Life"
-      ],
-      "letter": "L",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 14741,
-      "title": "Love, Chunibyo & Other Delusions",
-      "anilistUrl": "https://anilist.co/anime/14741",
-      "anilistId": 14741,
-      "type": "TV",
-      "score": 7.7,
-      "genres": [
-        "Romance",
-        "Comedy"
-      ],
-      "letter": "L",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 820,
-      "title": "Legend of the Galactic Heroes",
-      "anilistUrl": "https://anilist.co/anime/820",
-      "anilistId": 820,
-      "type": "OVA",
-      "score": 9.1,
+      "score": 7.2,
       "genres": [
         "Sci-Fi",
         "Drama"
       ],
-      "letter": "L",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "K",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 1244,
-      "title": "Lupin the Third",
-      "anilistUrl": "https://anilist.co/anime/1244",
-      "anilistId": 1244,
+      "id": 11771,
+      "title": "Kuroko's Basketball",
+      "anilistUrl": "https://anilist.co/anime/11771",
+      "anilistId": 11771,
       "type": "TV",
-      "score": 7.6,
+      "score": 9.2,
       "genres": [
-        "Action",
+        "Sports",
         "Comedy"
       ],
-      "letter": "L",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "K",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 339,
@@ -1796,7 +2134,83 @@
         "Sci-Fi"
       ],
       "letter": "L",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 98438,
+      "title": "Land of the Lustrous",
+      "anilistUrl": "https://anilist.co/anime/98707",
+      "anilistId": 98707,
+      "type": "TV",
+      "score": 8.4,
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "letter": "L",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 820,
+      "title": "Legend of the Galactic Heroes",
+      "anilistUrl": "https://anilist.co/anime/820",
+      "anilistId": 820,
+      "type": "OVA",
+      "score": 9.1,
+      "genres": [
+        "Sci-Fi",
+        "Drama"
+      ],
+      "letter": "L",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 21507,
+      "title": "Little Witch Academia",
+      "anilistUrl": "https://anilist.co/anime/14349",
+      "anilistId": 14349,
+      "type": "Movie",
+      "score": 7.8,
+      "genres": [
+        "Fantasy",
+        "Comedy"
+      ],
+      "letter": "L",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 17265,
+      "title": "Log Horizon",
+      "anilistUrl": "https://anilist.co/anime/17265",
+      "anilistId": 17265,
+      "type": "TV",
+      "score": 7.9,
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "letter": "L",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 15051,
@@ -1810,35 +2224,65 @@
         "Slice of Life"
       ],
       "letter": "L",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 21459,
-      "title": "My Hero Academia",
-      "anilistUrl": "https://anilist.co/anime/21459",
-      "anilistId": 21459,
+      "id": 14741,
+      "title": "Love, Chunibyo & Other Delusions",
+      "anilistUrl": "https://anilist.co/anime/14741",
+      "anilistId": 14741,
       "type": "TV",
-      "score": 7.9,
+      "score": 7.7,
+      "genres": [
+        "Romance",
+        "Comedy"
+      ],
+      "letter": "L",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 1887,
+      "title": "Lucky Star",
+      "anilistUrl": "https://anilist.co/anime/1887",
+      "anilistId": 1887,
+      "type": "TV",
+      "score": 7.4,
+      "genres": [
+        "Comedy",
+        "Slice of Life"
+      ],
+      "letter": "L",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 1244,
+      "title": "Lupin the Third",
+      "anilistUrl": "https://anilist.co/anime/1244",
+      "anilistId": 1244,
+      "type": "TV",
+      "score": 7.6,
       "genres": [
         "Action",
         "Comedy"
       ],
-      "letter": "M",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 100243,
-      "title": "Mob Psycho 100",
-      "anilistUrl": "https://anilist.co/anime/100243",
-      "anilistId": 100243,
-      "type": "TV",
-      "score": 8.7,
-      "genres": [
-        "Action",
-        "Comedy"
-      ],
-      "letter": "M",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "L",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 97986,
@@ -1852,49 +2296,11 @@
         "Fantasy"
       ],
       "letter": "M",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 19,
-      "title": "Monster",
-      "anilistUrl": "https://anilist.co/anime/19",
-      "anilistId": 19,
-      "type": "TV",
-      "score": 8.8,
-      "genres": [
-        "Psychological",
-        "Thriller"
-      ],
-      "letter": "M",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 457,
-      "title": "Mushishi",
-      "anilistUrl": "https://anilist.co/anime/457",
-      "anilistId": 457,
-      "type": "TV",
-      "score": 8.7,
-      "genres": [
-        "Fantasy",
-        "Mystery"
-      ],
-      "letter": "M",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 21776,
-      "title": "March Comes in Like a Lion",
-      "anilistUrl": "https://anilist.co/anime/21776",
-      "anilistId": 21776,
-      "type": "TV",
-      "score": 8.7,
-      "genres": [
-        "Drama",
-        "Slice of Life"
-      ],
-      "letter": "M",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 9756,
@@ -1908,13 +2314,35 @@
         "Psychological"
       ],
       "letter": "M",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 21776,
+      "title": "March Comes in Like a Lion",
+      "anilistUrl": "https://anilist.co/anime/21776",
+      "anilistId": 21776,
+      "type": "TV",
+      "score": 8.7,
+      "genres": [
+        "Drama",
+        "Slice of Life"
+      ],
+      "letter": "M",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 100243,
       "title": "Megalobox",
-      "anilistUrl": "https://anilist.co/anime/100243",
-      "anilistId": 100243,
+      "anilistUrl": "https://anilist.co/anime/100298",
+      "anilistId": 100298,
       "type": "TV",
       "score": 7.8,
       "genres": [
@@ -1922,13 +2350,17 @@
         "Sci-Fi"
       ],
       "letter": "M",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 101291,
       "title": "Miss Kobayashi's Dragon Maid",
-      "anilistUrl": "https://anilist.co/anime/101291",
-      "anilistId": 101291,
+      "anilistUrl": "https://anilist.co/anime/21816",
+      "anilistId": 21816,
       "type": "TV",
       "score": 8,
       "genres": [
@@ -1936,21 +2368,83 @@
         "Fantasy"
       ],
       "letter": "M",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 14813,
-      "title": "My Teen Romantic Comedy SNAFU",
-      "anilistUrl": "https://anilist.co/anime/14813",
-      "anilistId": 14813,
+      "id": 100243,
+      "title": "Mob Psycho 100",
+      "anilistUrl": "https://anilist.co/anime/21507",
+      "anilistId": 21507,
       "type": "TV",
-      "score": 8.1,
+      "score": 8.7,
       "genres": [
-        "Comedy",
-        "Romance"
+        "Action",
+        "Comedy"
       ],
       "letter": "M",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 19,
+      "title": "Monster",
+      "anilistUrl": "https://anilist.co/anime/19",
+      "anilistId": 19,
+      "type": "TV",
+      "score": 8.8,
+      "genres": [
+        "Psychological",
+        "Thriller"
+      ],
+      "letter": "M",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 457,
+      "title": "Mushishi",
+      "anilistUrl": "https://anilist.co/anime/457",
+      "anilistId": 457,
+      "type": "TV",
+      "score": 8.7,
+      "genres": [
+        "Fantasy",
+        "Mystery"
+      ],
+      "letter": "M",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 21459,
+      "title": "My Hero Academia",
+      "anilistUrl": "https://anilist.co/anime/21459",
+      "anilistId": 21459,
+      "type": "TV",
+      "score": 7.9,
+      "genres": [
+        "Action",
+        "Comedy"
+      ],
+      "letter": "M",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 103874,
@@ -1964,35 +2458,29 @@
         "Slice of Life"
       ],
       "letter": "M",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 1735,
-      "title": "Naruto Shippuden",
-      "anilistUrl": "https://anilist.co/anime/1735",
-      "anilistId": 1735,
+      "id": 14813,
+      "title": "My Teen Romantic Comedy SNAFU",
+      "anilistUrl": "https://anilist.co/anime/14813",
+      "anilistId": 14813,
       "type": "TV",
-      "score": 8.2,
+      "score": 8.1,
       "genres": [
-        "Action",
-        "Adventure"
+        "Comedy",
+        "Romance"
       ],
-      "letter": "N",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 30,
-      "title": "Neon Genesis Evangelion",
-      "anilistUrl": "https://anilist.co/anime/30",
-      "anilistId": 30,
-      "type": "TV",
-      "score": 8.3,
-      "genres": [
-        "Mecha",
-        "Psychological"
-      ],
-      "letter": "N",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "M",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 877,
@@ -2006,63 +2494,29 @@
         "Romance"
       ],
       "letter": "N",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 19815,
-      "title": "No Game No Life",
-      "anilistUrl": "https://anilist.co/anime/19815",
-      "anilistId": 19815,
+      "id": 1735,
+      "title": "Naruto Shippuden",
+      "anilistUrl": "https://anilist.co/anime/1735",
+      "anilistId": 1735,
       "type": "TV",
-      "score": 8.1,
-      "genres": [
-        "Psychological",
-        "Fantasy"
-      ],
-      "letter": "N",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 20507,
-      "title": "Noragami",
-      "anilistUrl": "https://anilist.co/anime/20507",
-      "anilistId": 20507,
-      "type": "TV",
-      "score": 7.9,
+      "score": 8.2,
       "genres": [
         "Action",
-        "Supernatural"
+        "Adventure"
       ],
       "letter": "N",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 20665,
-      "title": "Nisekoi",
-      "anilistUrl": "https://anilist.co/anime/20665",
-      "anilistId": 20665,
-      "type": "TV",
-      "score": 7.5,
-      "genres": [
-        "Romance",
-        "Comedy"
-      ],
-      "letter": "N",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 10165,
-      "title": "Nichijou",
-      "anilistUrl": "https://anilist.co/anime/10165",
-      "anilistId": 10165,
-      "type": "TV",
-      "score": 8.4,
-      "genres": [
-        "Comedy",
-        "Slice of Life"
-      ],
-      "letter": "N",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 4081,
@@ -2076,21 +2530,11 @@
         "Slice of Life"
       ],
       "letter": "N",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 1690,
-      "title": "Nodame Cantabile",
-      "anilistUrl": "https://anilist.co/anime/1690",
-      "anilistId": 1690,
-      "type": "TV",
-      "score": 8.3,
-      "genres": [
-        "Music",
-        "Romance"
-      ],
-      "letter": "N",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 572,
@@ -2104,7 +2548,137 @@
         "Fantasy"
       ],
       "letter": "N",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 30,
+      "title": "Neon Genesis Evangelion",
+      "anilistUrl": "https://anilist.co/anime/30",
+      "anilistId": 30,
+      "type": "TV",
+      "score": 8.3,
+      "genres": [
+        "Mecha",
+        "Psychological"
+      ],
+      "letter": "N",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 10165,
+      "title": "Nichijou",
+      "anilistUrl": "https://anilist.co/anime/10165",
+      "anilistId": 10165,
+      "type": "TV",
+      "score": 8.4,
+      "genres": [
+        "Comedy",
+        "Slice of Life"
+      ],
+      "letter": "N",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 20665,
+      "title": "Nisekoi",
+      "anilistUrl": "https://anilist.co/anime/132405",
+      "anilistId": 132405,
+      "type": "TV",
+      "score": 7.5,
+      "genres": [
+        "Romance",
+        "Comedy"
+      ],
+      "letter": "N",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 19815,
+      "title": "No Game No Life",
+      "anilistUrl": "https://anilist.co/anime/19815",
+      "anilistId": 19815,
+      "type": "TV",
+      "score": 8.1,
+      "genres": [
+        "Psychological",
+        "Fantasy"
+      ],
+      "letter": "N",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 1690,
+      "title": "Nodame Cantabile",
+      "anilistUrl": "https://anilist.co/anime/1690",
+      "anilistId": 1690,
+      "type": "TV",
+      "score": 8.3,
+      "genres": [
+        "Music",
+        "Romance"
+      ],
+      "letter": "N",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 20507,
+      "title": "Noragami",
+      "anilistUrl": "https://anilist.co/anime/20507",
+      "anilistId": 20507,
+      "type": "TV",
+      "score": 7.9,
+      "genres": [
+        "Action",
+        "Supernatural"
+      ],
+      "letter": "N",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 124194,
+      "title": "Odd Taxi",
+      "anilistUrl": "https://anilist.co/anime/128547",
+      "anilistId": 128547,
+      "type": "TV",
+      "score": 8.5,
+      "genres": [
+        "Mystery",
+        "Drama"
+      ],
+      "letter": "O",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 21,
@@ -2118,7 +2692,11 @@
         "Fantasy"
       ],
       "letter": "O",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 21087,
@@ -2132,35 +2710,11 @@
         "Comedy"
       ],
       "letter": "O",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 145064,
-      "title": "Oshi no Ko",
-      "anilistUrl": "https://anilist.co/anime/145064",
-      "anilistId": 145064,
-      "type": "TV",
-      "score": 9,
-      "genres": [
-        "Drama",
-        "Supernatural"
-      ],
-      "letter": "O",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 853,
-      "title": "Ouran High School Host Club",
-      "anilistUrl": "https://anilist.co/anime/853",
-      "anilistId": 853,
-      "type": "TV",
-      "score": 8.3,
-      "genres": [
-        "Comedy",
-        "Romance"
-      ],
-      "letter": "O",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 21557,
@@ -2174,21 +2728,29 @@
         "Sci-Fi"
       ],
       "letter": "O",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 20832,
-      "title": "Overlord",
-      "anilistUrl": "https://anilist.co/anime/20832",
-      "anilistId": 20832,
+      "id": 20787,
+      "title": "Ore Monogatari!!",
+      "anilistUrl": "https://anilist.co/anime/20946",
+      "anilistId": 20946,
       "type": "TV",
-      "score": 7.8,
+      "score": 8,
       "genres": [
-        "Action",
-        "Fantasy"
+        "Romance",
+        "Comedy"
       ],
       "letter": "O",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 14813,
@@ -2202,35 +2764,47 @@
         "Romance"
       ],
       "letter": "O",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 124194,
-      "title": "Odd Taxi",
-      "anilistUrl": "https://anilist.co/anime/124194",
-      "anilistId": 124194,
+      "id": 145064,
+      "title": "Oshi no Ko",
+      "anilistUrl": "https://anilist.co/anime/145064",
+      "anilistId": 145064,
       "type": "TV",
-      "score": 8.5,
+      "score": 9,
       "genres": [
-        "Mystery",
-        "Drama"
+        "Drama",
+        "Supernatural"
       ],
       "letter": "O",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 20787,
-      "title": "Ore Monogatari!!",
-      "anilistUrl": "https://anilist.co/anime/20787",
-      "anilistId": 20787,
+      "id": 853,
+      "title": "Ouran High School Host Club",
+      "anilistUrl": "https://anilist.co/anime/853",
+      "anilistId": 853,
       "type": "TV",
-      "score": 8,
+      "score": 8.3,
       "genres": [
-        "Romance",
-        "Comedy"
+        "Comedy",
+        "Romance"
       ],
       "letter": "O",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 525,
@@ -2244,119 +2818,29 @@
         "Sci-Fi"
       ],
       "letter": "O",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 20687,
-      "title": "Parasyte: The Maxim",
-      "anilistUrl": "https://anilist.co/anime/20687",
-      "anilistId": 20687,
-      "type": "TV",
-      "score": 8.3,
-      "genres": [
-        "Action",
-        "Horror"
-      ],
-      "letter": "P",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 101348,
-      "title": "Promised Neverland",
-      "anilistUrl": "https://anilist.co/anime/101348",
-      "anilistId": 101348,
-      "type": "TV",
-      "score": 8.5,
-      "genres": [
-        "Psychological",
-        "Horror"
-      ],
-      "letter": "P",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 13601,
-      "title": "Psycho-Pass",
-      "anilistUrl": "https://anilist.co/anime/13601",
-      "anilistId": 13601,
-      "type": "TV",
-      "score": 8.3,
-      "genres": [
-        "Sci-Fi",
-        "Psychological"
-      ],
-      "letter": "P",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 164,
-      "title": "Princess Mononoke",
-      "anilistUrl": "https://anilist.co/anime/164",
-      "anilistId": 164,
-      "type": "Movie",
-      "score": 8.8,
-      "genres": [
-        "Adventure",
-        "Fantasy"
-      ],
-      "letter": "P",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 20687,
-      "title": "Ping Pong the Animation",
-      "anilistUrl": "https://anilist.co/anime/20687",
-      "anilistId": 20687,
-      "type": "TV",
-      "score": 8.6,
-      "genres": [
-        "Sports",
-        "Psychological"
-      ],
-      "letter": "P",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 323,
-      "title": "Paranoia Agent",
-      "anilistUrl": "https://anilist.co/anime/323",
-      "anilistId": 323,
-      "type": "TV",
-      "score": 7.7,
-      "genres": [
-        "Psychological",
-        "Mystery"
-      ],
-      "letter": "P",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 20787,
-      "title": "Plastic Memories",
-      "anilistUrl": "https://anilist.co/anime/20787",
-      "anilistId": 20787,
+      "id": 20832,
+      "title": "Overlord",
+      "anilistUrl": "https://anilist.co/anime/20832",
+      "anilistId": 20832,
       "type": "TV",
       "score": 7.8,
       "genres": [
-        "Sci-Fi",
-        "Romance"
+        "Action",
+        "Fantasy"
       ],
-      "letter": "P",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 9756,
-      "title": "Puella Magi Madoka Magica",
-      "anilistUrl": "https://anilist.co/anime/9756",
-      "anilistId": 9756,
-      "type": "TV",
-      "score": 8.4,
-      "genres": [
-        "Fantasy",
-        "Psychological"
-      ],
-      "letter": "P",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "O",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 7711,
@@ -2370,7 +2854,47 @@
         "Action"
       ],
       "letter": "P",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 323,
+      "title": "Paranoia Agent",
+      "anilistUrl": "https://anilist.co/anime/323",
+      "anilistId": 323,
+      "type": "TV",
+      "score": 7.7,
+      "genres": [
+        "Psychological",
+        "Mystery"
+      ],
+      "letter": "P",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 20687,
+      "title": "Parasyte: The Maxim",
+      "anilistUrl": "https://anilist.co/anime/20623",
+      "anilistId": 20623,
+      "type": "TV",
+      "score": 8.3,
+      "genres": [
+        "Action",
+        "Horror"
+      ],
+      "letter": "P",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 437,
@@ -2384,27 +2908,125 @@
         "Thriller"
       ],
       "letter": "P",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 101291,
-      "title": "Quintessential Quintuplets",
-      "anilistUrl": "https://anilist.co/anime/101291",
-      "anilistId": 101291,
+      "id": 20687,
+      "title": "Ping Pong the Animation",
+      "anilistUrl": "https://anilist.co/anime/20607",
+      "anilistId": 20607,
       "type": "TV",
-      "score": 8,
+      "score": 8.6,
       "genres": [
-        "Romance",
-        "Comedy"
+        "Sports",
+        "Psychological"
       ],
-      "letter": "Q",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "P",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 20787,
+      "title": "Plastic Memories",
+      "anilistUrl": "https://anilist.co/anime/20872",
+      "anilistId": 20872,
+      "type": "TV",
+      "score": 7.8,
+      "genres": [
+        "Sci-Fi",
+        "Romance"
+      ],
+      "letter": "P",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 164,
+      "title": "Princess Mononoke",
+      "anilistUrl": "https://anilist.co/anime/164",
+      "anilistId": 164,
+      "type": "Movie",
+      "score": 8.8,
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "letter": "P",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 101348,
+      "title": "Promised Neverland",
+      "anilistUrl": "https://anilist.co/anime/101759",
+      "anilistId": 101759,
+      "type": "TV",
+      "score": 8.5,
+      "genres": [
+        "Psychological",
+        "Horror"
+      ],
+      "letter": "P",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 13601,
+      "title": "Psycho-Pass",
+      "anilistUrl": "https://anilist.co/anime/13601",
+      "anilistId": 13601,
+      "type": "TV",
+      "score": 8.3,
+      "genres": [
+        "Sci-Fi",
+        "Psychological"
+      ],
+      "letter": "P",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 9756,
+      "title": "Puella Magi Madoka Magica",
+      "anilistUrl": "https://anilist.co/anime/9756",
+      "anilistId": 9756,
+      "type": "TV",
+      "score": 8.4,
+      "genres": [
+        "Fantasy",
+        "Psychological"
+      ],
+      "letter": "P",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 21856,
       "title": "Q Transformers: Return of the Mystery of Convoy",
-      "anilistUrl": "https://anilist.co/anime/21856",
-      "anilistId": 21856,
+      "anilistUrl": "https://anilist.co/anime/900169",
+      "anilistId": 900169,
       "type": "Movie",
       "score": 5.5,
       "genres": [
@@ -2412,21 +3034,11 @@
         "Comedy"
       ],
       "letter": "Q",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 4896,
-      "title": "Queen's Blade: Rurou no Senshi",
-      "anilistUrl": "https://anilist.co/anime/4896",
-      "anilistId": 4896,
-      "type": "TV",
-      "score": 5.8,
-      "genres": [
-        "Action",
-        "Ecchi"
-      ],
-      "letter": "Q",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 8624,
@@ -2440,119 +3052,83 @@
         "Historical"
       ],
       "letter": "Q",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 4896,
+      "title": "Queen's Blade: Rurou no Senshi",
+      "anilistUrl": "https://anilist.co/anime/4896",
+      "anilistId": 4896,
+      "type": "TV",
+      "score": 5.8,
+      "genres": [
+        "Action",
+        "Ecchi"
+      ],
+      "letter": "Q",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 101291,
+      "title": "Quintessential Quintuplets",
+      "anilistUrl": "https://anilist.co/anime/103572",
+      "anilistId": 103572,
+      "type": "TV",
+      "score": 8,
+      "genres": [
+        "Romance",
+        "Comedy"
+      ],
+      "letter": "Q",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 10165,
       "title": "Quiz Magic Academy",
-      "anilistUrl": "https://anilist.co/anime/10165",
-      "anilistId": 10165,
-      "type": "TV",
+      "anilistUrl": "https://anilist.co/anime/5080",
+      "anilistId": 5080,
+      "type": "OVA",
       "score": 5.2,
       "genres": [
         "Fantasy",
         "Game"
       ],
       "letter": "Q",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 21355,
-      "title": "Re:Zero",
-      "anilistUrl": "https://anilist.co/anime/21355",
-      "anilistId": 21355,
+      "id": 20787,
+      "title": "Rage of Bahamut: Genesis",
+      "anilistUrl": "https://anilist.co/anime/20590",
+      "anilistId": 20590,
       "type": "TV",
-      "score": 8.2,
+      "score": 7.5,
       "genres": [
-        "Drama",
+        "Adventure",
         "Fantasy"
       ],
       "letter": "R",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 45,
-      "title": "Rurouni Kenshin",
-      "anilistUrl": "https://anilist.co/anime/45",
-      "anilistId": 45,
-      "type": "TV",
-      "score": 8.3,
-      "genres": [
-        "Action",
-        "Adventure"
-      ],
-      "letter": "R",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 101291,
-      "title": "Run with the Wind",
-      "anilistUrl": "https://anilist.co/anime/101291",
-      "anilistId": 101291,
-      "type": "TV",
-      "score": 8.6,
-      "genres": [
-        "Sports",
-        "Drama"
-      ],
-      "letter": "R",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 101291,
-      "title": "Rascal Does Not Dream of Bunny Girl Senpai",
-      "anilistUrl": "https://anilist.co/anime/101291",
-      "anilistId": 101291,
-      "type": "TV",
-      "score": 8.3,
-      "genres": [
-        "Romance",
-        "Supernatural"
-      ],
-      "letter": "R",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 6675,
-      "title": "Redline",
-      "anilistUrl": "https://anilist.co/anime/6675",
-      "anilistId": 6675,
-      "type": "Movie",
-      "score": 8.4,
-      "genres": [
-        "Action",
-        "Sci-Fi"
-      ],
-      "letter": "R",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 21507,
-      "title": "ReLIFE",
-      "anilistUrl": "https://anilist.co/anime/21507",
-      "anilistId": 21507,
-      "type": "TV",
-      "score": 8,
-      "genres": [
-        "Comedy",
-        "Romance"
-      ],
-      "letter": "R",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 2030,
-      "title": "Romeo x Juliet",
-      "anilistUrl": "https://anilist.co/anime/2030",
-      "anilistId": 2030,
-      "type": "TV",
-      "score": 7.4,
-      "genres": [
-        "Romance",
-        "Fantasy"
-      ],
-      "letter": "R",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 365,
@@ -2566,27 +3142,53 @@
         "Drama"
       ],
       "letter": "R",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 20787,
-      "title": "Rage of Bahamut: Genesis",
-      "anilistUrl": "https://anilist.co/anime/20787",
-      "anilistId": 20787,
+      "id": 101291,
+      "title": "Rascal Does Not Dream of Bunny Girl Senpai",
+      "anilistUrl": "https://anilist.co/anime/101291",
+      "anilistId": 101291,
       "type": "TV",
-      "score": 7.5,
+      "score": 8.3,
       "genres": [
-        "Adventure",
+        "Romance",
+        "Supernatural"
+      ],
+      "letter": "R",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 21355,
+      "title": "Re:Zero",
+      "anilistUrl": "https://anilist.co/anime/21355",
+      "anilistId": 21355,
+      "type": "TV",
+      "score": 8.2,
+      "genres": [
+        "Drama",
         "Fantasy"
       ],
       "letter": "R",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 98438,
       "title": "Recovery of an MMO Junkie",
-      "anilistUrl": "https://anilist.co/anime/98438",
-      "anilistId": 98438,
+      "anilistUrl": "https://anilist.co/anime/99726",
+      "anilistId": 99726,
       "type": "TV",
       "score": 7.5,
       "genres": [
@@ -2594,49 +3196,101 @@
         "Comedy"
       ],
       "letter": "R",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 9253,
-      "title": "Steins;Gate",
-      "anilistUrl": "https://anilist.co/anime/9253",
-      "anilistId": 9253,
-      "type": "TV",
-      "score": 10,
+      "id": 6675,
+      "title": "Redline",
+      "anilistUrl": "https://anilist.co/anime/6675",
+      "anilistId": 6675,
+      "type": "Movie",
+      "score": 8.4,
       "genres": [
-        "Sci-Fi",
-        "Thriller"
+        "Action",
+        "Sci-Fi"
       ],
-      "letter": "S",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "R",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 140752,
-      "title": "Spy x Family",
-      "anilistUrl": "https://anilist.co/anime/140752",
-      "anilistId": 140752,
+      "id": 21507,
+      "title": "ReLIFE",
+      "anilistUrl": "https://anilist.co/anime/21049",
+      "anilistId": 21049,
+      "type": "ONA",
+      "score": 8,
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "letter": "R",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 2030,
+      "title": "Romeo x Juliet",
+      "anilistUrl": "https://anilist.co/anime/2030",
+      "anilistId": 2030,
+      "type": "TV",
+      "score": 7.4,
+      "genres": [
+        "Romance",
+        "Fantasy"
+      ],
+      "letter": "R",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 101291,
+      "title": "Run with the Wind",
+      "anilistUrl": "https://anilist.co/anime/101903",
+      "anilistId": 101903,
       "type": "TV",
       "score": 8.6,
       "genres": [
-        "Comedy",
-        "Action"
+        "Sports",
+        "Drama"
       ],
-      "letter": "S",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "R",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 11757,
-      "title": "Sword Art Online",
-      "anilistUrl": "https://anilist.co/anime/11757",
-      "anilistId": 11757,
+      "id": 45,
+      "title": "Rurouni Kenshin",
+      "anilistUrl": "https://anilist.co/anime/45",
+      "anilistId": 45,
       "type": "TV",
-      "score": 7.2,
+      "score": 8.3,
       "genres": [
         "Action",
-        "Romance"
+        "Adventure"
       ],
-      "letter": "S",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "R",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 205,
@@ -2650,35 +3304,11 @@
         "Adventure"
       ],
       "letter": "S",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 16498,
-      "title": "Shingeki no Kyojin",
-      "anilistUrl": "https://anilist.co/anime/16498",
-      "anilistId": 16498,
-      "type": "TV",
-      "score": 10,
-      "genres": [
-        "Action",
-        "Drama"
-      ],
-      "letter": "S",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 21473,
-      "title": "Shouwa Genroku Rakugo Shinjuu",
-      "anilistUrl": "https://anilist.co/anime/21473",
-      "anilistId": 21473,
-      "type": "TV",
-      "score": 8.7,
-      "genres": [
-        "Drama",
-        "Historical"
-      ],
-      "letter": "S",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 339,
@@ -2692,7 +3322,83 @@
         "Sci-Fi"
       ],
       "letter": "S",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 20787,
+      "title": "Shimoneta",
+      "anilistUrl": "https://anilist.co/anime/20910",
+      "anilistId": 20910,
+      "type": "TV",
+      "score": 7.2,
+      "genres": [
+        "Comedy",
+        "Ecchi"
+      ],
+      "letter": "S",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 16498,
+      "title": "Shingeki no Kyojin",
+      "anilistUrl": "https://anilist.co/anime/16498",
+      "anilistId": 16498,
+      "type": "TV",
+      "score": 10,
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "letter": "S",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 20832,
+      "title": "Shirobako",
+      "anilistUrl": "https://anilist.co/anime/20812",
+      "anilistId": 20812,
+      "type": "TV",
+      "score": 8.1,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "letter": "S",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 21473,
+      "title": "Shouwa Genroku Rakugo Shinjuu",
+      "anilistUrl": "https://anilist.co/anime/20972",
+      "anilistId": 20972,
+      "type": "TV",
+      "score": 8.7,
+      "genres": [
+        "Drama",
+        "Historical"
+      ],
+      "letter": "S",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 3588,
@@ -2706,105 +3412,65 @@
         "Comedy"
       ],
       "letter": "S",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 20787,
-      "title": "Shimoneta",
-      "anilistUrl": "https://anilist.co/anime/20787",
-      "anilistId": 20787,
+      "id": 140752,
+      "title": "Spy x Family",
+      "anilistUrl": "https://anilist.co/anime/140752",
+      "anilistId": 140752,
+      "type": "TV",
+      "score": 8.6,
+      "genres": [
+        "Comedy",
+        "Action"
+      ],
+      "letter": "S",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 9253,
+      "title": "Steins;Gate",
+      "anilistUrl": "https://anilist.co/anime/9253",
+      "anilistId": 9253,
+      "type": "TV",
+      "score": 10,
+      "genres": [
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "letter": "S",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 11757,
+      "title": "Sword Art Online",
+      "anilistUrl": "https://anilist.co/anime/11757",
+      "anilistId": 11757,
       "type": "TV",
       "score": 7.2,
       "genres": [
-        "Comedy",
-        "Ecchi"
-      ],
-      "letter": "S",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 20832,
-      "title": "Shirobako",
-      "anilistUrl": "https://anilist.co/anime/20832",
-      "anilistId": 20832,
-      "type": "TV",
-      "score": 8.1,
-      "genres": [
-        "Comedy",
-        "Drama"
-      ],
-      "letter": "S",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 20687,
-      "title": "Tokyo Ghoul",
-      "anilistUrl": "https://anilist.co/anime/20687",
-      "anilistId": 20687,
-      "type": "TV",
-      "score": 7.7,
-      "genres": [
-        "Horror",
-        "Psychological"
-      ],
-      "letter": "T",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 6,
-      "title": "Trigun",
-      "anilistUrl": "https://anilist.co/anime/6",
-      "anilistId": 6,
-      "type": "TV",
-      "score": 8.2,
-      "genres": [
         "Action",
-        "Sci-Fi"
+        "Romance"
       ],
-      "letter": "T",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 4224,
-      "title": "Toradora!",
-      "anilistUrl": "https://anilist.co/anime/4224",
-      "anilistId": 4224,
-      "type": "TV",
-      "score": 8.3,
-      "genres": [
-        "Romance",
-        "Comedy"
-      ],
-      "letter": "T",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 849,
-      "title": "The Melancholy of Haruhi Suzumiya",
-      "anilistUrl": "https://anilist.co/anime/849",
-      "anilistId": 849,
-      "type": "TV",
-      "score": 7.9,
-      "genres": [
-        "Comedy",
-        "Mystery"
-      ],
-      "letter": "T",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 20687,
-      "title": "Terror in Resonance",
-      "anilistUrl": "https://anilist.co/anime/20687",
-      "anilistId": 20687,
-      "type": "TV",
-      "score": 7.7,
-      "genres": [
-        "Psychological",
-        "Thriller"
-      ],
-      "letter": "T",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "S",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 2001,
@@ -2818,7 +3484,29 @@
         "Action"
       ],
       "letter": "T",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 20687,
+      "title": "Terror in Resonance",
+      "anilistUrl": "https://anilist.co/anime/20661",
+      "anilistId": 20661,
+      "type": "TV",
+      "score": 7.7,
+      "genres": [
+        "Psychological",
+        "Thriller"
+      ],
+      "letter": "T",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 101280,
@@ -2832,41 +3520,53 @@
         "Fantasy"
       ],
       "letter": "T",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 21273,
       "title": "The Disastrous Life of Saiki K.",
-      "anilistUrl": "https://anilist.co/anime/21273",
-      "anilistId": 21273,
-      "type": "TV",
+      "anilistUrl": "https://anilist.co/anime/112625",
+      "anilistId": 112625,
+      "type": "ONA",
       "score": 8.3,
       "genres": [
         "Comedy",
         "Supernatural"
       ],
       "letter": "T",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 124194,
-      "title": "Tokyo Revengers",
-      "anilistUrl": "https://anilist.co/anime/124194",
-      "anilistId": 124194,
+      "id": 849,
+      "title": "The Melancholy of Haruhi Suzumiya",
+      "anilistUrl": "https://anilist.co/anime/849",
+      "anilistId": 849,
       "type": "TV",
-      "score": 7.8,
+      "score": 7.9,
       "genres": [
-        "Action",
-        "Drama"
+        "Comedy",
+        "Mystery"
       ],
       "letter": "T",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 101348,
       "title": "The Rising of the Shield Hero",
-      "anilistUrl": "https://anilist.co/anime/101348",
-      "anilistId": 101348,
+      "anilistUrl": "https://anilist.co/anime/99263",
+      "anilistId": 99263,
       "type": "TV",
       "score": 7.5,
       "genres": [
@@ -2874,7 +3574,11 @@
         "Fantasy"
       ],
       "letter": "T",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 186052,
@@ -2888,83 +3592,107 @@
         "Fantasy"
       ],
       "letter": "T",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 10165,
-      "title": "Usagi Drop",
-      "anilistUrl": "https://anilist.co/anime/10165",
-      "anilistId": 10165,
-      "type": "TV",
-      "score": 8.3,
-      "genres": [
-        "Comedy",
-        "Slice of Life"
-      ],
-      "letter": "U",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 20787,
-      "title": "Ushio and Tora",
-      "anilistUrl": "https://anilist.co/anime/20787",
-      "anilistId": 20787,
+      "id": 20687,
+      "title": "Tokyo Ghoul",
+      "anilistUrl": "https://anilist.co/anime/20605",
+      "anilistId": 20605,
       "type": "TV",
       "score": 7.7,
       "genres": [
-        "Action",
-        "Supernatural"
+        "Horror",
+        "Psychological"
       ],
-      "letter": "U",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "T",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 440,
-      "title": "Utena Revolutionary Girl",
-      "anilistUrl": "https://anilist.co/anime/440",
-      "anilistId": 440,
-      "type": "TV",
-      "score": 7.6,
-      "genres": [
-        "Psychological",
-        "Drama"
-      ],
-      "letter": "U",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 10165,
-      "title": "Un-Go",
-      "anilistUrl": "https://anilist.co/anime/10165",
-      "anilistId": 10165,
-      "type": "TV",
-      "score": 7,
-      "genres": [
-        "Mystery",
-        "Supernatural"
-      ],
-      "letter": "U",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 101291,
-      "title": "Uma Musume: Pretty Derby",
-      "anilistUrl": "https://anilist.co/anime/101291",
-      "anilistId": 101291,
+      "id": 124194,
+      "title": "Tokyo Revengers",
+      "anilistUrl": "https://anilist.co/anime/120120",
+      "anilistId": 120120,
       "type": "TV",
       "score": 7.8,
       "genres": [
-        "Sports",
+        "Action",
+        "Drama"
+      ],
+      "letter": "T",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 4224,
+      "title": "Toradora!",
+      "anilistUrl": "https://anilist.co/anime/4224",
+      "anilistId": 4224,
+      "type": "TV",
+      "score": 8.3,
+      "genres": [
+        "Romance",
         "Comedy"
       ],
+      "letter": "T",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 6,
+      "title": "Trigun",
+      "anilistUrl": "https://anilist.co/anime/6",
+      "anilistId": 6,
+      "type": "TV",
+      "score": 8.2,
+      "genres": [
+        "Action",
+        "Sci-Fi"
+      ],
+      "letter": "T",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 101291,
+      "title": "Ultraman",
+      "anilistUrl": "https://anilist.co/anime/100663",
+      "anilistId": 100663,
+      "type": "ONA",
+      "score": 6.8,
+      "genres": [
+        "Action",
+        "Sci-Fi"
+      ],
       "letter": "U",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 101291,
       "title": "Ulysses: Jeanne d'Arc and the Alchemist Knight",
-      "anilistUrl": "https://anilist.co/anime/101291",
-      "anilistId": 101291,
+      "anilistUrl": "https://anilist.co/anime/100432",
+      "anilistId": 100432,
       "type": "TV",
       "score": 5.8,
       "genres": [
@@ -2972,27 +3700,71 @@
         "Fantasy"
       ],
       "letter": "U",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 101291,
-      "title": "Ultraman",
-      "anilistUrl": "https://anilist.co/anime/101291",
-      "anilistId": 101291,
+      "title": "Uma Musume: Pretty Derby",
+      "anilistUrl": "https://anilist.co/anime/98514",
+      "anilistId": 98514,
       "type": "TV",
-      "score": 6.8,
+      "score": 7.8,
       "genres": [
-        "Action",
-        "Sci-Fi"
+        "Sports",
+        "Comedy"
       ],
       "letter": "U",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 10165,
+      "title": "Un-Go",
+      "anilistUrl": "https://anilist.co/anime/10798",
+      "anilistId": 10798,
+      "type": "TV",
+      "score": 7,
+      "genres": [
+        "Mystery",
+        "Supernatural"
+      ],
+      "letter": "U",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 20787,
+      "title": "Unlimited Psychic Squad",
+      "anilistUrl": "https://anilist.co/anime/16005",
+      "anilistId": 16005,
+      "type": "TV",
+      "score": 6.5,
+      "genres": [
+        "Action",
+        "Supernatural"
+      ],
+      "letter": "U",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 98438,
       "title": "UQ Holder!",
-      "anilistUrl": "https://anilist.co/anime/98438",
-      "anilistId": 98438,
+      "anilistUrl": "https://anilist.co/anime/21855",
+      "anilistId": 21855,
       "type": "TV",
       "score": 6.7,
       "genres": [
@@ -3000,7 +3772,11 @@
         "Fantasy"
       ],
       "letter": "U",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 940,
@@ -3014,77 +3790,65 @@
         "Romance"
       ],
       "letter": "U",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 10165,
+      "title": "Usagi Drop",
+      "anilistUrl": "https://anilist.co/anime/10162",
+      "anilistId": 10162,
+      "type": "TV",
+      "score": 8.3,
+      "genres": [
+        "Comedy",
+        "Slice of Life"
+      ],
+      "letter": "U",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 20787,
-      "title": "Unlimited Psychic Squad",
-      "anilistUrl": "https://anilist.co/anime/20787",
-      "anilistId": 20787,
-      "type": "TV",
-      "score": 6.5,
+      "title": "Ushio and Tora",
+      "anilistUrl": "https://anilist.co/anime/842",
+      "anilistId": 842,
+      "type": "OVA",
+      "score": 7.7,
       "genres": [
         "Action",
         "Supernatural"
       ],
       "letter": "U",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 101348,
-      "title": "Vinland Saga",
-      "anilistUrl": "https://anilist.co/anime/101348",
-      "anilistId": 101348,
+      "id": 440,
+      "title": "Utena Revolutionary Girl",
+      "anilistUrl": "https://anilist.co/anime/440",
+      "anilistId": 440,
       "type": "TV",
-      "score": 8.7,
+      "score": 7.6,
       "genres": [
-        "Action",
+        "Psychological",
         "Drama"
       ],
-      "letter": "V",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 21827,
-      "title": "Violet Evergarden",
-      "anilistUrl": "https://anilist.co/anime/21827",
-      "anilistId": 21827,
-      "type": "TV",
-      "score": 8.7,
-      "genres": [
-        "Drama",
-        "Slice of Life"
-      ],
-      "letter": "V",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 124194,
-      "title": "Vivy: Fluorite Eye's Song",
-      "anilistUrl": "https://anilist.co/anime/124194",
-      "anilistId": 124194,
-      "type": "TV",
-      "score": 8.3,
-      "genres": [
-        "Sci-Fi",
-        "Action"
-      ],
-      "letter": "V",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 3750,
-      "title": "Vampire Knight",
-      "anilistUrl": "https://anilist.co/anime/3750",
-      "anilistId": 3750,
-      "type": "TV",
-      "score": 6.7,
-      "genres": [
-        "Romance",
-        "Supernatural"
-      ],
-      "letter": "V",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "U",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 17074,
@@ -3098,49 +3862,11 @@
         "Action"
       ],
       "letter": "V",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 235,
-      "title": "Vandread",
-      "anilistUrl": "https://anilist.co/anime/235",
-      "anilistId": 235,
-      "type": "TV",
-      "score": 7,
-      "genres": [
-        "Mecha",
-        "Romance"
-      ],
-      "letter": "V",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 97,
-      "title": "Visions of Escaflowne",
-      "anilistUrl": "https://anilist.co/anime/97",
-      "anilistId": 97,
-      "type": "TV",
-      "score": 7.5,
-      "genres": [
-        "Mecha",
-        "Fantasy"
-      ],
-      "letter": "V",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 124194,
-      "title": "Vexations of a Shut-In Vampire Princess",
-      "anilistUrl": "https://anilist.co/anime/124194",
-      "anilistId": 124194,
-      "type": "TV",
-      "score": 6.2,
-      "genres": [
-        "Comedy",
-        "Fantasy"
-      ],
-      "letter": "V",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 1142,
@@ -3154,13 +3880,53 @@
         "Horror"
       ],
       "letter": "V",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 3750,
+      "title": "Vampire Knight",
+      "anilistUrl": "https://anilist.co/anime/3750",
+      "anilistId": 3750,
+      "type": "TV",
+      "score": 6.7,
+      "genres": [
+        "Romance",
+        "Supernatural"
+      ],
+      "letter": "V",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 235,
+      "title": "Vandread",
+      "anilistUrl": "https://anilist.co/anime/235",
+      "anilistId": 235,
+      "type": "TV",
+      "score": 7,
+      "genres": [
+        "Mecha",
+        "Romance"
+      ],
+      "letter": "V",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 98438,
       "title": "Vatican Miracle Examiner",
-      "anilistUrl": "https://anilist.co/anime/98438",
-      "anilistId": 98438,
+      "anilistUrl": "https://anilist.co/anime/97855",
+      "anilistId": 97855,
       "type": "TV",
       "score": 5.8,
       "genres": [
@@ -3168,91 +3934,101 @@
         "Supernatural"
       ],
       "letter": "V",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 1214,
-      "title": "Welcome to the N.H.K.",
-      "anilistUrl": "https://anilist.co/anime/1214",
-      "anilistId": 1214,
+      "id": 124194,
+      "title": "Vexations of a Shut-In Vampire Princess",
+      "anilistUrl": "https://anilist.co/anime/159808",
+      "anilistId": 159808,
       "type": "TV",
-      "score": 8.2,
+      "score": 6.2,
       "genres": [
-        "Psychological",
-        "Comedy"
-      ],
-      "letter": "W",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 12355,
-      "title": "Wolf Children",
-      "anilistUrl": "https://anilist.co/anime/12355",
-      "anilistId": 12355,
-      "type": "Movie",
-      "score": 8.6,
-      "genres": [
-        "Drama",
+        "Comedy",
         "Fantasy"
       ],
-      "letter": "W",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "V",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 101291,
-      "title": "Wotakoi: Love is Hard for Otaku",
-      "anilistUrl": "https://anilist.co/anime/101291",
-      "anilistId": 101291,
+      "id": 101348,
+      "title": "Vinland Saga",
+      "anilistUrl": "https://anilist.co/anime/101348",
+      "anilistId": 101348,
       "type": "TV",
-      "score": 8,
+      "score": 8.7,
       "genres": [
-        "Romance",
-        "Comedy"
+        "Action",
+        "Drama"
       ],
-      "letter": "W",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "V",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 389,
-      "title": "Witch Hunter Robin",
-      "anilistUrl": "https://anilist.co/anime/389",
-      "anilistId": 389,
+      "id": 21827,
+      "title": "Violet Evergarden",
+      "anilistUrl": "https://anilist.co/anime/21827",
+      "anilistId": 21827,
       "type": "TV",
-      "score": 7.2,
+      "score": 8.7,
       "genres": [
-        "Fantasy",
-        "Mystery"
+        "Drama",
+        "Slice of Life"
       ],
-      "letter": "W",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "V",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 98438,
-      "title": "WorldEnd",
-      "anilistUrl": "https://anilist.co/anime/98438",
-      "anilistId": 98438,
+      "id": 97,
+      "title": "Visions of Escaflowne",
+      "anilistUrl": "https://anilist.co/anime/97",
+      "anilistId": 97,
       "type": "TV",
       "score": 7.5,
       "genres": [
-        "Drama",
+        "Mecha",
         "Fantasy"
       ],
-      "letter": "W",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "V",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 101291,
-      "title": "Wise Man's Grandchild",
-      "anilistUrl": "https://anilist.co/anime/101291",
-      "anilistId": 101291,
+      "id": 124194,
+      "title": "Vivy: Fluorite Eye's Song",
+      "anilistUrl": "https://anilist.co/anime/128546",
+      "anilistId": 128546,
       "type": "TV",
-      "score": 6.5,
+      "score": 8.3,
       "genres": [
-        "Action",
-        "Fantasy"
+        "Sci-Fi",
+        "Action"
       ],
-      "letter": "W",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "V",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 8408,
@@ -3266,21 +4042,11 @@
         "Slice of Life"
       ],
       "letter": "W",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 20787,
-      "title": "World Trigger",
-      "anilistUrl": "https://anilist.co/anime/20787",
-      "anilistId": 20787,
-      "type": "TV",
-      "score": 7.7,
-      "genres": [
-        "Action",
-        "Sci-Fi"
-      ],
-      "letter": "W",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 18497,
@@ -3294,7 +4060,47 @@
         "Ecchi"
       ],
       "letter": "W",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 1214,
+      "title": "Welcome to the N.H.K.",
+      "anilistUrl": "https://anilist.co/anime/1214",
+      "anilistId": 1214,
+      "type": "TV",
+      "score": 8.2,
+      "genres": [
+        "Psychological",
+        "Comedy"
+      ],
+      "letter": "W",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 101291,
+      "title": "Wise Man's Grandchild",
+      "anilistUrl": "https://anilist.co/anime/100112",
+      "anilistId": 100112,
+      "type": "TV",
+      "score": 6.5,
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "letter": "W",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 19365,
@@ -3308,35 +4114,101 @@
         "Action"
       ],
       "letter": "W",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 465,
-      "title": "XXXHOLiC",
-      "anilistUrl": "https://anilist.co/anime/465",
-      "anilistId": 465,
+      "id": 389,
+      "title": "Witch Hunter Robin",
+      "anilistUrl": "https://anilist.co/anime/389",
+      "anilistId": 389,
       "type": "TV",
-      "score": 7.6,
+      "score": 7.2,
       "genres": [
         "Fantasy",
         "Mystery"
       ],
-      "letter": "X",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "W",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 4549,
-      "title": "Xam'd: Lost Memories",
-      "anilistUrl": "https://anilist.co/anime/4549",
-      "anilistId": 4549,
-      "type": "TV",
-      "score": 7.3,
+      "id": 12355,
+      "title": "Wolf Children",
+      "anilistUrl": "https://anilist.co/anime/12355",
+      "anilistId": 12355,
+      "type": "Movie",
+      "score": 8.6,
       "genres": [
-        "Mecha",
-        "Adventure"
+        "Drama",
+        "Fantasy"
       ],
-      "letter": "X",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "W",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 20787,
+      "title": "World Trigger",
+      "anilistUrl": "https://anilist.co/anime/20729",
+      "anilistId": 20729,
+      "type": "TV",
+      "score": 7.7,
+      "genres": [
+        "Action",
+        "Sci-Fi"
+      ],
+      "letter": "W",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 98438,
+      "title": "WorldEnd",
+      "anilistUrl": "https://anilist.co/anime/21860",
+      "anilistId": 21860,
+      "type": "TV",
+      "score": 7.5,
+      "genres": [
+        "Drama",
+        "Fantasy"
+      ],
+      "letter": "W",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 101291,
+      "title": "Wotakoi: Love is Hard for Otaku",
+      "anilistUrl": "https://anilist.co/anime/99578",
+      "anilistId": 99578,
+      "type": "TV",
+      "score": 8,
+      "genres": [
+        "Romance",
+        "Comedy"
+      ],
+      "letter": "W",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 99,
@@ -3350,7 +4222,29 @@
         "Fantasy"
       ],
       "letter": "X",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 4549,
+      "title": "Xam'd: Lost Memories",
+      "anilistUrl": "https://anilist.co/anime/4549",
+      "anilistId": 4549,
+      "type": "TV",
+      "score": 7.3,
+      "genres": [
+        "Mecha",
+        "Adventure"
+      ],
+      "letter": "X",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 1175,
@@ -3364,13 +4258,17 @@
         "Action"
       ],
       "letter": "X",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 20787,
       "title": "Xiaolin Showdown",
-      "anilistUrl": "https://anilist.co/anime/20787",
-      "anilistId": 20787,
+      "anilistUrl": "https://anilist.co/anime/900238",
+      "anilistId": 900238,
       "type": "TV",
       "score": 6.5,
       "genres": [
@@ -3378,21 +4276,101 @@
         "Adventure"
       ],
       "letter": "X",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 21519,
-      "title": "Your Name",
-      "anilistUrl": "https://anilist.co/anime/21519",
-      "anilistId": 21519,
-      "type": "Movie",
-      "score": 9,
+      "id": 465,
+      "title": "XXXHOLiC",
+      "anilistUrl": "https://anilist.co/anime/465",
+      "anilistId": 465,
+      "type": "TV",
+      "score": 7.6,
       "genres": [
-        "Romance",
+        "Fantasy",
+        "Mystery"
+      ],
+      "letter": "X",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 101348,
+      "title": "Yakusoku no Neverland",
+      "anilistUrl": "https://anilist.co/anime/101759",
+      "anilistId": 101759,
+      "type": "TV",
+      "score": 8.5,
+      "genres": [
+        "Psychological",
+        "Horror"
+      ],
+      "letter": "Y",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 20787,
+      "title": "Yamada-kun and the Seven Witches",
+      "anilistUrl": "https://anilist.co/anime/900248",
+      "anilistId": 900248,
+      "type": "TV",
+      "score": 7.5,
+      "genres": [
+        "Comedy",
         "Supernatural"
       ],
       "letter": "Y",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 20787,
+      "title": "Yona of the Dawn",
+      "anilistUrl": "https://anilist.co/anime/20770",
+      "anilistId": 20770,
+      "type": "TV",
+      "score": 8,
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "letter": "Y",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 21473,
+      "title": "Youjo Senki",
+      "anilistUrl": "https://anilist.co/anime/21613",
+      "anilistId": 21613,
+      "type": "TV",
+      "score": 7.8,
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "letter": "Y",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 20665,
@@ -3406,49 +4384,29 @@
         "Music"
       ],
       "letter": "Y",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 20787,
-      "title": "Yona of the Dawn",
-      "anilistUrl": "https://anilist.co/anime/20787",
-      "anilistId": 20787,
-      "type": "TV",
-      "score": 8,
+      "id": 21519,
+      "title": "Your Name",
+      "anilistUrl": "https://anilist.co/anime/21519",
+      "anilistId": 21519,
+      "type": "Movie",
+      "score": 9,
       "genres": [
-        "Adventure",
-        "Fantasy"
-      ],
-      "letter": "Y",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 392,
-      "title": "Yu Yu Hakusho",
-      "anilistUrl": "https://anilist.co/anime/392",
-      "anilistId": 392,
-      "type": "TV",
-      "score": 8.3,
-      "genres": [
-        "Action",
+        "Romance",
         "Supernatural"
       ],
       "letter": "Y",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 21327,
-      "title": "Yuri!!! on Ice",
-      "anilistUrl": "https://anilist.co/anime/21327",
-      "anilistId": 21327,
-      "type": "TV",
-      "score": 8.1,
-      "genres": [
-        "Sports",
-        "Romance"
-      ],
-      "letter": "Y",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 18139,
@@ -3462,27 +4420,53 @@
         "Comedy"
       ],
       "letter": "Y",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 101348,
-      "title": "Yakusoku no Neverland",
-      "anilistUrl": "https://anilist.co/anime/101348",
-      "anilistId": 101348,
+      "id": 392,
+      "title": "Yu Yu Hakusho",
+      "anilistUrl": "https://anilist.co/anime/392",
+      "anilistId": 392,
       "type": "TV",
-      "score": 8.5,
+      "score": 8.3,
       "genres": [
-        "Psychological",
-        "Horror"
+        "Action",
+        "Supernatural"
       ],
       "letter": "Y",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 21327,
+      "title": "Yuri!!! on Ice",
+      "anilistUrl": "https://anilist.co/anime/21709",
+      "anilistId": 21709,
+      "type": "TV",
+      "score": 8.1,
+      "genres": [
+        "Sports",
+        "Romance"
+      ],
+      "letter": "Y",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 98438,
       "title": "Yuru Camp",
-      "anilistUrl": "https://anilist.co/anime/98438",
-      "anilistId": 98438,
+      "anilistUrl": "https://anilist.co/anime/98444",
+      "anilistId": 98444,
       "type": "TV",
       "score": 8.2,
       "genres": [
@@ -3490,41 +4474,35 @@
         "Slice of Life"
       ],
       "letter": "Y",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
-      "id": 21473,
-      "title": "Youjo Senki",
-      "anilistUrl": "https://anilist.co/anime/21473",
-      "anilistId": 21473,
+      "id": 20787,
+      "title": "Z/X Ignition",
+      "anilistUrl": "https://anilist.co/anime/20486",
+      "anilistId": 20486,
       "type": "TV",
-      "score": 7.8,
+      "score": 5.5,
       "genres": [
         "Action",
         "Fantasy"
       ],
-      "letter": "Y",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 20787,
-      "title": "Yamada-kun and the Seven Witches",
-      "anilistUrl": "https://anilist.co/anime/20787",
-      "anilistId": 20787,
-      "type": "TV",
-      "score": 7.5,
-      "genres": [
-        "Comedy",
-        "Supernatural"
-      ],
-      "letter": "Y",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "letter": "Z",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 20687,
       "title": "Zankyou no Terror",
-      "anilistUrl": "https://anilist.co/anime/20687",
-      "anilistId": 20687,
+      "anilistUrl": "https://anilist.co/anime/20661",
+      "anilistId": 20661,
       "type": "TV",
       "score": 8,
       "genres": [
@@ -3532,35 +4510,11 @@
         "Thriller"
       ],
       "letter": "Z",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 14075,
-      "title": "Zetsuen no Tempest",
-      "anilistUrl": "https://anilist.co/anime/14075",
-      "anilistId": 14075,
-      "type": "TV",
-      "score": 7.7,
-      "genres": [
-        "Psychological",
-        "Fantasy"
-      ],
-      "letter": "Z",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 101291,
-      "title": "Zombie Land Saga",
-      "anilistUrl": "https://anilist.co/anime/101291",
-      "anilistId": 101291,
-      "type": "TV",
-      "score": 7.8,
-      "genres": [
-        "Comedy",
-        "Supernatural"
-      ],
-      "letter": "Z",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 1498,
@@ -3574,7 +4528,11 @@
         "Comedy"
       ],
       "letter": "Z",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 11785,
@@ -3588,7 +4546,29 @@
         "Horror"
       ],
       "letter": "Z",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 14075,
+      "title": "Zetsuen no Tempest",
+      "anilistUrl": "https://anilist.co/anime/14075",
+      "anilistId": 14075,
+      "type": "TV",
+      "score": 7.7,
+      "genres": [
+        "Psychological",
+        "Fantasy"
+      ],
+      "letter": "Z",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 504,
@@ -3602,7 +4582,11 @@
         "Historical"
       ],
       "letter": "Z",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 1095,
@@ -3616,7 +4600,29 @@
         "Action"
       ],
       "letter": "Z",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
+    },
+    {
+      "id": 101291,
+      "title": "Zombie Land Saga",
+      "anilistUrl": "https://anilist.co/anime/103871",
+      "anilistId": 103871,
+      "type": "TV",
+      "score": 7.8,
+      "genres": [
+        "Comedy",
+        "Supernatural"
+      ],
+      "letter": "Z",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 2163,
@@ -3630,27 +4636,17 @@
         "Horror"
       ],
       "letter": "Z",
-      "addedAt": "2026-05-06T15:26:54.151Z"
-    },
-    {
-      "id": 20787,
-      "title": "Z/X Ignition",
-      "anilistUrl": "https://anilist.co/anime/20787",
-      "anilistId": 20787,
-      "type": "TV",
-      "score": 5.5,
-      "genres": [
-        "Action",
-        "Fantasy"
-      ],
-      "letter": "Z",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     },
     {
       "id": 20787,
       "title": "Zombie Powder",
-      "anilistUrl": "https://anilist.co/anime/20787",
-      "anilistId": 20787,
+      "anilistUrl": "https://anilist.co/anime/900258",
+      "anilistId": 900258,
       "type": "TV",
       "score": 5,
       "genres": [
@@ -3658,7 +4654,11 @@
         "Supernatural"
       ],
       "letter": "Z",
-      "addedAt": "2026-05-06T15:26:54.151Z"
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z"
     }
   ]
 }

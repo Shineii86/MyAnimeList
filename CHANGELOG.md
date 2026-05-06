@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Admin Panel v1.2.1 — Diagnostics & Data Cleanup
+
+### Fixed
+- **Removed unused dependencies** — `cookie` and `jsonwebtoken` removed from package.json (custom HMAC auth used instead)
+- **Added try/catch** to 3 API routes (random, [id], stats) for proper error handling
+- **Fixed 73 incorrect AniList IDs** — fetched correct IDs from AniList API via rate-limited batch script
+- **Removed duplicate entries** — Hyouka (2x), Love is War (= Kaguya-sama)
+- **Fixed Dragon Maid ID** — corrected from 21507 to 21816
+- **Added missing data fields** — all 257 entries now have `status`, `notes`, `tags`, `addedAt`, `updatedAt` fields
+- **4 entries with placeholder IDs** — Q Transformers, Xiaolin Showdown, Yamada-kun, Zombie Powder (not available on AniList)
+
+### Technical
+- Added `scripts/fix-duplicate-ids.js` — batch AniList ID lookup with rate limiting
+- Added `scripts/fetch-correct-ids.js` — second-pass ID correction
+- Zero true duplicate IDs remaining (aliases are intentional: same anime, different names)
+- All 30 JS files pass syntax check, all API routes have error handling
+
 ## [2026-05-06] - Admin Panel v1.2.0 — Watchlist, Visuals & Polish
 
 ### Added

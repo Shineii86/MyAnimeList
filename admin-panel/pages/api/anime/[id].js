@@ -8,16 +8,20 @@ export default function handler(req, res) {
 
   const { id } = req.query;
 
-  switch (req.method) {
-    case 'GET':
-      return handleGet(id, res);
-    case 'PUT':
-    case 'PATCH':
-      return handleUpdate(id, req.body, res);
-    case 'DELETE':
-      return handleDelete(id, res);
-    default:
-      return res.status(405).json({ error: 'Method not allowed' });
+  try {
+    switch (req.method) {
+      case 'GET':
+        return handleGet(id, res);
+      case 'PUT':
+      case 'PATCH':
+        return handleUpdate(id, req.body, res);
+      case 'DELETE':
+        return handleDelete(id, res);
+      default:
+        return res.status(405).json({ error: 'Method not allowed' });
+    }
+  } catch (err) {
+    return res.status(500).json({ error: `Server error: ${err.message}` });
   }
 }
 

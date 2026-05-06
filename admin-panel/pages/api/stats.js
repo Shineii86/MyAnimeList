@@ -10,38 +10,42 @@ export default function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const stats = getStats();
-  const recommendations = getRecommendations();
-  const anime = getAllAnime();
+  try {
+    const stats = getStats();
+    const recommendations = getRecommendations();
+    const anime = getAllAnime();
 
-  const byType = {};
-  const byGenre = {};
-  const byStatus = {};
-  const byTag = {};
-  
-  VALID_STATUSES.forEach(s => { byStatus[s] = 0; });
+    const byType = {};
+    const byGenre = {};
+    const byStatus = {};
+    const byTag = {};
+    
+    VALID_STATUSES.forEach(s => { byStatus[s] = 0; });
 
-  anime.forEach(a => {
-    byType[a.type] = (byType[a.type] || 0) + 1;
-    const s = a.status || 'Completed';
-    byStatus[s] = (byStatus[s] || 0) + 1;
-    (a.genres || []).forEach(g => { byGenre[g] = (byGenre[g] || 0) + 1; });
-    (a.tags || []).forEach(t => { byTag[t] = (byTag[t] || 0) + 1; });
-  });
+    anime.forEach(a => {
+      byType[a.type] = (byType[a.type] || 0) + 1;
+      const s = a.status || 'Completed';
+      byStatus[s] = (byStatus[s] || 0) + 1;
+      (a.genres || []).forEach(g => { byGenre[g] = (byGenre[g] || 0) + 1; });
+      (a.tags || []).forEach(t => { byTag[t] = (byTag[t] || 0) + 1; });
+    });
 
-  return res.status(200).json({
-    stats,
-    totalAnime: anime.length,
-    recommendations: recommendations.length,
-    byType,
-    byStatus,
-    topGenres: Object.entries(byGenre)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 10)
-      .map(([genre, count]) => ({ genre, count })),
-    topTags: Object.entries(byTag)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 10)
-      .map(([tag, count]) => ({ tag, count }))
-  });
+    return res.status(200).json({
+      stats,
+      totalAnime: anime.length,
+      recommendations: recommendations.length,
+      byType,
+      byStatus,
+      topGenres: Object.entries(byGenre)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10)
+        .map(([genre, count]) => ({ genre, count })),
+      topTags: Object.entries(byTag)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10)
+        .map(([tag, count]) => ({ tag, count }))
+    });
+  } catch (err) {
+    return res.status(500).json({ error: `Failed to load stats: ${err.message}` });
+  }
 }
