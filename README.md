@@ -93,8 +93,8 @@ These are my personal 10/10 masterpieces:
 - [**Dealing with Mikadono Sisters Is a Breeze**](https://anilist.co/anime/178886) - TV ⭐ 9.3 | 😄 Comedy, 💕 Romance
 - [**Death Note**](https://anilist.co/anime/1535) - TV ⭐ 8.6 | 🧠 Psychological, 🎭 Thriller
 - [**Death Parade**](https://anilist.co/anime/20931) - TV ⭐ 8.2 | 🧠 Psychological, 💔 Drama
+- [**Debug Test 123**](https://anilist.co/anime/33333) - TV ⭐ 8 | 
 - [**Demon Slayer**](https://anilist.co/anime/21612) - TV ⭐ 8.5 | ⚔️ Action, 🧙 Fantasy
-- [**Deploy Test**](https://anilist.co/anime/44444) - TV ⭐ 8 | 
 - [**Devilman Crybaby**](https://anilist.co/anime/20996) - TV ⭐ 7.8 | ⚔️ Action, 🎭 Horror
 - [**Dorohedoro**](https://anilist.co/anime/103786) - TV ⭐ 8.2 | ⚔️ Action, 🧙 Fantasy
 - [**Dr. Stone**](https://anilist.co/anime/105333) - TV ⭐ 8.2 | 🗡️ Adventure, 🔬 Sci-Fi
