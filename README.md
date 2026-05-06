@@ -111,7 +111,6 @@ These are my personal 10/10 masterpieces:
 - [**Eromanga Sensei**](https://anilist.co/anime/21685) - TV ⭐ 6.5 | 💕 Romance, 😄 Comedy
 - [**Eureka Seven**](https://anilist.co/anime/237) - TV ⭐ 8 | 🤖 Mecha, 🗡️ Adventure
 - [**Excel Saga**](https://anilist.co/anime/134) - TV ⭐ 6.9 | 😄 Comedy, 😂 Parody
-- [**Explicit Creds Test**](https://anilist.co/anime/22222) - TV ⭐ 8 | 
 
 ### F
 - [**Fairy Tail**](https://anilist.co/anime/6702) - TV ⭐ 7.6 | ⚔️ Action, 🗡️ Adventure
@@ -293,6 +292,7 @@ These are my personal 10/10 masterpieces:
 - [**The Melancholy of Haruhi Suzumiya**](https://anilist.co/anime/849) - TV ⭐ 7.9 | 😄 Comedy, 🕰️ Mystery
 - [**The Rising of the Shield Hero**](https://anilist.co/anime/99263) - TV ⭐ 7.5 | ⚔️ Action, 🧙 Fantasy
 - [**The Water Magician**](https://anilist.co/anime/186052) - TV ⭐ 8.6 | 🗡️ Adventure, 🧙 Fantasy
+- [**Token Test**](https://anilist.co/anime/11111) - TV ⭐ 8 | 
 - [**Tokyo Ghoul**](https://anilist.co/anime/20605) - TV ⭐ 7.7 | 🎭 Horror, 🧠 Psychological
 - [**Tokyo Revengers**](https://anilist.co/anime/120120) - TV ⭐ 7.8 | ⚔️ Action, 💔 Drama
 - [**Toradora!**](https://anilist.co/anime/4224) - TV ⭐ 8.3 | 💕 Romance, 😄 Comedy
