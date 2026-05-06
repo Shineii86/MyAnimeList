@@ -28,7 +28,7 @@
 | Statistic | Value |
 |-----------|-------|
 | Total Anime | 265 |
-| Total Episodes | 4,014 |
+| Total Episodes | 4,002 |
 | TV Shows | 240 |
 | Movies Watched | 18 |
 | OVAs/Specials | 4 |
@@ -72,6 +72,7 @@ These are my personal 10/10 masterpieces:
 - [**Blue Lock**](https://anilist.co/anime/139893) - TV ⭐ 8.2 | 🏐 Sports, 🧠 Psychological
 - [**Bocchi the Rock!**](https://anilist.co/anime/144802) - TV ⭐ 8.5 | 🎵 Music, 😄 Comedy
 - [**Btooom!**](https://anilist.co/anime/13599) - TV ⭐ 7.2 | ⚔️ Action, 🧠 Psychological
+- [**Bulk Live 1**](https://anilist.co/anime/70001) - TV ⭐ 7 | 
 
 ### C
 - [**Carole & Tuesday**](https://anilist.co/anime/104578) - TV ⭐ 8 | 🎵 Music, 🔬 Sci-Fi
@@ -194,7 +195,6 @@ These are my personal 10/10 masterpieces:
 - [**Land of the Lustrous**](https://anilist.co/anime/98707) - TV ⭐ 8.4 | ⚔️ Action, 🧙 Fantasy
 - [**Legend of the Galactic Heroes**](https://anilist.co/anime/820) - OVA ⭐ 9.1 | 🔬 Sci-Fi, 💔 Drama
 - [**Little Witch Academia**](https://anilist.co/anime/14349) - Movie ⭐ 7.8 | 🧙 Fantasy, 😄 Comedy
-- [**Live Test Anime**](https://anilist.co/anime/88888) - TV ⭐ 8.5 | ⚔️ Action, 🏷️ Test
 - [**Log Horizon**](https://anilist.co/anime/17265) - TV ⭐ 7.9 | 🗡️ Adventure, 🧙 Fantasy
 - [**Love Live! School Idol Project**](https://anilist.co/anime/15051) - TV ⭐ 7.5 | 🎵 Music, 😃 Slice of Life
 - [**Love, Chunibyo & Other Delusions**](https://anilist.co/anime/14741) - TV ⭐ 7.7 | 💕 Romance, 😄 Comedy
