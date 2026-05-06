@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { SearchIcon, StarIcon, PlusIcon, EditIcon, NoteIcon, CheckCircleIcon, EyeIcon, ClockIcon, WarningIcon, TrashIcon } from '../../lib/icons';
+import { SearchIcon, StarIcon, PlusIcon, EditIcon, NoteIcon, CheckCircleIcon, EyeIcon, ClockIcon, WarningIcon, TrashIcon, RocketIcon } from '../../lib/icons';
 import { apiFetch, apiGet, apiPost, apiPut, apiDelete } from '../../lib/api';
 
 export default function AddAnime({ showToast }) {
@@ -11,6 +11,10 @@ export default function AddAnime({ showToast }) {
     genres: '', episodes: '', status: 'Completed', notes: '', tags: '', coverImage: ''
   });
   const [loading, setLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [lastAdded, setLastAdded] = useState('');
+  const [pushing, setPushing] = useState(false);
+  const [pushDone, setPushDone] = useState(false);
   const [anilistQuery, setAnilistQuery] = useState('');
   const [anilistResults, setAnilistResults] = useState([]);
   const [searching, setSearching] = useState(false);
@@ -111,18 +115,9 @@ export default function AddAnime({ showToast }) {
       const res = await apiPost('/api/anime', body);
 
       if (res.ok) {
-        try {
-          const settings = JSON.parse(localStorage.getItem('mal_admin_settings') || '{}');
-          if (settings.autoPush && settings.githubToken) {
-            fetch('/api/push', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ action: 'push', github_token: settings.githubToken, owner: settings.owner || 'Shineii86', repo: settings.repo || 'MyAnimeList' })
-            }).catch(() => {});
-          }
-        } catch {}
-        showToast?.(`Added: ${form.title}`, 'success');
-        router.push('/anime');
+        setLastAdded(form.title);
+        setShowSuccess(true);
+        setPushDone(false);
       } else {
         const data = await res.json();
         showToast?.(data.error || 'Failed to add', 'error');
@@ -132,6 +127,39 @@ export default function AddAnime({ showToast }) {
     } finally {
       setLoading(false);
     }
+  }
+
+  async function handlePushNow() {
+    setPushing(true);
+    try {
+      const settings = JSON.parse(localStorage.getItem('mal_admin_settings') || '{}');
+      const token = settings.githubToken;
+      const owner = settings.owner || 'Shineii86';
+      const repo = settings.repo || 'MyAnimeList';
+
+      const res = await fetch('/api/push', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'push', github_token: token, owner, repo })
+      });
+      if (res.ok) {
+        showToast?.('Pushed to GitHub!', 'success');
+        setPushDone(true);
+      } else {
+        const data = await res.json();
+        showToast?.(data.error || 'Push failed', 'error');
+      }
+    } catch {
+      showToast?.('Push error', 'error');
+    } finally {
+      setPushing(false);
+    }
+  }
+
+  function handleAddMore() {
+    setForm({ title: '', anilistUrl: '', anilistId: '', type: 'TV', score: '', genres: '', episodes: '', status: 'Completed', notes: '', tags: '', coverImage: '' });
+    setUrlDetected(false);
+    setShowSuccess(false);
   }
 
   return (
@@ -241,6 +269,48 @@ export default function AddAnime({ showToast }) {
           </div>
         </form>
       </div>
+
+      {/* Success Modal */}
+      {showSuccess && (
+        <div style={{
+          position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
+          background: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(4px)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          zIndex: 1000, padding: 20
+        }} onClick={() => setShowSuccess(false)}>
+          <div style={{
+            background: 'var(--bg-card, #1a1a2e)', borderRadius: 16,
+            padding: 32, maxWidth: 440, width: '100%',
+            border: '1px solid var(--border, #333)',
+            boxShadow: '0 24px 48px rgba(0,0,0,0.4)',
+            position: 'relative'
+          }} onClick={e => e.stopPropagation()}>
+            <div style={{ textAlign: 'center', marginBottom: 24 }}>
+              <div style={{
+                width: 56, height: 56, borderRadius: '50%',
+                background: 'rgba(16, 185, 129, 0.15)', margin: '0 auto 16px',
+                display: 'flex', alignItems: 'center', justifyContent: 'center'
+              }}>
+                <CheckCircleIcon size={28} style={{ color: '#10b981' }} />
+              </div>
+              <h2 style={{ fontSize: 20, fontWeight: 800, marginBottom: 4 }}>Anime Added!</h2>
+              <p style={{ color: 'var(--text-muted)', fontSize: 14 }}>{lastAdded} has been added to your collection.</p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <button className="btn btn-primary" onClick={handleAddMore} style={{ width: '100%', justifyContent: 'center' }}>
+                <PlusIcon size={16} /> Add Another Anime
+              </button>
+              <button className="btn btn-success" onClick={handlePushNow} disabled={pushing || pushDone} style={{ width: '100%', justifyContent: 'center' }}>
+                {pushing ? <><div className="spinner" /> Pushing...</> : pushDone ? <><CheckCircleIcon size={16} /> Pushed!</> : <><RocketIcon size={16} /> Push to GitHub</>}
+              </button>
+              <button className="btn btn-outline" onClick={() => router.push('/anime')} style={{ width: '100%', justifyContent: 'center' }}>
+                View All Anime
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

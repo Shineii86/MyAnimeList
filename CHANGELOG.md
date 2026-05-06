@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Add Anime: Post-Add Confirmation Modal
+
+### Added
+- **Success modal after adding anime** — instead of auto-redirecting, a modal appears with three options:
+  - **Add Another Anime** — resets the form and stays on the page for batch adding
+  - **Push to GitHub** — one-click push without leaving the page (shows loading/success state)
+  - **View All Anime** — navigate to the anime list (old behavior)
+- Modal shows the added anime title for confirmation
+- Push button disables after successful push to prevent double-pushing
+
 ## [2026-05-07] - Fix: Push Page Now Uses Environment Variables as Fallback
 
 ### Fixed
