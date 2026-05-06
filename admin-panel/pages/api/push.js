@@ -40,11 +40,13 @@ export default async function handler(req, res) {
     }
 
     if (action === 'push') {
-      const { github_token, owner, repo } = req.body;
+      const github_token = req.body.github_token || process.env.GITHUB_TOKEN;
+      const owner = req.body.owner || process.env.GITHUB_OWNER || 'Shineii86';
+      const repo = req.body.repo || process.env.GITHUB_REPO || 'MyAnimeList';
       
-      if (!github_token || !owner || !repo) {
+      if (!github_token) {
         return res.status(400).json({ 
-          error: 'github_token, owner, and repo are required for push action' 
+          error: 'GitHub token is required. Provide it in the form or set GITHUB_TOKEN in your environment variables.' 
         });
       }
 

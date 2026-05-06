@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { NoteIcon, RocketIcon } from '../lib/icons';
 
@@ -9,6 +9,16 @@ export default function PushPage({ showToast }) {
   const [pushing, setPushing] = useState(false);
   const [generating, setGenerating] = useState(false);
   const [preview, setPreview] = useState('');
+
+  // Pre-populate from saved settings
+  useEffect(() => {
+    try {
+      const stored = JSON.parse(localStorage.getItem('mal_admin_settings') || '{}');
+      if (stored.githubToken) setGithubToken(stored.githubToken);
+      if (stored.owner) setOwner(stored.owner);
+      if (stored.repo) setRepo(stored.repo);
+    } catch {}
+  }, []);
 
   async function handleGenerate() {
     setGenerating(true);
@@ -33,9 +43,9 @@ export default function PushPage({ showToast }) {
   }
 
   async function handlePush() {
+    // Token can come from the form or from environment variables (server-side fallback)
     if (!githubToken.trim()) {
-      showToast?.('GitHub token is required', 'error');
-      return;
+      // Will try env var on the server side
     }
 
     setPushing(true);
@@ -112,7 +122,8 @@ export default function PushPage({ showToast }) {
             placeholder="ghp_xxxxxxxxxxxx"
           />
           <p style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 4 }}>
-            Generate at: GitHub → Settings → Developer Settings → Personal Access Tokens → Fine-grained tokens
+            Generate at: GitHub → Settings → Developer Settings → Personal Access Tokens → Fine-grained tokens.
+            If GITHUB_TOKEN is set in your environment, you can leave this empty.
           </p>
         </div>
 

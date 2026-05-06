@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Fix: Push Page Now Uses Environment Variables as Fallback
+
+### Fixed
+- **Push page no longer requires manual token entry** — `api/push.js` now falls back to `GITHUB_TOKEN`, `GITHUB_OWNER`, `GITHUB_REPO` environment variables when credentials aren't provided in the form
+- **Push page pre-populates from saved settings** — Token, owner, and repo fields auto-fill from localStorage (set via Settings page) on page load
+- **Better error message** — Clear message when no token is available (form or env var)
+
+### Changed
+- Token field on Push page is now optional when `GITHUB_TOKEN` env var is set
+- Added hint text explaining the env var fallback
+
 ## [2026-05-07] - Favicon & Open Graph Meta Tags
 
 ### Added
