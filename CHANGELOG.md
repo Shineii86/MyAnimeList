@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Fix: Vercel Read-Only Filesystem Crash
+
+### Fixed
+- **Critical: Login crash on Vercel** — `addEntry()` in auth route threw unhandled error when writing `activity-log.json` to Vercel's read-only filesystem, causing "Internal server error" on every login attempt
+- **Activity log write safety** — `lib/activity-log.js` `writeLog()` now catches filesystem errors silently instead of crashing
+- **Data write safety** — `lib/data.js` `writeData()` now catches filesystem errors silently
+- **Vercel /tmp support** — Both `data.js` and `activity-log.js` detect `VERCEL` env var and use `/tmp` (writable) instead of `data/` (read-only)
+- **Data seeding** — On first read, if `/tmp` is empty, data is seeded from the bundled `data/anime.json` so the admin panel has content to display
+
+### Technical
+- `IS_VERCEL = !!process.env.VERCEL` — Vercel sets this automatically, no config needed
+- On Vercel: reads from bundled `data/anime.json`, writes to `/tmp/anime.json`
+- On local: reads/writes from `data/` as before — no behavior change for local dev
+- Activity log is ephemeral on Vercel (lost on cold start) — use GitHub push for persistence
+
 ## [2026-05-07] - Security & Stability Fixes — Full Diagnostic Sweep
 
 ### Fixed

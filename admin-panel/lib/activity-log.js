@@ -1,7 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
-const LOG_FILE = path.join(__dirname, '..', 'data', 'activity-log.json');
+// Use /tmp on Vercel (writable), local data/ directory otherwise
+const IS_VERCEL = !!process.env.VERCEL;
+const LOG_FILE = IS_VERCEL
+  ? path.join('/tmp', 'activity-log.json')
+  : path.join(__dirname, '..', 'data', 'activity-log.json');
 const MAX_ENTRIES = 500; // Keep last 500 entries
 
 function readLog() {
@@ -14,9 +18,12 @@ function readLog() {
 }
 
 function writeLog(entries) {
-  // Keep only the latest MAX_ENTRIES
   const trimmed = entries.slice(-MAX_ENTRIES);
-  fs.writeFileSync(LOG_FILE, JSON.stringify(trimmed, null, 2), 'utf-8');
+  try {
+    fs.writeFileSync(LOG_FILE, JSON.stringify(trimmed, null, 2), 'utf-8');
+  } catch {
+    // Silently fail on read-only filesystems (Vercel serverless)
+  }
 }
 
 function addEntry({ action, target, details, user }) {

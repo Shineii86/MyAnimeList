@@ -1,7 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
-const DATA_FILE = path.join(__dirname, '..', 'data', 'anime.json');
+// Use /tmp on Vercel (writable), local data/ directory otherwise
+const IS_VERCEL = !!process.env.VERCEL;
+const DATA_FILE = IS_VERCEL
+  ? path.join('/tmp', 'anime.json')
+  : path.join(__dirname, '..', 'data', 'anime.json');
 
 const VALID_STATUSES = ['Completed', 'Watching', 'Plan to Watch', 'Dropped', 'On Hold'];
 
@@ -10,12 +14,27 @@ function readData() {
     const raw = fs.readFileSync(DATA_FILE, 'utf-8');
     return JSON.parse(raw);
   } catch {
+    // On Vercel, /tmp may not have the file yet — try reading from bundled data
+    if (IS_VERCEL) {
+      try {
+        const bundled = path.join(__dirname, '..', 'data', 'anime.json');
+        const raw = fs.readFileSync(bundled, 'utf-8');
+        const data = JSON.parse(raw);
+        // Seed /tmp with a copy for future writes
+        try { fs.writeFileSync(DATA_FILE, raw, 'utf-8'); } catch {}
+        return data;
+      } catch {}
+    }
     return { metadata: {}, recommendations: [], anime: [] };
   }
 }
 
 function writeData(data) {
-  fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), 'utf-8');
+  try {
+    fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), 'utf-8');
+  } catch {
+    // Silently fail on read-only filesystems (Vercel serverless)
+  }
 }
 
 function getAllAnime() {
