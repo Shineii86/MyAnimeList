@@ -54,5 +54,13 @@
     "target": "Bulk Live 3",
     "details": "TV • 7 • ",
     "user": "admin"
+  },
+  {
+    "id": "moufyw20iw4t",
+    "timestamp": "2026-05-06T19:19:53.544Z",
+    "action": "delete",
+    "target": "Bulk: ",
+    "details": "Deleted 0 anime entries",
+    "user": "admin"
   }
 ]
