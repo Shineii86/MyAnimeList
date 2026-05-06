@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Favicon & Open Graph Meta Tags
+
+### Added
+- **`pages/_document.js`** — Custom document with favicon, Open Graph, and Twitter Card meta tags
+- **Favicon** — `public/favicon.png` (32x32 PNG, served at `/favicon.png`)
+- **Open Graph tags** — title, description, image (uses repo logo), site name, dimensions
+- **Twitter Card** — `summary_large_image` with title, description, and image
+- **Theme color** — `#7c3aed` (purple accent matching the UI)
+- **Meta description** — SEO-friendly description for the admin panel
+
+### Technical
+- OG image uses the repo's `assets/logo.png` via raw.githubusercontent.com (no extra hosting needed)
+- Favicon is a resized 32x32 version of the logo
+- All pages inherit the OG tags from `_document.js`
+
 ## [2026-05-07] - Simplified: Auto-Push via Environment Variables
 
 ### Changed
