@@ -102,5 +102,21 @@
     "target": "Persist Test",
     "details": "TV • 8 • ",
     "user": "admin"
+  },
+  {
+    "id": "moug76ljqjtf",
+    "timestamp": "2026-05-06T19:26:20.455Z",
+    "action": "login",
+    "target": "Admin Panel",
+    "details": "Successful login",
+    "user": "admin"
+  },
+  {
+    "id": "moug78dk9mby",
+    "timestamp": "2026-05-06T19:26:22.760Z",
+    "action": "add",
+    "target": "VercelEnvCheck_1778095580",
+    "details": "TV • 8 • ",
+    "user": "admin"
   }
 ]
