@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "261",
-    "totalEpisodes": "3,989+",
+    "totalAnime": "264",
+    "totalEpisodes": "4,002+",
     "moviesWatched": "18",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 261,
+      "Completed": 264,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -1117,26 +1117,6 @@
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx134-f3dmmMOijYdn.png"
     },
     {
-      "id": 227,
-      "title": "FLCL",
-      "anilistUrl": "https://anilist.co/anime/227",
-      "anilistId": 227,
-      "type": "TV",
-      "score": 7.7,
-      "genres": [
-        "Mecha",
-        "Comedy"
-      ],
-      "letter": "F",
-      "addedAt": "2026-05-06T15:26:54.151Z",
-      "status": "Completed",
-      "notes": "",
-      "tags": [],
-      "updatedAt": "2026-05-06T15:26:54.151Z",
-      "episodes": 0,
-      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx227-qOB9ZhVvNnqO.jpg"
-    },
-    {
       "id": 6702,
       "title": "Fairy Tail",
       "anilistUrl": "https://anilist.co/anime/6702",
@@ -1155,6 +1135,25 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 0,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b6702-KI4qgSMyI8Pm.png"
+    },
+    {
+      "id": 22297,
+      "title": "Fate/stay night: Unlimited Blade Works",
+      "anilistUrl": "https://anilist.co/anime/22297",
+      "anilistId": 22297,
+      "type": "TV",
+      "score": 8.2,
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "letter": "F",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z",
+      "episodes": 0
     },
     {
       "id": 10087,
@@ -1177,25 +1176,6 @@
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx10087-M4Hd9qrHGrXk.png"
     },
     {
-      "id": 22297,
-      "title": "Fate/stay night: Unlimited Blade Works",
-      "anilistUrl": "https://anilist.co/anime/22297",
-      "anilistId": 22297,
-      "type": "TV",
-      "score": 8.2,
-      "genres": [
-        "Action",
-        "Fantasy"
-      ],
-      "letter": "F",
-      "addedAt": "2026-05-06T15:26:54.151Z",
-      "status": "Completed",
-      "notes": "",
-      "tags": [],
-      "updatedAt": "2026-05-06T15:26:54.151Z",
-      "episodes": 0
-    },
-    {
       "id": 104581,
       "title": "Fire Force",
       "anilistUrl": "https://anilist.co/anime/104581",
@@ -1213,6 +1193,26 @@
       "tags": [],
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 0
+    },
+    {
+      "id": 227,
+      "title": "FLCL",
+      "anilistUrl": "https://anilist.co/anime/227",
+      "anilistId": 227,
+      "type": "TV",
+      "score": 7.7,
+      "genres": [
+        "Mecha",
+        "Comedy"
+      ],
+      "letter": "F",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z",
+      "episodes": 0,
+      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx227-qOB9ZhVvNnqO.jpg"
     },
     {
       "id": 21087,
@@ -1559,26 +1559,6 @@
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2001-XwRnjzGeFWRQ.png"
     },
     {
-      "id": 185262,
-      "title": "HELL MODE: The Hardcore Gamer Dominates in Another World with Garbage Balancing",
-      "anilistUrl": "https://anilist.co/anime/185262",
-      "anilistId": 185262,
-      "type": "TV",
-      "score": 6.7,
-      "genres": [
-        "Action",
-        "Adventurer"
-      ],
-      "letter": "H",
-      "addedAt": "2026-05-06T15:26:54.151Z",
-      "status": "Completed",
-      "notes": "",
-      "tags": [],
-      "updatedAt": "2026-05-06T15:26:54.151Z",
-      "episodes": 12,
-      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx185262-95wbx3Y9hCwm.jpg"
-    },
-    {
       "id": 20583,
       "title": "Haikyuu!!",
       "anilistUrl": "https://anilist.co/anime/20583",
@@ -1617,6 +1597,48 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 75,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx263-ivVyn9xAgwSZ.png"
+    },
+    {
+      "id": 185262,
+      "title": "HELL MODE: The Hardcore Gamer Dominates in Another World with Garbage Balancing",
+      "anilistUrl": "https://anilist.co/anime/185262",
+      "anilistId": 185262,
+      "type": "TV",
+      "score": 6.7,
+      "genres": [
+        "Action",
+        "Adventurer"
+      ],
+      "letter": "H",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z",
+      "episodes": 12,
+      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx185262-95wbx3Y9hCwm.jpg"
+    },
+    {
+      "id": 128893,
+      "title": "Hell’s Paradise",
+      "anilistUrl": "https://anilist.co/anime/128893",
+      "anilistId": 128893,
+      "type": "TV",
+      "score": 8,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Mystery",
+        "Supernatural"
+      ],
+      "episodes": 13,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "H",
+      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx128893-Gc2t8b8M0mVu.jpg",
+      "addedAt": "2026-05-06T18:48:14.381Z",
+      "updatedAt": "2026-05-06T18:48:14.381Z"
     },
     {
       "id": 777,
@@ -3600,26 +3622,6 @@
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21355-wRVUrGxpvIQQ.jpg"
     },
     {
-      "id": 21507,
-      "title": "ReLIFE",
-      "anilistUrl": "https://anilist.co/anime/21049",
-      "anilistId": 21049,
-      "type": "ONA",
-      "score": 8,
-      "genres": [
-        "Comedy",
-        "Romance"
-      ],
-      "letter": "R",
-      "addedAt": "2026-05-06T15:26:54.151Z",
-      "status": "Completed",
-      "notes": "",
-      "tags": [],
-      "updatedAt": "2026-05-06T15:26:54.151Z",
-      "episodes": 13,
-      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21049-4AHSLeiDE9eg.png"
-    },
-    {
       "id": 98438,
       "title": "Recovery of an MMO Junkie",
       "anilistUrl": "https://anilist.co/anime/99726",
@@ -3658,6 +3660,26 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 1,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx6675-NF4tFzAxSjkj.png"
+    },
+    {
+      "id": 21507,
+      "title": "ReLIFE",
+      "anilistUrl": "https://anilist.co/anime/21049",
+      "anilistId": 21049,
+      "type": "ONA",
+      "score": 8,
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "letter": "R",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z",
+      "episodes": 13,
+      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21049-4AHSLeiDE9eg.png"
     },
     {
       "id": 13667,
@@ -4201,26 +4223,6 @@
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx6-wd4saT1JzStH.jpg"
     },
     {
-      "id": 98438,
-      "title": "UQ Holder!",
-      "anilistUrl": "https://anilist.co/anime/21855",
-      "anilistId": 21855,
-      "type": "TV",
-      "score": 6.7,
-      "genres": [
-        "Action",
-        "Fantasy"
-      ],
-      "letter": "U",
-      "addedAt": "2026-05-06T15:26:54.151Z",
-      "status": "Completed",
-      "notes": "",
-      "tags": [],
-      "updatedAt": "2026-05-06T15:26:54.151Z",
-      "episodes": 12,
-      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx21855-4Dpxr8GQ4BKy.jpg"
-    },
-    {
       "id": 101291,
       "title": "Ultraman",
       "anilistUrl": "https://anilist.co/anime/100663",
@@ -4319,6 +4321,26 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 12,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16005-79QCNJTaNHqK.jpg"
+    },
+    {
+      "id": 98438,
+      "title": "UQ Holder!",
+      "anilistUrl": "https://anilist.co/anime/21855",
+      "anilistId": 21855,
+      "type": "TV",
+      "score": 6.7,
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "letter": "U",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z",
+      "episodes": 12,
+      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx21855-4Dpxr8GQ4BKy.jpg"
     },
     {
       "id": 940,
@@ -4821,26 +4843,6 @@
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx99-NOVuOiWoqpMb.jpg"
     },
     {
-      "id": 465,
-      "title": "XXXHOLiC",
-      "anilistUrl": "https://anilist.co/anime/465",
-      "anilistId": 465,
-      "type": "TV",
-      "score": 7.6,
-      "genres": [
-        "Fantasy",
-        "Mystery"
-      ],
-      "letter": "X",
-      "addedAt": "2026-05-06T15:26:54.151Z",
-      "status": "Completed",
-      "notes": "",
-      "tags": [],
-      "updatedAt": "2026-05-06T15:26:54.151Z",
-      "episodes": 0,
-      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx465-qSRr0MKYhS0I.jpg"
-    },
-    {
       "id": 4549,
       "title": "Xam'd: Lost Memories",
       "anilistUrl": "https://anilist.co/anime/4549",
@@ -4898,6 +4900,26 @@
       "tags": [],
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 0
+    },
+    {
+      "id": 465,
+      "title": "XXXHOLiC",
+      "anilistUrl": "https://anilist.co/anime/465",
+      "anilistId": 465,
+      "type": "TV",
+      "score": 7.6,
+      "genres": [
+        "Fantasy",
+        "Mystery"
+      ],
+      "letter": "X",
+      "addedAt": "2026-05-06T15:26:54.151Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.151Z",
+      "episodes": 0,
+      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx465-qSRr0MKYhS0I.jpg"
     },
     {
       "id": 101348,
