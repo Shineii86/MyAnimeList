@@ -28,7 +28,7 @@
 | Statistic | Value |
 |-----------|-------|
 | Total Anime | 257 |
-| Total Episodes | 1,240+ |
+| Total Episodes | 3,730 |
 | TV Shows | 233 |
 | Movies Watched | 17 |
 | OVAs/Specials | 4 |
