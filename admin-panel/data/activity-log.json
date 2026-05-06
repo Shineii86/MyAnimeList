@@ -1,82 +1,18 @@
 [
   {
-    "id": "moufylrhkidr",
-    "timestamp": "2026-05-06T19:19:40.205Z",
+    "id": "moufzezmh0cc",
+    "timestamp": "2026-05-06T19:20:18.082Z",
     "action": "login",
     "target": "Admin Panel",
     "details": "Successful login",
     "user": "admin"
   },
   {
-    "id": "moufym11pqci",
-    "timestamp": "2026-05-06T19:19:40.549Z",
-    "action": "login",
-    "target": "Admin Panel",
-    "details": "Failed login attempt",
-    "user": "admin"
-  },
-  {
-    "id": "moufym9soxtv",
-    "timestamp": "2026-05-06T19:19:40.864Z",
-    "action": "login",
-    "target": "Admin Panel",
-    "details": "Successful login",
-    "user": "admin"
-  },
-  {
-    "id": "moufyq9w5frm",
-    "timestamp": "2026-05-06T19:19:46.052Z",
+    "id": "moufzgutvru9",
+    "timestamp": "2026-05-06T19:20:20.501Z",
     "action": "add",
-    "target": "Live Test Anime",
-    "details": "TV • 8.5 • Action, Test",
-    "user": "admin"
-  },
-  {
-    "id": "moufyte2b9o3",
-    "timestamp": "2026-05-06T19:19:50.090Z",
-    "action": "add",
-    "target": "Bulk Live 1",
-    "details": "TV • 7 • ",
-    "user": "admin"
-  },
-  {
-    "id": "moufyu7yu7nv",
-    "timestamp": "2026-05-06T19:19:51.166Z",
-    "action": "add",
-    "target": "Bulk Live 2",
-    "details": "TV • 7 • ",
-    "user": "admin"
-  },
-  {
-    "id": "moufyv0yglas",
-    "timestamp": "2026-05-06T19:19:52.210Z",
-    "action": "add",
-    "target": "Bulk Live 3",
-    "details": "TV • 7 • ",
-    "user": "admin"
-  },
-  {
-    "id": "moufyw20iw4t",
-    "timestamp": "2026-05-06T19:19:53.544Z",
-    "action": "delete",
-    "target": "Bulk: ",
-    "details": "Deleted 0 anime entries",
-    "user": "admin"
-  },
-  {
-    "id": "moufyy6u9cuq",
-    "timestamp": "2026-05-06T19:19:56.310Z",
-    "action": "import",
-    "target": "Collection",
-    "details": "Merged 2 new anime (0 duplicates skipped)",
-    "user": "admin"
-  },
-  {
-    "id": "moufyz6ncywb",
-    "timestamp": "2026-05-06T19:19:57.599Z",
-    "action": "import",
-    "target": "Collection",
-    "details": "Merged 2 new anime (0 duplicates skipped)",
+    "target": "Path Test",
+    "details": "TV • 8 • ",
     "user": "admin"
   }
 ]
