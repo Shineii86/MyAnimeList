@@ -3323,6 +3323,23 @@
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx437-69NMlXKFeuse.jpg"
     },
     {
+      "id": 11112,
+      "title": "Persist Test",
+      "anilistUrl": "https://anilist.co/anime/11112",
+      "anilistId": 11112,
+      "type": "TV",
+      "score": 8,
+      "genres": [],
+      "episodes": 0,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "P",
+      "coverImage": null,
+      "addedAt": "2026-05-06T19:25:41.018Z",
+      "updatedAt": "2026-05-06T19:25:41.018Z"
+    },
+    {
       "id": 20687,
       "title": "Ping Pong the Animation",
       "anilistUrl": "https://anilist.co/anime/20607",
@@ -4141,23 +4158,6 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 12,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx186052-zq8h0Qo0O0sP.jpg"
-    },
-    {
-      "id": 11111,
-      "title": "Token Test",
-      "anilistUrl": "https://anilist.co/anime/11111",
-      "anilistId": 11111,
-      "type": "TV",
-      "score": 8,
-      "genres": [],
-      "episodes": 0,
-      "status": "Completed",
-      "notes": "",
-      "tags": [],
-      "letter": "T",
-      "coverImage": null,
-      "addedAt": "2026-05-06T19:24:56.187Z",
-      "updatedAt": "2026-05-06T19:24:56.187Z"
     },
     {
       "id": 20687,
