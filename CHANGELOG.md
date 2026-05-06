@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Admin Panel v1.3.1 — Live Stats
+
+### Changed
+- **README Generator now computes live stats** from actual data — no more hardcoded values
+  - Total Anime: computed from array length
+  - TV/Movie/OVA/ONA counts: computed from type field
+  - Average Score: computed from all scores
+  - Completion Rate: computed from status field
+  - Stats table includes TV Shows, OVAs, ONA rows
+- **Dashboard shows 6 stat cards** — Total Anime, Avg Score, TV Shows, Movies, OVAs, Completion Rate
+- **Stats API returns computed stats** — score distribution, type breakdown, status counts
+
+### Technical
+- `computeStats()` function in readme-generator.js computes all stats from anime array
+- Stats API uses real-time computation instead of stored metadata
+- README badge dynamically shows actual anime count
+
 ## [2026-05-07] - Admin Panel v1.3.0 — Activity Log
 
 ### Added

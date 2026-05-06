@@ -53,19 +53,27 @@ export default function Dashboard({ showToast }) {
       <div className="stats-grid">
         <div className="stat-card">
           <div className="label">Total Anime</div>
-          <div className="value">{stats?.totalAnime || 0}</div>
+          <div className="value">{stats?.stats?.totalAnime || stats?.totalAnime || 0}</div>
         </div>
         <div className="stat-card">
           <div className="label">Average Score</div>
-          <div className="value">{stats?.stats?.averageScore || '0'}</div>
+          <div className="value">⭐ {stats?.stats?.averageScore || '0'}</div>
         </div>
         <div className="stat-card">
           <div className="label">TV Shows</div>
-          <div className="value">{stats?.byType?.TV || 0}</div>
+          <div className="value">{stats?.stats?.tvShows || stats?.byType?.TV || 0}</div>
         </div>
         <div className="stat-card">
           <div className="label">Movies</div>
-          <div className="value">{stats?.byType?.Movie || 0}</div>
+          <div className="value">{stats?.stats?.moviesWatched || stats?.byType?.Movie || 0}</div>
+        </div>
+        <div className="stat-card">
+          <div className="label">OVAs</div>
+          <div className="value">{stats?.stats?.ovasSpecials || stats?.byType?.OVA || 0}</div>
+        </div>
+        <div className="stat-card">
+          <div className="label">Completion Rate</div>
+          <div className="value">{stats?.stats?.completionRate || '0%'}</div>
         </div>
       </div>
 

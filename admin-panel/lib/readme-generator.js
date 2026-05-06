@@ -3,56 +3,54 @@ const fs = require('fs');
 const path = require('path');
 
 const EMOJI_MAP = {
-  'Action': '⚔️',
-  'Adventure': '🗡️',
-  'Comedy': '😄',
-  'Drama': '💔',
-  'Fantasy': '🧙',
-  'Horror': '🎭',
-  'Mecha': '🤖',
-  'Music': '🎵',
-  'Mystery': '🕰️',
-  'Psychological': '🧠',
-  'Romance': '💕',
-  'Sci-Fi': '🔬',
-  'Slice of Life': '😃',
-  'Sports': '🏐',
-  'Supernatural': '🔥',
-  'Thriller': '🎭',
-  'Ecchi': '😈',
-  'Harem': '💕',
-  'Historical': '📜',
-  'Military': '🎖️',
-  'Parody': '😂',
-  'School': '🎓',
-  'Seinen': '🔞',
-  'Shoujo': '💮',
-  'Shounen': '🔥',
-  'Space': '🌌',
-  'Super Power': '💥',
-  'Vampire': '🧛',
-  'Game': '🎮',
-  'Racing': '🏎️',
-  'Demons': '👹',
-  'Magic': '✨',
-  'Martial Arts': '🥋',
-  'Samurai': '⛩️',
-  'Police': '👮',
-  'Kids': '👶',
-  'Josei': '👩',
-  'Isekai': '🌀',
+  'Action': '⚔️', 'Adventure': '🗡️', 'Comedy': '😄', 'Drama': '💔',
+  'Fantasy': '🧙', 'Horror': '🎭', 'Mecha': '🤖', 'Music': '🎵',
+  'Mystery': '🕰️', 'Psychological': '🧠', 'Romance': '💕', 'Sci-Fi': '🔬',
+  'Slice of Life': '😃', 'Sports': '🏐', 'Supernatural': '🔥', 'Thriller': '🎭',
+  'Ecchi': '😈', 'Harem': '💕', 'Historical': '📜', 'Military': '🎖️',
+  'Parody': '😂', 'School': '🎓', 'Seinen': '🔞', 'Shoujo': '💮',
+  'Shounen': '🔥', 'Space': '🌌', 'Super Power': '💥', 'Vampire': '🧛',
+  'Game': '🎮', 'Racing': '🏎️', 'Demons': '👹', 'Magic': '✨',
+  'Martial Arts': '🥋', 'Samurai': '⛩️', 'Police': '👮', 'Kids': '👶',
+  'Josei': '👩', 'Isekai': '🌀',
 };
 
-function getGenreEmoji(genre) {
-  return EMOJI_MAP[genre] || '🏷️';
-}
+function getGenreEmoji(genre) { return EMOJI_MAP[genre] || '🏷️'; }
 
 function formatGenreLine(genres) {
   return genres.map(g => `${getGenreEmoji(g)} ${g}`).join(', ');
 }
 
+function computeStats(anime) {
+  const total = anime.length;
+  const movies = anime.filter(a => a.type === 'Movie').length;
+  const tv = anime.filter(a => a.type === 'TV').length;
+  const ovas = anime.filter(a => a.type === 'OVA' || a.type === 'Special').length;
+  const ona = anime.filter(a => a.type === 'ONA').length;
+  const scores = anime.filter(a => a.score > 0).map(a => a.score);
+  const avgScore = scores.length ? (scores.reduce((a, b) => a + b, 0) / scores.length).toFixed(1) : '0';
+  const totalEpisodes = anime.reduce((sum, a) => sum + (a.episodes || 0), 0);
+  const completed = anime.filter(a => a.status === 'Completed').length;
+  const watching = anime.filter(a => a.status === 'Watching').length;
+  const completionRate = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+  return {
+    totalAnime: `${total}`,
+    totalEpisodes: totalEpisodes > 0 ? `${totalEpisodes.toLocaleString()}` : '1,240+',
+    moviesWatched: `${movies}`,
+    tvShows: `${tv}`,
+    ovasSpecials: `${ovas}`,
+    onaShows: `${ona}`,
+    averageScore: avgScore,
+    completionRate: `${completionRate}%`,
+    completed: completed,
+    watching: watching
+  };
+}
+
 function generateReadme(data) {
-  const { metadata, recommendations, anime } = data;
+  const { recommendations, anime } = data;
+  const stats = computeStats(anime);
   
   // Group anime by letter
   const grouped = {};
@@ -61,8 +59,6 @@ function generateReadme(data) {
     if (!grouped[letter]) grouped[letter] = [];
     grouped[letter].push(entry);
   }
-
-  // Sort letters
   const letters = Object.keys(grouped).sort();
 
   let readme = `<div align="center">
@@ -70,7 +66,7 @@ function generateReadme(data) {
 <img src="https://raw.githubusercontent.com/Shineii86/MyAnimeList/refs/heads/main/assets/image.png" alt="LOGO" width="200" height="200"/>
 </a>
 
-![Anime Count](https://img.shields.io/badge/Anime%20Watched-${encodeURIComponent(metadata.totalAnime || '100+')}-blueviolet?style=for-the-badge)
+![Anime Count](https://img.shields.io/badge/Anime%20Watched-${stats.totalAnime}-blueviolet?style=for-the-badge)
 ![Days Watched](https://img.shields.io/badge/Days%20Watched-3.5+-important?style=for-the-badge)
 [![GitHub Stars](https://img.shields.io/github/stars/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/fork)
@@ -79,13 +75,14 @@ function generateReadme(data) {
 
 </div> 
 
-> I began my anime-watching journey in **2020**, and since then I have watched and completed over **${metadata.totalAnime || '100+'} Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
+> I began my anime-watching journey in **2020**, and since then I have watched and completed over **${stats.totalAnime} Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
 
 
 ## 📋 Table of Contents
 - [📊 Statistics](#-statistics)
 - [🏆 Top Recommendations](#-top-recommendations)
 - [📺 Complete Anime List](#-complete-anime-list)
+- [🛠️ Admin Panel](#%EF%B8%8F-admin-panel)
 - [🤝 Recommendations](#recommendations-welcome)
 - [📝 License](#license)
 
@@ -93,12 +90,14 @@ function generateReadme(data) {
 
 | Statistic | Value |
 |-----------|-------|
-| Total Anime | ${metadata.totalAnime || '100+'} |
-| Total Episodes | ${metadata.totalEpisodes || '1,240+'} |
-| Movies Watched | ${metadata.moviesWatched || '10+'} |
-| OVAs/Specials | ${metadata.ovasSpecials || '5+'} |
-| Average Score | ${metadata.averageScore || '8.2'} |
-| Completion Rate | ${metadata.completionRate || '87%'} |
+| Total Anime | ${stats.totalAnime} |
+| Total Episodes | ${stats.totalEpisodes} |
+| TV Shows | ${stats.tvShows} |
+| Movies Watched | ${stats.moviesWatched} |
+| OVAs/Specials | ${stats.ovasSpecials} |
+| ONA | ${stats.onaShows} |
+| Average Score | ${stats.averageScore} |
+| Completion Rate | ${stats.completionRate} |
 
 ## 🏆 Top Recommendations
 
@@ -106,7 +105,6 @@ These are my personal 10/10 masterpieces:
 
 `;
 
-  // Recommendations
   if (recommendations && recommendations.length > 0) {
     for (const rec of recommendations) {
       readme += `- [**${rec.title}**](${rec.url}) - ${rec.description}\n`;
@@ -118,7 +116,6 @@ These are my personal 10/10 masterpieces:
 
 `;
 
-  // Anime list by letter
   for (const letter of letters) {
     readme += `### ${letter}\n`;
     for (const entry of grouped[letter]) {
@@ -128,7 +125,39 @@ These are my personal 10/10 masterpieces:
     readme += '\n';
   }
 
-  readme += `## 🤝 Recommendations Welcome!
+  readme += `## 🛠️ Admin Panel
+
+This repository includes a **web-based Admin Panel** for managing the anime collection.
+
+### Features
+- 🔐 Password-protected authentication
+- 📊 Dashboard with real-time stats
+- ➕ Add/Edit/Delete anime with full CRUD
+- 🔍 AniList API search & quick import
+- 📦 Bulk import from multiple AniList URLs
+- 📊 Visual analytics (score charts, genre breakdown)
+- 🎲 Random anime picker
+- 📋 Activity log with full audit trail
+- 🚀 Push changes directly to GitHub
+- ⚙️ Auto-push toggle for seamless updates
+
+### Quick Start
+\`\`\`bash
+cd admin-panel
+npm install
+cp .env.example .env.local  # Set ADMIN_PASSWORD
+npm run dev                  # Open localhost:3000
+\`\`\`
+
+### Deploy to Vercel
+1. Import repo at [vercel.com](https://vercel.com)
+2. Set Root Directory to \`admin-panel\`
+3. Add env var: \`ADMIN_PASSWORD\`
+4. Deploy!
+
+See [admin-panel/README.md](admin-panel/README.md) for full documentation.
+
+## 🤝 Recommendations Welcome!
 
 I'm always looking for new anime to watch! Feel free to:
 
@@ -180,13 +209,14 @@ function generateAndSave() {
   const readme = generateReadme(data);
   fs.writeFileSync(readmeFile, readme, 'utf-8');
   
-  console.log(`✅ README.md generated with ${data.anime.length} anime entries`);
+  const stats = computeStats(data.anime);
+  console.log(`✅ README.md generated with live stats:`);
+  console.log(`   Anime: ${stats.totalAnime} | Avg Score: ${stats.averageScore} | Movies: ${stats.moviesWatched} | TV: ${stats.tvShows}`);
   return readme;
 }
 
-// Run if called directly
 if (require.main === module) {
   generateAndSave();
 }
 
-module.exports = { generateReadme, generateAndSave };
+module.exports = { generateReadme, generateAndSave, computeStats };

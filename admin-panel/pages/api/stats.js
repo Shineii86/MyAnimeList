@@ -1,4 +1,5 @@
-const { getStats, getRecommendations, getAllAnime, VALID_STATUSES } = require('../../../lib/data');
+const { getAllAnime, VALID_STATUSES } = require('../../../lib/data');
+const { computeStats } = require('../../../lib/readme-generator');
 const { requireAuth } = require('../../../lib/auth');
 
 export default function handler(req, res) {
@@ -11,9 +12,8 @@ export default function handler(req, res) {
   }
 
   try {
-    const stats = getStats();
-    const recommendations = getRecommendations();
     const anime = getAllAnime();
+    const stats = computeStats(anime);
 
     const byType = {};
     const byGenre = {};
@@ -30,12 +30,22 @@ export default function handler(req, res) {
       (a.tags || []).forEach(t => { byTag[t] = (byTag[t] || 0) + 1; });
     });
 
+    // Score distribution
+    const scoreDist = {};
+    [5, 6, 7, 8, 9, 10].forEach(s => { scoreDist[s] = 0; });
+    anime.forEach(a => {
+      if (a.score >= 5) {
+        const bucket = Math.min(10, Math.floor(a.score));
+        scoreDist[bucket] = (scoreDist[bucket] || 0) + 1;
+      }
+    });
+
     return res.status(200).json({
       stats,
       totalAnime: anime.length,
-      recommendations: recommendations.length,
       byType,
       byStatus,
+      scoreDistribution: scoreDist,
       topGenres: Object.entries(byGenre)
         .sort((a, b) => b[1] - a[1])
         .slice(0, 10)
