@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import { SearchIcon, PlusIcon, StarIcon } from '../lib/icons';
+import { apiFetch, apiGet, apiPost, apiPut, apiDelete } from '../lib/api';
 
 export default function AniListSearch({ showToast }) {
   const [query, setQuery] = useState('');
@@ -42,11 +43,7 @@ export default function AniListSearch({ showToast }) {
         episodes: anime.episodes || 0
       };
 
-      const res = await fetch('/api/anime', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body)
-      });
+      const res = await apiPost('/api/anime', body);
 
       if (res.ok) {
         showToast?.(`Added: ${body.title}`, 'success');

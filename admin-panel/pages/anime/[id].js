@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { SaveIcon, EditIcon, NoteIcon, StarIcon } from '../../lib/icons';
+import { apiFetch, apiGet, apiPost, apiPut, apiDelete } from '../../lib/api';
 
 export default function EditAnime({ showToast }) {
   const router = useRouter();
@@ -14,7 +15,7 @@ export default function EditAnime({ showToast }) {
 
   async function loadAnime() {
     try {
-      const res = await fetch(`/api/anime/${id}`);
+      const res = await apiGet(`/api/anime/${id}`);
       if (res.ok) {
         const data = await res.json();
         setForm({
@@ -51,9 +52,7 @@ export default function EditAnime({ showToast }) {
         episodes: form.episodes ? parseInt(form.episodes) : 0,
         anilistId: form.anilistId ? parseInt(form.anilistId) : null
       };
-      const res = await fetch(`/api/anime/${id}`, {
-        method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body)
-      });
+      const res = await apiPut(`/api/anime/${id}`, body);
       if (res.ok) {
         showToast?.('Anime updated successfully', 'success');
         try {

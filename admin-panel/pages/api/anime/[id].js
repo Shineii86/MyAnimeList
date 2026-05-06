@@ -1,23 +1,22 @@
-const { getAnimeById, updateAnime, deleteAnime } = require('../../../lib/data');
+const { getAnimeById, updateAnime, deleteAnime, getGhFromReq } = require('../../../lib/data');
 const { requireAuth } = require('../../../lib/auth');
 const { addEntry } = require('../../../lib/activity-log');
 
-export default function handler(req, res) {
-  if (!requireAuth(req)) {
-    return res.status(401).json({ error: 'Unauthorized' });
-  }
+export default async function handler(req, res) {
+  if (!requireAuth(req)) return res.status(401).json({ error: 'Unauthorized' });
 
   const { id } = req.query;
+  const gh = getGhFromReq(req);
 
   try {
     switch (req.method) {
       case 'GET':
-        return handleGet(id, res);
+        return handleGet(id, res, gh);
       case 'PUT':
       case 'PATCH':
-        return handleUpdate(id, req.body, res);
+        return handleUpdate(id, req.body, res, gh);
       case 'DELETE':
-        return handleDelete(id, res);
+        return handleDelete(id, res, gh);
       default:
         return res.status(405).json({ error: 'Method not allowed' });
     }
@@ -26,22 +25,17 @@ export default function handler(req, res) {
   }
 }
 
-function handleGet(id, res) {
-  const anime = getAnimeById(id);
-  if (!anime) {
-    return res.status(404).json({ error: 'Anime not found' });
-  }
+async function handleGet(id, res, gh) {
+  const anime = await getAnimeById(id, gh);
+  if (!anime) return res.status(404).json({ error: 'Anime not found' });
   return res.status(200).json(anime);
 }
 
-function handleUpdate(id, body, res) {
-  const existing = getAnimeById(id);
-  const updated = updateAnime(id, body);
-  if (!updated) {
-    return res.status(404).json({ error: 'Anime not found' });
-  }
+async function handleUpdate(id, body, res, gh) {
+  const existing = await getAnimeById(id, gh);
+  const updated = await updateAnime(id, body, gh);
+  if (!updated) return res.status(404).json({ error: 'Anime not found' });
 
-  // Build change details
   const changes = [];
   if (existing) {
     if (body.score && body.score !== existing.score) changes.push(`score ${existing.score}→${body.score}`);
@@ -49,21 +43,16 @@ function handleUpdate(id, body, res) {
     if (body.title && body.title !== existing.title) changes.push(`renamed to "${body.title}"`);
     if (body.type && body.type !== existing.type) changes.push(`type ${existing.type}→${body.type}`);
   }
-  const detail = changes.length > 0 ? changes.join(', ') : 'updated details';
 
-  addEntry({ action: 'edit', target: updated.title, details: detail });
-
+  addEntry({ action: 'edit', target: updated.title, details: changes.length > 0 ? changes.join(', ') : 'updated details' });
   return res.status(200).json({ success: true, anime: updated });
 }
 
-function handleDelete(id, res) {
-  const existing = getAnimeById(id);
-  const deleted = deleteAnime(id);
-  if (!deleted) {
-    return res.status(404).json({ error: 'Anime not found' });
-  }
+async function handleDelete(id, res, gh) {
+  const existing = await getAnimeById(id, gh);
+  const deleted = await deleteAnime(id, gh);
+  if (!deleted) return res.status(404).json({ error: 'Anime not found' });
 
-  addEntry({ action: 'delete', target: existing ? existing.title : `ID ${id}`, details: `${existing?.type || '?'} • ⭐ ${existing?.score || '?'}` });
-
+  addEntry({ action: 'delete', target: existing ? existing.title : `ID ${id}`, details: `${existing?.type || '?'} • ${existing?.score || '?'}` });
   return res.status(200).json({ success: true, message: 'Anime deleted' });
 }

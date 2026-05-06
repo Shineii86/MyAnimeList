@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { ChartIcon, StarIcon, TvIcon, TagIcon, ListIcon, RocketIcon, CheckCircleIcon } from '../lib/icons';
+import { apiFetch, apiGet, apiPost, apiPut, apiDelete } from '../lib/api';
 
 // SVG-based charts — no external dependencies
 function BarChart({ data, width = 600, height = 300, color = 'var(--accent)' }) {
@@ -129,7 +130,7 @@ export default function Analytics({ showToast }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/anime')
+    apiGet('/api/anime')
       .then(r => r.json())
       .then(data => { setAnime(data.anime || []); setLoading(false); })
       .catch(() => { showToast?.('Failed to load data', 'error'); setLoading(false); });

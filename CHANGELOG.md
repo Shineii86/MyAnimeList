@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Critical Fix: Persistent Data Storage & Data Recovery
+
+### Fixed
+- **Data loss on Vercel** — Root cause: `/tmp` filesystem resets on every serverless cold start, causing all add/edit/delete operations to silently lose data. Fixed by using GitHub API as persistent storage backend.
+- **Recovered 257 anime entries** — Data was lost when Vercel's ephemeral `/tmp` wrote back a single-entry state. Restored from git history commit `0a57fdf`.
+- **All data mutations now persist** — `addAnime`, `updateAnime`, `deleteAnime` write to GitHub repo via API, not just local filesystem
+- **Reads use GitHub as source of truth** — When GitHub credentials are available, reads fetch from `raw.githubusercontent.com` (always up-to-date), falling back to bundled file
+
+### Changed
+- **`lib/data.js` completely rewritten** — All CRUD functions are now async, accept optional GitHub credentials (`{token, owner, repo}`), and persist to GitHub
+- **`lib/api.js` created** — Client-side helper that auto-attaches GitHub credentials from localStorage settings to every API request via `x-github-token`, `x-github-owner`, `x-github-repo` headers
+- **All 8 API routes updated** — Extract GitHub credentials from request headers/body via `getGhFromReq()` and pass to data layer
+- **All 10 client pages updated** — Use `apiGet`/`apiPost`/`apiPut`/`apiDelete` instead of raw `fetch` to automatically include credentials
+- **Zero external dependencies** — GitHub API calls use native Node.js `https` module only
+
+### Technical
+- Data flow: Client → `apiFetch` (adds GH headers) → API route → `getGhFromReq(req)` → `readData(gh)` / `writeData(data, gh)` → GitHub API
+- Fallback chain: GitHub API → `/tmp` cache → bundled `data/anime.json` → empty state
+- `readDataSync()` preserved for legacy sync callers (uses local cache only)
+- GitHub credentials stored in `localStorage` as `mal_admin_settings` (client-side only, never leaked)
+
+### Required Setup
+- **Enable Settings → Auto-Push** with your GitHub token, owner, and repo name — this is now required for data persistence on Vercel
+
 ## [2026-05-07] - UI Overhaul: Professional SVG Icons Replace Emojis
 
 ### Changed

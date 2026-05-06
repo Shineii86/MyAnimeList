@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { PlusIcon, SearchIcon, TrashIcon, EditIcon, StarIcon, GridIcon, ListIcon, EyeIcon, CheckCircleIcon, ClockIcon, WarningIcon, NoteIcon, FilterIcon } from '../../lib/icons';
+import { apiFetch, apiGet, apiPost, apiPut, apiDelete } from '../../lib/api';
 
 export default function AnimeList({ showToast }) {
   const [anime, setAnime] = useState([]);
@@ -54,7 +55,7 @@ export default function AnimeList({ showToast }) {
 
   async function loadAnime() {
     try {
-      const res = await fetch('/api/anime');
+      const res = await apiGet('/api/anime');
       if (res.ok) {
         const data = await res.json();
         setAnime(data.anime);
@@ -68,7 +69,7 @@ export default function AnimeList({ showToast }) {
 
   async function handleDelete(id) {
     try {
-      const res = await fetch(`/api/anime/${id}`, { method: 'DELETE' });
+      const res = await apiDelete(`/api/anime/${id}`);
       if (res.ok) {
         setAnime(prev => prev.filter(a => a.id !== id));
         showToast?.('Anime deleted', 'success');

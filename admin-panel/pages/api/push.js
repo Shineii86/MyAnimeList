@@ -1,4 +1,4 @@
-const { readData } = require('../../lib/data');
+const { readData, getGhFromReq } = require('../../lib/data');
 const { generateReadme } = require('../../lib/readme-generator');
 const { pushReadme, pushData } = require('../../lib/github');
 const { requireAuth } = require('../../lib/auth');
@@ -7,18 +7,18 @@ const fs = require('fs');
 const path = require('path');
 
 export default async function handler(req, res) {
-  if (!requireAuth(req)) {
-    return res.status(401).json({ error: 'Unauthorized' });
-  }
-
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
+  if (!requireAuth(req)) return res.status(401).json({ error: 'Unauthorized' });
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   const { action } = req.body;
 
   try {
-    const data = readData();
+    // For push action, use the provided credentials for reading too
+    const gh = action === 'push' && req.body.github_token
+      ? { token: req.body.github_token, owner: req.body.owner, repo: req.body.repo }
+      : getGhFromReq(req);
+
+    const data = await readData(gh);
     const readme = generateReadme(data);
 
     if (action === 'generate') {

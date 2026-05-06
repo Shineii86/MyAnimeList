@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { SearchIcon, StarIcon, PlusIcon, EditIcon, NoteIcon, CheckCircleIcon, EyeIcon, ClockIcon, WarningIcon, TrashIcon } from '../../lib/icons';
+import { apiFetch, apiGet, apiPost, apiPut, apiDelete } from '../../lib/api';
 
 export default function AddAnime({ showToast }) {
   const router = useRouter();
@@ -107,11 +108,7 @@ export default function AddAnime({ showToast }) {
         anilistId: form.anilistId ? parseInt(form.anilistId) : null
       };
 
-      const res = await fetch('/api/anime', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body)
-      });
+      const res = await apiPost('/api/anime', body);
 
       if (res.ok) {
         try {

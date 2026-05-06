@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import { BoxIcon, LinkIcon, SearchIcon, ClipboardIcon, RocketIcon, StarIcon } from '../lib/icons';
+import { apiFetch, apiGet, apiPost, apiPut, apiDelete } from '../lib/api';
 
 export default function BulkImport({ showToast }) {
   const [mode, setMode] = useState('url'); // 'url' or 'search'
@@ -119,10 +120,7 @@ export default function BulkImport({ showToast }) {
 
     for (const anime of toImport) {
       try {
-        const res = await fetch('/api/anime', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
+        const res = await apiPost('/api/anime', {
             title: anime.titleEnglish || anime.titleRomaji,
             anilistUrl: anime.anilistUrl,
             anilistId: anime.anilistId,
@@ -130,8 +128,7 @@ export default function BulkImport({ showToast }) {
             score: anime.score ? parseFloat(anime.score) : 0,
             genres: anime.genres || [],
             episodes: anime.episodes || 0
-          })
-        });
+          });
         if (res.ok) success++;
         else failed++;
       } catch {

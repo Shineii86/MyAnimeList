@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { PlusIcon, EditIcon, TrashIcon, RocketIcon, DownloadIcon, RefreshIcon, KeyIcon, SettingsIcon, NoteIcon, SearchIcon, ClipboardIcon, ClockIcon } from '../lib/icons';
+import { apiFetch, apiGet, apiPost, apiPut, apiDelete } from '../lib/api';
 
 const ACTION_ICONS = {
   add: PlusIcon,
@@ -42,7 +43,7 @@ export default function ActivityLog({ showToast }) {
       if (filter) params.set('action', filter);
       if (search) params.set('search', search);
 
-      const res = await fetch(`/api/activity?${params}`);
+      const res = await apiGet(`/api/activity?${params}`);
       if (res.ok) {
         const data = await res.json();
         setEntries(data.entries || []);
@@ -57,7 +58,7 @@ export default function ActivityLog({ showToast }) {
   async function handleClear() {
     if (!confirm('Clear entire activity log? This cannot be undone.')) return;
     try {
-      const res = await fetch('/api/activity', { method: 'DELETE' });
+      const res = await apiDelete('/api/activity');
       if (res.ok) {
         setEntries([]);
         setTotal(0);

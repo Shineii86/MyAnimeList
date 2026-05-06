@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { SettingsIcon, RocketIcon, TagIcon, SaveIcon, DownloadIcon, UploadIcon, CheckCircleIcon } from '../lib/icons';
+import { apiFetch, apiGet, apiPost, apiPut, apiDelete } from '../lib/api';
 
 export default function SettingsPage({ showToast }) {
   const [settings, setSettings] = useState({
@@ -34,7 +35,7 @@ export default function SettingsPage({ showToast }) {
   }
 
   function handleExport() {
-    fetch('/api/anime')
+    apiGet('/api/anime')
       .then(r => r.json())
       .then(data => {
         const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
@@ -64,11 +65,7 @@ export default function SettingsPage({ showToast }) {
         
         if (!confirm(`Import ${data.anime.length} anime entries? This will replace all current data.`)) return;
 
-        const res = await fetch('/api/anime/import', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        });
+        const res = await apiPost('/api/anime/import', data);
 
         if (res.ok) {
           showToast?.(`Imported ${data.anime.length} entries`, 'success');

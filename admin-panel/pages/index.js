@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { StarIcon, PlusIcon, SearchIcon, ClipboardIcon, RocketIcon, TagIcon, CheckCircleIcon, EyeIcon, ClockIcon, TrashIcon, WarningIcon, RefreshIcon } from '../lib/icons';
+import { apiFetch, apiGet, apiPost, apiPut, apiDelete } from '../lib/api';
 
 export default function Dashboard({ showToast }) {
   const [stats, setStats] = useState(null);
@@ -15,8 +16,8 @@ export default function Dashboard({ showToast }) {
   async function loadData() {
     try {
       const [statsRes, animeRes] = await Promise.all([
-        fetch('/api/stats'),
-        fetch('/api/anime?sort=recent')
+        apiGet('/api/stats'),
+        apiGet('/api/anime?sort=recent')
       ]);
       
       if (statsRes.ok) setStats(await statsRes.json());

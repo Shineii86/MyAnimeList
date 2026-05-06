@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import { DiceIcon, TargetIcon, StarIcon, NoteIcon } from '../lib/icons';
+import { apiFetch, apiGet, apiPost, apiPut, apiDelete } from '../lib/api';
 
 export default function RandomPicker({ showToast }) {
   const [result, setResult] = useState(null);
@@ -11,7 +12,7 @@ export default function RandomPicker({ showToast }) {
   const spinRef = useRef(null);
 
   useEffect(() => {
-    fetch('/api/anime')
+    apiGet('/api/anime')
       .then(r => r.json())
       .then(data => setTotalCount(data.total || 0))
       .catch(() => {});
@@ -31,7 +32,7 @@ export default function RandomPicker({ showToast }) {
     await new Promise(r => setTimeout(r, 1500));
 
     try {
-      const res = await fetch(`/api/anime/random?${params}`);
+      const res = await apiGet(`/api/anime/random?${params}`);
       if (res.ok) {
         const anime = await res.json();
         setResult(anime);
