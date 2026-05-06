@@ -104,6 +104,7 @@ function readDataSync() {
 }
 
 // Write data: local cache + push to GitHub if credentials provided
+// Also regenerates and pushes README.md
 async function writeData(data, gh = null) {
   const json = JSON.stringify(data, null, 2);
 
@@ -113,7 +114,7 @@ async function writeData(data, gh = null) {
   // Push to GitHub if credentials provided
   if (gh && gh.token && gh.owner && gh.repo) {
     try {
-      // Get current file SHA from GitHub
+      // Push anime.json
       const existing = await githubApi('GET', gh.token, gh.owner, gh.repo, REPO_PATH);
       const sha = existing.sha || null;
 
@@ -122,6 +123,23 @@ async function writeData(data, gh = null) {
         content: Buffer.from(json).toString('base64'),
         ...(sha ? { sha } : {})
       });
+
+      // Auto-regenerate and push README.md
+      try {
+        const { generateReadme } = require('./readme-generator');
+        const readme = generateReadme(data);
+        const readmePath = 'README.md';
+        const existingReadme = await githubApi('GET', gh.token, gh.owner, gh.repo, readmePath);
+        const readmeSha = existingReadme.sha || null;
+
+        await githubApi('PUT', gh.token, gh.owner, gh.repo, readmePath, {
+          message: `📝 Auto-regenerate README [${new Date().toISOString().split('T')[0]}]`,
+          content: Buffer.from(readme).toString('base64'),
+          ...(readmeSha ? { sha: readmeSha } : {})
+        });
+      } catch (readmeErr) {
+        console.error('[data] README auto-push failed:', readmeErr.message);
+      }
     } catch (err) {
       console.error('[data] GitHub push failed:', err.message);
     }

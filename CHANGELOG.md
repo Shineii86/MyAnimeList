@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Auto-Regenerate README on Every Data Change
+
+### Fixed
+- **README.md now auto-updates on every add/edit/delete/import** — `writeData()` in `lib/data.js` now regenerates and pushes `README.md` alongside `anime.json` automatically
+- No more manual "Generate README" step — every data mutation keeps README in sync
+
+### Changed
+- `writeData()` pushes two commits to GitHub: `anime.json` + `README.md`
+- README generation errors are non-blocking (data push still succeeds even if README fails)
+
 ## [2026-05-07] - Activity Log: GitHub Persistence & Bulk Delete Logging
 
 ### Added
