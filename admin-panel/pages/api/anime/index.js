@@ -59,7 +59,7 @@ async function handlePost(req, res) {
       notes: notes || '', tags: tags || [], coverImage: coverImage || null
     }, gh);
 
-    addEntry({ action: 'add', target: title, details: `${type || 'TV'} • ${score || 0} • ${(genres || []).join(', ')}` });
+    addEntry({ action: 'add', target: title, details: `${type || 'TV'} • ${score || 0} • ${(genres || []).join(', ')}`, gh });
 
     return res.status(201).json({ success: true, anime: entry });
   } catch (err) {

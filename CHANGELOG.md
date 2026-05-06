@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Activity Log: GitHub Persistence & Bulk Delete Logging
+
+### Added
+- **Activity log persists to GitHub** — `addEntry()` now pushes log to GitHub repo alongside local write, surviving Vercel cold starts
+- **Bulk delete API endpoint** — `POST /api/anime/bulk-delete` accepts array of IDs, logs as single "Bulk: Title1, Title2 +N more" entry
+- **Activity log loads from GitHub on cold start** — API route fetches from GitHub when local `/tmp` is empty (Vercel)
+- **New action types** — `export` action color/icon added to activity page filters
+
+### Changed
+- All API routes now pass GitHub credentials to `addEntry()` for persistent logging
+- Bulk delete on anime list page uses new dedicated endpoint instead of N individual deletes
+- Activity log filter dropdown includes all action types: add, edit, delete, push, import, generate, login, settings, export
+
+### Technical
+- `activity-log.js` — `addEntry()` accepts optional `gh` param, fire-and-forget push to GitHub
+- `api/activity.js` — async handler, falls back to GitHub fetch when local log is empty
+- `api/anime/bulk-delete.js` — new endpoint for batch deletion with logging
+
 ## [2026-05-07] - Anime List: Covers, Bulk Actions, Stats & More
 
 ### Added

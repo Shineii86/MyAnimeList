@@ -12,6 +12,7 @@ const ACTION_ICONS = {
   generate: RefreshIcon,
   login: KeyIcon,
   settings: SettingsIcon,
+  export: DownloadIcon,
 };
 
 const ACTION_COLORS = {
@@ -22,7 +23,8 @@ const ACTION_COLORS = {
   import: '#f59e0b',
   generate: '#8b5cf6',
   login: '#ec4899',
-  settings: '#6b7280'
+  settings: '#6b7280',
+  export: '#06b6d4',
 };
 
 export default function ActivityLog({ showToast }) {
@@ -95,7 +97,7 @@ export default function ActivityLog({ showToast }) {
   }
 
   const grouped = groupByDate(entries);
-  const actions = ['', 'add', 'edit', 'delete', 'push', 'import', 'generate', 'login'];
+  const actions = ['', 'add', 'edit', 'delete', 'push', 'import', 'generate', 'login', 'settings', 'export'];
   const totalPages = Math.ceil(total / limit);
 
   return (

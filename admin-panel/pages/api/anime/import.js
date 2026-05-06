@@ -29,7 +29,7 @@ export default async function handler(req, res) {
     updateStats(data);
     await writeData(data, gh);
 
-    addEntry({ action: 'import', target: 'Collection', details: `Imported ${valid.length} anime entries from backup` });
+    addEntry({ action: 'import', target: 'Collection', details: `Imported ${valid.length} anime entries from backup`, gh });
 
     return res.status(200).json({ success: true, message: `Imported ${valid.length} anime entries`, total: valid.length });
   } catch (err) {

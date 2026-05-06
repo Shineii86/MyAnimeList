@@ -99,18 +99,21 @@ export default function AnimeList({ showToast }) {
 
   async function handleBulkDelete() {
     setDeleting(true);
-    let success = 0;
-    for (const id of selected) {
-      try {
-        const res = await apiDelete(`/api/anime/${id}`);
-        if (res.ok) success++;
-      } catch {}
+    try {
+      const res = await apiPost('/api/anime/bulk-delete', { ids: Array.from(selected) });
+      if (res.ok) {
+        const data = await res.json();
+        setAnime(prev => prev.filter(a => !selected.has(a.id)));
+        setSelected(new Set());
+        showToast?.(`Deleted ${data.deleted} anime`, 'success');
+      } else {
+        showToast?.('Bulk delete failed', 'error');
+      }
+    } catch {
+      showToast?.('Bulk delete error', 'error');
     }
-    setAnime(prev => prev.filter(a => !selected.has(a.id)));
-    setSelected(new Set());
     setBulkDeleteModal(false);
     setDeleting(false);
-    showToast?.(`Deleted ${success} anime`, 'success');
   }
 
   async function handlePushNow() {

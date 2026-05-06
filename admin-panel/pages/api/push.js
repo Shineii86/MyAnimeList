@@ -29,7 +29,7 @@ export default async function handler(req, res) {
         }
       } catch {}
 
-      addEntry({ action: 'generate', target: 'README.md', details: `${data.anime.length} anime entries` });
+      addEntry({ action: 'generate', target: 'README.md', details: `${data.anime.length} anime entries`, gh });
       
       return res.status(200).json({ 
         success: true, 
@@ -53,7 +53,7 @@ export default async function handler(req, res) {
       const readmeResult = await pushReadme(owner, repo, readme, github_token);
       const dataResult = await pushData(owner, repo, JSON.stringify(data, null, 2), github_token);
 
-      addEntry({ action: 'push', target: `${owner}/${repo}`, details: `README.md + anime.json (${data.anime.length} entries)` });
+      addEntry({ action: 'push', target: `${owner}/${repo}`, details: `README.md + anime.json (${data.anime.length} entries)`, gh: { token: github_token, owner, repo } });
 
       return res.status(200).json({
         success: true,

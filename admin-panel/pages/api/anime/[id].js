@@ -44,7 +44,7 @@ async function handleUpdate(id, body, res, gh) {
     if (body.type && body.type !== existing.type) changes.push(`type ${existing.type}→${body.type}`);
   }
 
-  addEntry({ action: 'edit', target: updated.title, details: changes.length > 0 ? changes.join(', ') : 'updated details' });
+  addEntry({ action: 'edit', target: updated.title, details: changes.length > 0 ? changes.join(', ') : 'updated details', gh });
   return res.status(200).json({ success: true, anime: updated });
 }
 
@@ -53,6 +53,6 @@ async function handleDelete(id, res, gh) {
   const deleted = await deleteAnime(id, gh);
   if (!deleted) return res.status(404).json({ error: 'Anime not found' });
 
-  addEntry({ action: 'delete', target: existing ? existing.title : `ID ${id}`, details: `${existing?.type || '?'} • ${existing?.score || '?'}` });
+  addEntry({ action: 'delete', target: existing ? existing.title : `ID ${id}`, details: `${existing?.type || '?'} • ${existing?.score || '?'}`, gh });
   return res.status(200).json({ success: true, message: 'Anime deleted' });
 }

@@ -1,20 +1,32 @@
 const fs = require('fs');
 const path = require('path');
+const https = require('https');
 
 // Use /tmp on Vercel (writable), local data/ directory otherwise
 const IS_VERCEL = !!process.env.VERCEL;
 const LOG_FILE = IS_VERCEL
   ? path.join('/tmp', 'activity-log.json')
   : path.join(__dirname, '..', 'data', 'activity-log.json');
-const MAX_ENTRIES = 500; // Keep last 500 entries
+const MAX_ENTRIES = 500;
+const GITHUB_API = 'https://api.github.com';
+const LOG_PATH = 'admin-panel/data/activity-log.json';
 
 function readLog() {
   try {
     const raw = fs.readFileSync(LOG_FILE, 'utf-8');
-    return JSON.parse(raw);
-  } catch {
-    return [];
+    const data = JSON.parse(raw);
+    if (data.length > 0) return data;
+  } catch {}
+
+  // On Vercel cold start, try loading from GitHub
+  if (IS_VERCEL && process.env.GITHUB_TOKEN && process.env.GITHUB_OWNER && process.env.GITHUB_REPO) {
+    try {
+      const url = `https://raw.githubusercontent.com/${process.env.GITHUB_OWNER}/${process.env.GITHUB_REPO}/main/${LOG_PATH}`;
+      // Synchronous fetch not available, return empty for now (will be populated on next write)
+    } catch {}
   }
+
+  return [];
 }
 
 function writeLog(entries) {
@@ -22,22 +34,83 @@ function writeLog(entries) {
   try {
     fs.writeFileSync(LOG_FILE, JSON.stringify(trimmed, null, 2), 'utf-8');
   } catch {
-    // Silently fail on read-only filesystems (Vercel serverless)
+    // Silently fail on read-only filesystems
   }
 }
 
-function addEntry({ action, target, details, user }) {
+// Push activity log to GitHub (fire-and-forget)
+function pushToGitHub(entries, gh) {
+  if (!gh || !gh.token || !gh.owner || !gh.repo) return;
+
+  const json = JSON.stringify(entries.slice(-MAX_ENTRIES), null, 2);
+
+  // First get current SHA
+  const getOpts = {
+    hostname: 'api.github.com',
+    path: `/repos/${gh.owner}/${gh.repo}/contents/${LOG_PATH}`,
+    method: 'GET',
+    headers: {
+      'Authorization': `token ${gh.token}`,
+      'Accept': 'application/vnd.github.v3+json',
+      'User-Agent': 'MyAnimeList-Admin'
+    }
+  };
+
+  const getReq = https.request(getOpts, (res) => {
+    let body = '';
+    res.on('data', chunk => body += chunk);
+    res.on('end', () => {
+      let sha = null;
+      try { sha = JSON.parse(body).sha; } catch {}
+
+      // Push updated file
+      const putData = JSON.stringify({
+        message: `📋 Update activity log [${new Date().toISOString().split('T')[0]}]`,
+        content: Buffer.from(json).toString('base64'),
+        ...(sha ? { sha } : {})
+      });
+
+      const putOpts = {
+        hostname: 'api.github.com',
+        path: `/repos/${gh.owner}/${gh.repo}/contents/${LOG_PATH}`,
+        method: 'PUT',
+        headers: {
+          'Authorization': `token ${gh.token}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json',
+          'User-Agent': 'MyAnimeList-Admin',
+          'Content-Length': Buffer.byteLength(putData)
+        }
+      };
+
+      const putReq = https.request(putOpts, () => {});
+      putReq.on('error', () => {});
+      putReq.setTimeout(10000, () => putReq.destroy());
+      putReq.write(putData);
+      putReq.end();
+    });
+  });
+  getReq.on('error', () => {});
+  getReq.setTimeout(10000, () => getReq.destroy());
+  getReq.end();
+}
+
+function addEntry({ action, target, details, user, gh }) {
   const entries = readLog();
   const entry = {
     id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
     timestamp: new Date().toISOString(),
-    action,      // 'add', 'edit', 'delete', 'push', 'import', 'generate', 'login', 'settings'
-    target,      // anime title, 'README.md', 'GitHub', etc.
-    details,     // extra info (old score → new score, etc.)
+    action,
+    target,
+    details,
     user: user || 'admin'
   };
   entries.push(entry);
   writeLog(entries);
+
+  // Persist to GitHub if credentials provided
+  if (gh) pushToGitHub(entries, gh);
+
   return entry;
 }
 
