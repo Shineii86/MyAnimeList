@@ -1117,23 +1117,6 @@
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx134-f3dmmMOijYdn.png"
     },
     {
-      "id": 22222,
-      "title": "Explicit Creds Test",
-      "anilistUrl": "https://anilist.co/anime/22222",
-      "anilistId": 22222,
-      "type": "TV",
-      "score": 8,
-      "genres": [],
-      "episodes": 0,
-      "status": "Completed",
-      "notes": "",
-      "tags": [],
-      "letter": "E",
-      "coverImage": null,
-      "addedAt": "2026-05-06T19:24:40.791Z",
-      "updatedAt": "2026-05-06T19:24:40.791Z"
-    },
-    {
       "id": 6702,
       "title": "Fairy Tail",
       "anilistUrl": "https://anilist.co/anime/6702",
@@ -4158,6 +4141,23 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 12,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx186052-zq8h0Qo0O0sP.jpg"
+    },
+    {
+      "id": 11111,
+      "title": "Token Test",
+      "anilistUrl": "https://anilist.co/anime/11111",
+      "anilistId": 11111,
+      "type": "TV",
+      "score": 8,
+      "genres": [],
+      "episodes": 0,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "T",
+      "coverImage": null,
+      "addedAt": "2026-05-06T19:24:56.187Z",
+      "updatedAt": "2026-05-06T19:24:56.187Z"
     },
     {
       "id": 20687,
