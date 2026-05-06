@@ -1,5 +1,5 @@
-const { getLog, clearLog } = require('../../../lib/activity-log');
-const { requireAuth } = require('../../../lib/auth');
+const { getLog, clearLog } = require('../../lib/activity-log');
+const { requireAuth } = require('../../lib/auth');
 
 export default function handler(req, res) {
   if (!requireAuth(req)) {

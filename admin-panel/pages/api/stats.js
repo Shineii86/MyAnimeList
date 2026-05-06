@@ -1,6 +1,6 @@
-const { getAllAnime, VALID_STATUSES } = require('../../../lib/data');
-const { computeStats } = require('../../../lib/readme-generator');
-const { requireAuth } = require('../../../lib/auth');
+const { getAllAnime, VALID_STATUSES } = require('../../lib/data');
+const { computeStats } = require('../../lib/readme-generator');
+const { requireAuth } = require('../../lib/auth');
 
 export default function handler(req, res) {
   if (!requireAuth(req)) {

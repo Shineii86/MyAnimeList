@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Fix Vercel Build — Broken Import Paths
+
+### Fixed
+- **Fixed incorrect relative import paths** in 3 API route files that caused Vercel build failure
+  - `pages/api/activity.js` — `../../../lib/` → `../../lib/` (2 levels up, not 3)
+  - `pages/api/push.js` — `../../../lib/` → `../../lib/` for all 5 imports
+  - `pages/api/stats.js` — `../../../lib/` → `../../lib/` for all 3 imports
+- Root cause: `pages/api/*.js` files are 2 levels from `admin-panel/` root, but imports used `../../../` (3 levels) which resolved outside the project directory
+- Files in subdirectories (`pages/api/anime/`, `pages/api/anilist/`) already had correct `../../../` paths (3 levels deep)
+
+### Technical
+- Verified all 14 API route files have correct import paths
+- `pages/api/auth.js` was already correct (`../../lib/`)
+- No functional changes, only path resolution fix
+
 ## [2026-05-07] - Admin Panel v1.3.1 — Live Stats
 
 ### Changed

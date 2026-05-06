@@ -1,8 +1,8 @@
-const { readData } = require('../../../lib/data');
-const { generateReadme } = require('../../../lib/readme-generator');
-const { pushReadme, pushData } = require('../../../lib/github');
-const { requireAuth } = require('../../../lib/auth');
-const { addEntry } = require('../../../lib/activity-log');
+const { readData } = require('../../lib/data');
+const { generateReadme } = require('../../lib/readme-generator');
+const { pushReadme, pushData } = require('../../lib/github');
+const { requireAuth } = require('../../lib/auth');
+const { addEntry } = require('../../lib/activity-log');
 const fs = require('fs');
 const path = require('path');
 
