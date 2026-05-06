@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "266",
+    "totalAnime": "265",
     "totalEpisodes": "4,002+",
-    "moviesWatched": "19",
+    "moviesWatched": "18",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 266,
+      "Completed": 265,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -2500,40 +2500,6 @@
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx14349-zvSfbgjZr4LW.jpg"
     },
     {
-      "id": 1778095195322,
-      "title": "Live Import Test A",
-      "anilistUrl": "",
-      "anilistId": null,
-      "type": "TV",
-      "score": 8,
-      "genres": [],
-      "episodes": 0,
-      "status": "Completed",
-      "notes": "",
-      "tags": [],
-      "letter": "L",
-      "coverImage": null,
-      "addedAt": "2026-05-06T19:19:54.704Z",
-      "updatedAt": "2026-05-06T19:19:54.704Z"
-    },
-    {
-      "id": 1778095195360,
-      "title": "Live Import Test B",
-      "anilistUrl": "",
-      "anilistId": null,
-      "type": "Movie",
-      "score": 9,
-      "genres": [],
-      "episodes": 0,
-      "status": "Completed",
-      "notes": "",
-      "tags": [],
-      "letter": "L",
-      "coverImage": null,
-      "addedAt": "2026-05-06T19:19:54.704Z",
-      "updatedAt": "2026-05-06T19:19:54.704Z"
-    },
-    {
       "id": 17265,
       "title": "Log Horizon",
       "anilistUrl": "https://anilist.co/anime/17265",
@@ -3335,6 +3301,23 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 24,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20623-dUARfggnNDOe.jpg"
+    },
+    {
+      "id": 66666,
+      "title": "Path Test",
+      "anilistUrl": "https://anilist.co/anime/66666",
+      "anilistId": 66666,
+      "type": "TV",
+      "score": 8,
+      "genres": [],
+      "episodes": 0,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "P",
+      "coverImage": null,
+      "addedAt": "2026-05-06T19:20:18.667Z",
+      "updatedAt": "2026-05-06T19:20:18.667Z"
     },
     {
       "id": 437,
