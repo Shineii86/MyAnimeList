@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "265",
+    "totalAnime": "266",
     "totalEpisodes": "4,002+",
     "moviesWatched": "18",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 265,
+      "Completed": 266,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -815,6 +815,23 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 0,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21612-d5zrx9CWkxNl.png"
+    },
+    {
+      "id": 44444,
+      "title": "Deploy Test",
+      "anilistUrl": "https://anilist.co/anime/44444",
+      "anilistId": 44444,
+      "type": "TV",
+      "score": 8,
+      "genres": [],
+      "episodes": 0,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "D",
+      "coverImage": null,
+      "addedAt": "2026-05-06T19:24:02.165Z",
+      "updatedAt": "2026-05-06T19:24:02.165Z"
     },
     {
       "id": 20996,
