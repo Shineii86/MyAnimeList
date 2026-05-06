@@ -459,6 +459,23 @@
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx13599-jpZpumSDPJM0.jpg"
     },
     {
+      "id": 60001,
+      "title": "Bulk Final 1",
+      "anilistUrl": "https://anilist.co/anime/60001",
+      "anilistId": 60001,
+      "type": "TV",
+      "score": 7,
+      "genres": [],
+      "episodes": 0,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "B",
+      "coverImage": null,
+      "addedAt": "2026-05-06T19:28:40.179Z",
+      "updatedAt": "2026-05-06T19:28:40.179Z"
+    },
+    {
       "id": 104578,
       "title": "Carole & Tuesday",
       "anilistUrl": "https://anilist.co/anime/104578",
@@ -1174,23 +1191,6 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 0,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx10087-M4Hd9qrHGrXk.png"
-    },
-    {
-      "id": 77701,
-      "title": "Final Test",
-      "anilistUrl": "https://anilist.co/anime/77701",
-      "anilistId": 77701,
-      "type": "TV",
-      "score": 8,
-      "genres": [],
-      "episodes": 0,
-      "status": "Completed",
-      "notes": "",
-      "tags": [],
-      "letter": "F",
-      "coverImage": null,
-      "addedAt": "2026-05-06T19:28:29.008Z",
-      "updatedAt": "2026-05-06T19:28:29.008Z"
     },
     {
       "id": 104581,
