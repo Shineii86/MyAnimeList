@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "264",
-    "totalEpisodes": "4,002+",
+    "totalAnime": "265",
+    "totalEpisodes": "4,014+",
     "moviesWatched": "18",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 264,
+      "Completed": 265,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -2498,6 +2498,26 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 1,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx14349-zvSfbgjZr4LW.jpg"
+    },
+    {
+      "id": 88888,
+      "title": "Live Test Anime",
+      "anilistUrl": "https://anilist.co/anime/88888",
+      "anilistId": 88888,
+      "type": "TV",
+      "score": 8.5,
+      "genres": [
+        "Action",
+        "Test"
+      ],
+      "episodes": 12,
+      "status": "Completed",
+      "notes": "Added via live test",
+      "tags": [],
+      "letter": "L",
+      "coverImage": null,
+      "addedAt": "2026-05-06T19:19:43.973Z",
+      "updatedAt": "2026-05-06T19:19:43.973Z"
     },
     {
       "id": 17265,
