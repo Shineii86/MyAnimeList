@@ -1,11 +1,18 @@
 {
   "metadata": {
-    "totalAnime": "100+",
-    "totalEpisodes": "1,240+",
-    "moviesWatched": "10+",
-    "ovasSpecials": "5+",
-    "averageScore": "8.2",
-    "completionRate": "87%"
+    "totalAnime": "258",
+    "totalEpisodes": "3,740+",
+    "moviesWatched": "17",
+    "ovasSpecials": "4",
+    "averageScore": "7.9",
+    "completionRate": "100%",
+    "statusCounts": {
+      "Completed": 258,
+      "Watching": 0,
+      "Plan to Watch": 0,
+      "Dropped": 0,
+      "On Hold": 0
+    }
   },
   "recommendations": [
     {
@@ -1173,6 +1180,27 @@
       "tags": [],
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 0
+    },
+    {
+      "id": 182255,
+      "title": "Frieren: Beyond Journey’s End Season 2",
+      "anilistUrl": "https://anilist.co/anime/182255",
+      "anilistId": 182255,
+      "type": "TV",
+      "score": 8.8,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Fantasy"
+      ],
+      "episodes": 10,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "F",
+      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx182255-butzrqd4I0aC.jpg",
+      "addedAt": "2026-05-06T17:43:23.964Z",
+      "updatedAt": "2026-05-06T17:43:23.964Z"
     },
     {
       "id": 13125,
