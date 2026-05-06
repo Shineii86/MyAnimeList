@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "261",
-    "totalEpisodes": "3,989+",
+    "totalAnime": "262",
+    "totalEpisodes": "4,001+",
     "moviesWatched": "18",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 261,
+      "Completed": 262,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -3997,6 +3997,27 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 24,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101280-tDxCVJm714nt.jpg"
+    },
+    {
+      "id": 183161,
+      "title": "The Beginning After the End",
+      "anilistUrl": "https://anilist.co/anime/183161",
+      "anilistId": 183161,
+      "type": "TV",
+      "score": 5.9,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "episodes": 12,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "T",
+      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx183161-5M054tuPmZJX.jpg",
+      "addedAt": "2026-05-06T18:20:03.978Z",
+      "updatedAt": "2026-05-06T18:20:03.978Z"
     },
     {
       "id": 21273,
