@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "259",
-    "totalEpisodes": "3,955+",
+    "totalAnime": "261",
+    "totalEpisodes": "3,989+",
     "moviesWatched": "18",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 259,
+      "Completed": 261,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -97,6 +97,25 @@
       "tags": [],
       "updatedAt": "2026-05-06T15:26:54.150Z",
       "episodes": 1
+    },
+    {
+      "id": 20787,
+      "title": "Akame ga Kill!",
+      "anilistUrl": "https://anilist.co/anime/20613",
+      "anilistId": 20613,
+      "type": "TV",
+      "score": 7.5,
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "letter": "A",
+      "addedAt": "2026-05-06T15:26:54.150Z",
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "updatedAt": "2026-05-06T15:26:54.150Z",
+      "episodes": 24
     },
     {
       "id": 47,
@@ -1182,6 +1201,29 @@
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx154587-qQTzQnEJJ3oB.jpg",
       "addedAt": "2026-05-06T17:45:41.718Z",
       "updatedAt": "2026-05-06T17:45:41.718Z"
+    },
+    {
+      "id": 182255,
+      "title": "Frieren: Beyond Journey’s End Season 2",
+      "anilistUrl": "https://anilist.co/anime/182255",
+      "anilistId": 182255,
+      "type": "TV",
+      "score": 8.8,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Fantasy"
+      ],
+      "episodes": 10,
+      "status": "Completed",
+      "notes": "",
+      "tags": [
+        "favourite"
+      ],
+      "letter": "F",
+      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx182255-butzrqd4I0aC.jpg",
+      "addedAt": "2026-05-06T18:06:31.326Z",
+      "updatedAt": "2026-05-06T18:06:31.326Z"
     },
     {
       "id": 13125,
