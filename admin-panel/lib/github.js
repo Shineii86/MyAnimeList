@@ -18,32 +18,48 @@ async function getFileContent(owner, repo, filePath, token) {
 }
 
 async function pushFile(owner, repo, filePath, content, message, token, sha = null) {
-  const body = {
-    message,
-    content: Buffer.from(content).toString('base64'),
-  };
-  
-  if (sha) {
-    body.sha = sha;
-  }
+  const MAX_RETRIES = 3;
 
-  const res = await fetch(`${GITHUB_API}/repos/${owner}/${repo}/contents/${filePath}`, {
-    method: 'PUT',
-    headers: {
-      'Authorization': `token ${token}`,
-      'Accept': 'application/vnd.github.v3+json',
-      'Content-Type': 'application/json',
-      'User-Agent': 'MyAnimeList-Admin'
-    },
-    body: JSON.stringify(body)
-  });
+  for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
+    // Always fetch a fresh SHA on retry (or first attempt if none provided)
+    if (attempt > 0 || !sha) {
+      const existing = await getFileContent(owner, repo, filePath, token);
+      sha = existing ? existing.sha : null;
+    }
 
-  if (!res.ok) {
+    const body = {
+      message,
+      content: Buffer.from(content).toString('base64'),
+    };
+
+    if (sha) {
+      body.sha = sha;
+    }
+
+    const res = await fetch(`${GITHUB_API}/repos/${owner}/${repo}/contents/${filePath}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `token ${token}`,
+        'Accept': 'application/vnd.github.v3+json',
+        'Content-Type': 'application/json',
+        'User-Agent': 'MyAnimeList-Admin'
+      },
+      body: JSON.stringify(body)
+    });
+
+    if (res.ok) {
+      return await res.json();
+    }
+
     const err = await res.json();
+
+    // 409 = SHA conflict — retry with fresh SHA
+    if (res.status === 409 && attempt < MAX_RETRIES - 1) {
+      continue;
+    }
+
     throw new Error(`GitHub push failed: ${res.status} - ${JSON.stringify(err)}`);
   }
-
-  return await res.json();
 }
 
 async function pushReadme(owner, repo, readmeContent, token) {

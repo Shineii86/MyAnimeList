@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Fix: GitHub Push 409 SHA Conflict
+
+### Fixed
+- **409 conflict on push** — `pushFile()` now retries up to 3 times on SHA mismatch, re-fetching the file's current SHA before each retry
+- **Race condition** — Sequential pushes (README → anime.json) no longer fail when concurrent commits change the file SHA between GET and PUT
+
 ## [2026-05-07] - Diagnostic Sweep: Critical Fixes
 
 ### Fixed
