@@ -243,6 +243,7 @@ These are my personal 10/10 masterpieces:
 - [**Paranoia Agent**](https://anilist.co/anime/323) - TV ⭐ 7.7 | 🧠 Psychological, 🕰️ Mystery
 - [**Parasyte: The Maxim**](https://anilist.co/anime/20623) - TV ⭐ 8.3 | ⚔️ Action, 🎭 Horror
 - [**Perfect Blue**](https://anilist.co/anime/437) - Movie ⭐ 8.2 | 🧠 Psychological, 🎭 Thriller
+- [**Persist Test**](https://anilist.co/anime/11112) - TV ⭐ 8 | 
 - [**Ping Pong the Animation**](https://anilist.co/anime/20607) - TV ⭐ 8.6 | 🏐 Sports, 🧠 Psychological
 - [**Plastic Memories**](https://anilist.co/anime/20872) - TV ⭐ 7.8 | 🔬 Sci-Fi, 💕 Romance
 - [**Princess Mononoke**](https://anilist.co/anime/164) - Movie ⭐ 8.8 | 🗡️ Adventure, 🧙 Fantasy
@@ -292,7 +293,6 @@ These are my personal 10/10 masterpieces:
 - [**The Melancholy of Haruhi Suzumiya**](https://anilist.co/anime/849) - TV ⭐ 7.9 | 😄 Comedy, 🕰️ Mystery
 - [**The Rising of the Shield Hero**](https://anilist.co/anime/99263) - TV ⭐ 7.5 | ⚔️ Action, 🧙 Fantasy
 - [**The Water Magician**](https://anilist.co/anime/186052) - TV ⭐ 8.6 | 🗡️ Adventure, 🧙 Fantasy
-- [**Token Test**](https://anilist.co/anime/11111) - TV ⭐ 8 | 
 - [**Tokyo Ghoul**](https://anilist.co/anime/20605) - TV ⭐ 7.7 | 🎭 Horror, 🧠 Psychological
 - [**Tokyo Revengers**](https://anilist.co/anime/120120) - TV ⭐ 7.8 | ⚔️ Action, 💔 Drama
 - [**Toradora!**](https://anilist.co/anime/4224) - TV ⭐ 8.3 | 💕 Romance, 😄 Comedy
