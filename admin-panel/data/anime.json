@@ -797,6 +797,23 @@
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx20931-bktYqOcxPERi.jpg"
     },
     {
+      "id": 33333,
+      "title": "Debug Test 123",
+      "anilistUrl": "https://anilist.co/anime/33333",
+      "anilistId": 33333,
+      "type": "TV",
+      "score": 8,
+      "genres": [],
+      "episodes": 0,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "D",
+      "coverImage": null,
+      "addedAt": "2026-05-06T19:24:19.559Z",
+      "updatedAt": "2026-05-06T19:24:19.559Z"
+    },
+    {
       "id": 101922,
       "title": "Demon Slayer",
       "anilistUrl": "https://anilist.co/anime/21612",
@@ -815,23 +832,6 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 0,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21612-d5zrx9CWkxNl.png"
-    },
-    {
-      "id": 44444,
-      "title": "Deploy Test",
-      "anilistUrl": "https://anilist.co/anime/44444",
-      "anilistId": 44444,
-      "type": "TV",
-      "score": 8,
-      "genres": [],
-      "episodes": 0,
-      "status": "Completed",
-      "notes": "",
-      "tags": [],
-      "letter": "D",
-      "coverImage": null,
-      "addedAt": "2026-05-06T19:24:02.165Z",
-      "updatedAt": "2026-05-06T19:24:02.165Z"
     },
     {
       "id": 20996,
