@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-06] - Admin Panel v1.2.0 — Watchlist, Visuals & Polish
+
+### Added
+- **Watchlist / Status Tracking** — Mark anime as Completed, Watching, Plan to Watch, On Hold, or Dropped; filter by status; status breakdown on dashboard
+- **Grid / Cover View** — Toggle between table and visual grid view with AniList cover art; hover animations; score & status badges on cards
+- **Personal Notes & Reviews** — Add text notes to any anime; shown in edit page, table view, and random picker
+- **Random Anime Picker** — Spin the wheel with filters (status, type, min score); dramatic spin animation; pick history
+- **Keyboard Shortcuts** — `N` = new anime, `/` = search, `H` = dashboard, `A` = all anime, `S` = AniList search, `R` = random, `Esc` = close modal, `?` = help
+- **Custom Tags** — Add custom labels beyond genres (favorite, hidden-gem, rewatch); filter by tag
+- **Cover Image Support** — Auto-fetched from AniList; stored in data; shown in grid view and edit page
+- **Score Color Coding** — Green (≥8), Yellow (6-7.9), Red (<6) across all views
+- **Status Color Coding** — Each status has a distinct color shown as badges and indicators
+
+### Changed
+- Anime list now supports both table and grid view (persisted in localStorage)
+- Search now also searches notes and genres
+- Dashboard shows status breakdown (Completed, Watching, Plan to Watch, etc.)
+- Add/Edit forms now include status, notes, tags, and cover image fields
+- Sidebar now includes Random Picker link
+- Status filter added to anime list page
+
+### Technical
+- New `status`, `notes`, `tags`, `coverImage` fields in anime data
+- Random anime API endpoint with filter support
+- Keyboard shortcuts hook with smart input detection
+- SVG-based charts with no external dependencies
+
 ## [2026-05-06] - Admin Panel v1.1.0 — Smart Features
 
 ### Added

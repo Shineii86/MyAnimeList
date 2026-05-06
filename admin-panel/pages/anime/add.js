@@ -11,7 +11,11 @@ export default function AddAnime({ showToast }) {
     type: 'TV',
     score: '',
     genres: '',
-    episodes: ''
+    episodes: '',
+    status: 'Completed',
+    notes: '',
+    tags: '',
+    coverImage: ''
   });
   const [loading, setLoading] = useState(false);
   const [anilistQuery, setAnilistQuery] = useState('');
@@ -44,7 +48,11 @@ export default function AddAnime({ showToast }) {
             type: anime.type || 'TV',
             score: anime.score || '',
             genres: (anime.genres || []).join(', '),
-            episodes: anime.episodes ? String(anime.episodes) : ''
+            episodes: anime.episodes ? String(anime.episodes) : '',
+            status: 'Completed',
+            notes: '',
+            tags: '',
+            coverImage: anime.coverImage || ''
           });
           showToast?.(`Auto-fetched: ${anime.titleEnglish || anime.titleRomaji}`, 'success');
         }
@@ -90,7 +98,11 @@ export default function AddAnime({ showToast }) {
       type: anime.type || 'TV',
       score: anime.score || '',
       genres: (anime.genres || []).join(', '),
-      episodes: anime.episodes ? String(anime.episodes) : ''
+      episodes: anime.episodes ? String(anime.episodes) : '',
+      status: 'Completed',
+      notes: '',
+      tags: '',
+      coverImage: anime.coverImage || ''
     });
     setAnilistResults([]);
     setAnilistQuery('');
@@ -109,6 +121,7 @@ export default function AddAnime({ showToast }) {
       const body = {
         ...form,
         genres: form.genres ? form.genres.split(',').map(g => g.trim()).filter(Boolean) : [],
+        tags: form.tags ? form.tags.split(',').map(t => t.trim()).filter(Boolean) : [],
         score: form.score ? parseFloat(form.score) : 0,
         episodes: form.episodes ? parseInt(form.episodes) : 0,
         anilistId: form.anilistId ? parseInt(form.anilistId) : null
@@ -249,6 +262,34 @@ export default function AddAnime({ showToast }) {
           <div className="form-group">
             <label className="form-label">Genres (comma separated)</label>
             <input className="form-input" name="genres" value={form.genres} onChange={handleChange} placeholder="e.g., Action, Drama, Fantasy" />
+          </div>
+
+          <div className="form-row">
+            <div className="form-group">
+              <label className="form-label">Status</label>
+              <select className="form-input" name="status" value={form.status} onChange={handleChange}>
+                <option value="Completed">✅ Completed</option>
+                <option value="Watching">👁️ Watching</option>
+                <option value="Plan to Watch">📋 Plan to Watch</option>
+                <option value="On Hold">⏸️ On Hold</option>
+                <option value="Dropped">🚫 Dropped</option>
+              </select>
+            </div>
+            <div className="form-group">
+              <label className="form-label">Custom Tags</label>
+              <input className="form-input" name="tags" value={form.tags} onChange={handleChange} placeholder="favorite, hidden-gem, rewatch" />
+            </div>
+          </div>
+
+          <div className="form-group">
+            <label className="form-label">Cover Image URL</label>
+            <input className="form-input" name="coverImage" value={form.coverImage} onChange={handleChange} placeholder="Auto-filled from AniList, or paste URL" />
+            {form.coverImage && <img src={form.coverImage} alt="Preview" style={{ marginTop: 8, width: 60, height: 84, borderRadius: 6, objectFit: 'cover' }} />}
+          </div>
+
+          <div className="form-group">
+            <label className="form-label">📝 Personal Notes</label>
+            <textarea className="form-input" name="notes" value={form.notes} onChange={handleChange} placeholder="Your thoughts, why you rated it this way..." rows={3} />
           </div>
 
           <div className="form-actions">

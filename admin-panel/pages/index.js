@@ -69,6 +69,26 @@ export default function Dashboard({ showToast }) {
         </div>
       </div>
 
+      {/* Status Breakdown */}
+      <div style={{ display: 'flex', gap: 12, marginBottom: 24, flexWrap: 'wrap' }}>
+        {[
+          { label: '✅ Completed', key: 'Completed', color: 'var(--success)' },
+          { label: '👁️ Watching', key: 'Watching', color: '#3b82f6' },
+          { label: '📋 Plan to Watch', key: 'Plan to Watch', color: '#f59e0b' },
+          { label: '⏸️ On Hold', key: 'On Hold', color: '#8b5cf6' },
+          { label: '🚫 Dropped', key: 'Dropped', color: 'var(--danger)' },
+        ].map(({ label, key, color }) => (
+          <div key={key} style={{
+            flex: '1 1 150px', padding: '12px 16px', background: 'var(--bg-card)',
+            border: `1px solid var(--border)`, borderRadius: 8,
+            borderLeft: `3px solid ${color}`
+          }}>
+            <div style={{ fontSize: 11, color: 'var(--text-muted)', marginBottom: 2 }}>{label}</div>
+            <div style={{ fontSize: 20, fontWeight: 800 }}>{stats?.byStatus?.[key] || 0}</div>
+          </div>
+        ))}
+      </div>
+
       {/* Quick Actions */}
       <div className="card" style={{ marginBottom: 24 }}>
         <div className="card-header">

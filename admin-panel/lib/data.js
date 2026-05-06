@@ -3,6 +3,8 @@ const path = require('path');
 
 const DATA_FILE = path.join(process.cwd(), 'data', 'anime.json');
 
+const VALID_STATUSES = ['Completed', 'Watching', 'Plan to Watch', 'Dropped', 'On Hold'];
+
 function readData() {
   try {
     const raw = fs.readFileSync(DATA_FILE, 'utf-8');
@@ -36,13 +38,17 @@ function addAnime(entry) {
     type: entry.type || 'TV',
     score: parseFloat(entry.score) || 0,
     genres: entry.genres || [],
+    episodes: parseInt(entry.episodes) || 0,
+    status: entry.status || 'Completed',
+    notes: entry.notes || '',
+    tags: entry.tags || [],
     letter: entry.title.charAt(0).toUpperCase(),
-    addedAt: new Date().toISOString()
+    coverImage: entry.coverImage || null,
+    addedAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
   };
   data.anime.push(newEntry);
-  // Sort alphabetically
   data.anime.sort((a, b) => a.title.localeCompare(b.title));
-  // Recalculate letters
   data.anime.forEach(a => { a.letter = a.title.charAt(0).toUpperCase(); });
   writeData(data);
   updateStats(data);
@@ -54,7 +60,7 @@ function updateAnime(id, updates) {
   const index = data.anime.findIndex(a => a.id === parseInt(id));
   if (index === -1) return null;
   
-  data.anime[index] = { ...data.anime[index], ...updates };
+  data.anime[index] = { ...data.anime[index], ...updates, updatedAt: new Date().toISOString() };
   if (updates.title) {
     data.anime[index].letter = updates.title.charAt(0).toUpperCase();
   }
@@ -75,6 +81,26 @@ function deleteAnime(id) {
   return true;
 }
 
+function getRandomAnime(filters = {}) {
+  let anime = getAllAnime();
+  
+  if (filters.status) {
+    anime = anime.filter(a => a.status === filters.status);
+  }
+  if (filters.type) {
+    anime = anime.filter(a => a.type === filters.type);
+  }
+  if (filters.minScore) {
+    anime = anime.filter(a => a.score >= parseFloat(filters.minScore));
+  }
+  if (filters.genre) {
+    anime = anime.filter(a => a.genres && a.genres.some(g => g.toLowerCase() === filters.genre.toLowerCase()));
+  }
+  
+  if (anime.length === 0) return null;
+  return anime[Math.floor(Math.random() * anime.length)];
+}
+
 function updateStats(data) {
   const anime = data.anime || [];
   const totalAnime = anime.length;
@@ -83,7 +109,15 @@ function updateStats(data) {
   const ovasSpecials = anime.filter(a => a.type === 'OVA' || a.type === 'Special').length;
   const scores = anime.filter(a => a.score > 0).map(a => a.score);
   const avgScore = scores.length ? (scores.reduce((a, b) => a + b, 0) / scores.length).toFixed(1) : '0';
-  const completionRate = totalAnime > 0 ? Math.round((anime.filter(a => a.status === 'Completed' || !a.status).length / totalAnime) * 100) + '%' : '0%';
+  
+  const statusCounts = {};
+  VALID_STATUSES.forEach(s => { statusCounts[s] = 0; });
+  anime.forEach(a => {
+    const s = a.status || 'Completed';
+    statusCounts[s] = (statusCounts[s] || 0) + 1;
+  });
+  
+  const completionRate = totalAnime > 0 ? Math.round((statusCounts['Completed'] / totalAnime) * 100) + '%' : '0%';
 
   data.metadata = {
     totalAnime: `${totalAnime}`,
@@ -91,7 +125,8 @@ function updateStats(data) {
     moviesWatched: `${moviesWatched}`,
     ovasSpecials: `${ovasSpecials}`,
     averageScore: avgScore,
-    completionRate: completionRate
+    completionRate: completionRate,
+    statusCounts
   };
   writeData(data);
 }
@@ -131,9 +166,11 @@ module.exports = {
   addAnime,
   updateAnime,
   deleteAnime,
+  getRandomAnime,
   getStats,
   getRecommendations,
   addRecommendation,
   deleteRecommendation,
-  updateStats
+  updateStats,
+  VALID_STATUSES
 };

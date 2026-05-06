@@ -25,7 +25,11 @@ export default function EditAnime({ showToast }) {
           type: data.type || 'TV',
           score: data.score ? String(data.score) : '',
           genres: (data.genres || []).join(', '),
-          episodes: data.episodes ? String(data.episodes) : ''
+          episodes: data.episodes ? String(data.episodes) : '',
+          status: data.status || 'Completed',
+          notes: data.notes || '',
+          tags: (data.tags || []).join(', '),
+          coverImage: data.coverImage || ''
         });
       } else {
         showToast?.('Anime not found', 'error');
@@ -49,6 +53,7 @@ export default function EditAnime({ showToast }) {
       const body = {
         ...form,
         genres: form.genres ? form.genres.split(',').map(g => g.trim()).filter(Boolean) : [],
+        tags: form.tags ? form.tags.split(',').map(t => t.trim()).filter(Boolean) : [],
         score: form.score ? parseFloat(form.score) : 0,
         episodes: form.episodes ? parseInt(form.episodes) : 0,
         anilistId: form.anilistId ? parseInt(form.anilistId) : null
@@ -62,7 +67,6 @@ export default function EditAnime({ showToast }) {
 
       if (res.ok) {
         showToast?.('Anime updated successfully', 'success');
-        // Auto-push if enabled
         try {
           const settings = JSON.parse(localStorage.getItem('mal_admin_settings') || '{}');
           if (settings.autoPush && settings.githubToken) {
@@ -85,18 +89,12 @@ export default function EditAnime({ showToast }) {
   }
 
   if (loading || !form) {
-    return (
-      <div style={{ display: 'flex', justifyContent: 'center', padding: 60 }}>
-        <div className="spinner" style={{ width: 40, height: 40 }} />
-      </div>
-    );
+    return <div style={{ display: 'flex', justifyContent: 'center', padding: 60 }}><div className="spinner" style={{ width: 40, height: 40 }} /></div>;
   }
 
   return (
     <>
-      <Head>
-        <title>Edit: {form.title} - MyAnimeList Admin</title>
-      </Head>
+      <Head><title>Edit: {form.title} - MyAnimeList Admin</title></Head>
 
       <div style={{ marginBottom: 32 }}>
         <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 4 }}>Edit Anime</h1>
@@ -133,20 +131,56 @@ export default function EditAnime({ showToast }) {
               </select>
             </div>
             <div className="form-group">
-              <label className="form-label">Score (0-10)</label>
-              <input className="form-input" name="score" type="number" min="0" max="10" step="0.1" value={form.score} onChange={handleChange} />
+              <label className="form-label">Status</label>
+              <select className="form-input" name="status" value={form.status} onChange={handleChange}>
+                <option value="Completed">✅ Completed</option>
+                <option value="Watching">👁️ Watching</option>
+                <option value="Plan to Watch">📋 Plan to Watch</option>
+                <option value="On Hold">⏸️ On Hold</option>
+                <option value="Dropped">🚫 Dropped</option>
+              </select>
             </div>
           </div>
 
           <div className="form-row">
             <div className="form-group">
+              <label className="form-label">Score (0-10)</label>
+              <input className="form-input" name="score" type="number" min="0" max="10" step="0.1" value={form.score} onChange={handleChange} />
+            </div>
+            <div className="form-group">
               <label className="form-label">Episodes</label>
               <input className="form-input" name="episodes" type="number" min="0" value={form.episodes} onChange={handleChange} />
             </div>
-            <div className="form-group">
-              <label className="form-label">Genres (comma separated)</label>
-              <input className="form-input" name="genres" value={form.genres} onChange={handleChange} />
-            </div>
+          </div>
+
+          <div className="form-group">
+            <label className="form-label">Genres (comma separated)</label>
+            <input className="form-input" name="genres" value={form.genres} onChange={handleChange} />
+          </div>
+
+          <div className="form-group">
+            <label className="form-label">Custom Tags <span style={{ color: 'var(--text-muted)', fontWeight: 400 }}>(e.g., favorite, hidden-gem, rewatch)</span></label>
+            <input className="form-input" name="tags" value={form.tags} onChange={handleChange} placeholder="favorite, hidden-gem, rewatch" />
+          </div>
+
+          <div className="form-group">
+            <label className="form-label">Cover Image URL</label>
+            <input className="form-input" name="coverImage" value={form.coverImage} onChange={handleChange} placeholder="https://example.com/cover.jpg" />
+            {form.coverImage && (
+              <img src={form.coverImage} alt="Preview" style={{ marginTop: 8, width: 80, height: 112, borderRadius: 8, objectFit: 'cover' }} />
+            )}
+          </div>
+
+          <div className="form-group">
+            <label className="form-label">📝 Personal Notes</label>
+            <textarea 
+              className="form-input" 
+              name="notes" 
+              value={form.notes} 
+              onChange={handleChange} 
+              placeholder="Your thoughts, rewatch notes, why you rated it this way..."
+              rows={4}
+            />
           </div>
 
           <div className="form-actions">
