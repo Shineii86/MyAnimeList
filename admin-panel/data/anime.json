@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "264",
-    "totalEpisodes": "4,002+",
+    "totalAnime": "265",
+    "totalEpisodes": "4,015+",
     "moviesWatched": "18",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 264,
+      "Completed": 265,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -1639,6 +1639,28 @@
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx128893-Gc2t8b8M0mVu.jpg",
       "addedAt": "2026-05-06T18:48:14.381Z",
       "updatedAt": "2026-05-06T18:48:14.381Z"
+    },
+    {
+      "id": 128893,
+      "title": "Hell’s Paradise",
+      "anilistUrl": "https://anilist.co/anime/128893",
+      "anilistId": 128893,
+      "type": "TV",
+      "score": 8,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Mystery",
+        "Supernatural"
+      ],
+      "episodes": 13,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "H",
+      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx128893-Gc2t8b8M0mVu.jpg",
+      "addedAt": "2026-05-06T18:55:41.551Z",
+      "updatedAt": "2026-05-06T18:55:41.551Z"
     },
     {
       "id": 777,
