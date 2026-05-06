@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Added: The Beginning After the End
+
+### Added
+- **The Beginning After the End** — TV • AniList ID: 144176
+- **The Beginning After the End Season 2** — TV • AniList ID: 169822
+
 ## [2026-05-07] - Auto-Regenerate README on Every Data Change
 
 ### Fixed
