@@ -46,5 +46,37 @@
     "target": "Debug Test 123",
     "details": "TV • 8 • ",
     "user": "admin"
+  },
+  {
+    "id": "moug51gisxi1",
+    "timestamp": "2026-05-06T19:24:40.482Z",
+    "action": "login",
+    "target": "Admin Panel",
+    "details": "Successful login",
+    "user": "admin"
+  },
+  {
+    "id": "moug534w00br",
+    "timestamp": "2026-05-06T19:24:42.656Z",
+    "action": "add",
+    "target": "Explicit Creds Test",
+    "details": "TV • 8 • ",
+    "user": "admin"
+  },
+  {
+    "id": "moug5dcgsekf",
+    "timestamp": "2026-05-06T19:24:55.888Z",
+    "action": "login",
+    "target": "Admin Panel",
+    "details": "Successful login",
+    "user": "admin"
+  },
+  {
+    "id": "moug5eupm24m",
+    "timestamp": "2026-05-06T19:24:57.841Z",
+    "action": "add",
+    "target": "Token Test",
+    "details": "TV • 8 • ",
+    "user": "admin"
   }
 ]
