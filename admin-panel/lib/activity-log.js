@@ -41,7 +41,12 @@ function writeLog(entries) {
 
 // Push activity log to GitHub with retry on 409 SHA conflict
 function pushToGitHub(entries, gh) {
-  if (!gh || !gh.token || !gh.owner || !gh.repo) return;
+  // Resolve credentials: explicit param → env vars
+  const token = gh?.token || process.env.GITHUB_TOKEN;
+  const owner = gh?.owner || process.env.GITHUB_OWNER || 'Shineii86';
+  const repo = gh?.repo || process.env.GITHUB_REPO || 'MyAnimeList';
+  if (!token || !owner || !repo) return;
+  const creds = { token, owner, repo };
   const MAX_RETRIES = 3;
 
   const json = JSON.stringify(entries.slice(-MAX_ENTRIES), null, 2);
@@ -50,10 +55,10 @@ function pushToGitHub(entries, gh) {
     // First get current SHA
     const getOpts = {
       hostname: 'api.github.com',
-      path: `/repos/${gh.owner}/${gh.repo}/contents/${LOG_PATH}`,
+      path: `/repos/${creds.owner}/${creds.repo}/contents/${LOG_PATH}`,
       method: 'GET',
       headers: {
-        'Authorization': `token ${gh.token}`,
+        'Authorization': `token ${creds.token}`,
         'Accept': 'application/vnd.github.v3+json',
         'User-Agent': 'MyAnimeList-Admin'
       }
@@ -75,10 +80,10 @@ function pushToGitHub(entries, gh) {
 
         const putOpts = {
           hostname: 'api.github.com',
-          path: `/repos/${gh.owner}/${gh.repo}/contents/${LOG_PATH}`,
+          path: `/repos/${creds.owner}/${creds.repo}/contents/${LOG_PATH}`,
           method: 'PUT',
           headers: {
-            'Authorization': `token ${gh.token}`,
+            'Authorization': `token ${creds.token}`,
             'Accept': 'application/vnd.github.v3+json',
             'Content-Type': 'application/json',
             'User-Agent': 'MyAnimeList-Admin',

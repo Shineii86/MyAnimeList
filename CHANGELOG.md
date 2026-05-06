@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Fix: Vercel Data Persistence
+
+### Fixed
+- **`readData()` now uses env vars as fallback** — Added `resolveGh()` helper that checks explicit params first, then falls back to `GITHUB_TOKEN`/`GITHUB_OWNER`/`GITHUB_REPO` env vars. Data reads work on Vercel even without client-side GitHub headers.
+- **`writeData()` now uses env vars as fallback** — Same `resolveGh()` pattern. Writes always push to GitHub when env vars are set.
+- **`pushToGitHub()` in activity-log.js now uses env vars** — Activity log persists to GitHub on Vercel without requiring explicit credentials in the request.
+- **Rate limiter documented** — In-memory rate limiting resets per Vercel cold start. Noted in code for future Redis/KV upgrade.
+
 ## [2026-05-07] - Critical: Data Path & Import Fixes
 
 ### Fixed

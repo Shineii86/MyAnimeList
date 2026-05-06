@@ -80,12 +80,25 @@ async function githubPushWithRetry(token, owner, repo, filePath, content, messag
   }
 }
 
+// Resolve GitHub credentials: explicit param → env vars (Vercel fallback)
+function resolveGh(gh) {
+  if (gh && gh.token && gh.owner && gh.repo) return gh;
+  // On Vercel, always try env vars as fallback (serverless has no persistent state)
+  const token = process.env.GITHUB_TOKEN;
+  const owner = process.env.GITHUB_OWNER || 'Shineii86';
+  const repo = process.env.GITHUB_REPO || 'MyAnimeList';
+  if (token && owner && repo) return { token, owner, repo };
+  return null;
+}
+
 // Read data with GitHub as primary source when credentials available
 async function readData(gh = null) {
-  // 1. If GitHub credentials provided, read from GitHub (most up-to-date)
-  if (gh && gh.token && gh.owner && gh.repo) {
+  const resolved = resolveGh(gh);
+
+  // 1. If GitHub credentials available, read from GitHub (most up-to-date)
+  if (resolved) {
     try {
-      const url = `${GITHUB_RAW_BASE}/${gh.owner}/${gh.repo}/main/${REPO_PATH}`;
+      const url = `${GITHUB_RAW_BASE}/${resolved.owner}/${resolved.repo}/main/${REPO_PATH}`;
       const raw = await fetchUrl(url);
       const data = JSON.parse(raw);
       // Cache locally for faster subsequent reads
@@ -137,18 +150,19 @@ async function writeData(data, gh = null) {
   // Always write to local cache
   try { fs.writeFileSync(LOCAL_DATA_FILE, json, 'utf-8'); } catch {}
 
-  // Push to GitHub if credentials provided
-  if (gh && gh.token && gh.owner && gh.repo) {
+  // Push to GitHub if credentials available (explicit or env vars)
+  const resolved = resolveGh(gh);
+  if (resolved) {
     try {
       // Push anime.json (with retry on 409)
-      await githubPushWithRetry(gh.token, gh.owner, gh.repo, REPO_PATH, json,
+      await githubPushWithRetry(resolved.token, resolved.owner, resolved.repo, REPO_PATH, json,
         `📊 Update anime data via Admin Panel [${new Date().toISOString().split('T')[0]}]`);
 
       // Auto-regenerate and push README.md (with retry on 409)
       try {
         const { generateReadme } = require('./readme-generator');
         const readme = generateReadme(data);
-        await githubPushWithRetry(gh.token, gh.owner, gh.repo, 'README.md', readme,
+        await githubPushWithRetry(resolved.token, resolved.owner, resolved.repo, 'README.md', readme,
           `📝 Auto-regenerate README [${new Date().toISOString().split('T')[0]}]`);
       } catch (readmeErr) {
         console.error('[data] README auto-push failed:', readmeErr.message);

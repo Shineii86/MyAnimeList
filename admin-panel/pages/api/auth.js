@@ -2,6 +2,8 @@ const { authenticate, createToken } = require('../../lib/auth');
 const { addEntry } = require('../../lib/activity-log');
 
 // Simple in-memory rate limiter for login attempts
+// NOTE: On Vercel (serverless), this resets per cold start.
+// For production, consider Vercel KV or Upstash Redis for persistent rate limiting.
 const loginAttempts = new Map(); // IP -> { count, firstAttempt }
 const MAX_ATTEMPTS = 5;
 const WINDOW_MS = 15 * 60 * 1000; // 15 minutes
