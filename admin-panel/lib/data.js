@@ -98,12 +98,15 @@ async function readData(gh = null) {
   // 1. If GitHub credentials available, read from GitHub (most up-to-date)
   if (resolved) {
     try {
-      const url = `${GITHUB_RAW_BASE}/${resolved.owner}/${resolved.repo}/main/${REPO_PATH}`;
-      const raw = await fetchUrl(url);
-      const data = JSON.parse(raw);
-      // Cache locally for faster subsequent reads
-      try { fs.writeFileSync(LOCAL_DATA_FILE, raw, 'utf-8'); } catch {}
-      return data;
+      // Use GitHub API (not raw CDN) to get fresh data immediately after writes
+      const result = await githubApi('GET', resolved.token, resolved.owner, resolved.repo, REPO_PATH);
+      if (result.content) {
+        const raw = Buffer.from(result.content, 'base64').toString('utf-8');
+        const data = JSON.parse(raw);
+        // Cache locally for faster subsequent reads
+        try { fs.writeFileSync(LOCAL_DATA_FILE, raw, 'utf-8'); } catch {}
+        return data;
+      }
     } catch {
       // Fall through to local
     }
