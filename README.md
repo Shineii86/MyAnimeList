@@ -243,7 +243,6 @@ These are my personal 10/10 masterpieces:
 - [**Paranoia Agent**](https://anilist.co/anime/323) - TV ⭐ 7.7 | 🧠 Psychological, 🕰️ Mystery
 - [**Parasyte: The Maxim**](https://anilist.co/anime/20623) - TV ⭐ 8.3 | ⚔️ Action, 🎭 Horror
 - [**Perfect Blue**](https://anilist.co/anime/437) - Movie ⭐ 8.2 | 🧠 Psychological, 🎭 Thriller
-- [**Persist Test**](https://anilist.co/anime/11112) - TV ⭐ 8 | 
 - [**Ping Pong the Animation**](https://anilist.co/anime/20607) - TV ⭐ 8.6 | 🏐 Sports, 🧠 Psychological
 - [**Plastic Memories**](https://anilist.co/anime/20872) - TV ⭐ 7.8 | 🔬 Sci-Fi, 💕 Romance
 - [**Princess Mononoke**](https://anilist.co/anime/164) - Movie ⭐ 8.8 | 🗡️ Adventure, 🧙 Fantasy
@@ -317,6 +316,7 @@ These are my personal 10/10 masterpieces:
 - [**Vandread**](https://anilist.co/anime/235) - TV ⭐ 7 | 🤖 Mecha, 💕 Romance
 - [**Vatican Miracle Examiner**](https://anilist.co/anime/97855) - TV ⭐ 5.8 | 🕰️ Mystery, 🔥 Supernatural
 - [**Vercel Path Test**](https://anilist.co/anime/55555) - TV ⭐ 8 | 
+- [**VercelEnvCheck_1778095580**](https://anilist.co/anime/99901) - TV ⭐ 8 | 
 - [**Vexations of a Shut-In Vampire Princess**](https://anilist.co/anime/159808) - TV ⭐ 6.2 | 😄 Comedy, 🧙 Fantasy
 - [**Vinland Saga**](https://anilist.co/anime/101348) - TV ⭐ 8.7 | ⚔️ Action, 💔 Drama
 - [**Violet Evergarden**](https://anilist.co/anime/21827) - TV ⭐ 8.7 | 💔 Drama, 😃 Slice of Life
