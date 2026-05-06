@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "260",
-    "totalEpisodes": "3,979+",
+    "totalAnime": "259",
+    "totalEpisodes": "3,955+",
     "moviesWatched": "18",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 260,
+      "Completed": 259,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -97,25 +97,6 @@
       "tags": [],
       "updatedAt": "2026-05-06T15:26:54.150Z",
       "episodes": 1
-    },
-    {
-      "id": 20787,
-      "title": "Akame ga Kill!",
-      "anilistUrl": "https://anilist.co/anime/20613",
-      "anilistId": 20613,
-      "type": "TV",
-      "score": 7.5,
-      "genres": [
-        "Action",
-        "Fantasy"
-      ],
-      "letter": "A",
-      "addedAt": "2026-05-06T15:26:54.150Z",
-      "status": "Completed",
-      "notes": "",
-      "tags": [],
-      "updatedAt": "2026-05-06T15:26:54.150Z",
-      "episodes": 24
     },
     {
       "id": 47,
