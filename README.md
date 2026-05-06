@@ -3,7 +3,7 @@
 <img src="https://raw.githubusercontent.com/Shineii86/MyAnimeList/refs/heads/main/assets/image.png" alt="LOGO" width="200" height="200"/>
 </a>
 
-![Anime Count](https://img.shields.io/badge/Anime%20Watched-257-blueviolet?style=for-the-badge)
+![Anime Count](https://img.shields.io/badge/Anime%20Watched-258-blueviolet?style=for-the-badge)
 ![Days Watched](https://img.shields.io/badge/Days%20Watched-3.5+-important?style=for-the-badge)
 [![GitHub Stars](https://img.shields.io/github/stars/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/fork)
@@ -12,7 +12,7 @@
 
 </div> 
 
-> I began my anime-watching journey in **2020**, and since then I have watched and completed over **257 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
+> I began my anime-watching journey in **2020**, and since then I have watched and completed over **258 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
 
 
 ## 📋 Table of Contents
@@ -27,9 +27,9 @@
 
 | Statistic | Value |
 |-----------|-------|
-| Total Anime | 257 |
-| Total Episodes | 3,730 |
-| TV Shows | 233 |
+| Total Anime | 258 |
+| Total Episodes | 3,758 |
+| TV Shows | 234 |
 | Movies Watched | 17 |
 | OVAs/Specials | 4 |
 | ONA | 3 |
@@ -119,6 +119,7 @@ These are my personal 10/10 masterpieces:
 - [**Fire Force**](https://anilist.co/anime/104581) - TV ⭐ 7.7 | ⚔️ Action, 🔥 Supernatural
 - [**FLCL**](https://anilist.co/anime/227) - TV ⭐ 7.7 | 🤖 Mecha, 😄 Comedy
 - [**Food Wars!**](https://anilist.co/anime/20923) - TV ⭐ 8 | 😄 Comedy, 😈 Ecchi
+- [**Frieren: Beyond Journey’s End**](https://anilist.co/anime/154587) - TV ⭐ 9.1 | 🗡️ Adventure, 💔 Drama, 🧙 Fantasy
 - [**From the New World**](https://anilist.co/anime/13125) - TV ⭐ 8.3 | 🔬 Sci-Fi, 🎭 Horror
 - [**Fruits Basket**](https://anilist.co/anime/7525) - TV ⭐ 8.5 | 💕 Romance, 🔥 Supernatural
 - [**Fullmetal Alchemist: Brotherhood**](https://anilist.co/anime/5114) - TV ⭐ 10 | ⚔️ Action, 🗡️ Adventure
