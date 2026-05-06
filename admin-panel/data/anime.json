@@ -3303,23 +3303,6 @@
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20623-dUARfggnNDOe.jpg"
     },
     {
-      "id": 66666,
-      "title": "Path Test",
-      "anilistUrl": "https://anilist.co/anime/66666",
-      "anilistId": 66666,
-      "type": "TV",
-      "score": 8,
-      "genres": [],
-      "episodes": 0,
-      "status": "Completed",
-      "notes": "",
-      "tags": [],
-      "letter": "P",
-      "coverImage": null,
-      "addedAt": "2026-05-06T19:20:18.667Z",
-      "updatedAt": "2026-05-06T19:20:18.667Z"
-    },
-    {
       "id": 437,
       "title": "Perfect Blue",
       "anilistUrl": "https://anilist.co/anime/437",
@@ -4538,6 +4521,23 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 12,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx97855-BPWo0CRnrpAi.png"
+    },
+    {
+      "id": 55555,
+      "title": "Vercel Path Test",
+      "anilistUrl": "https://anilist.co/anime/55555",
+      "anilistId": 55555,
+      "type": "TV",
+      "score": 8,
+      "genres": [],
+      "episodes": 0,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "V",
+      "coverImage": null,
+      "addedAt": "2026-05-06T19:21:15.583Z",
+      "updatedAt": "2026-05-06T19:21:15.583Z"
     },
     {
       "id": 124194,
