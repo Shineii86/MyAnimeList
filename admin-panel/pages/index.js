@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { StarIcon, PlusIcon, SearchIcon, ClipboardIcon, RocketIcon, TagIcon, CheckCircleIcon, EyeIcon, ClockIcon, TrashIcon, WarningIcon, RefreshIcon } from '../lib/icons';
 
 export default function Dashboard({ showToast }) {
   const [stats, setStats] = useState(null);
@@ -57,7 +58,7 @@ export default function Dashboard({ showToast }) {
         </div>
         <div className="stat-card">
           <div className="label">Average Score</div>
-          <div className="value">⭐ {stats?.stats?.averageScore || '0'}</div>
+          <div className="value" style={{ display: 'flex', alignItems: 'center', gap: 6 }}><StarIcon size={18} style={{ color: '#fbbf24' }} /> {stats?.stats?.averageScore || '0'}</div>
         </div>
         <div className="stat-card">
           <div className="label">TV Shows</div>
@@ -80,18 +81,18 @@ export default function Dashboard({ showToast }) {
       {/* Status Breakdown */}
       <div style={{ display: 'flex', gap: 12, marginBottom: 24, flexWrap: 'wrap' }}>
         {[
-          { label: '✅ Completed', key: 'Completed', color: 'var(--success)' },
-          { label: '👁️ Watching', key: 'Watching', color: '#3b82f6' },
-          { label: '📋 Plan to Watch', key: 'Plan to Watch', color: '#f59e0b' },
-          { label: '⏸️ On Hold', key: 'On Hold', color: '#8b5cf6' },
-          { label: '🚫 Dropped', key: 'Dropped', color: 'var(--danger)' },
-        ].map(({ label, key, color }) => (
+          { label: 'Completed', key: 'Completed', color: 'var(--success)', Icon: CheckCircleIcon },
+          { label: 'Watching', key: 'Watching', color: '#3b82f6', Icon: EyeIcon },
+          { label: 'Plan to Watch', key: 'Plan to Watch', color: '#f59e0b', Icon: ClockIcon },
+          { label: 'On Hold', key: 'On Hold', color: '#8b5cf6', Icon: WarningIcon },
+          { label: 'Dropped', key: 'Dropped', color: 'var(--danger)', Icon: TrashIcon },
+        ].map(({ label, key, color, Icon }) => (
           <div key={key} style={{
             flex: '1 1 150px', padding: '12px 16px', background: 'var(--bg-card)',
             border: `1px solid var(--border)`, borderRadius: 8,
             borderLeft: `3px solid ${color}`
           }}>
-            <div style={{ fontSize: 11, color: 'var(--text-muted)', marginBottom: 2 }}>{label}</div>
+            <div style={{ fontSize: 11, color: 'var(--text-muted)', marginBottom: 2, display: 'flex', alignItems: 'center', gap: 4 }}><Icon size={12} /> {label}</div>
             <div style={{ fontSize: 20, fontWeight: 800 }}>{stats?.byStatus?.[key] || 0}</div>
           </div>
         ))}
@@ -100,20 +101,20 @@ export default function Dashboard({ showToast }) {
       {/* Quick Actions */}
       <div className="card" style={{ marginBottom: 24 }}>
         <div className="card-header">
-          <h2 className="card-title">⚡ Quick Actions</h2>
+          <h2 className="card-title"><RefreshIcon size={18} style={{ marginRight: 6 }} /> Quick Actions</h2>
         </div>
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
           <Link href="/anime/add" className="btn btn-primary">
-            ➕ Add Anime
+            <PlusIcon size={16} /> Add Anime
           </Link>
           <Link href="/anilist" className="btn btn-outline">
-            🔍 Search AniList
+            <SearchIcon size={16} /> Search AniList
           </Link>
           <Link href="/anime" className="btn btn-outline">
-            📋 View All Anime
+            <ClipboardIcon size={16} /> View All Anime
           </Link>
           <Link href="/push" className="btn btn-success">
-            🚀 Push to GitHub
+            <RocketIcon size={16} /> Push to GitHub
           </Link>
         </div>
       </div>
@@ -122,7 +123,7 @@ export default function Dashboard({ showToast }) {
       {stats?.topGenres?.length > 0 && (
         <div className="card" style={{ marginBottom: 24 }}>
           <div className="card-header">
-            <h2 className="card-title">🏷️ Top Genres</h2>
+            <h2 className="card-title"><TagIcon size={18} style={{ marginRight: 6 }} /> Top Genres</h2>
           </div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {stats.topGenres.map(({ genre, count }) => (
@@ -137,7 +138,7 @@ export default function Dashboard({ showToast }) {
       {/* Recent Anime */}
       <div className="card">
         <div className="card-header">
-          <h2 className="card-title">🕐 Recently Added</h2>
+          <h2 className="card-title"><ClockIcon size={18} style={{ marginRight: 6 }} /> Recently Added</h2>
           <Link href="/anime" className="btn btn-sm btn-outline">View All</Link>
         </div>
         <div className="table-container">
@@ -168,7 +169,7 @@ export default function Dashboard({ showToast }) {
                   </td>
                   <td>
                     <div className="score-display">
-                      <span className="score-star">⭐</span>
+                      <StarIcon size={14} style={{ color: '#fbbf24' }} />
                       {anime.score}
                     </div>
                   </td>

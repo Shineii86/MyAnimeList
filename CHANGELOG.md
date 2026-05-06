@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - UI Overhaul: Professional SVG Icons Replace Emojis
+
+### Changed
+- **Replaced all emoji icons with SVG components** across 13 page files and 1 shared icon library
+- Created `lib/icons.js` — 35+ reusable SVG icon components (Heroicons-style, 20x20 default, inherit currentColor)
+- **Dashboard** (`pages/index.js`) — star ratings, status cards, quick action buttons, genre tags, recent table
+- **Login** (`pages/login.js`) — unlock icon on sign-in button
+- **Activity Log** (`pages/activity.js`) — action-specific icons (add/edit/delete/push/import/login/settings), timeline dots, empty state
+- **Push to GitHub** (`pages/push.js`) — document and rocket icons for step headers and buttons
+- **Settings** (`pages/settings.js`) — settings/gear, rocket, tag, save, download/upload, checkmark icons
+- **Random Picker** (`pages/random.js`) — dice, target filter, star ratings, note icons
+- **All Anime** (`pages/anime/index.js`) — grid/list toggle, plus, search, edit, trash, star scores, filter icons
+- **Add Anime** (`pages/anime/add.js`) — search, edit, star, plus, note icons on form labels and buttons
+- **Edit Anime** (`pages/anime/[id].js`) — save, note, star icons
+- **Bulk Import** (`pages/bulk-import.js`) — box, link, search, clipboard, rocket icons
+- **AniList Search** (`pages/anilist.js`) — search, star, plus icons
+- **Analytics** (`pages/analytics.js`) — chart, star, TV, tag, list, rocket, checkmark icons
+
+### Technical
+- All icons use `stroke="currentColor"` — automatically match theme colors
+- Icons scale via `size` prop (default 20px)
+- Both outline (`Icon`) and solid (`IconSolid`) variants available
+- Activity log action icons mapped via `ACTIVITY_ACTION_ICONS` constant
+- Page bundle sizes increased ~1-3KB each (SVG paths are lightweight)
+- Zero external icon library dependencies — pure inline SVG
+
 ## [2026-05-07] - Fix: Vercel Read-Only Filesystem Crash
 
 ### Fixed

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
+import { DiceIcon, TargetIcon, StarIcon, NoteIcon } from '../lib/icons';
 
 export default function RandomPicker({ showToast }) {
   const [result, setResult] = useState(null);
@@ -35,7 +36,7 @@ export default function RandomPicker({ showToast }) {
         const anime = await res.json();
         setResult(anime);
         setHistory(prev => [anime, ...prev].slice(0, 10));
-        showToast?.(`🎲 ${anime.title}`, 'success');
+        showToast?.(<><DiceIcon size={16} /> {anime.title}</>, 'success');
       } else {
         showToast?.('No anime found matching filters', 'error');
       }
@@ -61,14 +62,14 @@ export default function RandomPicker({ showToast }) {
       <Head><title>Random Picker - MyAnimeList Admin</title></Head>
 
       <div style={{ marginBottom: 32 }}>
-        <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 4 }}>🎲 Random Picker</h1>
+        <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 4 }}><DiceIcon size={18} style={{ marginRight: 6 }} /> Random Picker</h1>
         <p style={{ color: 'var(--text-muted)' }}>Can't decide what to watch? Let fate choose.</p>
       </div>
 
       {/* Filters */}
       <div className="card" style={{ marginBottom: 24 }}>
         <div className="card-header">
-          <h2 className="card-title">🎯 Filters</h2>
+          <h2 className="card-title"><TargetIcon size={18} style={{ marginRight: 6 }} /> Filters</h2>
           <span style={{ color: 'var(--text-muted)', fontSize: 13 }}>{totalCount} anime in collection</span>
         </div>
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
@@ -124,7 +125,7 @@ export default function RandomPicker({ showToast }) {
             <div className="spinner" style={{ width: 48, height: 48, borderWidth: 4 }} />
           ) : (
             <>
-              🎲
+              <DiceIcon size={48} />
               <span style={{ fontSize: 14, fontWeight: 600, marginTop: 4 }}>SPIN</span>
             </>
           )}
@@ -151,7 +152,7 @@ export default function RandomPicker({ showToast }) {
               <div style={{ fontSize: 24, fontWeight: 800, marginBottom: 8 }}>{result.title}</div>
               <div style={{ display: 'flex', gap: 12, marginBottom: 16, flexWrap: 'wrap' }}>
                 <span className={`badge badge-${result.type?.toLowerCase()}`}>{result.type}</span>
-                <span className="badge badge-high">⭐ {result.score}</span>
+                <span className="badge badge-high"><StarIcon size={14} style={{ color: '#fbbf24' }} /> {result.score}</span>
                 <span style={{ 
                   padding: '4px 10px', borderRadius: 20, fontSize: 11, fontWeight: 600,
                   background: `${getStatusColor(result.status)}20`, color: getStatusColor(result.status)
@@ -165,7 +166,7 @@ export default function RandomPicker({ showToast }) {
               </div>
               {result.notes && (
                 <div style={{ padding: 12, background: 'var(--bg-input)', borderRadius: 8, marginBottom: 12 }}>
-                  <div style={{ fontSize: 11, color: 'var(--text-muted)', marginBottom: 4 }}>📝 NOTES</div>
+                  <div style={{ fontSize: 11, color: 'var(--text-muted)', marginBottom: 4 }}><NoteIcon size={14} style={{ marginRight: 4 }} /> NOTES</div>
                   <div style={{ color: 'var(--text-secondary)', fontSize: 14 }}>{result.notes}</div>
                 </div>
               )}
@@ -174,7 +175,7 @@ export default function RandomPicker({ showToast }) {
                   View on AniList ↗
                 </a>
                 <button className="btn btn-primary btn-sm" onClick={spin}>
-                  🎲 Spin Again
+                  <DiceIcon size={16} /> Spin Again
                 </button>
               </div>
             </div>
@@ -186,7 +187,7 @@ export default function RandomPicker({ showToast }) {
       {history.length > 0 && (
         <div className="card">
           <div className="card-header">
-            <h2 className="card-title">📜 Recent Picks</h2>
+            <h2 className="card-title"><NoteIcon size={18} style={{ marginRight: 6 }} /> Recent Picks</h2>
             <button className="btn btn-sm btn-outline" onClick={() => setHistory([])}>Clear</button>
           </div>
           <div style={{ display: 'grid', gap: 8 }}>
@@ -199,7 +200,7 @@ export default function RandomPicker({ showToast }) {
                 {a.coverImage && <img src={a.coverImage} alt="" style={{ width: 32, height: 44, borderRadius: 4, objectFit: 'cover' }} />}
                 <div style={{ flex: 1 }}>
                   <div style={{ fontWeight: 600, fontSize: 14 }}>{a.title}</div>
-                  <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>{a.type} • ⭐ {a.score}</div>
+                  <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>{a.type} • <StarIcon size={14} style={{ color: '#fbbf24' }} /> {a.score}</div>
                 </div>
                 {i === 0 && <span style={{ fontSize: 11, color: 'var(--accent-light)', fontWeight: 600 }}>LATEST</span>}
               </div>
@@ -211,7 +212,7 @@ export default function RandomPicker({ showToast }) {
       {/* Empty state */}
       {!result && !spinning && history.length === 0 && (
         <div className="empty-state">
-          <div style={{ fontSize: 64, marginBottom: 16 }}>🎰</div>
+          <div style={{ fontSize: 64, marginBottom: 16 }}><DiceIcon size={64} /></div>
           <h3>Feeling Lucky?</h3>
           <p>Hit the spin button and we'll pick a random anime from your collection. Use filters to narrow down by status, type, or minimum score.</p>
         </div>

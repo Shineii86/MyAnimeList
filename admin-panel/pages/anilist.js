@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
+import { SearchIcon, PlusIcon, StarIcon } from '../lib/icons';
 
 export default function AniListSearch({ showToast }) {
   const [query, setQuery] = useState('');
@@ -85,7 +86,7 @@ export default function AniListSearch({ showToast }) {
           />
         </div>
         <button type="submit" className="btn btn-primary" disabled={loading}>
-          {loading ? <div className="spinner" /> : '🔍 Search'}
+          {loading ? <div className="spinner" /> : <><SearchIcon size={16} /> Search</>}
         </button>
       </form>
 
@@ -111,7 +112,7 @@ export default function AniListSearch({ showToast }) {
                   )}
                   <div style={{ display: 'flex', gap: 12, marginBottom: 12, flexWrap: 'wrap' }}>
                     <span className={`badge badge-${anime.type?.toLowerCase()}`}>{anime.type}</span>
-                    {anime.score && <span className="badge badge-high">⭐ {anime.score}</span>}
+                    {anime.score && <span className="badge badge-high"><StarIcon size={14} style={{ color: '#fbbf24' }} /> {anime.score}</span>}
                     {anime.episodes && <span style={{ color: 'var(--text-muted)', fontSize: 13 }}>{anime.episodes} episodes</span>}
                     {anime.year && <span style={{ color: 'var(--text-muted)', fontSize: 13 }}>{anime.year}</span>}
                     {anime.status && <span style={{ color: 'var(--text-muted)', fontSize: 13 }}>{anime.status}</span>}
@@ -130,7 +131,7 @@ export default function AniListSearch({ showToast }) {
                       onClick={() => quickAdd(anime)}
                       disabled={importing === anime.anilistId}
                     >
-                      {importing === anime.anilistId ? <div className="spinner" /> : '➕ Quick Add'}
+                      {importing === anime.anilistId ? <div className="spinner" /> : <><PlusIcon size={16} /> Quick Add</>}
                     </button>
                     <a 
                       href={anime.anilistUrl} 

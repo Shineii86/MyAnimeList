@@ -1,21 +1,13 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { SearchIcon, StarIcon, PlusIcon, EditIcon, NoteIcon, CheckCircleIcon, EyeIcon, ClockIcon, WarningIcon, TrashIcon } from '../../lib/icons';
 
 export default function AddAnime({ showToast }) {
   const router = useRouter();
   const [form, setForm] = useState({
-    title: '',
-    anilistUrl: '',
-    anilistId: '',
-    type: 'TV',
-    score: '',
-    genres: '',
-    episodes: '',
-    status: 'Completed',
-    notes: '',
-    tags: '',
-    coverImage: ''
+    title: '', anilistUrl: '', anilistId: '', type: 'TV', score: '',
+    genres: '', episodes: '', status: 'Completed', notes: '', tags: '', coverImage: ''
   });
   const [loading, setLoading] = useState(false);
   const [anilistQuery, setAnilistQuery] = useState('');
@@ -24,7 +16,6 @@ export default function AddAnime({ showToast }) {
   const [urlDetected, setUrlDetected] = useState(false);
   const [fetchingUrl, setFetchingUrl] = useState(false);
 
-  // Detect AniList URL paste and auto-fetch
   useEffect(() => {
     const urlMatch = form.anilistUrl.match(/anilist\.co\/anime\/(\d+)/);
     if (urlMatch && !urlDetected) {
@@ -45,13 +36,10 @@ export default function AddAnime({ showToast }) {
             title: anime.titleEnglish || anime.titleRomaji || '',
             anilistUrl: anime.anilistUrl || `https://anilist.co/anime/${anilistId}`,
             anilistId: String(anime.anilistId || anilistId),
-            type: anime.type || 'TV',
-            score: anime.score || '',
+            type: anime.type || 'TV', score: anime.score || '',
             genres: (anime.genres || []).join(', '),
             episodes: anime.episodes ? String(anime.episodes) : '',
-            status: 'Completed',
-            notes: '',
-            tags: '',
+            status: 'Completed', notes: '', tags: '',
             coverImage: anime.coverImage || ''
           });
           showToast?.(`Auto-fetched: ${anime.titleEnglish || anime.titleRomaji}`, 'success');
@@ -67,9 +55,7 @@ export default function AddAnime({ showToast }) {
   function handleChange(e) {
     const { name, value } = e.target;
     setForm(prev => ({ ...prev, [name]: value }));
-    if (name === 'anilistUrl') {
-      setUrlDetected(false);
-    }
+    if (name === 'anilistUrl') setUrlDetected(false);
   }
 
   async function searchAniList() {
@@ -95,13 +81,10 @@ export default function AddAnime({ showToast }) {
       title: anime.titleEnglish || anime.titleRomaji || '',
       anilistUrl: anime.anilistUrl || '',
       anilistId: String(anime.anilistId || ''),
-      type: anime.type || 'TV',
-      score: anime.score || '',
+      type: anime.type || 'TV', score: anime.score || '',
       genres: (anime.genres || []).join(', '),
       episodes: anime.episodes ? String(anime.episodes) : '',
-      status: 'Completed',
-      notes: '',
-      tags: '',
+      status: 'Completed', notes: '', tags: '',
       coverImage: anime.coverImage || ''
     });
     setAnilistResults([]);
@@ -111,10 +94,7 @@ export default function AddAnime({ showToast }) {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    if (!form.title.trim()) {
-      showToast?.('Title is required', 'error');
-      return;
-    }
+    if (!form.title.trim()) { showToast?.('Title is required', 'error'); return; }
     
     setLoading(true);
     try {
@@ -134,23 +114,16 @@ export default function AddAnime({ showToast }) {
       });
 
       if (res.ok) {
-        // Auto-push if enabled
         try {
           const settings = JSON.parse(localStorage.getItem('mal_admin_settings') || '{}');
           if (settings.autoPush && settings.githubToken) {
             fetch('/api/push', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                action: 'push',
-                github_token: settings.githubToken,
-                owner: settings.owner || 'Shineii86',
-                repo: settings.repo || 'MyAnimeList'
-              })
+              body: JSON.stringify({ action: 'push', github_token: settings.githubToken, owner: settings.owner || 'Shineii86', repo: settings.repo || 'MyAnimeList' })
             }).catch(() => {});
           }
         } catch {}
-
         showToast?.(`Added: ${form.title}`, 'success');
         router.push('/anime');
       } else {
@@ -166,28 +139,19 @@ export default function AddAnime({ showToast }) {
 
   return (
     <>
-      <Head>
-        <title>Add Anime - MyAnimeList Admin</title>
-      </Head>
+      <Head><title>Add Anime - MyAnimeList Admin</title></Head>
 
       <div style={{ marginBottom: 32 }}>
         <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 4 }}>Add Anime</h1>
         <p style={{ color: 'var(--text-muted)' }}>Add a new anime to your collection</p>
       </div>
 
-      {/* AniList Search Panel */}
       <div className="anilist-search-panel">
-        <h3 style={{ fontSize: 16, fontWeight: 700, marginBottom: 12 }}>🔍 Quick Import from AniList</h3>
+        <h3 style={{ fontSize: 16, fontWeight: 700, marginBottom: 12 }}><SearchIcon size={16} style={{ marginRight: 6 }} /> Quick Import from AniList</h3>
         <div style={{ display: 'flex', gap: 12 }}>
-          <input
-            className="form-input"
-            placeholder="Search anime on AniList..."
-            value={anilistQuery}
-            onChange={e => setAnilistQuery(e.target.value)}
-            onKeyDown={e => e.key === 'Enter' && searchAniList()}
-          />
+          <input className="form-input" placeholder="Search anime on AniList..." value={anilistQuery} onChange={e => setAnilistQuery(e.target.value)} onKeyDown={e => e.key === 'Enter' && searchAniList()} />
           <button className="btn btn-primary" onClick={searchAniList} disabled={searching}>
-            {searching ? <div className="spinner" /> : 'Search'}
+            {searching ? <div className="spinner" /> : <><SearchIcon size={16} /> Search</>}
           </button>
         </div>
 
@@ -198,7 +162,7 @@ export default function AddAnime({ showToast }) {
                 {anime.coverImage && <img src={anime.coverImage} alt={anime.title} />}
                 <div className="anilist-result-info">
                   <h4>{anime.titleEnglish || anime.titleRomaji}</h4>
-                  <p>{anime.titleRomaji} • {anime.type} • ⭐ {anime.score || 'N/A'} • {anime.year || 'N/A'}</p>
+                  <p>{anime.titleRomaji} • {anime.type} • <StarIcon size={12} style={{ color: '#fbbf24' }} /> {anime.score || 'N/A'} • {anime.year || 'N/A'}</p>
                   <p>{(anime.genres || []).join(', ')}</p>
                 </div>
               </div>
@@ -207,30 +171,20 @@ export default function AddAnime({ showToast }) {
         )}
       </div>
 
-      {/* Manual Form */}
       <div className="card">
         <div className="card-header">
-          <h2 className="card-title">✏️ Manual Entry</h2>
+          <h2 className="card-title"><EditIcon size={18} style={{ marginRight: 6 }} /> Manual Entry</h2>
           {fetchingUrl && <span style={{ color: 'var(--accent-light)', fontSize: 13 }}><div className="spinner" style={{ display: 'inline-block', width: 14, height: 14, marginRight: 6 }} />Fetching from AniList...</span>}
         </div>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label className="form-label">AniList URL <span style={{ color: 'var(--text-muted)', fontWeight: 400 }}>(paste to auto-fill)</span></label>
-            <input 
-              className="form-input" 
-              name="anilistUrl" 
-              value={form.anilistUrl} 
-              onChange={handleChange} 
-              placeholder="https://anilist.co/anime/16498 — paste a URL and all fields auto-fill!" 
-              style={urlDetected ? { borderColor: 'var(--success)', boxShadow: '0 0 0 3px rgba(16, 185, 129, 0.2)' } : {}}
-            />
+            <input className="form-input" name="anilistUrl" value={form.anilistUrl} onChange={handleChange} placeholder="https://anilist.co/anime/16498" style={urlDetected ? { borderColor: 'var(--success)', boxShadow: '0 0 0 3px rgba(16, 185, 129, 0.2)' } : {}} />
           </div>
-
           <div className="form-group">
             <label className="form-label">Title *</label>
             <input className="form-input" name="title" value={form.title} onChange={handleChange} placeholder="e.g., Attack on Titan" required />
           </div>
-
           <div className="form-row">
             <div className="form-group">
               <label className="form-label">AniList ID</label>
@@ -239,15 +193,10 @@ export default function AddAnime({ showToast }) {
             <div className="form-group">
               <label className="form-label">Type</label>
               <select className="form-input" name="type" value={form.type} onChange={handleChange}>
-                <option value="TV">TV</option>
-                <option value="Movie">Movie</option>
-                <option value="OVA">OVA</option>
-                <option value="ONA">ONA</option>
-                <option value="Special">Special</option>
+                <option value="TV">TV</option><option value="Movie">Movie</option><option value="OVA">OVA</option><option value="ONA">ONA</option><option value="Special">Special</option>
               </select>
             </div>
           </div>
-
           <div className="form-row">
             <div className="form-group">
               <label className="form-label">Score (0-10)</label>
@@ -258,21 +207,19 @@ export default function AddAnime({ showToast }) {
               <input className="form-input" name="episodes" type="number" min="0" value={form.episodes} onChange={handleChange} placeholder="e.g., 24" />
             </div>
           </div>
-
           <div className="form-group">
             <label className="form-label">Genres (comma separated)</label>
             <input className="form-input" name="genres" value={form.genres} onChange={handleChange} placeholder="e.g., Action, Drama, Fantasy" />
           </div>
-
           <div className="form-row">
             <div className="form-group">
               <label className="form-label">Status</label>
               <select className="form-input" name="status" value={form.status} onChange={handleChange}>
-                <option value="Completed">✅ Completed</option>
-                <option value="Watching">👁️ Watching</option>
-                <option value="Plan to Watch">📋 Plan to Watch</option>
-                <option value="On Hold">⏸️ On Hold</option>
-                <option value="Dropped">🚫 Dropped</option>
+                <option value="Completed">Completed</option>
+                <option value="Watching">Watching</option>
+                <option value="Plan to Watch">Plan to Watch</option>
+                <option value="On Hold">On Hold</option>
+                <option value="Dropped">Dropped</option>
               </select>
             </div>
             <div className="form-group">
@@ -280,21 +227,18 @@ export default function AddAnime({ showToast }) {
               <input className="form-input" name="tags" value={form.tags} onChange={handleChange} placeholder="favorite, hidden-gem, rewatch" />
             </div>
           </div>
-
           <div className="form-group">
             <label className="form-label">Cover Image URL</label>
-            <input className="form-input" name="coverImage" value={form.coverImage} onChange={handleChange} placeholder="Auto-filled from AniList, or paste URL" />
+            <input className="form-input" name="coverImage" value={form.coverImage} onChange={handleChange} placeholder="Auto-filled from AniList" />
             {form.coverImage && <img src={form.coverImage} alt="Preview" style={{ marginTop: 8, width: 60, height: 84, borderRadius: 6, objectFit: 'cover' }} />}
           </div>
-
           <div className="form-group">
-            <label className="form-label">📝 Personal Notes</label>
+            <label className="form-label"><NoteIcon size={14} style={{ marginRight: 4 }} /> Personal Notes</label>
             <textarea className="form-input" name="notes" value={form.notes} onChange={handleChange} placeholder="Your thoughts, why you rated it this way..." rows={3} />
           </div>
-
           <div className="form-actions">
             <button type="submit" className="btn btn-primary" disabled={loading || fetchingUrl}>
-              {loading ? <><div className="spinner" /> Adding...</> : '➕ Add Anime'}
+              {loading ? <><div className="spinner" /> Adding...</> : <><PlusIcon size={16} /> Add Anime</>}
             </button>
             <button type="button" className="btn btn-outline" onClick={() => router.push('/anime')}>Cancel</button>
           </div>

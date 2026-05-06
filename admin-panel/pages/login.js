@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { UnlockIcon } from '../lib/icons';
 
 export default function Login({ showToast }) {
   const [password, setPassword] = useState('');
@@ -23,7 +24,7 @@ export default function Login({ showToast }) {
       const data = await res.json();
 
       if (res.ok) {
-        showToast?.('Welcome back! 👋', 'success');
+        showToast?.('Welcome back!', 'success');
         router.push('/');
       } else {
         setError(data.error || 'Invalid password');
@@ -68,7 +69,7 @@ export default function Login({ showToast }) {
               style={{ width: '100%', justifyContent: 'center' }}
               disabled={loading}
             >
-              {loading ? <><div className="spinner" /> Authenticating...</> : '🔓 Sign In'}
+              {loading ? <><div className="spinner" /> Authenticating...</> : <><UnlockIcon size={16} /> Sign In</>}
             </button>
           </form>
         </div>

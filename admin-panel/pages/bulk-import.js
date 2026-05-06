@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
+import { BoxIcon, LinkIcon, SearchIcon, ClipboardIcon, RocketIcon, StarIcon } from '../lib/icons';
 
 export default function BulkImport({ showToast }) {
   const [mode, setMode] = useState('url'); // 'url' or 'search'
@@ -154,17 +155,17 @@ export default function BulkImport({ showToast }) {
       <Head><title>Bulk Import - MyAnimeList Admin</title></Head>
 
       <div style={{ marginBottom: 32 }}>
-        <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 4 }}>📦 Bulk Import</h1>
+        <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 4 }}><BoxIcon size={18} style={{ marginRight: 6 }} /> Bulk Import</h1>
         <p style={{ color: 'var(--text-muted)' }}>Import multiple anime at once from AniList URLs or search</p>
       </div>
 
       {/* Mode Toggle */}
       <div style={{ display: 'flex', gap: 8, marginBottom: 24 }}>
         <button className={`btn ${mode === 'url' ? 'btn-primary' : 'btn-outline'}`} onClick={() => setMode('url')}>
-          🔗 Paste URLs
+          <LinkIcon size={16} /> Paste URLs
         </button>
         <button className={`btn ${mode === 'search' ? 'btn-primary' : 'btn-outline'}`} onClick={() => setMode('search')}>
-          🔍 Search & Add
+          <SearchIcon size={16} /> Search & Add
         </button>
       </div>
 
@@ -186,7 +187,7 @@ export default function BulkImport({ showToast }) {
           />
           <div style={{ marginTop: 12 }}>
             <button className="btn btn-primary" onClick={handleUrlPaste} disabled={loading}>
-              {loading ? <><div className="spinner" /> Fetching...</> : '🔍 Detect & Fetch Details'}
+              {loading ? <><div className="spinner" /> Fetching...</> : <><SearchIcon size={16} /> Detect & Fetch Details</>}
             </button>
           </div>
         </div>
@@ -218,7 +219,7 @@ export default function BulkImport({ showToast }) {
                   {anime.coverImage && <img src={anime.coverImage} alt={anime.title} />}
                   <div className="anilist-result-info">
                     <h4>{anime.titleEnglish || anime.titleRomaji}</h4>
-                    <p>{anime.type} • ⭐ {anime.score || 'N/A'} • {anime.year || ''}</p>
+                    <p>{anime.type} • <StarIcon size={14} style={{ color: '#fbbf24' }} /> {anime.score || 'N/A'} • {anime.year || ''}</p>
                     <p>{(anime.genres || []).join(', ')}</p>
                   </div>
                   <button className="btn btn-sm btn-primary" style={{ marginLeft: 'auto' }}>+ Add</button>
@@ -233,12 +234,12 @@ export default function BulkImport({ showToast }) {
       {results.length > 0 && (
         <div className="card">
           <div className="card-header">
-            <h2 className="card-title">📋 Import Queue ({results.length} items)</h2>
+            <h2 className="card-title"><ClipboardIcon size={18} style={{ marginRight: 6 }} /> Import Queue ({results.length} items)</h2>
             <div style={{ display: 'flex', gap: 8 }}>
               <button className="btn btn-sm btn-outline" onClick={selectAll}>Select All</button>
               <button className="btn btn-sm btn-outline" onClick={deselectAll}>Deselect All</button>
               <button className="btn btn-sm btn-success" onClick={handleImport} disabled={importing || selected.size === 0}>
-                {importing ? <><div className="spinner" /> Importing...</> : `🚀 Import ${selected.size} Selected`}
+                {importing ? <><div className="spinner" /> Importing...</> : <><RocketIcon size={16} /> Import {selected.size} Selected</>}
               </button>
             </div>
           </div>
@@ -267,7 +268,7 @@ export default function BulkImport({ showToast }) {
                 <div style={{ flex: 1 }}>
                   <div style={{ fontWeight: 600 }}>{anime.titleEnglish || anime.titleRomaji}</div>
                   <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>
-                    {anime.type} • ⭐ {anime.score || 'N/A'} • {(anime.genres || []).slice(0, 3).join(', ')}
+                    {anime.type} • <StarIcon size={14} style={{ color: '#fbbf24' }} /> {anime.score || 'N/A'} • {(anime.genres || []).slice(0, 3).join(', ')}
                   </div>
                 </div>
                 <button

@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
+import { PlusIcon, EditIcon, TrashIcon, RocketIcon, DownloadIcon, RefreshIcon, KeyIcon, SettingsIcon, NoteIcon, SearchIcon, ClipboardIcon, ClockIcon } from '../lib/icons';
 
 const ACTION_ICONS = {
-  add: '➕',
-  edit: '✏️',
-  delete: '🗑️',
-  push: '🚀',
-  import: '📦',
-  generate: '📄',
-  login: '🔐',
-  settings: '⚙️'
+  add: PlusIcon,
+  edit: EditIcon,
+  delete: TrashIcon,
+  push: RocketIcon,
+  import: DownloadIcon,
+  generate: RefreshIcon,
+  login: KeyIcon,
+  settings: SettingsIcon,
 };
 
 const ACTION_COLORS = {
@@ -102,20 +103,18 @@ export default function ActivityLog({ showToast }) {
 
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 24 }}>
         <div>
-          <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 4 }}>📋 Activity Log</h1>
+          <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 4 }}><ClockIcon size={24} style={{ marginRight: 8 }} /> Activity Log</h1>
           <p style={{ color: 'var(--text-muted)' }}>{total} events recorded</p>
         </div>
         <button className="btn btn-outline btn-sm" onClick={handleClear} style={{ color: 'var(--danger)', borderColor: 'var(--danger)' }}>
-          🗑️ Clear Log
+          <TrashIcon size={14} /> Clear Log
         </button>
       </div>
 
       {/* Filters */}
       <div style={{ display: 'flex', gap: 12, marginBottom: 24, flexWrap: 'wrap' }}>
         <div className="search-container" style={{ flex: 1, minWidth: 200, marginBottom: 0 }}>
-          <svg className="search-icon" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
+          <SearchIcon size={18} className="search-icon" />
           <input 
             className="search-input" 
             placeholder="Search activity..." 
@@ -125,9 +124,12 @@ export default function ActivityLog({ showToast }) {
         </div>
         <select className="form-input" style={{ width: 150 }} value={filter} onChange={e => { setFilter(e.target.value); setPage(0); }}>
           <option value="">All Actions</option>
-          {actions.slice(1).map(a => (
-            <option key={a} value={a}>{ACTION_ICONS[a]} {a.charAt(0).toUpperCase() + a.slice(1)}</option>
-          ))}
+          {actions.slice(1).map(a => {
+            const ActionIcon = ACTION_ICONS[a];
+            return (
+              <option key={a} value={a}>{a.charAt(0).toUpperCase() + a.slice(1)}</option>
+            );
+          })}
         </select>
       </div>
 
@@ -138,7 +140,7 @@ export default function ActivityLog({ showToast }) {
         </div>
       ) : entries.length === 0 ? (
         <div className="empty-state">
-          <div style={{ fontSize: 64, marginBottom: 16 }}>📋</div>
+          <ClipboardIcon size={64} style={{ opacity: 0.3, marginBottom: 16 }} />
           <h3>No activity yet</h3>
           <p>Actions like adding, editing, deleting anime and pushing to GitHub will appear here.</p>
         </div>
@@ -161,68 +163,71 @@ export default function ActivityLog({ showToast }) {
                   width: 2, background: 'var(--border)', borderRadius: 1
                 }} />
 
-                {items.map((entry, i) => (
-                  <div key={entry.id || i} style={{ 
-                    display: 'flex', gap: 16, marginBottom: 16, position: 'relative',
-                    animation: 'slideUp 0.3s ease'
-                  }}>
-                    {/* Timeline dot */}
-                    <div style={{
-                      position: 'absolute', left: -20, top: 6,
-                      width: 12, height: 12, borderRadius: 6,
-                      background: ACTION_COLORS[entry.action] || 'var(--text-muted)',
-                      border: '2px solid var(--bg-primary)',
-                      zIndex: 1
-                    }} />
-
-                    {/* Entry card */}
-                    <div style={{
-                      flex: 1, padding: '12px 16px',
-                      background: 'var(--bg-card)', border: '1px solid var(--border)',
-                      borderRadius: 8, display: 'flex', alignItems: 'flex-start', gap: 12
+                {items.map((entry, i) => {
+                  const ActionIcon = ACTION_ICONS[entry.action] || NoteIcon;
+                  return (
+                    <div key={entry.id || i} style={{ 
+                      display: 'flex', gap: 16, marginBottom: 16, position: 'relative',
+                      animation: 'slideUp 0.3s ease'
                     }}>
-                      {/* Icon */}
+                      {/* Timeline dot */}
                       <div style={{
-                        width: 36, height: 36, borderRadius: 8,
-                        background: `${ACTION_COLORS[entry.action]}15`,
-                        display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        fontSize: 18, flexShrink: 0
+                        position: 'absolute', left: -20, top: 6,
+                        width: 12, height: 12, borderRadius: 6,
+                        background: ACTION_COLORS[entry.action] || 'var(--text-muted)',
+                        border: '2px solid var(--bg-primary)',
+                        zIndex: 1
+                      }} />
+
+                      {/* Entry card */}
+                      <div style={{
+                        flex: 1, padding: '12px 16px',
+                        background: 'var(--bg-card)', border: '1px solid var(--border)',
+                        borderRadius: 8, display: 'flex', alignItems: 'flex-start', gap: 12
                       }}>
-                        {ACTION_ICONS[entry.action] || '📝'}
-                      </div>
+                        {/* Icon */}
+                        <div style={{
+                          width: 36, height: 36, borderRadius: 8,
+                          background: `${ACTION_COLORS[entry.action]}15`,
+                          display: 'flex', alignItems: 'center', justifyContent: 'center',
+                          flexShrink: 0, color: ACTION_COLORS[entry.action]
+                        }}>
+                          <ActionIcon size={18} />
+                        </div>
 
-                      {/* Content */}
-                      <div style={{ flex: 1, minWidth: 0 }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 2 }}>
-                          <span style={{ 
-                            fontSize: 11, fontWeight: 700, textTransform: 'uppercase',
-                            color: ACTION_COLORS[entry.action] || 'var(--text-muted)',
-                            letterSpacing: 0.5
-                          }}>
-                            {entry.action}
-                          </span>
-                          <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>•</span>
-                          <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>
-                            {formatTime(entry.timestamp)}
-                          </span>
-                        </div>
-                        <div style={{ fontWeight: 600, fontSize: 14, marginBottom: 2 }}>
-                          {entry.target}
-                        </div>
-                        {entry.details && (
-                          <div style={{ fontSize: 13, color: 'var(--text-secondary)' }}>
-                            {entry.details}
+                        {/* Content */}
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 2 }}>
+                            <span style={{ 
+                              fontSize: 11, fontWeight: 700, textTransform: 'uppercase',
+                              color: ACTION_COLORS[entry.action] || 'var(--text-muted)',
+                              letterSpacing: 0.5
+                            }}>
+                              {entry.action}
+                            </span>
+                            <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>•</span>
+                            <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>
+                              {formatTime(entry.timestamp)}
+                            </span>
                           </div>
-                        )}
-                      </div>
+                          <div style={{ fontWeight: 600, fontSize: 14, marginBottom: 2 }}>
+                            {entry.target}
+                          </div>
+                          {entry.details && (
+                            <div style={{ fontSize: 13, color: 'var(--text-secondary)' }}>
+                              {entry.details}
+                            </div>
+                          )}
+                        </div>
 
-                      {/* Timestamp */}
-                      <div style={{ fontSize: 11, color: 'var(--text-muted)', whiteSpace: 'nowrap', flexShrink: 0 }}>
-                        {new Date(entry.timestamp).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
+                        {/* Timestamp */}
+                        <div style={{ fontSize: 11, color: 'var(--text-muted)', whiteSpace: 'nowrap', flexShrink: 0 }}>
+                          {new Date(entry.timestamp).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           ))}

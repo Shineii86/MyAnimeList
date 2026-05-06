@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { PlusIcon, SearchIcon, TrashIcon, EditIcon, StarIcon, GridIcon, ListIcon, EyeIcon, CheckCircleIcon, ClockIcon, WarningIcon, NoteIcon, FilterIcon } from '../../lib/icons';
 
 export default function AnimeList({ showToast }) {
   const [anime, setAnime] = useState([]);
@@ -11,7 +12,7 @@ export default function AnimeList({ showToast }) {
   const [typeFilter, setTypeFilter] = useState('');
   const [statusFilter, setStatusFilter] = useState('');
   const [sortBy, setSortBy] = useState('title');
-  const [viewMode, setViewMode] = useState('table'); // 'table' or 'grid'
+  const [viewMode, setViewMode] = useState('table');
   const [deleteModal, setDeleteModal] = useState(null);
 
   useEffect(() => {
@@ -127,29 +128,26 @@ export default function AnimeList({ showToast }) {
           <p style={{ color: 'var(--text-muted)' }}>{filtered.length} of {anime.length} entries</p>
         </div>
         <div style={{ display: 'flex', gap: 8 }}>
-          {/* View Toggle */}
           <div style={{ display: 'flex', border: '1px solid var(--border)', borderRadius: 8, overflow: 'hidden' }}>
             <button 
               onClick={() => toggleView('table')}
-              style={{ padding: '8px 12px', background: viewMode === 'table' ? 'var(--accent)' : 'var(--bg-input)', border: 'none', color: 'white', cursor: 'pointer', fontSize: 13 }}
+              style={{ padding: '8px 12px', background: viewMode === 'table' ? 'var(--accent)' : 'var(--bg-input)', border: 'none', color: 'white', cursor: 'pointer' }}
               title="Table View"
-            >☰</button>
+            ><ListIcon size={14} /></button>
             <button 
               onClick={() => toggleView('grid')}
-              style={{ padding: '8px 12px', background: viewMode === 'grid' ? 'var(--accent)' : 'var(--bg-input)', border: 'none', color: 'white', cursor: 'pointer', fontSize: 13 }}
+              style={{ padding: '8px 12px', background: viewMode === 'grid' ? 'var(--accent)' : 'var(--bg-input)', border: 'none', color: 'white', cursor: 'pointer' }}
               title="Grid View"
-            >⊞</button>
+            ><GridIcon size={14} /></button>
           </div>
-          <Link href="/anime/add" className="btn btn-primary">➕ Add Anime</Link>
+          <Link href="/anime/add" className="btn btn-primary"><PlusIcon size={16} /> Add Anime</Link>
         </div>
       </div>
 
       {/* Filters */}
       <div style={{ display: 'flex', gap: 12, marginBottom: 16, flexWrap: 'wrap' }}>
         <div className="search-container" style={{ flex: 1, minWidth: 200, marginBottom: 0 }}>
-          <svg className="search-icon" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
+          <SearchIcon size={18} className="search-icon" />
           <input className="search-input" placeholder="Search title, notes, genres..." value={search} onChange={e => setSearch(e.target.value)} />
         </div>
         <select className="form-input" style={{ width: 130 }} value={statusFilter} onChange={e => setStatusFilter(e.target.value)}>
@@ -178,12 +176,11 @@ export default function AnimeList({ showToast }) {
         <div style={{ display: 'flex', justifyContent: 'center', padding: 60 }}><div className="spinner" style={{ width: 40, height: 40 }} /></div>
       ) : filtered.length === 0 ? (
         <div className="empty-state">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}><path strokeLinecap="round" strokeLinejoin="round" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2h-2" /></svg>
+          <FilterIcon size={48} style={{ opacity: 0.3, marginBottom: 12 }} />
           <h3>No anime found</h3>
           <p>Try adjusting your filters or add a new anime entry.</p>
         </div>
       ) : viewMode === 'grid' ? (
-        /* Grid View */
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 16 }}>
           {filtered.map(a => (
             <div key={a.id} style={{
@@ -193,26 +190,24 @@ export default function AnimeList({ showToast }) {
               onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.3)'; }}
               onMouseLeave={e => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.boxShadow = 'none'; }}
             >
-              {/* Cover Image */}
-              <div style={{ 
-                height: 220, background: 'var(--bg-input)', position: 'relative', overflow: 'hidden'
-              }}>
+              <div style={{ height: 220, background: 'var(--bg-input)', position: 'relative', overflow: 'hidden' }}>
                 {a.coverImage ? (
                   <img src={a.coverImage} alt={a.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : (
-                  <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 48, opacity: 0.2 }}>📺</div>
+                  <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <EyeIcon size={48} style={{ opacity: 0.15 }} />
+                  </div>
                 )}
-                {/* Score Badge */}
                 {a.score > 0 && (
                   <div style={{
                     position: 'absolute', top: 8, right: 8,
                     background: 'rgba(0,0,0,0.8)', padding: '4px 8px', borderRadius: 6,
-                    fontSize: 13, fontWeight: 700, color: getScoreColor(a.score)
+                    fontSize: 13, fontWeight: 700, color: getScoreColor(a.score),
+                    display: 'flex', alignItems: 'center', gap: 4
                   }}>
-                    ⭐ {a.score}
+                    <StarIcon size={12} style={{ color: '#fbbf24' }} /> {a.score}
                   </div>
                 )}
-                {/* Status Badge */}
                 <div style={{
                   position: 'absolute', top: 8, left: 8,
                   background: `${getStatusColor(a.status)}dd`, padding: '3px 8px', borderRadius: 6,
@@ -221,7 +216,6 @@ export default function AnimeList({ showToast }) {
                   {a.status || 'Completed'}
                 </div>
               </div>
-              {/* Info */}
               <div style={{ padding: 12 }}>
                 <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 4, lineHeight: 1.3, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                   {a.title}
@@ -233,7 +227,6 @@ export default function AnimeList({ showToast }) {
                   {(a.genres || []).slice(0, 2).map(g => <span key={g} className="genre-tag" style={{ fontSize: 10 }}>{g}</span>)}
                 </div>
               </div>
-              {/* Hover Actions */}
               <div style={{
                 position: 'absolute', bottom: 0, left: 0, right: 0,
                 background: 'linear-gradient(transparent, rgba(0,0,0,0.9))', padding: '40px 12px 12px',
@@ -242,14 +235,13 @@ export default function AnimeList({ showToast }) {
                 onMouseEnter={e => e.currentTarget.style.opacity = 1}
                 onMouseLeave={e => e.currentTarget.style.opacity = 0}
               >
-                <Link href={`/anime/${a.id}`} className="btn btn-sm btn-primary" style={{ flex: 1, justifyContent: 'center', fontSize: 11 }}>Edit</Link>
-                <button className="btn btn-sm btn-danger" style={{ fontSize: 11 }} onClick={e => { e.stopPropagation(); setDeleteModal(a); }}>🗑️</button>
+                <Link href={`/anime/${a.id}`} className="btn btn-sm btn-primary" style={{ flex: 1, justifyContent: 'center', fontSize: 11 }}><EditIcon size={12} /> Edit</Link>
+                <button className="btn btn-sm btn-danger" style={{ fontSize: 11 }} onClick={e => { e.stopPropagation(); setDeleteModal(a); }}><TrashIcon size={12} /></button>
               </div>
             </div>
           ))}
         </div>
       ) : (
-        /* Table View */
         <div className="table-container">
           <table>
             <thead>
@@ -272,7 +264,7 @@ export default function AnimeList({ showToast }) {
                         <a href={a.anilistUrl} target="_blank" rel="noopener" style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>
                           {a.title}
                         </a>
-                        {a.notes && <div style={{ fontSize: 11, color: 'var(--text-muted)', maxWidth: 300, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>📝 {a.notes}</div>}
+                        {a.notes && <div style={{ fontSize: 11, color: 'var(--text-muted)', maxWidth: 300, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 4 }}><NoteIcon size={10} /> {a.notes}</div>}
                       </div>
                     </div>
                   </td>
@@ -285,7 +277,7 @@ export default function AnimeList({ showToast }) {
                     </span>
                   </td>
                   <td><span className={`badge badge-${a.type?.toLowerCase()}`}>{a.type}</span></td>
-                  <td><span style={{ fontWeight: 700, color: getScoreColor(a.score) }}>⭐ {a.score}</span></td>
+                  <td><span style={{ fontWeight: 700, color: getScoreColor(a.score), display: 'inline-flex', alignItems: 'center', gap: 4 }}><StarIcon size={12} style={{ color: '#fbbf24' }} /> {a.score}</span></td>
                   <td>
                     <div className="genre-tags">
                       {(a.genres || []).slice(0, 2).map(g => <span key={g} className="genre-tag">{g}</span>)}
@@ -294,12 +286,8 @@ export default function AnimeList({ showToast }) {
                   </td>
                   <td>
                     <div style={{ display: 'flex', gap: 6 }}>
-                      <Link href={`/anime/${a.id}`} className="btn-icon" title="Edit">
-                        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
-                      </Link>
-                      <button className="btn-icon" title="Delete" onClick={() => setDeleteModal(a)} style={{ color: 'var(--danger)' }}>
-                        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
-                      </button>
+                      <Link href={`/anime/${a.id}`} className="btn-icon" title="Edit"><EditIcon size={16} /></Link>
+                      <button className="btn-icon" title="Delete" onClick={() => setDeleteModal(a)} style={{ color: 'var(--danger)' }}><TrashIcon size={16} /></button>
                     </div>
                   </td>
                 </tr>
@@ -313,7 +301,7 @@ export default function AnimeList({ showToast }) {
       {deleteModal && (
         <div className="modal-overlay" onClick={() => setDeleteModal(null)}>
           <div className="modal" onClick={e => e.stopPropagation()}>
-            <h3 className="modal-title">🗑️ Delete Anime</h3>
+            <h3 className="modal-title"><TrashIcon size={18} style={{ marginRight: 6 }} /> Delete Anime</h3>
             <p style={{ color: 'var(--text-secondary)', marginBottom: 24 }}>
               Are you sure you want to delete <strong>{deleteModal.title}</strong>?
             </p>

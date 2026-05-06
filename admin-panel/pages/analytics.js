@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
+import { ChartIcon, StarIcon, TvIcon, TagIcon, ListIcon, RocketIcon, CheckCircleIcon } from '../lib/icons';
 
 // SVG-based charts — no external dependencies
 function BarChart({ data, width = 600, height = 300, color = 'var(--accent)' }) {
@@ -169,7 +170,7 @@ export default function Analytics({ showToast }) {
       <Head><title>Analytics - MyAnimeList Admin</title></Head>
 
       <div style={{ marginBottom: 32 }}>
-        <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 4 }}>📊 Analytics</h1>
+        <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 4 }}><ChartIcon size={18} style={{ marginRight: 6 }} /> Analytics</h1>
         <p style={{ color: 'var(--text-muted)' }}>Visual insights into your anime collection</p>
       </div>
 
@@ -196,7 +197,7 @@ export default function Analytics({ showToast }) {
       {/* Score Distribution */}
       <div className="card" style={{ marginBottom: 24 }}>
         <div className="card-header">
-          <h2 className="card-title">⭐ Score Distribution</h2>
+          <h2 className="card-title"><StarIcon size={18} style={{ marginRight: 6, color: '#fbbf24' }} /> Score Distribution</h2>
         </div>
         <div style={{ overflowX: 'auto' }}>
           <BarChart data={scoreData} width={500} height={250} color="#fbbf24" />
@@ -207,14 +208,14 @@ export default function Analytics({ showToast }) {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, marginBottom: 24 }}>
         <div className="card">
           <div className="card-header">
-            <h2 className="card-title">📺 By Type</h2>
+            <h2 className="card-title"><TvIcon size={18} style={{ marginRight: 6 }} /> By Type</h2>
           </div>
           <DonutChart data={typeData} size={180} />
         </div>
 
         <div className="card">
           <div className="card-header">
-            <h2 className="card-title">🏷️ Top Genres</h2>
+            <h2 className="card-title"><TagIcon size={18} style={{ marginRight: 6 }} /> Top Genres</h2>
           </div>
           {genreData.slice(0, 8).map((g, i) => (
             <StatRow key={g.label} label={g.label} value={g.value} total={total} color={
@@ -227,7 +228,7 @@ export default function Analytics({ showToast }) {
       {/* Letter Distribution */}
       <div className="card" style={{ marginBottom: 24 }}>
         <div className="card-header">
-          <h2 className="card-title">🔤 Distribution by Letter</h2>
+          <h2 className="card-title"><ListIcon size={18} style={{ marginRight: 6 }} /> Distribution by Letter</h2>
         </div>
         <div style={{ overflowX: 'auto' }}>
           <BarChart data={letterData} width={900} height={200} color="#7c3aed" />
@@ -237,7 +238,7 @@ export default function Analytics({ showToast }) {
       {/* Highest Rated */}
       <div className="card">
         <div className="card-header">
-          <h2 className="card-title">🏆 Highest Rated</h2>
+          <h2 className="card-title"><CheckCircleIcon size={18} style={{ marginRight: 6, color: '#fbbf24' }} /> Highest Rated</h2>
         </div>
         <div style={{ display: 'grid', gap: 8 }}>
           {highestRated.map((a, i) => (
@@ -247,7 +248,7 @@ export default function Analytics({ showToast }) {
                 <div style={{ fontWeight: 600 }}>{a.title}</div>
                 <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>{a.type} • {(a.genres || []).slice(0, 3).join(', ')}</div>
               </div>
-              <div style={{ fontSize: 20, fontWeight: 800, color: '#fbbf24' }}>⭐ {a.score}</div>
+              <div style={{ fontSize: 20, fontWeight: 800, color: '#fbbf24' }}><StarIcon size={14} style={{ color: '#fbbf24' }} /> {a.score}</div>
             </div>
           ))}
         </div>

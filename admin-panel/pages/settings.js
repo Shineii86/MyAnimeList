@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
+import { SettingsIcon, RocketIcon, TagIcon, SaveIcon, DownloadIcon, UploadIcon, CheckCircleIcon } from '../lib/icons';
 
 export default function SettingsPage({ showToast }) {
   const [settings, setSettings] = useState({
@@ -86,14 +87,14 @@ export default function SettingsPage({ showToast }) {
       <Head><title>Settings - MyAnimeList Admin</title></Head>
 
       <div style={{ marginBottom: 32 }}>
-        <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 4 }}>⚙️ Settings</h1>
+        <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 4 }}><SettingsIcon size={24} style={{ marginRight: 8 }} /> Settings</h1>
         <p style={{ color: 'var(--text-muted)' }}>Configure your admin panel preferences</p>
       </div>
 
       {/* Auto-Push */}
       <div className="card" style={{ marginBottom: 24 }}>
         <div className="card-header">
-          <h2 className="card-title">🚀 Auto-Push to GitHub</h2>
+          <h2 className="card-title"><RocketIcon size={18} style={{ marginRight: 6 }} /> Auto-Push to GitHub</h2>
         </div>
         <p style={{ color: 'var(--text-secondary)', marginBottom: 20 }}>
           When enabled, every add/edit/delete automatically commits and pushes changes to your repository.
@@ -148,7 +149,7 @@ export default function SettingsPage({ showToast }) {
       {/* Display */}
       <div className="card" style={{ marginBottom: 24 }}>
         <div className="card-header">
-          <h2 className="card-title">🎨 Display</h2>
+          <h2 className="card-title"><TagIcon size={18} style={{ marginRight: 6 }} /> Display</h2>
         </div>
         <div className="form-row">
           <div className="form-group">
@@ -174,17 +175,17 @@ export default function SettingsPage({ showToast }) {
       {/* Backup & Restore */}
       <div className="card" style={{ marginBottom: 24 }}>
         <div className="card-header">
-          <h2 className="card-title">💾 Backup & Restore</h2>
+          <h2 className="card-title"><SaveIcon size={18} style={{ marginRight: 6 }} /> Backup & Restore</h2>
         </div>
         <p style={{ color: 'var(--text-secondary)', marginBottom: 20 }}>
           Export your entire anime collection as a JSON file, or restore from a previous backup.
         </p>
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
           <button className="btn btn-primary" onClick={handleExport}>
-            📥 Export Collection
+            <DownloadIcon size={16} /> Export Collection
           </button>
           <label className="btn btn-outline" style={{ cursor: 'pointer' }}>
-            📤 Import Backup
+            <UploadIcon size={16} /> Import Backup
             <input type="file" accept=".json" onChange={handleImport} style={{ display: 'none' }} />
           </label>
         </div>
@@ -193,7 +194,7 @@ export default function SettingsPage({ showToast }) {
       {/* Save */}
       <div style={{ display: 'flex', gap: 12 }}>
         <button className="btn btn-success" onClick={handleSave}>
-          {saved ? '✅ Saved!' : '💾 Save Settings'}
+          {saved ? <><CheckCircleIcon size={16} /> Saved!</> : <><SaveIcon size={16} /> Save Settings</>}
         </button>
       </div>
     </>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
+import { NoteIcon, RocketIcon } from '../lib/icons';
 
 export default function PushPage({ showToast }) {
   const [githubToken, setGithubToken] = useState('');
@@ -51,7 +52,7 @@ export default function PushPage({ showToast }) {
       });
       const data = await res.json();
       if (res.ok) {
-        showToast?.('Pushed to GitHub successfully! 🚀', 'success');
+        showToast?.('Pushed to GitHub successfully!', 'success');
       } else {
         showToast?.(data.error || 'Push failed', 'error');
       }
@@ -76,13 +77,13 @@ export default function PushPage({ showToast }) {
       {/* Generate README */}
       <div className="card" style={{ marginBottom: 24 }}>
         <div className="card-header">
-          <h2 className="card-title">📄 Step 1: Generate README</h2>
+          <h2 className="card-title"><NoteIcon size={18} style={{ marginRight: 6 }} /> Step 1: Generate README</h2>
         </div>
         <p style={{ color: 'var(--text-secondary)', marginBottom: 16 }}>
           Regenerate the README.md file from your current anime data. This updates the file locally.
         </p>
         <button className="btn btn-primary" onClick={handleGenerate} disabled={generating}>
-          {generating ? <><div className="spinner" /> Generating...</> : '📄 Generate README.md'}
+          {generating ? <><div className="spinner" /> Generating...</> : <><NoteIcon size={16} /> Generate README.md</>}
         </button>
 
         {preview && (
@@ -95,7 +96,7 @@ export default function PushPage({ showToast }) {
       {/* Push to GitHub */}
       <div className="card">
         <div className="card-header">
-          <h2 className="card-title">🚀 Step 2: Push to GitHub</h2>
+          <h2 className="card-title"><RocketIcon size={18} style={{ marginRight: 6 }} /> Step 2: Push to GitHub</h2>
         </div>
         <p style={{ color: 'var(--text-secondary)', marginBottom: 20 }}>
           Push the generated README and data files to your GitHub repository. You need a Personal Access Token with repo permissions.
@@ -127,7 +128,7 @@ export default function PushPage({ showToast }) {
         </div>
 
         <button className="btn btn-success" onClick={handlePush} disabled={pushing}>
-          {pushing ? <><div className="spinner" /> Pushing...</> : '🚀 Push to GitHub'}
+          {pushing ? <><div className="spinner" /> Pushing...</> : <><RocketIcon size={16} /> Push to GitHub</>}
         </button>
       </div>
     </>

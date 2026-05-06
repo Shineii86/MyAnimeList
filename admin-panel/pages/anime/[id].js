@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { SaveIcon, EditIcon, NoteIcon, StarIcon } from '../../lib/icons';
 
 export default function EditAnime({ showToast }) {
   const router = useRouter();
@@ -9,9 +10,7 @@ export default function EditAnime({ showToast }) {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
 
-  useEffect(() => {
-    if (id) loadAnime();
-  }, [id]);
+  useEffect(() => { if (id) loadAnime(); }, [id]);
 
   async function loadAnime() {
     try {
@@ -19,17 +18,13 @@ export default function EditAnime({ showToast }) {
       if (res.ok) {
         const data = await res.json();
         setForm({
-          title: data.title || '',
-          anilistUrl: data.anilistUrl || '',
+          title: data.title || '', anilistUrl: data.anilistUrl || '',
           anilistId: data.anilistId ? String(data.anilistId) : '',
-          type: data.type || 'TV',
-          score: data.score ? String(data.score) : '',
+          type: data.type || 'TV', score: data.score ? String(data.score) : '',
           genres: (data.genres || []).join(', '),
           episodes: data.episodes ? String(data.episodes) : '',
-          status: data.status || 'Completed',
-          notes: data.notes || '',
-          tags: (data.tags || []).join(', '),
-          coverImage: data.coverImage || ''
+          status: data.status || 'Completed', notes: data.notes || '',
+          tags: (data.tags || []).join(', '), coverImage: data.coverImage || ''
         });
       } else {
         showToast?.('Anime not found', 'error');
@@ -42,9 +37,7 @@ export default function EditAnime({ showToast }) {
     }
   }
 
-  function handleChange(e) {
-    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
-  }
+  function handleChange(e) { setForm(prev => ({ ...prev, [e.target.name]: e.target.value })); }
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -58,56 +51,40 @@ export default function EditAnime({ showToast }) {
         episodes: form.episodes ? parseInt(form.episodes) : 0,
         anilistId: form.anilistId ? parseInt(form.anilistId) : null
       };
-
       const res = await fetch(`/api/anime/${id}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body)
+        method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body)
       });
-
       if (res.ok) {
         showToast?.('Anime updated successfully', 'success');
         try {
           const settings = JSON.parse(localStorage.getItem('mal_admin_settings') || '{}');
           if (settings.autoPush && settings.githubToken) {
             fetch('/api/push', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
+              method: 'POST', headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ action: 'push', github_token: settings.githubToken, owner: settings.owner || 'Shineii86', repo: settings.repo || 'MyAnimeList' })
             }).catch(() => {});
           }
         } catch {}
         router.push('/anime');
-      } else {
-        showToast?.('Failed to update', 'error');
-      }
-    } catch {
-      showToast?.('Error updating anime', 'error');
-    } finally {
-      setSaving(false);
-    }
+      } else { showToast?.('Failed to update', 'error'); }
+    } catch { showToast?.('Error updating anime', 'error'); } finally { setSaving(false); }
   }
 
-  if (loading || !form) {
-    return <div style={{ display: 'flex', justifyContent: 'center', padding: 60 }}><div className="spinner" style={{ width: 40, height: 40 }} /></div>;
-  }
+  if (loading || !form) return <div style={{ display: 'flex', justifyContent: 'center', padding: 60 }}><div className="spinner" style={{ width: 40, height: 40 }} /></div>;
 
   return (
     <>
       <Head><title>Edit: {form.title} - MyAnimeList Admin</title></Head>
-
       <div style={{ marginBottom: 32 }}>
         <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 4 }}>Edit Anime</h1>
         <p style={{ color: 'var(--text-muted)' }}>Editing: {form.title}</p>
       </div>
-
       <div className="card">
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label className="form-label">Title *</label>
             <input className="form-input" name="title" value={form.title} onChange={handleChange} required />
           </div>
-
           <div className="form-row">
             <div className="form-group">
               <label className="form-label">AniList URL</label>
@@ -118,30 +95,24 @@ export default function EditAnime({ showToast }) {
               <input className="form-input" name="anilistId" value={form.anilistId} onChange={handleChange} />
             </div>
           </div>
-
           <div className="form-row">
             <div className="form-group">
               <label className="form-label">Type</label>
               <select className="form-input" name="type" value={form.type} onChange={handleChange}>
-                <option value="TV">TV</option>
-                <option value="Movie">Movie</option>
-                <option value="OVA">OVA</option>
-                <option value="ONA">ONA</option>
-                <option value="Special">Special</option>
+                <option value="TV">TV</option><option value="Movie">Movie</option><option value="OVA">OVA</option><option value="ONA">ONA</option><option value="Special">Special</option>
               </select>
             </div>
             <div className="form-group">
               <label className="form-label">Status</label>
               <select className="form-input" name="status" value={form.status} onChange={handleChange}>
-                <option value="Completed">✅ Completed</option>
-                <option value="Watching">👁️ Watching</option>
-                <option value="Plan to Watch">📋 Plan to Watch</option>
-                <option value="On Hold">⏸️ On Hold</option>
-                <option value="Dropped">🚫 Dropped</option>
+                <option value="Completed">Completed</option>
+                <option value="Watching">Watching</option>
+                <option value="Plan to Watch">Plan to Watch</option>
+                <option value="On Hold">On Hold</option>
+                <option value="Dropped">Dropped</option>
               </select>
             </div>
           </div>
-
           <div className="form-row">
             <div className="form-group">
               <label className="form-label">Score (0-10)</label>
@@ -152,40 +123,26 @@ export default function EditAnime({ showToast }) {
               <input className="form-input" name="episodes" type="number" min="0" value={form.episodes} onChange={handleChange} />
             </div>
           </div>
-
           <div className="form-group">
             <label className="form-label">Genres (comma separated)</label>
             <input className="form-input" name="genres" value={form.genres} onChange={handleChange} />
           </div>
-
           <div className="form-group">
-            <label className="form-label">Custom Tags <span style={{ color: 'var(--text-muted)', fontWeight: 400 }}>(e.g., favorite, hidden-gem, rewatch)</span></label>
+            <label className="form-label">Custom Tags <span style={{ color: 'var(--text-muted)', fontWeight: 400 }}>(e.g., favorite, hidden-gem)</span></label>
             <input className="form-input" name="tags" value={form.tags} onChange={handleChange} placeholder="favorite, hidden-gem, rewatch" />
           </div>
-
           <div className="form-group">
             <label className="form-label">Cover Image URL</label>
             <input className="form-input" name="coverImage" value={form.coverImage} onChange={handleChange} placeholder="https://example.com/cover.jpg" />
-            {form.coverImage && (
-              <img src={form.coverImage} alt="Preview" style={{ marginTop: 8, width: 80, height: 112, borderRadius: 8, objectFit: 'cover' }} />
-            )}
+            {form.coverImage && <img src={form.coverImage} alt="Preview" style={{ marginTop: 8, width: 80, height: 112, borderRadius: 8, objectFit: 'cover' }} />}
           </div>
-
           <div className="form-group">
-            <label className="form-label">📝 Personal Notes</label>
-            <textarea 
-              className="form-input" 
-              name="notes" 
-              value={form.notes} 
-              onChange={handleChange} 
-              placeholder="Your thoughts, rewatch notes, why you rated it this way..."
-              rows={4}
-            />
+            <label className="form-label"><NoteIcon size={14} style={{ marginRight: 4 }} /> Personal Notes</label>
+            <textarea className="form-input" name="notes" value={form.notes} onChange={handleChange} placeholder="Your thoughts, rewatch notes..." rows={4} />
           </div>
-
           <div className="form-actions">
             <button type="submit" className="btn btn-primary" disabled={saving}>
-              {saving ? <><div className="spinner" /> Saving...</> : '💾 Save Changes'}
+              {saving ? <><div className="spinner" /> Saving...</> : <><SaveIcon size={16} /> Save Changes</>}
             </button>
             <button type="button" className="btn btn-outline" onClick={() => router.push('/anime')}>Cancel</button>
           </div>
