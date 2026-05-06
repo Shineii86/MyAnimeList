@@ -166,5 +166,13 @@
     "target": "Bulk Final 3",
     "details": "TV • 7 • ",
     "user": "admin"
+  },
+  {
+    "id": "mougacp5oxv9",
+    "timestamp": "2026-05-06T19:28:48.329Z",
+    "action": "delete",
+    "target": "Bulk: ",
+    "details": "Deleted 0 anime entries",
+    "user": "admin"
   }
 ]
