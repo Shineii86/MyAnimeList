@@ -1176,6 +1176,23 @@
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx10087-M4Hd9qrHGrXk.png"
     },
     {
+      "id": 77701,
+      "title": "Final Test",
+      "anilistUrl": "https://anilist.co/anime/77701",
+      "anilistId": 77701,
+      "type": "TV",
+      "score": 8,
+      "genres": [],
+      "episodes": 0,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "F",
+      "coverImage": null,
+      "addedAt": "2026-05-06T19:28:29.008Z",
+      "updatedAt": "2026-05-06T19:28:29.008Z"
+    },
+    {
       "id": 104581,
       "title": "Fire Force",
       "anilistUrl": "https://anilist.co/anime/104581",
@@ -4538,23 +4555,6 @@
       "coverImage": null,
       "addedAt": "2026-05-06T19:21:15.583Z",
       "updatedAt": "2026-05-06T19:21:15.583Z"
-    },
-    {
-      "id": 99901,
-      "title": "VercelEnvCheck_1778095580",
-      "anilistUrl": "https://anilist.co/anime/99901",
-      "anilistId": 99901,
-      "type": "TV",
-      "score": 8,
-      "genres": [],
-      "episodes": 0,
-      "status": "Completed",
-      "notes": "",
-      "tags": [],
-      "letter": "V",
-      "coverImage": null,
-      "addedAt": "2026-05-06T19:26:21.070Z",
-      "updatedAt": "2026-05-06T19:26:21.070Z"
     },
     {
       "id": 124194,
