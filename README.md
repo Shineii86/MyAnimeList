@@ -116,6 +116,7 @@ These are my personal 10/10 masterpieces:
 - [**Fairy Tail**](https://anilist.co/anime/6702) - TV ⭐ 7.6 | ⚔️ Action, 🗡️ Adventure
 - [**Fate/stay night: Unlimited Blade Works**](https://anilist.co/anime/22297) - TV ⭐ 8.2 | ⚔️ Action, 🧙 Fantasy
 - [**Fate/Zero**](https://anilist.co/anime/10087) - TV ⭐ 8.9 | ⚔️ Action, 🧙 Fantasy
+- [**Final Test**](https://anilist.co/anime/77701) - TV ⭐ 8 | 
 - [**Fire Force**](https://anilist.co/anime/104581) - TV ⭐ 7.7 | ⚔️ Action, 🔥 Supernatural
 - [**FLCL**](https://anilist.co/anime/227) - TV ⭐ 7.7 | 🤖 Mecha, 😄 Comedy
 - [**Food Wars!**](https://anilist.co/anime/20923) - TV ⭐ 8 | 😄 Comedy, 😈 Ecchi
@@ -316,7 +317,6 @@ These are my personal 10/10 masterpieces:
 - [**Vandread**](https://anilist.co/anime/235) - TV ⭐ 7 | 🤖 Mecha, 💕 Romance
 - [**Vatican Miracle Examiner**](https://anilist.co/anime/97855) - TV ⭐ 5.8 | 🕰️ Mystery, 🔥 Supernatural
 - [**Vercel Path Test**](https://anilist.co/anime/55555) - TV ⭐ 8 | 
-- [**VercelEnvCheck_1778095580**](https://anilist.co/anime/99901) - TV ⭐ 8 | 
 - [**Vexations of a Shut-In Vampire Princess**](https://anilist.co/anime/159808) - TV ⭐ 6.2 | 😄 Comedy, 🧙 Fantasy
 - [**Vinland Saga**](https://anilist.co/anime/101348) - TV ⭐ 8.7 | ⚔️ Action, 💔 Drama
 - [**Violet Evergarden**](https://anilist.co/anime/21827) - TV ⭐ 8.7 | 💔 Drama, 😃 Slice of Life
