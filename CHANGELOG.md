@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Admin Panel v1.3.0 — Activity Log
+
+### Added
+- **Activity Log** — Full audit trail of every action in the admin panel
+  - Timeline view grouped by date with colored dots and icons
+  - Tracks: add, edit, delete, push, import, generate, login events
+  - Shows what changed (score 7→9, status Completed→Watching, etc.)
+  - Search and filter by action type
+  - Pagination (30 per page)
+  - Clear log button
+  - Stored in `data/activity-log.json` (max 500 entries, auto-trimmed)
+- **Logging integrated into all API routes**
+  - `POST /api/anime` — logs "Added: Title"
+  - `PUT /api/anime/[id]` — logs "Edited: Title — score 7→9"
+  - `DELETE /api/anime/[id]` — logs "Deleted: Title"
+  - `POST /api/push` — logs "Pushed to owner/repo"
+  - `POST /api/anime/import` — logs "Imported X entries"
+  - `POST /api/auth` — logs "Successful login" or "Failed login attempt"
+
+### Technical
+- New `lib/activity-log.js` module with add/get/clear functions
+- Activity log API endpoint with filtering and pagination
+- Auto-trim to 500 entries to prevent unbounded growth
+
 ## [2026-05-07] - Admin Panel v1.2.1 — Diagnostics & Data Cleanup
 
 ### Fixed

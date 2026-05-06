@@ -2,6 +2,7 @@ const { readData } = require('../../../lib/data');
 const { generateReadme } = require('../../../lib/readme-generator');
 const { pushReadme, pushData } = require('../../../lib/github');
 const { requireAuth } = require('../../../lib/auth');
+const { addEntry } = require('../../../lib/activity-log');
 const fs = require('fs');
 const path = require('path');
 
@@ -21,15 +22,14 @@ export default async function handler(req, res) {
     const readme = generateReadme(data);
 
     if (action === 'generate') {
-      // Try to write README locally (works in dev/local, not on Vercel)
       try {
         const readmePath = path.join(process.cwd(), '..', 'README.md');
         if (fs.existsSync(path.dirname(readmePath))) {
           fs.writeFileSync(readmePath, readme, 'utf-8');
         }
-      } catch {
-        // On Vercel/readonly FS — that's fine, we'll push via API
-      }
+      } catch {}
+
+      addEntry({ action: 'generate', target: 'README.md', details: `${data.anime.length} anime entries` });
       
       return res.status(200).json({ 
         success: true, 
@@ -48,11 +48,10 @@ export default async function handler(req, res) {
         });
       }
 
-      // Push README
       const readmeResult = await pushReadme(owner, repo, readme, github_token);
-      
-      // Push data file
       const dataResult = await pushData(owner, repo, JSON.stringify(data, null, 2), github_token);
+
+      addEntry({ action: 'push', target: `${owner}/${repo}`, details: `README.md + anime.json (${data.anime.length} entries)` });
 
       return res.status(200).json({
         success: true,

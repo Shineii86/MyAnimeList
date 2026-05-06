@@ -1,5 +1,6 @@
 const { writeData, readData, updateStats } = require('../../../lib/data');
 const { requireAuth } = require('../../../lib/auth');
+const { addEntry } = require('../../../lib/activity-log');
 
 export default function handler(req, res) {
   if (!requireAuth(req)) {
@@ -17,13 +18,11 @@ export default function handler(req, res) {
       return res.status(400).json({ error: 'Invalid data: anime array required' });
     }
 
-    // Validate entries
     const valid = anime.filter(a => a.title && typeof a.title === 'string');
     if (valid.length === 0) {
       return res.status(400).json({ error: 'No valid anime entries found' });
     }
 
-    // Sort alphabetically
     valid.sort((a, b) => a.title.localeCompare(b.title));
     valid.forEach(a => { a.letter = a.title.charAt(0).toUpperCase(); });
 
@@ -35,6 +34,8 @@ export default function handler(req, res) {
 
     updateStats(data);
     writeData(data);
+
+    addEntry({ action: 'import', target: 'Collection', details: `Imported ${valid.length} anime entries from backup` });
 
     return res.status(200).json({
       success: true,

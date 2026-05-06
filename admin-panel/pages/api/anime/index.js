@@ -1,5 +1,6 @@
 const { getAllAnime, addAnime } = require('../../../lib/data');
 const { requireAuth } = require('../../../lib/auth');
+const { addEntry } = require('../../../lib/activity-log');
 
 export default function handler(req, res) {
   if (!requireAuth(req)) {
@@ -81,6 +82,8 @@ function handlePost(req, res) {
       tags: tags || [],
       coverImage: coverImage || null
     });
+
+    addEntry({ action: 'add', target: title, details: `${type || 'TV'} • ⭐ ${score || 0} • ${(genres || []).join(', ')}` });
 
     return res.status(201).json({ success: true, anime: entry });
   } catch (err) {
