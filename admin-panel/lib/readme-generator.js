@@ -202,8 +202,8 @@ This project is open source and available under the [MIT License](LICENSE).
 }
 
 function generateAndSave() {
-  const dataFile = path.join(__dirname, '..', 'data', 'anime.json');
-  const readmeFile = path.join(__dirname, '..', '..', 'README.md');
+  const dataFile = path.join(process.cwd(), 'data', 'anime.json');
+  const readmeFile = path.join(process.cwd(), '..', 'README.md');
   
   const data = JSON.parse(fs.readFileSync(dataFile, 'utf-8'));
   const readme = generateReadme(data);

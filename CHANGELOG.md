@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Critical: Data Path & Import Fixes
+
+### Fixed
+- **Data file not found after build** — `data.js` and `activity-log.js` now use `process.cwd()` instead of `__dirname` for file paths (Next.js builds change `__dirname` to `.next/server/chunks/`)
+- **Import replaces all data** — Import endpoint now defaults to **merge mode** (adds new, skips duplicates by title). Pass `mode: "replace"` for full backup restore
+- **Import missing fields** — Imported entries now get proper `id`, `addedAt`, `updatedAt`, `anilistUrl` fields
+- **Settings import UX** — Now prompts for merge vs replace with confirmation for destructive replace
+
 ## [2026-05-07] - Full Diagnostic Sweep: Security & Reliability Fixes
 
 ### Fixed

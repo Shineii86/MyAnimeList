@@ -63,12 +63,16 @@ export default function SettingsPage({ showToast }) {
           return;
         }
         
-        if (!confirm(`Import ${data.anime.length} anime entries? This will replace all current data.`)) return;
+        const mode = confirm(`Import ${data.anime.length} anime entries?\n\nOK = Merge (add new, skip duplicates)\nCancel = Replace (⚠️ overwrites everything)`)
+          ? 'merge' : 'replace';
 
-        const res = await apiPost('/api/anime/import', data);
+        if (mode === 'replace' && !confirm(`⚠️ This will REPLACE your entire collection with ${data.anime.length} entries. Continue?`)) return;
+
+        const res = await apiPost('/api/anime/import', { ...data, mode });
 
         if (res.ok) {
-          showToast?.(`Imported ${data.anime.length} entries`, 'success');
+          const result = await res.json();
+          showToast?.(result.message, 'success');
         } else {
           showToast?.('Import failed', 'error');
         }

@@ -3,10 +3,11 @@ const path = require('path');
 const https = require('https');
 
 const IS_VERCEL = !!process.env.VERCEL;
+const PROJECT_ROOT = process.cwd();
 const LOCAL_DATA_FILE = IS_VERCEL
   ? path.join('/tmp', 'anime.json')
-  : path.join(__dirname, '..', 'data', 'anime.json');
-const BUNDLED_DATA_FILE = path.join(__dirname, '..', 'data', 'anime.json');
+  : path.join(PROJECT_ROOT, 'data', 'anime.json');
+const BUNDLED_DATA_FILE = path.join(PROJECT_ROOT, 'data', 'anime.json');
 const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com';
 const REPO_PATH = 'admin-panel/data/anime.json';
 

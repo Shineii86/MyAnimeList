@@ -4,9 +4,10 @@ const https = require('https');
 
 // Use /tmp on Vercel (writable), local data/ directory otherwise
 const IS_VERCEL = !!process.env.VERCEL;
+const PROJECT_ROOT = process.cwd();
 const LOG_FILE = IS_VERCEL
   ? path.join('/tmp', 'activity-log.json')
-  : path.join(__dirname, '..', 'data', 'activity-log.json');
+  : path.join(PROJECT_ROOT, 'data', 'activity-log.json');
 const MAX_ENTRIES = 500;
 const GITHUB_API = 'https://api.github.com';
 const LOG_PATH = 'admin-panel/data/activity-log.json';
