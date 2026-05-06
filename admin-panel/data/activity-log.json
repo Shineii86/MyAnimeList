@@ -30,5 +30,13 @@
     "target": "Live Test Anime",
     "details": "TV • 8.5 • Action, Test",
     "user": "admin"
+  },
+  {
+    "id": "moufyte2b9o3",
+    "timestamp": "2026-05-06T19:19:50.090Z",
+    "action": "add",
+    "target": "Bulk Live 1",
+    "details": "TV • 7 • ",
+    "user": "admin"
   }
 ]
