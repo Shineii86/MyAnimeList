@@ -1,0 +1,20 @@
+{
+  "name": "myanimelist-admin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Admin panel for MyAnimeList repository management",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "parse": "node scripts/parse-readme.js",
+    "generate": "node scripts/generate-readme.js"
+  },
+  "dependencies": {
+    "next": "^14.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "cookie": "^0.6.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
