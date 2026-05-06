@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "265",
+    "totalAnime": "266",
     "totalEpisodes": "4,002+",
-    "moviesWatched": "18",
+    "moviesWatched": "19",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 265,
+      "Completed": 266,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -457,23 +457,6 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 0,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx13599-jpZpumSDPJM0.jpg"
-    },
-    {
-      "id": 70001,
-      "title": "Bulk Live 1",
-      "anilistUrl": "https://anilist.co/anime/70001",
-      "anilistId": 70001,
-      "type": "TV",
-      "score": 7,
-      "genres": [],
-      "episodes": 0,
-      "status": "Completed",
-      "notes": "",
-      "tags": [],
-      "letter": "B",
-      "coverImage": null,
-      "addedAt": "2026-05-06T19:19:48.431Z",
-      "updatedAt": "2026-05-06T19:19:48.431Z"
     },
     {
       "id": 104578,
@@ -2515,6 +2498,40 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 1,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx14349-zvSfbgjZr4LW.jpg"
+    },
+    {
+      "id": 1778095195322,
+      "title": "Live Import Test A",
+      "anilistUrl": "",
+      "anilistId": null,
+      "type": "TV",
+      "score": 8,
+      "genres": [],
+      "episodes": 0,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "L",
+      "coverImage": null,
+      "addedAt": "2026-05-06T19:19:54.704Z",
+      "updatedAt": "2026-05-06T19:19:54.704Z"
+    },
+    {
+      "id": 1778095195360,
+      "title": "Live Import Test B",
+      "anilistUrl": "",
+      "anilistId": null,
+      "type": "Movie",
+      "score": 9,
+      "genres": [],
+      "episodes": 0,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "L",
+      "coverImage": null,
+      "addedAt": "2026-05-06T19:19:54.704Z",
+      "updatedAt": "2026-05-06T19:19:54.704Z"
     },
     {
       "id": 17265,
