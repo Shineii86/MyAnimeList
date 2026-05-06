@@ -1,7 +1,7 @@
 // Auto-push helper — triggers GitHub push after data mutations
 // Settings are read client-side and sent with API requests
 
-export function getSettings() {
+function getSettings() {
   if (typeof window === 'undefined') return {};
   try {
     return JSON.parse(localStorage.getItem('mal_admin_settings') || '{}');
@@ -10,7 +10,7 @@ export function getSettings() {
   }
 }
 
-export async function autoPushIfEnabled() {
+async function autoPushIfEnabled() {
   const settings = getSettings();
   if (!settings.autoPush || !settings.githubToken) return null;
 
@@ -33,7 +33,7 @@ export async function autoPushIfEnabled() {
 }
 
 // Wraps fetch with auto-push after mutations
-export async function apiWithAutoPush(url, options = {}) {
+async function apiWithAutoPush(url, options = {}) {
   const res = await fetch(url, options);
   
   if (res.ok && ['POST', 'PUT', 'PATCH', 'DELETE'].includes(options.method)) {
@@ -43,3 +43,5 @@ export async function apiWithAutoPush(url, options = {}) {
   
   return res;
 }
+
+module.exports = { getSettings, autoPushIfEnabled, apiWithAutoPush };

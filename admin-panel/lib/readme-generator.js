@@ -210,8 +210,7 @@ function generateAndSave() {
   fs.writeFileSync(readmeFile, readme, 'utf-8');
   
   const stats = computeStats(data.anime);
-  console.log(`✅ README.md generated with live stats:`);
-  console.log(`   Anime: ${stats.totalAnime} | Avg Score: ${stats.averageScore} | Movies: ${stats.moviesWatched} | TV: ${stats.tvShows}`);
+  // Stats computed silently
   return readme;
 }
 

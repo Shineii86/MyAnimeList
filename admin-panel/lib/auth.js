@@ -1,11 +1,20 @@
 // Simple auth using HMAC (no external deps needed)
 const crypto = require('crypto');
 
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'anime-admin-2026';
-const JWT_SECRET = process.env.JWT_SECRET || crypto.randomBytes(32).toString('hex');
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+const JWT_SECRET = process.env.JWT_SECRET;
 const TOKEN_EXPIRY = 24 * 60 * 60 * 1000; // 24 hours
 
+// Validate required env vars at module load
+if (!ADMIN_PASSWORD) {
+  console.error('[auth] FATAL: ADMIN_PASSWORD env var is not set. Authentication is disabled.');
+}
+if (!JWT_SECRET) {
+  console.error('[auth] WARNING: JWT_SECRET env var is not set. Tokens will not survive cold starts.');
+}
+
 function createToken() {
+  const secret = JWT_SECRET || crypto.createHash('sha256').update(ADMIN_PASSWORD || 'fallback').digest('hex');
   const header = Buffer.from(JSON.stringify({ alg: 'HS256', typ: 'JWT' })).toString('base64url');
   const payload = Buffer.from(JSON.stringify({
     authenticated: true,
@@ -14,7 +23,7 @@ function createToken() {
   })).toString('base64url');
   
   const signature = crypto
-    .createHmac('sha256', JWT_SECRET)
+    .createHmac('sha256', secret)
     .update(`${header}.${payload}`)
     .digest('base64url');
   
@@ -24,13 +33,15 @@ function createToken() {
 function verifyToken(token) {
   if (!token) return false;
   
+  const secret = JWT_SECRET || crypto.createHash('sha256').update(ADMIN_PASSWORD || 'fallback').digest('hex');
+  
   try {
     const parts = token.split('.');
     if (parts.length !== 3) return false;
     
     const [header, payload, signature] = parts;
     const expectedSig = crypto
-      .createHmac('sha256', JWT_SECRET)
+      .createHmac('sha256', secret)
       .update(`${header}.${payload}`)
       .digest('base64url');
     
@@ -46,6 +57,7 @@ function verifyToken(token) {
 }
 
 function authenticate(password) {
+  if (!ADMIN_PASSWORD) return false; // No password configured = no access
   return password === ADMIN_PASSWORD;
 }
 

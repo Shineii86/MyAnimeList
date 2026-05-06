@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const LOG_FILE = path.join(process.cwd(), 'data', 'activity-log.json');
+const LOG_FILE = path.join(__dirname, '..', 'data', 'activity-log.json');
 const MAX_ENTRIES = 500; // Keep last 500 entries
 
 function readLog() {

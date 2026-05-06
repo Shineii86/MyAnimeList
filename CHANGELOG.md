@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Security & Stability Fixes — Full Diagnostic Sweep
+
+### Fixed
+- **Critical: Hardcoded password fallback removed** — `lib/auth.js` no longer falls back to `anime-admin-2026` when `ADMIN_PASSWORD` env var is missing. Auth now fails closed (no access without env var configured)
+- **Critical: JWT secret cold-start fix** — `lib/auth.js` now derives a deterministic secret from `ADMIN_PASSWORD` when `JWT_SECRET` is not set, so tokens survive serverless cold starts instead of being randomly regenerated each restart
+- **Auth cookie production fix** — `pages/api/auth.js` now adds `Secure` flag on Vercel/production environments so cookies work over HTTPS
+- **Error handling added** — `pages/api/auth.js` and `pages/api/activity.js` now wrap handlers in try/catch like all other API routes
+- **Serverless path fix** — `lib/data.js` and `lib/activity-log.js` now use `__dirname`-relative paths instead of `process.cwd()` which is unreliable in Vercel's standalone output
+- **Removed production console.log** — `lib/readme-generator.js` no longer logs to stdout in production
+
+### Changed
+- **CJS consistency** — `lib/auto-push.js` converted from ESM (`export`) to CJS (`module.exports`) to match all other `lib/` modules
+- **`.env.example` updated** — Added `JWT_SECRET` generation command and marked both vars as required with notes about cold-start behavior
+
+### Technical
+- When `JWT_SECRET` is not set, secret is derived as `SHA-256(ADMIN_PASSWORD)` — deterministic across cold starts, unique per password
+- When neither `ADMIN_PASSWORD` nor `JWT_SECRET` is set, auth is completely disabled with console.error warning
+- All 36 JS files pass syntax check, build passes clean (14 routes, 0 errors)
+
 ## [2026-05-07] - Fix Vercel Build — Broken Import Paths
 
 ### Fixed

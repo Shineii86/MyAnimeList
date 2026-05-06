@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const DATA_FILE = path.join(process.cwd(), 'data', 'anime.json');
+const DATA_FILE = path.join(__dirname, '..', 'data', 'anime.json');
 
 const VALID_STATUSES = ['Completed', 'Watching', 'Plan to Watch', 'Dropped', 'On Hold'];
 
