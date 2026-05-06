@@ -72,6 +72,7 @@ These are my personal 10/10 masterpieces:
 - [**Blue Lock**](https://anilist.co/anime/139893) - TV ⭐ 8.2 | 🏐 Sports, 🧠 Psychological
 - [**Bocchi the Rock!**](https://anilist.co/anime/144802) - TV ⭐ 8.5 | 🎵 Music, 😄 Comedy
 - [**Btooom!**](https://anilist.co/anime/13599) - TV ⭐ 7.2 | ⚔️ Action, 🧠 Psychological
+- [**Bulk Final 1**](https://anilist.co/anime/60001) - TV ⭐ 7 | 
 
 ### C
 - [**Carole & Tuesday**](https://anilist.co/anime/104578) - TV ⭐ 8 | 🎵 Music, 🔬 Sci-Fi
@@ -116,7 +117,6 @@ These are my personal 10/10 masterpieces:
 - [**Fairy Tail**](https://anilist.co/anime/6702) - TV ⭐ 7.6 | ⚔️ Action, 🗡️ Adventure
 - [**Fate/stay night: Unlimited Blade Works**](https://anilist.co/anime/22297) - TV ⭐ 8.2 | ⚔️ Action, 🧙 Fantasy
 - [**Fate/Zero**](https://anilist.co/anime/10087) - TV ⭐ 8.9 | ⚔️ Action, 🧙 Fantasy
-- [**Final Test**](https://anilist.co/anime/77701) - TV ⭐ 8 | 
 - [**Fire Force**](https://anilist.co/anime/104581) - TV ⭐ 7.7 | ⚔️ Action, 🔥 Supernatural
 - [**FLCL**](https://anilist.co/anime/227) - TV ⭐ 7.7 | 🤖 Mecha, 😄 Comedy
 - [**Food Wars!**](https://anilist.co/anime/20923) - TV ⭐ 8 | 😄 Comedy, 😈 Ecchi
