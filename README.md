@@ -28,7 +28,7 @@
 | Statistic | Value |
 |-----------|-------|
 | Total Anime | 264 |
-| Total Episodes | 4,002 |
+| Total Episodes | 4,001 |
 | TV Shows | 239 |
 | Movies Watched | 18 |
 | OVAs/Specials | 4 |
@@ -142,7 +142,7 @@ These are my personal 10/10 masterpieces:
 - [**Haikyuu!!**](https://anilist.co/anime/20583) - TV ⭐ 8.8 | 🏐 Sports, 😄 Comedy
 - [**Hajime no Ippo**](https://anilist.co/anime/263) - TV ⭐ 8.7 | 🏐 Sports, 😄 Comedy
 - [**HELL MODE: The Hardcore Gamer Dominates in Another World with Garbage Balancing**](https://anilist.co/anime/185262) - TV ⭐ 6.7 | ⚔️ Action, 🏷️ Adventurer
-- [**Hell’s Paradise**](https://anilist.co/anime/128893) - TV ⭐ 8 | ⚔️ Action, 🗡️ Adventure, 🕰️ Mystery, 🔥 Supernatural
+- [**Hell’s Paradise Season 2**](https://anilist.co/anime/166613) - TV ⭐ 8.2 | ⚔️ Action, 🗡️ Adventure, 🕰️ Mystery, 🔥 Supernatural
 - [**Hellsing Ultimate**](https://anilist.co/anime/777) - OVA ⭐ 8.3 | ⚔️ Action, 🎭 Horror
 - [**Highschool of the Dead**](https://anilist.co/anime/8074) - TV ⭐ 6.9 | ⚔️ Action, 😈 Ecchi
 - [**Hinamatsuri**](https://anilist.co/anime/100077) - TV ⭐ 8.3 | 😄 Comedy, 🔥 Supernatural
