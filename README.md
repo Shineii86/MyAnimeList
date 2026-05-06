@@ -3,7 +3,7 @@
 <img src="https://raw.githubusercontent.com/Shineii86/MyAnimeList/refs/heads/main/assets/image.png" alt="LOGO" width="200" height="200"/>
 </a>
 
-![Anime Count](https://img.shields.io/badge/Anime%20Watched-265-blueviolet?style=for-the-badge)
+![Anime Count](https://img.shields.io/badge/Anime%20Watched-266-blueviolet?style=for-the-badge)
 ![Days Watched](https://img.shields.io/badge/Days%20Watched-3.5+-important?style=for-the-badge)
 [![GitHub Stars](https://img.shields.io/github/stars/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/fork)
@@ -12,7 +12,7 @@
 
 </div> 
 
-> I began my anime-watching journey in **2020**, and since then I have watched and completed over **265 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
+> I began my anime-watching journey in **2020**, and since then I have watched and completed over **266 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
 
 
 ## 📋 Table of Contents
@@ -27,9 +27,9 @@
 
 | Statistic | Value |
 |-----------|-------|
-| Total Anime | 265 |
+| Total Anime | 266 |
 | Total Episodes | 4,002 |
-| TV Shows | 240 |
+| TV Shows | 241 |
 | Movies Watched | 18 |
 | OVAs/Specials | 4 |
 | ONA | 3 |
@@ -94,6 +94,7 @@ These are my personal 10/10 masterpieces:
 - [**Death Note**](https://anilist.co/anime/1535) - TV ⭐ 8.6 | 🧠 Psychological, 🎭 Thriller
 - [**Death Parade**](https://anilist.co/anime/20931) - TV ⭐ 8.2 | 🧠 Psychological, 💔 Drama
 - [**Demon Slayer**](https://anilist.co/anime/21612) - TV ⭐ 8.5 | ⚔️ Action, 🧙 Fantasy
+- [**Deploy Test**](https://anilist.co/anime/44444) - TV ⭐ 8 | 
 - [**Devilman Crybaby**](https://anilist.co/anime/20996) - TV ⭐ 7.8 | ⚔️ Action, 🎭 Horror
 - [**Dorohedoro**](https://anilist.co/anime/103786) - TV ⭐ 8.2 | ⚔️ Action, 🧙 Fantasy
 - [**Dr. Stone**](https://anilist.co/anime/105333) - TV ⭐ 8.2 | 🗡️ Adventure, 🔬 Sci-Fi
