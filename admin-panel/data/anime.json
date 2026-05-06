@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "262",
-    "totalEpisodes": "4,001+",
+    "totalAnime": "261",
+    "totalEpisodes": "3,989+",
     "moviesWatched": "18",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 262,
+      "Completed": 261,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -3997,27 +3997,6 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 24,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101280-tDxCVJm714nt.jpg"
-    },
-    {
-      "id": 194317,
-      "title": "The Beginning After the End Season 2",
-      "anilistUrl": "https://anilist.co/anime/194317",
-      "anilistId": 194317,
-      "type": "TV",
-      "score": 5.5,
-      "genres": [
-        "Action",
-        "Adventure",
-        "Fantasy"
-      ],
-      "episodes": 12,
-      "status": "Completed",
-      "notes": "",
-      "tags": [],
-      "letter": "T",
-      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx194317-M7t2ymBDHqyW.jpg",
-      "addedAt": "2026-05-06T18:20:23.626Z",
-      "updatedAt": "2026-05-06T18:20:23.626Z"
     },
     {
       "id": 21273,
