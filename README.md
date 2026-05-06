@@ -3,7 +3,7 @@
 <img src="https://raw.githubusercontent.com/Shineii86/MyAnimeList/refs/heads/main/assets/image.png" alt="LOGO" width="200" height="200"/>
 </a>
 
-![Anime Count](https://img.shields.io/badge/Anime%20Watched-264-blueviolet?style=for-the-badge)
+![Anime Count](https://img.shields.io/badge/Anime%20Watched-265-blueviolet?style=for-the-badge)
 ![Days Watched](https://img.shields.io/badge/Days%20Watched-3.5+-important?style=for-the-badge)
 [![GitHub Stars](https://img.shields.io/github/stars/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/fork)
@@ -12,7 +12,7 @@
 
 </div> 
 
-> I began my anime-watching journey in **2020**, and since then I have watched and completed over **264 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
+> I began my anime-watching journey in **2020**, and since then I have watched and completed over **265 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
 
 
 ## 📋 Table of Contents
@@ -27,9 +27,9 @@
 
 | Statistic | Value |
 |-----------|-------|
-| Total Anime | 264 |
-| Total Episodes | 4,002 |
-| TV Shows | 239 |
+| Total Anime | 265 |
+| Total Episodes | 4,014 |
+| TV Shows | 240 |
 | Movies Watched | 18 |
 | OVAs/Specials | 4 |
 | ONA | 3 |
@@ -194,6 +194,7 @@ These are my personal 10/10 masterpieces:
 - [**Land of the Lustrous**](https://anilist.co/anime/98707) - TV ⭐ 8.4 | ⚔️ Action, 🧙 Fantasy
 - [**Legend of the Galactic Heroes**](https://anilist.co/anime/820) - OVA ⭐ 9.1 | 🔬 Sci-Fi, 💔 Drama
 - [**Little Witch Academia**](https://anilist.co/anime/14349) - Movie ⭐ 7.8 | 🧙 Fantasy, 😄 Comedy
+- [**Live Test Anime**](https://anilist.co/anime/88888) - TV ⭐ 8.5 | ⚔️ Action, 🏷️ Test
 - [**Log Horizon**](https://anilist.co/anime/17265) - TV ⭐ 7.9 | 🗡️ Adventure, 🧙 Fantasy
 - [**Love Live! School Idol Project**](https://anilist.co/anime/15051) - TV ⭐ 7.5 | 🎵 Music, 😃 Slice of Life
 - [**Love, Chunibyo & Other Delusions**](https://anilist.co/anime/14741) - TV ⭐ 7.7 | 💕 Romance, 😄 Comedy
