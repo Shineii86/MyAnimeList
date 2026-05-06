@@ -62,5 +62,13 @@
     "target": "Bulk: ",
     "details": "Deleted 0 anime entries",
     "user": "admin"
+  },
+  {
+    "id": "moufyy6u9cuq",
+    "timestamp": "2026-05-06T19:19:56.310Z",
+    "action": "import",
+    "target": "Collection",
+    "details": "Merged 2 new anime (0 duplicates skipped)",
+    "user": "admin"
   }
 ]
