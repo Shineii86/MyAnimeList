@@ -78,5 +78,29 @@
     "target": "Token Test",
     "details": "TV • 8 • ",
     "user": "admin"
+  },
+  {
+    "id": "moug5i2v6gbt",
+    "timestamp": "2026-05-06T19:25:02.023Z",
+    "action": "delete",
+    "target": "Another",
+    "details": "TV • 7.5",
+    "user": "admin"
+  },
+  {
+    "id": "moug6bav0ei0",
+    "timestamp": "2026-05-06T19:25:39.895Z",
+    "action": "login",
+    "target": "Admin Panel",
+    "details": "Successful login",
+    "user": "admin"
+  },
+  {
+    "id": "moug6dmsu2ub",
+    "timestamp": "2026-05-06T19:25:42.916Z",
+    "action": "add",
+    "target": "Persist Test",
+    "details": "TV • 8 • ",
+    "user": "admin"
   }
 ]
