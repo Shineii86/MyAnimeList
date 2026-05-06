@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Simplified: Auto-Push via Environment Variables
+
+### Changed
+- **GitHub credentials now read from environment variables** — `GITHUB_TOKEN`, `GITHUB_OWNER`, `GITHUB_REPO` env vars are used automatically as fallback when client doesn't send credentials
+- **No manual Settings configuration needed** — set 3 env vars on Vercel once and data persistence works automatically
+- Updated `.env.example` with all required variables
+
+### Setup (one-time)
+1. Vercel Dashboard → your project → **Settings** → **Environment Variables**
+2. Add: `ADMIN_PASSWORD`, `JWT_SECRET`, `GITHUB_TOKEN`, `GITHUB_OWNER`, `GITHUB_REPO`
+3. Redeploy
+
 ## [2026-05-07] - Critical Fix: Persistent Data Storage & Data Recovery
 
 ### Fixed

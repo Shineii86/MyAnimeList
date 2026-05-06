@@ -128,11 +128,11 @@ async function writeData(data, gh = null) {
   }
 }
 
-// Extract GitHub credentials from request
+// Extract GitHub credentials from request headers, or fall back to env vars
 function getGhFromReq(req) {
-  const token = req.headers['x-github-token'] || req.body?.github_token;
-  const owner = req.headers['x-github-owner'] || req.body?.github_owner;
-  const repo = req.headers['x-github-repo'] || req.body?.github_repo;
+  const token = req.headers['x-github-token'] || req.body?.github_token || process.env.GITHUB_TOKEN;
+  const owner = req.headers['x-github-owner'] || req.body?.github_owner || process.env.GITHUB_OWNER;
+  const repo = req.headers['x-github-repo'] || req.body?.github_repo || process.env.GITHUB_REPO;
   if (token && owner && repo) return { token, owner, repo };
   return null;
 }
