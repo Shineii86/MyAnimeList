@@ -58,7 +58,10 @@ function verifyToken(token) {
 
 function authenticate(password) {
   if (!ADMIN_PASSWORD) return false; // No password configured = no access
-  return password === ADMIN_PASSWORD;
+  // Timing-safe comparison to prevent timing attacks
+  if (typeof password !== 'string' || typeof ADMIN_PASSWORD !== 'string') return false;
+  if (password.length !== ADMIN_PASSWORD.length) return false;
+  return crypto.timingSafeEqual(Buffer.from(password), Buffer.from(ADMIN_PASSWORD));
 }
 
 // Parse cookie header for token

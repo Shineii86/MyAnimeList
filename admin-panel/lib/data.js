@@ -45,13 +45,38 @@ function githubApi(method, token, owner, repo, filePath, body) {
     const req = https.request(opts, (res) => {
       let body = '';
       res.on('data', chunk => body += chunk);
-      res.on('end', () => { try { resolve(JSON.parse(body)); } catch { resolve({ error: body }); } });
+      res.on('end', () => { try { resolve({ status: res.statusCode, ...JSON.parse(body) }); } catch { resolve({ status: res.statusCode, error: body }); } });
     });
     req.on('error', reject);
     req.setTimeout(10000, () => { req.destroy(); reject(new Error('GitHub API timeout')); });
     if (data) req.write(data);
     req.end();
   });
+}
+
+// Push a single file to GitHub with retry on 409 SHA conflict
+async function githubPushWithRetry(token, owner, repo, filePath, content, message, maxRetries = 3) {
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    // Get current file SHA
+    let sha = null;
+    try {
+      const existing = await githubApi('GET', token, owner, repo, filePath);
+      if (existing.sha) sha = existing.sha;
+    } catch {}
+
+    const result = await githubApi('PUT', token, owner, repo, filePath, {
+      message,
+      content: Buffer.from(content).toString('base64'),
+      ...(sha ? { sha } : {})
+    });
+
+    if (result.status === 200 || result.status === 201) return result;
+
+    // 409 = SHA conflict — retry with fresh SHA
+    if (result.status === 409 && attempt < maxRetries - 1) continue;
+
+    throw new Error(`GitHub push failed (${result.status}): ${JSON.stringify(result)}`);
+  }
 }
 
 // Read data with GitHub as primary source when credentials available
@@ -114,29 +139,16 @@ async function writeData(data, gh = null) {
   // Push to GitHub if credentials provided
   if (gh && gh.token && gh.owner && gh.repo) {
     try {
-      // Push anime.json
-      const existing = await githubApi('GET', gh.token, gh.owner, gh.repo, REPO_PATH);
-      const sha = existing.sha || null;
+      // Push anime.json (with retry on 409)
+      await githubPushWithRetry(gh.token, gh.owner, gh.repo, REPO_PATH, json,
+        `📊 Update anime data via Admin Panel [${new Date().toISOString().split('T')[0]}]`);
 
-      await githubApi('PUT', gh.token, gh.owner, gh.repo, REPO_PATH, {
-        message: `📊 Update anime data via Admin Panel [${new Date().toISOString().split('T')[0]}]`,
-        content: Buffer.from(json).toString('base64'),
-        ...(sha ? { sha } : {})
-      });
-
-      // Auto-regenerate and push README.md
+      // Auto-regenerate and push README.md (with retry on 409)
       try {
         const { generateReadme } = require('./readme-generator');
         const readme = generateReadme(data);
-        const readmePath = 'README.md';
-        const existingReadme = await githubApi('GET', gh.token, gh.owner, gh.repo, readmePath);
-        const readmeSha = existingReadme.sha || null;
-
-        await githubApi('PUT', gh.token, gh.owner, gh.repo, readmePath, {
-          message: `📝 Auto-regenerate README [${new Date().toISOString().split('T')[0]}]`,
-          content: Buffer.from(readme).toString('base64'),
-          ...(readmeSha ? { sha: readmeSha } : {})
-        });
+        await githubPushWithRetry(gh.token, gh.owner, gh.repo, 'README.md', readme,
+          `📝 Auto-regenerate README [${new Date().toISOString().split('T')[0]}]`);
       } catch (readmeErr) {
         console.error('[data] README auto-push failed:', readmeErr.message);
       }

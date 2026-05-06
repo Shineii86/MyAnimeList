@@ -36,11 +36,17 @@ async function handleUpdate(id, body, res, gh) {
 
   // Sanitize inputs
   const updates = { ...body };
-  if (updates.title !== undefined) updates.title = (updates.title || '').trim();
+  if (updates.title !== undefined) {
+    updates.title = (updates.title || '').trim();
+    if (!updates.title) return res.status(400).json({ error: 'Title cannot be empty' });
+  }
   if (updates.score !== undefined) updates.score = updates.score ? Math.min(10, Math.max(0, parseFloat(updates.score))) : 0;
   if (updates.episodes !== undefined) updates.episodes = updates.episodes ? Math.max(0, parseInt(updates.episodes)) : 0;
   if (updates.type !== undefined && !['TV', 'Movie', 'OVA', 'ONA', 'Special'].includes(updates.type)) updates.type = 'TV';
   if (updates.status !== undefined && !['Completed', 'Watching', 'Plan to Watch', 'On Hold', 'Dropped'].includes(updates.status)) updates.status = 'Completed';
+  // Only allow known fields — prevent arbitrary data injection
+  const allowedFields = ['title', 'anilistUrl', 'anilistId', 'type', 'score', 'genres', 'episodes', 'status', 'notes', 'tags', 'coverImage'];
+  Object.keys(updates).forEach(key => { if (!allowedFields.includes(key)) delete updates[key]; });
 
   const updated = await updateAnime(id, updates, gh);
   if (!updated) return res.status(404).json({ error: 'Anime not found' });

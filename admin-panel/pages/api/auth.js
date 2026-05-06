@@ -1,10 +1,42 @@
 const { authenticate, createToken } = require('../../lib/auth');
 const { addEntry } = require('../../lib/activity-log');
 
+// Simple in-memory rate limiter for login attempts
+const loginAttempts = new Map(); // IP -> { count, firstAttempt }
+const MAX_ATTEMPTS = 5;
+const WINDOW_MS = 15 * 60 * 1000; // 15 minutes
+
+function checkRateLimit(ip) {
+  const now = Date.now();
+  const entry = loginAttempts.get(ip);
+  if (!entry) return true;
+  if (now - entry.firstAttempt > WINDOW_MS) {
+    loginAttempts.delete(ip);
+    return true;
+  }
+  return entry.count < MAX_ATTEMPTS;
+}
+
+function recordAttempt(ip) {
+  const now = Date.now();
+  const entry = loginAttempts.get(ip);
+  if (!entry || now - entry.firstAttempt > WINDOW_MS) {
+    loginAttempts.set(ip, { count: 1, firstAttempt: now });
+  } else {
+    entry.count++;
+  }
+}
+
 export default function handler(req, res) {
   try {
     if (req.method !== 'POST') {
       return res.status(405).json({ error: 'Method not allowed' });
+    }
+
+    const ip = req.headers['x-forwarded-for'] || req.socket?.remoteAddress || 'unknown';
+
+    if (!checkRateLimit(ip)) {
+      return res.status(429).json({ error: 'Too many login attempts. Try again in 15 minutes.' });
     }
 
     const { password } = req.body;
@@ -14,9 +46,13 @@ export default function handler(req, res) {
     }
 
     if (!authenticate(password)) {
+      recordAttempt(ip);
       addEntry({ action: 'login', target: 'Admin Panel', details: 'Failed login attempt' });
       return res.status(401).json({ error: 'Invalid password' });
     }
+
+    // Clear attempts on successful login
+    loginAttempts.delete(ip);
 
     const token = createToken();
     const isProduction = process.env.VERCEL || process.env.NODE_ENV === 'production';

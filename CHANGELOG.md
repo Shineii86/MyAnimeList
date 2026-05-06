@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Full Diagnostic Sweep: Security & Reliability Fixes
+
+### Fixed
+- **409 SHA conflict in `writeData()`** — `data.js` now uses `githubPushWithRetry()` with automatic SHA refresh on conflict (same bug as `github.js`)
+- **409 SHA conflict in `pushToGitHub()`** — `activity-log.js` now retries up to 3 times on SHA mismatch
+- **Timing attack on login** — `authenticate()` now uses `crypto.timingSafeEqual()` instead of `===`
+- **Brute-force login protection** — Rate limiter: 5 attempts per 15 minutes per IP, returns 429 on excess
+- **No input validation on update** — Update endpoint now rejects empty titles, caps title length at 500 chars, and strips unknown fields from the update payload
+- **Missing security headers** — `next.config.js` now sends `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, `Referrer-Policy`, and `X-XSS-Protection`
+- **`output: 'standalone'`** — Removed Docker-only config that's unnecessary for Vercel deployment
+- **Unused imports** — Cleaned up unused `apiFetch/apiGet/apiPut/apiDelete` imports in `anilist.js`
+- **`githubApi()` response format** — Now includes HTTP status code in response for proper error detection
+
 ## [2026-05-07] - Fix: GitHub Push 409 SHA Conflict
 
 ### Fixed

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import { SearchIcon, PlusIcon, StarIcon } from '../lib/icons';
-import { apiFetch, apiGet, apiPost, apiPut, apiDelete } from '../lib/api';
+import { apiPost } from '../lib/api';
 
 export default function AniListSearch({ showToast }) {
   const [query, setQuery] = useState('');

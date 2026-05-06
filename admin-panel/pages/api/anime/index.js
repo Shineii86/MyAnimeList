@@ -48,6 +48,7 @@ async function handlePost(req, res) {
   const { title, anilistUrl, anilistId, type, score, genres, episodes, status, notes, tags, coverImage } = req.body;
 
   if (!title || !title.trim()) return res.status(400).json({ error: 'Title is required' });
+  if (title.trim().length > 500) return res.status(400).json({ error: 'Title too long (max 500 chars)' });
 
   try {
     const gh = getGhFromReq(req);

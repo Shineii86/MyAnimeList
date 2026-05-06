@@ -38,61 +38,75 @@ function writeLog(entries) {
   }
 }
 
-// Push activity log to GitHub (fire-and-forget)
+// Push activity log to GitHub with retry on 409 SHA conflict
 function pushToGitHub(entries, gh) {
   if (!gh || !gh.token || !gh.owner || !gh.repo) return;
+  const MAX_RETRIES = 3;
 
   const json = JSON.stringify(entries.slice(-MAX_ENTRIES), null, 2);
 
-  // First get current SHA
-  const getOpts = {
-    hostname: 'api.github.com',
-    path: `/repos/${gh.owner}/${gh.repo}/contents/${LOG_PATH}`,
-    method: 'GET',
-    headers: {
-      'Authorization': `token ${gh.token}`,
-      'Accept': 'application/vnd.github.v3+json',
-      'User-Agent': 'MyAnimeList-Admin'
-    }
-  };
+  function attemptPush(attempt) {
+    // First get current SHA
+    const getOpts = {
+      hostname: 'api.github.com',
+      path: `/repos/${gh.owner}/${gh.repo}/contents/${LOG_PATH}`,
+      method: 'GET',
+      headers: {
+        'Authorization': `token ${gh.token}`,
+        'Accept': 'application/vnd.github.v3+json',
+        'User-Agent': 'MyAnimeList-Admin'
+      }
+    };
 
-  const getReq = https.request(getOpts, (res) => {
-    let body = '';
-    res.on('data', chunk => body += chunk);
-    res.on('end', () => {
-      let sha = null;
-      try { sha = JSON.parse(body).sha; } catch {}
+    const getReq = https.request(getOpts, (res) => {
+      let body = '';
+      res.on('data', chunk => body += chunk);
+      res.on('end', () => {
+        let sha = null;
+        try { sha = JSON.parse(body).sha; } catch {}
 
-      // Push updated file
-      const putData = JSON.stringify({
-        message: `📋 Update activity log [${new Date().toISOString().split('T')[0]}]`,
-        content: Buffer.from(json).toString('base64'),
-        ...(sha ? { sha } : {})
+        // Push updated file
+        const putData = JSON.stringify({
+          message: `📋 Update activity log [${new Date().toISOString().split('T')[0]}]`,
+          content: Buffer.from(json).toString('base64'),
+          ...(sha ? { sha } : {})
+        });
+
+        const putOpts = {
+          hostname: 'api.github.com',
+          path: `/repos/${gh.owner}/${gh.repo}/contents/${LOG_PATH}`,
+          method: 'PUT',
+          headers: {
+            'Authorization': `token ${gh.token}`,
+            'Accept': 'application/vnd.github.v3+json',
+            'Content-Type': 'application/json',
+            'User-Agent': 'MyAnimeList-Admin',
+            'Content-Length': Buffer.byteLength(putData)
+          }
+        };
+
+        const putReq = https.request(putOpts, (putRes) => {
+          let putBody = '';
+          putRes.on('data', chunk => putBody += chunk);
+          putRes.on('end', () => {
+            // 409 = SHA conflict — retry
+            if (putRes.statusCode === 409 && attempt < MAX_RETRIES - 1) {
+              attemptPush(attempt + 1);
+            }
+          });
+        });
+        putReq.on('error', () => {});
+        putReq.setTimeout(10000, () => putReq.destroy());
+        putReq.write(putData);
+        putReq.end();
       });
-
-      const putOpts = {
-        hostname: 'api.github.com',
-        path: `/repos/${gh.owner}/${gh.repo}/contents/${LOG_PATH}`,
-        method: 'PUT',
-        headers: {
-          'Authorization': `token ${gh.token}`,
-          'Accept': 'application/vnd.github.v3+json',
-          'Content-Type': 'application/json',
-          'User-Agent': 'MyAnimeList-Admin',
-          'Content-Length': Buffer.byteLength(putData)
-        }
-      };
-
-      const putReq = https.request(putOpts, () => {});
-      putReq.on('error', () => {});
-      putReq.setTimeout(10000, () => putReq.destroy());
-      putReq.write(putData);
-      putReq.end();
     });
-  });
-  getReq.on('error', () => {});
-  getReq.setTimeout(10000, () => getReq.destroy());
-  getReq.end();
+    getReq.on('error', () => {});
+    getReq.setTimeout(10000, () => getReq.destroy());
+    getReq.end();
+  }
+
+  attemptPush(0);
 }
 
 function addEntry({ action, target, details, user, gh }) {

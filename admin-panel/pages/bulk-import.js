@@ -31,7 +31,7 @@ export default function BulkImport({ showToast }) {
     
     for (const id of ids) {
       try {
-        const res = await fetch(`/api/anilist/search?id=${id}`);
+      const res = await apiFetch(`/api/anilist/search?id=${id}`);
         if (res.ok) {
           const data = await res.json();
           if (data.results?.[0]) {
@@ -67,7 +67,7 @@ export default function BulkImport({ showToast }) {
     if (!searchQuery.trim()) return;
     setLoading(true);
     try {
-      const res = await fetch(`/api/anilist/search?q=${encodeURIComponent(searchQuery)}`);
+      const res = await apiFetch(`/api/anilist/search?q=${encodeURIComponent(searchQuery)}`);
       if (res.ok) {
         const data = await res.json();
         setSearchResults(data.results || []);
