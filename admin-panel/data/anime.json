@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "258",
-    "totalEpisodes": "3,758+",
-    "moviesWatched": "17",
+    "totalAnime": "259",
+    "totalEpisodes": "3,759+",
+    "moviesWatched": "18",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 258,
+      "Completed": 259,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -3443,6 +3443,26 @@
       "tags": [],
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 13
+    },
+    {
+      "id": 13667,
+      "title": "Road to Ninja: Naruto the Movie",
+      "anilistUrl": "https://anilist.co/anime/13667",
+      "anilistId": 13667,
+      "type": "Movie",
+      "score": 7.4,
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "episodes": 1,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "R",
+      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx13667-gAKuIXI2avRq.jpg",
+      "addedAt": "2026-05-06T17:54:30.205Z",
+      "updatedAt": "2026-05-06T17:54:30.205Z"
     },
     {
       "id": 2030,
