@@ -118,5 +118,29 @@
     "target": "VercelEnvCheck_1778095580",
     "details": "TV • 8 • ",
     "user": "admin"
+  },
+  {
+    "id": "moug7k5qjfi8",
+    "timestamp": "2026-05-06T19:26:38.030Z",
+    "action": "login",
+    "target": "Admin Panel",
+    "details": "Successful login",
+    "user": "admin"
+  },
+  {
+    "id": "moug9x2zbq29",
+    "timestamp": "2026-05-06T19:28:28.091Z",
+    "action": "login",
+    "target": "Admin Panel",
+    "details": "Successful login",
+    "user": "admin"
+  },
+  {
+    "id": "moug9z807wjr",
+    "timestamp": "2026-05-06T19:28:30.864Z",
+    "action": "add",
+    "target": "Final Test",
+    "details": "TV • 8 • ",
+    "user": "admin"
   }
 ]
