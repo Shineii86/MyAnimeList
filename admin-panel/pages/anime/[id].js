@@ -55,15 +55,6 @@ export default function EditAnime({ showToast }) {
       const res = await apiPut(`/api/anime/${id}`, body);
       if (res.ok) {
         showToast?.('Anime updated successfully', 'success');
-        try {
-          const settings = JSON.parse(localStorage.getItem('mal_admin_settings') || '{}');
-          if (settings.autoPush && settings.githubToken) {
-            fetch('/api/push', {
-              method: 'POST', headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ action: 'push', github_token: settings.githubToken, owner: settings.owner || 'Shineii86', repo: settings.repo || 'MyAnimeList' })
-            }).catch(() => {});
-          }
-        } catch {}
         router.push('/anime');
       } else { showToast?.('Failed to update', 'error'); }
     } catch { showToast?.('Error updating anime', 'error'); } finally { setSaving(false); }

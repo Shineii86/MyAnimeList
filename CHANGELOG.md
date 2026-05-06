@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Diagnostic Sweep: Critical Fixes
+
+### Fixed
+- **Double push on edit** — `anime/[id].js` no longer fires redundant client-side push after `writeData()` already pushes
+- **Double push on add** — `anime/add.js` modal push now uses `apiPost()` with proper headers
+- **Missing GitHub headers on push** — All `fetch('/api/push')` calls replaced with `apiPost('/api/push')` which sends GitHub credentials from localStorage settings
+- **Bulk delete O(n) API calls** — Now batches all deletes locally, single `writeData()` call (2 API calls instead of 2n)
+- **No input validation** — Add/edit routes now validate: title non-empty, score clamped 0-10, episodes ≥ 0, type/status whitelisted
+- **Push page missing auth headers** — `push.js` now uses `apiPost()` instead of raw `fetch()`
+
+### Removed
+- Dead auto-push code from `anime/[id].js` (lines 58-66)
+- Redundant client-side push logic (server-side `writeData()` handles it)
+
+### Technical
+- `pages/anime/[id].js` — removed auto-push block, added input sanitization
+- `pages/anime/add.js` — `handlePushNow()` uses `apiPost()`
+- `pages/anime/index.js` — `handlePushNow()` uses `apiPost()`
+- `pages/push.js` — all fetch calls use `apiPost()`
+- `pages/api/anime/bulk-delete.js` — rewritten to batch deletes with single `writeData()`
+- `pages/api/anime/index.js` — input validation on POST
+- `pages/api/anime/[id].js` — input sanitization on PUT/PATCH
+
 ## [2026-05-07] - Added: The Beginning After the End
 
 ### Added

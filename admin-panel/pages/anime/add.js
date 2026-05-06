@@ -133,14 +133,11 @@ export default function AddAnime({ showToast }) {
     setPushing(true);
     try {
       const settings = JSON.parse(localStorage.getItem('mal_admin_settings') || '{}');
-      const token = settings.githubToken;
-      const owner = settings.owner || 'Shineii86';
-      const repo = settings.repo || 'MyAnimeList';
-
-      const res = await fetch('/api/push', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'push', github_token: token, owner, repo })
+      const res = await apiPost('/api/push', {
+        action: 'push',
+        github_token: settings.githubToken,
+        owner: settings.owner || 'Shineii86',
+        repo: settings.repo || 'MyAnimeList'
       });
       if (res.ok) {
         showToast?.('Pushed to GitHub!', 'success');

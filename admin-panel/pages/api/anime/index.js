@@ -47,16 +47,21 @@ async function handleGet(req, res) {
 async function handlePost(req, res) {
   const { title, anilistUrl, anilistId, type, score, genres, episodes, status, notes, tags, coverImage } = req.body;
 
-  if (!title) return res.status(400).json({ error: 'Title is required' });
+  if (!title || !title.trim()) return res.status(400).json({ error: 'Title is required' });
 
   try {
     const gh = getGhFromReq(req);
     const entry = await addAnime({
-      title, anilistUrl: anilistUrl || (anilistId ? `https://anilist.co/anime/${anilistId}` : ''),
+      title: title.trim(),
+      anilistUrl: anilistUrl || (anilistId ? `https://anilist.co/anime/${anilistId}` : ''),
       anilistId: anilistId ? parseInt(anilistId) : null,
-      type: type || 'TV', score: score || 0, genres: genres || [],
-      episodes: episodes || 0, status: status || 'Completed',
-      notes: notes || '', tags: tags || [], coverImage: coverImage || null
+      type: ['TV', 'Movie', 'OVA', 'ONA', 'Special'].includes(type) ? type : 'TV',
+      score: score ? Math.min(10, Math.max(0, parseFloat(score))) : 0,
+      genres: Array.isArray(genres) ? genres : [],
+      episodes: episodes ? Math.max(0, parseInt(episodes)) : 0,
+      status: ['Completed', 'Watching', 'Plan to Watch', 'On Hold', 'Dropped'].includes(status) ? status : 'Completed',
+      notes: notes || '', tags: Array.isArray(tags) ? tags : [],
+      coverImage: coverImage || null
     }, gh);
 
     addEntry({ action: 'add', target: title, details: `${type || 'TV'} • ${score || 0} • ${(genres || []).join(', ')}`, gh });

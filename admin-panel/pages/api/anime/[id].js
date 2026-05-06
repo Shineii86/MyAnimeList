@@ -33,7 +33,16 @@ async function handleGet(id, res, gh) {
 
 async function handleUpdate(id, body, res, gh) {
   const existing = await getAnimeById(id, gh);
-  const updated = await updateAnime(id, body, gh);
+
+  // Sanitize inputs
+  const updates = { ...body };
+  if (updates.title !== undefined) updates.title = (updates.title || '').trim();
+  if (updates.score !== undefined) updates.score = updates.score ? Math.min(10, Math.max(0, parseFloat(updates.score))) : 0;
+  if (updates.episodes !== undefined) updates.episodes = updates.episodes ? Math.max(0, parseInt(updates.episodes)) : 0;
+  if (updates.type !== undefined && !['TV', 'Movie', 'OVA', 'ONA', 'Special'].includes(updates.type)) updates.type = 'TV';
+  if (updates.status !== undefined && !['Completed', 'Watching', 'Plan to Watch', 'On Hold', 'Dropped'].includes(updates.status)) updates.status = 'Completed';
+
+  const updated = await updateAnime(id, updates, gh);
   if (!updated) return res.status(404).json({ error: 'Anime not found' });
 
   const changes = [];

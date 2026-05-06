@@ -1,4 +1,4 @@
-const { getAnimeById, deleteAnime, getGhFromReq } = require('../../../lib/data');
+const { readData, writeData, getGhFromReq } = require('../../../lib/data');
 const { requireAuth } = require('../../../lib/auth');
 const { addEntry } = require('../../../lib/activity-log');
 
@@ -11,35 +11,44 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'ids array is required' });
   }
 
-  const gh = getGhFromReq(req);
-  const results = { success: 0, failed: 0, titles: [] };
-
-  for (const id of ids) {
-    try {
-      const existing = await getAnimeById(id, gh);
-      const deleted = await deleteAnime(id, gh);
-      if (deleted) {
-        results.success++;
-        results.titles.push(existing?.title || `ID ${id}`);
-      } else {
-        results.failed++;
+  try {
+    const gh = getGhFromReq(req);
+    const data = await readData(gh);
+    const idSet = new Set(ids.map(Number));
+    const removed = [];
+    
+    data.anime = data.anime.filter(a => {
+      if (idSet.has(a.id)) {
+        removed.push(a.title);
+        return false;
       }
-    } catch {
-      results.failed++;
-    }
+      return true;
+    });
+
+    // Sort and update letters
+    data.anime.sort((a, b) => a.title.localeCompare(b.title));
+    data.anime.forEach(a => { a.letter = a.title.charAt(0).toUpperCase(); });
+
+    // Update stats
+    const { updateStats } = require('../../../lib/data');
+    updateStats(data);
+
+    // Single writeData call (pushes anime.json + README.md)
+    await writeData(data, gh);
+
+    addEntry({
+      action: 'delete',
+      target: `Bulk: ${removed.slice(0, 3).join(', ')}${removed.length > 3 ? ` +${removed.length - 3} more` : ''}`,
+      details: `Deleted ${removed.length} anime entries`,
+      gh
+    });
+
+    return res.status(200).json({
+      success: true,
+      message: `Deleted ${removed.length} anime`,
+      deleted: removed.length
+    });
+  } catch (err) {
+    return res.status(500).json({ error: err.message });
   }
-
-  addEntry({
-    action: 'delete',
-    target: `Bulk: ${results.titles.slice(0, 3).join(', ')}${results.titles.length > 3 ? ` +${results.titles.length - 3} more` : ''}`,
-    details: `Deleted ${results.success} anime entries`,
-    gh
-  });
-
-  return res.status(200).json({
-    success: true,
-    message: `Deleted ${results.success} anime`,
-    deleted: results.success,
-    failed: results.failed
-  });
 }

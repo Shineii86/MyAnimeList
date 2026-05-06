@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { NoteIcon, RocketIcon } from '../lib/icons';
+import { apiPost } from '../lib/api';
 
 export default function PushPage({ showToast }) {
   const [githubToken, setGithubToken] = useState('');
@@ -23,11 +24,7 @@ export default function PushPage({ showToast }) {
   async function handleGenerate() {
     setGenerating(true);
     try {
-      const res = await fetch('/api/push', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'generate' })
-      });
+      const res = await apiPost('/api/push', { action: 'generate' });
       const data = await res.json();
       if (res.ok) {
         showToast?.(data.message, 'success');
@@ -43,22 +40,13 @@ export default function PushPage({ showToast }) {
   }
 
   async function handlePush() {
-    // Token can come from the form or from environment variables (server-side fallback)
-    if (!githubToken.trim()) {
-      // Will try env var on the server side
-    }
-
     setPushing(true);
     try {
-      const res = await fetch('/api/push', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-          action: 'push',
-          github_token: githubToken,
-          owner,
-          repo
-        })
+      const res = await apiPost('/api/push', {
+        action: 'push',
+        github_token: githubToken || undefined,
+        owner,
+        repo
       });
       const data = await res.json();
       if (res.ok) {
