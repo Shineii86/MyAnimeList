@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Anime List: Covers, Bulk Actions, Stats & More
+
+### Added
+- **Cover images for 244/258 anime** — batch-fetched from AniList API; missing covers show a styled gradient placeholder with title initial letter
+- **Quick stats bar** — top of anime list shows Total, Completed, Watching, Plan to Watch, and Average Score at a glance
+- **Bulk select & batch delete** — checkboxes on each row/card + select-all in table view; bulk delete with confirmation modal showing all selected titles
+- **Export CSV** — download current filtered list as a CSV file (Title, Type, Score, Episodes, Status, Genres, URL)
+- **Quick Push button** — push to GitHub directly from the anime list page (top toolbar)
+- **Random Pick button** — jump to random picker from the list toolbar
+- **Grid view selection** — click any card to select it (visual checkbox overlay); selected cards get accent border
+
+### Fixed
+- **Grid view missing covers** — 244 out of 258 anime now display AniList cover art; remaining 14 show deterministic color gradient with title initial
+- **Table view missing covers** — same fallback with mini colored placeholder
+
+### Technical
+- Cover fetch script at `scripts/fetch-covers.py` — batch AniList GraphQL queries with rate limiting
+- `titleColor()` function generates deterministic HSL color from title string for consistent placeholders
+
 ## [2026-05-07] - Add Anime: Post-Add Confirmation Modal
 
 ### Added
