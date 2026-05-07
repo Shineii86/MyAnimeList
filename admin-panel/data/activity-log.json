@@ -70,5 +70,13 @@
     "target": "Tokyo Ravens",
     "details": "TV • 0 • Action, Fantasy, Romance",
     "user": "admin"
+  },
+  {
+    "id": "mov5rs8p3mqa",
+    "timestamp": "2026-05-07T07:22:12.025Z",
+    "action": "add",
+    "target": "Tomodachi Game",
+    "details": "TV • 0 • Suspense",
+    "user": "admin"
   }
 ]
