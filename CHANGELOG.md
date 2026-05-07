@@ -16,3 +16,4 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - Removed "+" from all statistics — now showing exact numbers
 - Corrected Total Episodes from 1,240 to 7,183 (real count from 511 completed anime)
+- Corrected Days Watched from 3.5 to 120 (7,183 episodes × ~24 min each)
