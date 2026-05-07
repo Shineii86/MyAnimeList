@@ -998,5 +998,21 @@
     "target": "Gachiakuta",
     "details": "TV • 0 • Action, Fantasy",
     "user": "admin"
+  },
+  {
+    "id": "mov4x3y802ek",
+    "timestamp": "2026-05-07T06:58:20.864Z",
+    "action": "add",
+    "target": "Gall Force 1: Eternal Story",
+    "details": "TV • 0 • Adventure, Sci-Fi",
+    "user": "admin"
+  },
+  {
+    "id": "mov4ynv1f6lz",
+    "timestamp": "2026-05-07T06:59:33.325Z",
+    "action": "add",
+    "target": "Gall Force 2: Destruction",
+    "details": "TV • 0 • Action, Sci-Fi",
+    "user": "admin"
   }
 ]
