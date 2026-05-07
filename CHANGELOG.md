@@ -2,28 +2,6 @@
 
 All notable changes to this project will be documented in this file.
 
-## [2026-05-07] - Data Cleanup: Remove Test Entries & Deduplicate
-
-### Removed
-- **Test entry: "Bulk Final 1"** (id=60001) — leftover from bulk import testing
-- **Test entry: "Vercel Path Test"** (id=55555) — leftover from Vercel deployment testing
-- **9 duplicate entries** — Same anime listed under both English and Romaji titles:
-  - Shingeki no Kyojin → kept "Attack on Titan" (anilistId: 16498)
-  - Tengen Toppa Gurren Lagann → kept "Gurren Lagann" (anilistId: 2001)
-  - Land of the Lustrous → kept "Houseki no Kuni" (anilistId: 98707)
-  - Serial Experiments Lain → kept "Lain Serial Experiments" (anilistId: 339)
-  - Puella Magi Madoka Magica → kept "Madoka Magica" (anilistId: 9756)
-  - Oregairu → kept "My Teen Romantic Comedy SNAFU" (anilistId: 14813)
-  - Yakusoku no Neverland → kept "Promised Neverland" (anilistId: 101759)
-  - Zankyou no Terror → kept "Terror in Resonance" (anilistId: 20661)
-  - The Last: Naruto the Movie (duplicate) → kept single entry (anilistId: 16870)
-
-### Updated
-- **Anime count**: 268 → 257 (removed 2 test + 9 duplicates)
-- **Total episodes**: 4,004 → 3,940
-- **README.md regenerated** with corrected stats and cleaned anime list
-- **anime.json metadata** updated to reflect accurate counts
-
 ## [2026-05-07] - Fix: Vercel Data Persistence
 
 ### Fixed
