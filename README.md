@@ -3,7 +3,7 @@
 <img src="https://raw.githubusercontent.com/Shineii86/MyAnimeList/refs/heads/main/assets/image.png" alt="LOGO" width="200" height="200"/>
 </a>
 
-![Anime Count](https://img.shields.io/badge/Anime%20Watched-268-blueviolet?style=for-the-badge)
+![Anime Count](https://img.shields.io/badge/Anime%20Watched-257-blueviolet?style=for-the-badge)
 ![Days Watched](https://img.shields.io/badge/Days%20Watched-3.5+-important?style=for-the-badge)
 [![GitHub Stars](https://img.shields.io/github/stars/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/fork)
@@ -12,7 +12,7 @@
 
 </div> 
 
-> I began my anime-watching journey in **2020**, and since then I have watched and completed over **268 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
+> I began my anime-watching journey in **2020**, and since then I have watched and completed over **257 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
 
 
 ## 📋 Table of Contents
@@ -27,10 +27,10 @@
 
 | Statistic | Value |
 |-----------|-------|
-| Total Anime | 268 |
-| Total Episodes | 4,004 |
-| TV Shows | 241 |
-| Movies Watched | 20 |
+| Total Anime | 257 |
+| Total Episodes | 3,940 |
+| TV Shows | 231 |
+| Movies Watched | 19 |
 | OVAs/Specials | 4 |
 | ONA | 3 |
 | Average Score | 7.9 |
@@ -72,7 +72,6 @@ These are my personal 10/10 masterpieces:
 - [**Blue Lock**](https://anilist.co/anime/139893) - TV ⭐ 8.2 | 🏐 Sports, 🧠 Psychological
 - [**Bocchi the Rock!**](https://anilist.co/anime/144802) - TV ⭐ 8.5 | 🎵 Music, 😄 Comedy
 - [**Btooom!**](https://anilist.co/anime/13599) - TV ⭐ 7.2 | ⚔️ Action, 🧠 Psychological
-- [**Bulk Final 1**](https://anilist.co/anime/60001) - TV ⭐ 7 | 
 
 ### C
 - [**Carole & Tuesday**](https://anilist.co/anime/104578) - TV ⭐ 8 | 🎵 Music, 🔬 Sci-Fi
@@ -192,7 +191,6 @@ These are my personal 10/10 masterpieces:
 
 ### L
 - [**Lain Serial Experiments**](https://anilist.co/anime/339) - TV ⭐ 7.6 | 🧠 Psychological, 🔬 Sci-Fi
-- [**Land of the Lustrous**](https://anilist.co/anime/98707) - TV ⭐ 8.4 | ⚔️ Action, 🧙 Fantasy
 - [**Legend of the Galactic Heroes**](https://anilist.co/anime/820) - OVA ⭐ 9.1 | 🔬 Sci-Fi, 💔 Drama
 - [**Little Witch Academia**](https://anilist.co/anime/14349) - Movie ⭐ 7.8 | 🧙 Fantasy, 😄 Comedy
 - [**Log Horizon**](https://anilist.co/anime/17265) - TV ⭐ 7.9 | 🗡️ Adventure, 🧙 Fantasy
@@ -233,7 +231,6 @@ These are my personal 10/10 masterpieces:
 - [**One Punch Man**](https://anilist.co/anime/21087) - TV ⭐ 8.5 | ⚔️ Action, 😄 Comedy
 - [**Orange**](https://anilist.co/anime/21557) - TV ⭐ 7.9 | 💕 Romance, 🔬 Sci-Fi
 - [**Ore Monogatari!!**](https://anilist.co/anime/20946) - TV ⭐ 8 | 💕 Romance, 😄 Comedy
-- [**Oregairu**](https://anilist.co/anime/14813) - TV ⭐ 8.1 | 😄 Comedy, 💕 Romance
 - [**Oshi no Ko**](https://anilist.co/anime/145064) - TV ⭐ 9 | 💔 Drama, 🔥 Supernatural
 - [**Ouran High School Host Club**](https://anilist.co/anime/853) - TV ⭐ 8.3 | 😄 Comedy, 💕 Romance
 - [**Outlaw Star**](https://anilist.co/anime/525) - TV ⭐ 7.6 | ⚔️ Action, 🔬 Sci-Fi
@@ -249,7 +246,6 @@ These are my personal 10/10 masterpieces:
 - [**Princess Mononoke**](https://anilist.co/anime/164) - Movie ⭐ 8.8 | 🗡️ Adventure, 🧙 Fantasy
 - [**Promised Neverland**](https://anilist.co/anime/101759) - TV ⭐ 8.5 | 🧠 Psychological, 🎭 Horror
 - [**Psycho-Pass**](https://anilist.co/anime/13601) - TV ⭐ 8.3 | 🔬 Sci-Fi, 🧠 Psychological
-- [**Puella Magi Madoka Magica**](https://anilist.co/anime/9756) - TV ⭐ 8.4 | 🧙 Fantasy, 🧠 Psychological
 
 ### Q
 - [**Q Transformers: Return of the Mystery of Convoy**](https://anilist.co/anime/900169) - Movie ⭐ 5.5 | 🤖 Mecha, 😄 Comedy
@@ -273,9 +269,7 @@ These are my personal 10/10 masterpieces:
 
 ### S
 - [**Samurai Champloo**](https://anilist.co/anime/205) - TV ⭐ 8.5 | ⚔️ Action, 🗡️ Adventure
-- [**Serial Experiments Lain**](https://anilist.co/anime/339) - TV ⭐ 7.6 | 🧠 Psychological, 🔬 Sci-Fi
 - [**Shimoneta**](https://anilist.co/anime/20910) - TV ⭐ 7.2 | 😄 Comedy, 😈 Ecchi
-- [**Shingeki no Kyojin**](https://anilist.co/anime/16498) - TV ⭐ 10 | ⚔️ Action, 💔 Drama
 - [**Shirobako**](https://anilist.co/anime/20812) - TV ⭐ 8.1 | 😄 Comedy, 💔 Drama
 - [**Shouwa Genroku Rakugo Shinjuu**](https://anilist.co/anime/20972) - TV ⭐ 8.7 | 💔 Drama, 📜 Historical
 - [**Soul Eater**](https://anilist.co/anime/3588) - TV ⭐ 7.7 | ⚔️ Action, 😄 Comedy
@@ -284,13 +278,11 @@ These are my personal 10/10 masterpieces:
 - [**Sword Art Online**](https://anilist.co/anime/11757) - TV ⭐ 7.2 | ⚔️ Action, 💕 Romance
 
 ### T
-- [**Tengen Toppa Gurren Lagann**](https://anilist.co/anime/2001) - TV ⭐ 8.6 | 🤖 Mecha, ⚔️ Action
 - [**Terror in Resonance**](https://anilist.co/anime/20661) - TV ⭐ 7.7 | 🧠 Psychological, 🎭 Thriller
 - [**That Time I Got Reincarnated as a Slime**](https://anilist.co/anime/101280) - TV ⭐ 8 | ⚔️ Action, 🧙 Fantasy
 - [**The Beginning After the End**](https://anilist.co/anime/144176) - TV ⭐ 0 | ⚔️ Action, 🗡️ Adventure, 🧙 Fantasy
 - [**The Beginning After the End Season 2**](https://anilist.co/anime/169822) - TV ⭐ 0 | ⚔️ Action, 🗡️ Adventure, 🧙 Fantasy
 - [**The Disastrous Life of Saiki K.**](https://anilist.co/anime/112625) - ONA ⭐ 8.3 | 😄 Comedy, 🔥 Supernatural
-- [**The Last: Naruto the Movie**](https://anilist.co/anime/16870) - Movie ⭐ 7.6 | ⚔️ Action, 💕 Romance
 - [**The Last: Naruto the Movie**](https://anilist.co/anime/16870) - Movie ⭐ 7.6 | ⚔️ Action, 💕 Romance
 - [**The Melancholy of Haruhi Suzumiya**](https://anilist.co/anime/849) - TV ⭐ 7.9 | 😄 Comedy, 🕰️ Mystery
 - [**The Rising of the Shield Hero**](https://anilist.co/anime/99263) - TV ⭐ 7.5 | ⚔️ Action, 🧙 Fantasy
@@ -318,7 +310,6 @@ These are my personal 10/10 masterpieces:
 - [**Vampire Knight**](https://anilist.co/anime/3750) - TV ⭐ 6.7 | 💕 Romance, 🔥 Supernatural
 - [**Vandread**](https://anilist.co/anime/235) - TV ⭐ 7 | 🤖 Mecha, 💕 Romance
 - [**Vatican Miracle Examiner**](https://anilist.co/anime/97855) - TV ⭐ 5.8 | 🕰️ Mystery, 🔥 Supernatural
-- [**Vercel Path Test**](https://anilist.co/anime/55555) - TV ⭐ 8 | 
 - [**Vexations of a Shut-In Vampire Princess**](https://anilist.co/anime/159808) - TV ⭐ 6.2 | 😄 Comedy, 🧙 Fantasy
 - [**Vinland Saga**](https://anilist.co/anime/101348) - TV ⭐ 8.7 | ⚔️ Action, 💔 Drama
 - [**Violet Evergarden**](https://anilist.co/anime/21827) - TV ⭐ 8.7 | 💔 Drama, 😃 Slice of Life
@@ -345,7 +336,6 @@ These are my personal 10/10 masterpieces:
 - [**XXXHOLiC**](https://anilist.co/anime/465) - TV ⭐ 7.6 | 🧙 Fantasy, 🕰️ Mystery
 
 ### Y
-- [**Yakusoku no Neverland**](https://anilist.co/anime/101759) - TV ⭐ 8.5 | 🧠 Psychological, 🎭 Horror
 - [**Yamada-kun and the Seven Witches**](https://anilist.co/anime/900248) - TV ⭐ 7.5 | 😄 Comedy, 🔥 Supernatural
 - [**Yona of the Dawn**](https://anilist.co/anime/20770) - TV ⭐ 8 | 🗡️ Adventure, 🧙 Fantasy
 - [**Youjo Senki**](https://anilist.co/anime/21613) - TV ⭐ 7.8 | ⚔️ Action, 🧙 Fantasy
@@ -358,7 +348,6 @@ These are my personal 10/10 masterpieces:
 
 ### Z
 - [**Z/X Ignition**](https://anilist.co/anime/20486) - TV ⭐ 5.5 | ⚔️ Action, 🧙 Fantasy
-- [**Zankyou no Terror**](https://anilist.co/anime/20661) - TV ⭐ 8 | 🧠 Psychological, 🎭 Thriller
 - [**Zatch Bell!**](https://anilist.co/anime/1498) - TV ⭐ 7.3 | ⚔️ Action, 😄 Comedy
 - [**Zetman**](https://anilist.co/anime/11785) - TV ⭐ 6.5 | ⚔️ Action, 🎭 Horror
 - [**Zetsuen no Tempest**](https://anilist.co/anime/14075) - TV ⭐ 7.7 | 🧠 Psychological, 🧙 Fantasy
