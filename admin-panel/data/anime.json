@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "268",
-    "totalEpisodes": "4,004+",
+    "totalAnime": "269",
+    "totalEpisodes": "4,017+",
     "moviesWatched": "20",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 268,
+      "Completed": 269,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -613,6 +613,27 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 0,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx98659-WNyPLIZDpGGY.jpg"
+    },
+    {
+      "id": 145545,
+      "title": "Classroom of the Elite Season 2",
+      "anilistUrl": "https://anilist.co/anime/145545",
+      "anilistId": 145545,
+      "type": "TV",
+      "score": 7.9,
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Psychological"
+      ],
+      "episodes": 13,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "C",
+      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx145545-DGl3LVvFlnHi.png",
+      "addedAt": "2026-05-07T05:25:59.067Z",
+      "updatedAt": "2026-05-07T05:25:59.067Z"
     },
     {
       "id": 178869,
