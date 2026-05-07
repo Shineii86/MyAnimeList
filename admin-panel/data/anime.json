@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "279",
-    "totalEpisodes": "4,122+",
+    "totalAnime": "280",
+    "totalEpisodes": "4,134+",
     "moviesWatched": "21",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 279,
+      "Completed": 280,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -1818,6 +1818,27 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 75,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx263-ivVyn9xAgwSZ.png"
+    },
+    {
+      "id": 1778137199639,
+      "title": "Headhunted to Another World: From Salaryman to Big Four!",
+      "anilistUrl": "https://anilist.co/anime/null",
+      "anilistId": null,
+      "type": "TV",
+      "score": 0,
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Fantasy"
+      ],
+      "episodes": 12,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "H",
+      "coverImage": null,
+      "addedAt": "2026-05-07T06:59:59.639Z",
+      "updatedAt": "2026-05-07T06:59:59.639Z"
     },
     {
       "id": 185262,
