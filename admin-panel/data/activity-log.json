@@ -54,5 +54,13 @@
     "target": "Tokko",
     "details": "TV • 0 • Action, Horror, Mystery, Supernatural",
     "user": "admin"
+  },
+  {
+    "id": "mov5rp334y1p",
+    "timestamp": "2026-05-07T07:22:07.935Z",
+    "action": "add",
+    "target": "Tokyo Ghoul",
+    "details": "TV • 0 • Action, Fantasy, Horror, Suspense",
+    "user": "admin"
   }
 ]
