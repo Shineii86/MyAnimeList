@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "276",
-    "totalEpisodes": "4,096+",
+    "totalAnime": "277",
+    "totalEpisodes": "4,109+",
     "moviesWatched": "21",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 276,
+      "Completed": 277,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -302,6 +302,26 @@
       "updatedAt": "2026-05-06T15:26:54.150Z",
       "episodes": 12,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11111-gvvE5bBYsyFo.png"
+    },
+    {
+      "id": 178433,
+      "title": "Apocalypse Bringer Mynoghra: World Conquest Starts with the Civilization of Ruin",
+      "anilistUrl": "https://anilist.co/anime/178433",
+      "anilistId": 178433,
+      "type": "TV",
+      "score": 0,
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "episodes": 13,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "A",
+      "coverImage": null,
+      "addedAt": "2026-05-07T06:54:51.711Z",
+      "updatedAt": "2026-05-07T06:54:51.711Z"
     },
     {
       "id": 20755,
