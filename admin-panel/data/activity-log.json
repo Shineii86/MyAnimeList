@@ -1918,5 +1918,13 @@
     "target": "My Hero Academia Season 7",
     "details": "TV • 0 • Action",
     "user": "admin"
+  },
+  {
+    "id": "mov5274v7n5i",
+    "timestamp": "2026-05-07T07:02:18.271Z",
+    "action": "add",
+    "target": "My Home Hero",
+    "details": "TV • 0 • Drama, Suspense",
+    "user": "admin"
   }
 ]
