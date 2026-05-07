@@ -142,5 +142,13 @@
     "target": "Avenger",
     "details": "TV • 0 • Adventure, Fantasy, Sci-Fi",
     "user": "admin"
+  },
+  {
+    "id": "mov4tfb1gibe",
+    "timestamp": "2026-05-07T06:55:28.957Z",
+    "action": "add",
+    "target": "Ayakashi: Samurai Horror Tales",
+    "details": "TV • 0 • Horror, Mystery, Supernatural, Suspense",
+    "user": "admin"
   }
 ]
