@@ -1166,5 +1166,21 @@
     "target": "Guyver: Out of Control",
     "details": "TV • 0 • Action, Horror, Sci-Fi",
     "user": "admin"
+  },
+  {
+    "id": "mov4z7qivk7l",
+    "timestamp": "2026-05-07T06:59:59.082Z",
+    "action": "add",
+    "target": "Haikyu!! Movie: The Dumpster Battle",
+    "details": "TV • 0 • Sports",
+    "user": "admin"
+  },
+  {
+    "id": "mov4z9f3669x",
+    "timestamp": "2026-05-07T07:00:01.263Z",
+    "action": "add",
+    "target": "Headhunted to Another World: From Salaryman to Big Four!",
+    "details": "TV • 0 • Adventure, Comedy, Fantasy",
+    "user": "admin"
   }
 ]
