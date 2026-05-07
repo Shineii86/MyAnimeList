@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "290",
-    "totalEpisodes": "4,222+",
+    "totalAnime": "291",
+    "totalEpisodes": "4,234+",
     "moviesWatched": "21",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 290,
+      "Completed": 291,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -4652,6 +4652,26 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 12,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx186052-zq8h0Qo0O0sP.jpg"
+    },
+    {
+      "id": 1778138513071,
+      "title": "The Weakest Tamer Began a Journey to Pick Up Trash",
+      "anilistUrl": "https://anilist.co/anime/null",
+      "anilistId": null,
+      "type": "TV",
+      "score": 0,
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "episodes": 12,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "T",
+      "coverImage": null,
+      "addedAt": "2026-05-07T07:21:53.071Z",
+      "updatedAt": "2026-05-07T07:21:53.071Z"
     },
     {
       "id": 20687,
