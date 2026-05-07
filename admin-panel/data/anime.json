@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "280",
-    "totalEpisodes": "4,134+",
+    "totalAnime": "281",
+    "totalEpisodes": "4,146+",
     "moviesWatched": "21",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 280,
+      "Completed": 281,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -1881,6 +1881,27 @@
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx128893-Gc2t8b8M0mVu.jpg",
       "addedAt": "2026-05-06T18:48:14.381Z",
       "updatedAt": "2026-05-06T18:48:14.381Z"
+    },
+    {
+      "id": 1778137204024,
+      "title": "Hell's Paradise Season 2",
+      "anilistUrl": "https://anilist.co/anime/null",
+      "anilistId": null,
+      "type": "TV",
+      "score": 0,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Supernatural"
+      ],
+      "episodes": 12,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "H",
+      "coverImage": null,
+      "addedAt": "2026-05-07T07:00:04.024Z",
+      "updatedAt": "2026-05-07T07:00:04.024Z"
     },
     {
       "id": 777,
