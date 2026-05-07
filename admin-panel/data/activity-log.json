@@ -854,5 +854,13 @@
     "target": "Ellcia",
     "details": "TV • 0 • Adventure, Fantasy",
     "user": "admin"
+  },
+  {
+    "id": "mov4walddngr",
+    "timestamp": "2026-05-07T06:57:42.817Z",
+    "action": "add",
+    "target": "Escaflowne: A Girl in Gaea",
+    "details": "TV • 0 • Adventure, Fantasy, Romance",
+    "user": "admin"
   }
 ]
