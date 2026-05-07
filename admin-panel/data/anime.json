@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "281",
-    "totalEpisodes": "4,146+",
+    "totalAnime": "282",
+    "totalEpisodes": "4,147+",
     "moviesWatched": "21",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 281,
+      "Completed": 282,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -2741,6 +2741,27 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 110,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx820-x5dNLNFeKb8B.png"
+    },
+    {
+      "id": 1778137285008,
+      "title": "Like the Clouds, Like the Wind",
+      "anilistUrl": "https://anilist.co/anime/null",
+      "anilistId": null,
+      "type": "TV",
+      "score": 0,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Romance"
+      ],
+      "episodes": 1,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "L",
+      "coverImage": null,
+      "addedAt": "2026-05-07T07:01:25.008Z",
+      "updatedAt": "2026-05-07T07:01:25.008Z"
     },
     {
       "id": 21507,
