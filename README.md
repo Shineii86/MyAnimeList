@@ -3,7 +3,7 @@
 <img src="https://raw.githubusercontent.com/Shineii86/MyAnimeList/refs/heads/main/assets/image.png" alt="LOGO" width="200" height="200"/>
 </a>
 
-![Anime Count](https://img.shields.io/badge/Anime%20Watched-100+-blueviolet?style=for-the-badge)
+![Anime Count](https://img.shields.io/badge/Anime%20Watched-511+-blueviolet?style=for-the-badge)
 ![Days Watched](https://img.shields.io/badge/Days%20Watched-3.5+-important?style=for-the-badge)
 [![GitHub Stars](https://img.shields.io/github/stars/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/fork)
@@ -12,26 +12,26 @@
 
 </div> 
 
-> I began my anime-watching journey in **2020**, and since then I have watched and completed over **100+ Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I’ve experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
+> I began my anime-watching journey in **2020**, and since then I have watched and completed over **511+ Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
 
 
 ## 📋 Table of Contents
 - [📊 Statistics](#-statistics)
 - [🏆 Top Recommendations](#-top-recommendations)
 - [📺 Complete Anime List](#-complete-anime-list)
-- [🤝 Recommendations](#-recommendations-welcome)
-- [📝 License](#-license)
+- [🤝 Recommendations](#recommendations-welcome)
+- [📝 License](#license)
 
 ## 📊 Statistics
 
 | Statistic | Value |
 |-----------|-------|
-| Total Anime | 100+ |
+| Total Anime | 511+ |
 | Total Episodes | 1,240+ |
-| Movies Watched | 10+ |
-| OVAs/Specials | 5+ |
+| Movies Watched | 74+ |
+| OVAs/Specials | 69+ |
 | Average Score | 8.2 |
-| Completion Rate | 87% |
+| Completion Rate | 99% |
 
 ## 🏆 Top Recommendations
 
@@ -45,316 +45,571 @@ These are my personal 10/10 masterpieces:
 
 ## 📺 Complete Anime List (A-Z)
 
+### #
+- [**#Compass2.0: Animation Project**](https://anilist.co/anime/158287)
+- [**.hack//Intermezzo**](https://anilist.co/anime/1143)
+- [**.hack//Legend of The Twilight**](https://anilist.co/anime/298)
+- [**.hack//Liminality**](https://anilist.co/anime/299)
+- [**.hack//Roots**](https://anilist.co/anime/873)
+- [**.hack//Sign**](https://anilist.co/anime/48)
+- [**.hack//Unison**](https://anilist.co/anime/1487)
+- [**2.5 Dimensional Seduction**](https://anilist.co/anime/158559)
+- [**86 Eighty-Six**](https://anilist.co/anime/116589)
+- [**86 Eighty-Six Part 2**](https://anilist.co/anime/131586)
+- [**[Oshi No Ko]**](https://anilist.co/anime/150672)
+- [**[Oshi No Ko] Season 2**](https://anilist.co/anime/166531)
+
 ### A
-- [**A Silent Voice**](https://anilist.co/anime/20954) - Movie ⭐ 9.5 | 💔 Drama
-- [**Attack on Titan**](https://anilist.co/anime/16498) - TV ⭐ 10 | 🔥 Action, Drama
-- [**Another**](https://anilist.co/anime/11111) - TV ⭐ 7.5 | 🎭 Horror, Mystery
-- [**Assassination Classroom**](https://anilist.co/anime/20755) - TV ⭐ 8.5 | 🎓 Comedy, Action
-- [**Anohana: The Flower We Saw That Day**](https://anilist.co/anime/10165) - TV ⭐ 8.5 | 💔 Drama, Supernatural
-- [**A Place Further Than The Universe**](https://anilist.co/anime/100876) - TV ⭐ 8.8 | 🗡️ Adventure, Comedy
-- [**Akira**](https://anilist.co/anime/47) - Movie ⭐ 8.3 | 🔬 Sci-Fi, Action
-- [**Angel Beats!**](https://anilist.co/anime/6547) - TV ⭐ 8.0 | 💔 Drama, Action
-- [**Akame ga Kill!**](https://anilist.co/anime/20787) - TV ⭐ 7.5 | ⚔️ Action, Fantasy
-- [**A Certain Scientific Railgun**](https://anilist.co/anime/6213) - TV ⭐ 8.2 | 🔬 Sci-Fi, Action
-- [**Alderamin on the Sky**](https://anilist.co/anime/21410) - TV ⭐ 8.6 | ⚔️ Action, Adventure
+- [**A Gatherer's Adventure in Isekai**](https://anilist.co/anime/187663)
+- [**A Journey Through Another World: Raising Kids While Adventuring**](https://anilist.co/anime/171031)
+- [**A Nobody's Way Up to an Exploration Hero**](https://anilist.co/anime/172416)
+- [**A Returner's Magic Should Be Special**](https://anilist.co/anime/163142)
+- [**A Wild Last Boss Appeared!**](https://anilist.co/anime/180523)
+- [**A Wind Named Amnesia**](https://anilist.co/anime/1793)
+- [**Accel World**](https://anilist.co/anime/11759)
+- [**AD Police Files**](https://anilist.co/anime/1346)
+- [**Agent AIKa**](https://anilist.co/anime/366)
+- [**Akashic Records of Bastard Magic Instructor**](https://anilist.co/anime/21700)
+- [**Akira**](https://anilist.co/anime/47)
+- [**Aldnoah.Zero Part 2**](https://anilist.co/anime/20853)
+- [**Alya Sometimes Hides Her Feelings in Russian**](https://anilist.co/anime/162804)
+- [**Am I Actually the Strongest?**](https://anilist.co/anime/154391)
+- [**AMAIM Warrior at the Borderline**](https://anilist.co/anime/131005)
+- [**Amon: Apocalypse of Devilman**](https://anilist.co/anime/2356)
+- [**An Archdemon's Dilemma: How to Love Your Elf Bride**](https://anilist.co/anime/156023)
+- [**Angel Cop**](https://anilist.co/anime/1351)
+- [**Anne of Green Gables**](https://anilist.co/anime/283)
+- [**Aoashi**](https://anilist.co/anime/134732)
+- [**Apocalypse Bringer Mynoghra: World Conquest Starts with the Civilization of Ruin**](https://anilist.co/anime/178433)
+- [**Appleseed**](https://anilist.co/anime/54)
+- [**Aquarion**](https://anilist.co/anime/478)
+- [**Arifureta: From Commonplace to World's Strongest**](https://anilist.co/anime/100668)
+- [**Arifureta: From Commonplace to World's Strongest Season 2**](https://anilist.co/anime/112323)
+- [**Arifureta: From Commonplace to World's Strongest Season 3**](https://anilist.co/anime/154473)
+- [**As a Reincarnated Aristocrat, I'll Use My Appraisal Skill to Rise in the World**](https://anilist.co/anime/164702)
+- [**As a Reincarnated Aristocrat, I'll Use My Appraisal Skill to Rise in the World Season 2**](https://anilist.co/anime/178434)
+- [**Ascendance of a Bookworm**](https://anilist.co/anime/108268)
+- [**Ascendance of a Bookworm Season 2**](https://anilist.co/anime/113693)
+- [**Ascendance of a Bookworm Season 3**](https://anilist.co/anime/121176)
+- [**Assassination Classroom Second Season**](https://anilist.co/anime/21170)
+- [**Assassins Pride**](https://anilist.co/anime/104722)
+- [**Astro Boy (1980)**](https://anilist.co/anime/3044)
+- [**Attack on Titan**](https://anilist.co/anime/16498)
+- [**Attack on Titan: Junior High**](https://anilist.co/anime/21281)
+- [**Avenger**](https://anilist.co/anime/56)
+- [**Ayakashi: Samurai Horror Tales**](https://anilist.co/anime/586)
 
 ### B
-- [**Bakemonogatari**](https://anilist.co/anime/5081) - TV ⭐ 8.5 | 🧠 Psychological, Supernatural
-- [**Berserk**](https://anilist.co/anime/33) - TV ⭐ 8.0 | 🗡️ Adventure, Horror
-- [**Bleach**](https://anilist.co/anime/269) - TV ⭐ 7.8 | ⚔️ Action, Supernatural
-- [**Blue Lock**](https://anilist.co/anime/139893) - TV ⭐ 8.2 | ⚽ Sports, Psychological
-- [**Black Clover**](https://anilist.co/anime/97940) - TV ⭐ 7.5 | ⚔️ Action, Fantasy
-- [**Bocchi the Rock!**](https://anilist.co/anime/144802) - TV ⭐ 8.5 | 🎵 Music, Comedy
-- [**Banana Fish**](https://anilist.co/anime/21473) - TV ⭐ 8.7 | 🔥 Action, Drama
-- [**Beastars**](https://anilist.co/anime/103897) - TV ⭐ 7.9 | 🎭 Drama, Psychological
-- [**Blue Exorcist**](https://anilist.co/anime/99147) - TV ⭐ 7.5 | ⚔️ Action, Supernatural
-- [**Btooom!**](https://anilist.co/anime/13599) - TV ⭐ 7.2 | 🔥 Action, Psychological
+- [**Banished From The Hero's Party, I Decided To Live A Quiet Life In The Countryside Season 2**](https://anilist.co/anime/156131)
+- [**Barakamon**](https://anilist.co/anime/20722)
+- [**Bastard‼ Heavy Metal, Dark Fantasy Part 2**](https://anilist.co/anime/159926)
+- [**Battle Angel Alita**](https://anilist.co/anime/1016)
+- [**Berserk**](https://anilist.co/anime/33)
+- [**Berserk of Gluttony**](https://anilist.co/anime/156039)
+- [**Bio Hunter**](https://anilist.co/anime/1269)
+- [**Black Clover**](https://anilist.co/anime/97940)
+- [**Black Magic M-66**](https://anilist.co/anime/1270)
+- [**Black Summoner**](https://anilist.co/anime/145260)
+- [**Blade of the Phantom Master**](https://anilist.co/anime/884)
+- [**Blood: The Last Vampire**](https://anilist.co/anime/405)
+- [**Blue Lock Season 2**](https://anilist.co/anime/163146)
+- [**Blue Lock: Episode Nagi**](https://anilist.co/anime/163147)
+- [**Blue Miburo**](https://anilist.co/anime/169258)
+- [**Blue Submarine No. 6**](https://anilist.co/anime/1051)
+- [**Bogus Skill <<Fruitmaster>>: About That Time I Became Able to Eat Unlimited Numbers of Skill Fruits (That Kill You)**](https://anilist.co/anime/178100)
+- [**Bottom-Tier Character Tomozaki 2nd Stage**](https://anilist.co/anime/143866)
+- [**Brave Story**](https://anilist.co/anime/1681)
+- [**Bride of Deimos**](https://anilist.co/anime/5918)
+- [**Bubble**](https://anilist.co/anime/142455)
+- [**Bubblegum Crash**](https://anilist.co/anime/1348)
+- [**By the Grace of the Gods**](https://anilist.co/anime/115740)
+- [**By the Grace of the Gods 2**](https://anilist.co/anime/135102)
+- [**Bye Bye, Earth**](https://anilist.co/anime/157371)
 
 ### C
-- [**Code Geass**](https://anilist.co/anime/1575) - TV ⭐ 9.0 | 🤖 Mecha, Psychological
-- [**Clannad: After Story**](https://anilist.co/anime/4181) - TV ⭐ 9.1 | 💔 Drama, Romance
-- [**Chainsaw Man**](https://anilist.co/anime/133445) - TV ⭐ 8.6 | 🔥 Action, Horror
-- [**Cowboy Bebop**](https://anilist.co/anime/1) - TV ⭐ 8.7 | 🔫 Action, Sci-Fi
-- [**Cyberpunk: Edgerunners**](https://anilist.co/anime/140933) - TV ⭐ 8.7 | 🔬 Sci-Fi, Action
-- [**Classroom of the Elite**](https://anilist.co/anime/98659) - TV ⭐ 8.0 | 🧠 Psychological, Drama
-- [**Charlotte**](https://anilist.co/anime/20787) - TV ⭐ 7.5 | 🔬 Sci-Fi, Drama
-- [**Cautious Hero**](https://anilist.co/anime/105333) - TV ⭐ 7.8 | 💕 Comedy, Fantasy
-- [**Cells at Work!**](https://anilist.co/anime/100243) - TV ⭐ 7.6 | 🔬 Sci-Fi, Comedy
-- [**Carole & Tuesday**](https://anilist.co/anime/104578) - TV ⭐ 8.0 | 🎵 Music, Sci-Fi
-- [**Clevatess: The King of Devil BeastsThe Baby and the Brave of Undead**](https://anilist.co/anime/178869) - TV ⭐ 9.1 | ⚔️ Action, Fantasy
+- [**Call of the Night**](https://anilist.co/anime/141391)
+- [**Call of the Night Season 2**](https://anilist.co/anime/175914)
+- [**Campfire Cooking in Another World with My Absurd Skill**](https://anilist.co/anime/156067)
+- [**Campfire Cooking in Another World with My Absurd Skill Season 2**](https://anilist.co/anime/170577)
+- [**Canaan**](https://anilist.co/anime/5356)
+- [**Candy Boy Episode: EX01 - Mirai Yohouzu**](https://anilist.co/anime/5116)
+- [**Candy Boy Episode: EX02 - Shiawase Kyouyuu Riron**](https://anilist.co/anime/6479)
+- [**Candy Boy: Nonchalant Talk of the Certain Twin Sisters in Daily Life**](https://anilist.co/anime/4535)
+- [**Candy Candy**](https://anilist.co/anime/2800)
+- [**Candy Candy**](https://anilist.co/anime/723)
+- [**Candy☆Boy: Side Story For Archive**](https://anilist.co/anime/3456)
+- [**Castle in the Sky**](https://anilist.co/anime/513)
+- [**Catch Me at the Ballpark!**](https://anilist.co/anime/184279)
+- [**Chain Chronicle: The Light of Haecceitas**](https://anilist.co/anime/20986)
+- [**Chainsaw Man**](https://anilist.co/anime/127230)
+- [**Chainsaw Man – The Movie: Reze Arc**](https://anilist.co/anime/171627)
+- [**Chillin' in Another World with Level 2 Super Cheat Powers**](https://anilist.co/anime/170130)
+- [**Chillin' in My 30s after Getting Fired from the Demon King's Army**](https://anilist.co/anime/152523)
+- [**Chivalry of a Failed Knight**](https://anilist.co/anime/21092)
+- [**Chrono Crusade**](https://anilist.co/anime/60)
+- [**Classroom for Heroes**](https://anilist.co/anime/139606)
+- [**Claymore**](https://anilist.co/anime/1818)
+- [**Cleopatra D.C.**](https://anilist.co/anime/2754)
+- [**Clevatess**](https://anilist.co/anime/178869)
+- [**Code Geass: Lelouch of the Rebellion**](https://anilist.co/anime/1575)
+- [**Code Geass: Lelouch of the Rebellion R2**](https://anilist.co/anime/2904)
+- [**Code Geass: Rozé of the Recapture**](https://anilist.co/anime/126830)
+- [**Cowboy Bebop: The Movie**](https://anilist.co/anime/5)
 
 ### D
-- [**Death Note**](https://anilist.co/anime/1535) - TV ⭐ 8.6 | 🧠 Psychological, Thriller
-- [**Demon Slayer**](https://anilist.co/anime/101922) - TV ⭐ 8.5 | ⚔️ Action, Fantasy
-- [**Dr. Stone**](https://anilist.co/anime/105333) - TV ⭐ 8.2 | 🔬 Adventure, Sci-Fi
-- [**Death Parade**](https://anilist.co/anime/20832) - TV ⭐ 8.2 | 🧠 Psychological, Drama
-- [**Darling in the Franxx**](https://anilist.co/anime/99423) - TV ⭐ 7.5 | 🤖 Mecha, Romance
-- [**Dorohedoro**](https://anilist.co/anime/103786) - TV ⭐ 8.2 | 🔥 Action, Fantasy
-- [**Devilman Crybaby**](https://anilist.co/anime/20996) - TV ⭐ 7.8 | 🔥 Action, Horror
-- [**Daily Lives of High School Boys**](https://anilist.co/anime/11843) - TV ⭐ 8.3 | 😄 Comedy, Slice of Life
-- [**Darker Than Black**](https://anilist.co/anime/2025) - TV ⭐ 7.8 | 🔥 Action, Sci-Fi
-- [**Drifters**](https://anilist.co/anime/21877) - TV ⭐ 7.8 | ⚔️ Action, Fantasy
-- [**Dealing with Mikadono Sisters Is a Breeze**](https://anilist.co/anime/178886) - TV ⭐ 9.3 | 😄 Comedy, Romance
+- [**Dad is a Hero, Mom is a Spirit, I'm a Reincarnator**](https://anilist.co/anime/173692)
+- [**Dahlia in Bloom: Crafting a Fresh Start with Magical Tools**](https://anilist.co/anime/168623)
+- [**Dallos**](https://anilist.co/anime/3060)
+- [**Dan Da Dan**](https://anilist.co/anime/171018)
+- [**Dan Da Dan Season 2**](https://anilist.co/anime/185660)
+- [**Darwin's Game**](https://anilist.co/anime/105190)
+- [**Deadman Wonderland**](https://anilist.co/anime/6880)
+- [**Delicious in Dungeon**](https://anilist.co/anime/153518)
+- [**Demon Lord 2099**](https://anilist.co/anime/163135)
+- [**Demon Slayer: Kimetsu no Yaiba - The Movie: Infinity Castle - Part 1: Akaza Returns**](https://anilist.co/anime/178788)
+- [**Demon Slayer: Kimetsu no Yaiba Hashira Training Arc**](https://anilist.co/anime/166240)
+- [**Demon Slayer: Kimetsu no Yaiba Swordsmith Village Arc**](https://anilist.co/anime/145139)
+- [**Desert Rose: The Snow Apocalypse**](https://anilist.co/anime/3989)
+- [**Devil May Cry**](https://anilist.co/anime/1726)
+- [**Devilman: The Birth**](https://anilist.co/anime/2354)
+- [**Devilman: The Demon Bird**](https://anilist.co/anime/2355)
+- [**Dirty Pair: Project Eden**](https://anilist.co/anime/1796)
+- [**Dr. Stone**](https://anilist.co/anime/105333)
+- [**Dr. Stone: Science Future**](https://anilist.co/anime/172019)
+- [**Dr. Stone: Science Future Part 2**](https://anilist.co/anime/189117)
+- [**Dragon Ball**](https://anilist.co/anime/223)
+- [**Dragon Ball GT**](https://anilist.co/anime/225)
+- [**Dragon Ball Z**](https://anilist.co/anime/813)
+- [**Dragon Ball: Curse of the Blood Rubies**](https://anilist.co/anime/502)
+- [**Dragon Century**](https://anilist.co/anime/4318)
+- [**Dragon Goes House-Hunting**](https://anilist.co/anime/112376)
+- [**Dragon Raja II: The Mourner's Eyes**](https://anilist.co/anime/157692)
+- [**Dragonar Academy**](https://anilist.co/anime/20592)
+- [**Durarara!!**](https://anilist.co/anime/6746)
+- [**Dusk Beyond the End of the World**](https://anilist.co/anime/195153)
 
 ### E
-- [**Erased**](https://anilist.co/anime/21273) - TV ⭐ 8.3 | 🕰️ Mystery, Psychological
-- [**Elfen Lied**](https://anilist.co/anime/226) - TV ⭐ 7.5 | 💔 Drama, Horror
-- [**Eighty-Six**](https://anilist.co/anime/131586) - TV ⭐ 8.5 | 🤖 Mecha, Drama
-- [**Eureka Seven**](https://anilist.co/anime/237) - TV ⭐ 8.0 | 🤖 Mecha, Adventure
-- [**Excel Saga**](https://anilist.co/anime/134) - TV ⭐ 6.9 | 😄 Comedy, Parody
-- [**End of Evangelion**](https://anilist.co/anime/32) - Movie ⭐ 8.8 | 🤖 Mecha, Psychological
-- [**Eden of the East**](https://anilist.co/anime/5630) - TV ⭐ 7.7 | 🧠 Mystery, Thriller
-- [**Ef: A Tale of Memories**](https://anilist.co/anime/2922) - TV ⭐ 7.8 | 💕 Romance, Drama
-- [**Emma: A Victorian Romance**](https://anilist.co/anime/457) - TV ⭐ 7.8 | 💕 Romance, Historical
-- [**Eromanga Sensei**](https://anilist.co/anime/21856) - TV ⭐ 6.5 | 💕 Romance, Comedy
-- [**Easygoing Territory Defense by the Optimistic Lord**](https://anilist.co/anime/191205) - TV ⭐ 7.0 | 🎯 Adventure, Fantasy
+- [**Early Reins**](https://anilist.co/anime/1928)
+- [**Easygoing Territory Defense by the Optimistic Lord: Production Magic Turns a Nameless Village into the Strongest Fortified City**](https://anilist.co/anime/191205)
+- [**Elfen Lied**](https://anilist.co/anime/226)
+- [**Elfen Lied: In the Passing Rain, or, How Can a Girl Have Reached Such Feelings?**](https://anilist.co/anime/376)
+- [**Ellcia**](https://anilist.co/anime/3461)
+- [**Escaflowne: A Girl in Gaea**](https://anilist.co/anime/393)
+- [**Evangelion: 1.0 You Are (Not) Alone**](https://anilist.co/anime/2759)
+- [**Even Given the Worthless "Appraiser" Class, I’m Actually the Strongest**](https://anilist.co/anime/178548)
 
 ### F
-- [**Fullmetal Alchemist: Brotherhood**](https://anilist.co/anime/5114) - TV ⭐ 10 | ⚔️ Action, Adventure
-- [**Fate/Zero**](https://anilist.co/anime/10087) - TV ⭐ 8.9 | 🎭 Action, Fantasy
-- [**Fire Force**](https://anilist.co/anime/104581) - TV ⭐ 7.7 | 🔥 Action, Supernatural
-- [**Fruits Basket**](https://anilist.co/anime/7525) - TV ⭐ 8.5 | 💕 Romance, Supernatural
-- [**Fate/stay night: Unlimited Blade Works**](https://anilist.co/anime/22297) - TV ⭐ 8.2 | ⚔️ Action, Fantasy
-- [**Food Wars!**](https://anilist.co/anime/21087) - TV ⭐ 8.0 | 😄 Comedy, Ecchi
-- [**From the New World**](https://anilist.co/anime/13125) - TV ⭐ 8.3 | 🔬 Sci-Fi, Horror
-- [**FLCL**](https://anilist.co/anime/227) - TV ⭐ 7.7 | 🤖 Mecha, Comedy
-- [**Fairy Tail**](https://anilist.co/anime/6702) - TV ⭐ 7.6 | ⚔️ Action, Adventure
-- [**Future Diary**](https://anilist.co/anime/10620) - TV ⭐ 7.3 | 🧠 Psychological, Thriller
+- [**Failure Frame: I Became the Strongest and Annihilated Everything With Low-Level Spells**](https://anilist.co/anime/173694)
+- [**Farming Life in Another World**](https://anilist.co/anime/146850)
+- [**Fena: Pirate Princess**](https://anilist.co/anime/122052)
+- [**Final Fantasy VII: Advent Children Complete**](https://anilist.co/anime/2952)
+- [**Final Fantasy VII: Last Order**](https://anilist.co/anime/408)
+- [**Fire Emblem**](https://anilist.co/anime/2782)
+- [**Fire Force**](https://anilist.co/anime/105310)
+- [**Fire Force Season 2**](https://anilist.co/anime/114236)
+- [**Fire Force Season 3**](https://anilist.co/anime/149118)
+- [**Fire Force Season 3 Part 2**](https://anilist.co/anime/179062)
+- [**Free! - Iwatobi Swim Club**](https://anilist.co/anime/18507)
+- [**Frieren: Beyond Journey's End Season 2**](https://anilist.co/anime/182255)
+- [**From Old Country Bumpkin to Master Swordsman**](https://anilist.co/anime/179955)
+- [**Fullmetal Alchemist**](https://anilist.co/anime/121)
 
 ### G
-- [**Gintama**](https://anilist.co/anime/918) - TV ⭐ 9.0 | 😄 Comedy, Action
-- [**Gurren Lagann**](https://anilist.co/anime/2001) - TV ⭐ 8.6 | 🤖 Mecha, Action
-- [**Ghost in the Shell**](https://anilist.co/anime/43) - Movie ⭐ 8.3 | 🔬 Sci-Fi, Psychological
-- [**Golden Time**](https://anilist.co/anime/17827) - TV ⭐ 7.8 | 💕 Romance, Comedy
-- [**Great Teacher Onizuka**](https://anilist.co/anime/245) - TV ⭐ 8.8 | 😄 Comedy, Drama
-- [**Guilty Crown**](https://anilist.co/anime/10793) - TV ⭐ 7.3 | 🤖 Mecha, Action
-- [**Garden of Words**](https://anilist.co/anime/16782) - Movie ⭐ 8.2 | 💕 Romance, Drama
-- [**Gankutsuou: The Count of Monte Cristo**](https://anilist.co/anime/239) - TV ⭐ 8.3 | 🧠 Psychological, Drama
-- [**Grimgar of Fantasy and Ash**](https://anilist.co/anime/21327) - TV ⭐ 7.6 | 🗡️ Adventure, Drama
-- [**Gosick**](https://anilist.co/anime/8425) - TV ⭐ 8.0 | 🕰️ Mystery, Romance
+- [**Gachiakuta**](https://anilist.co/anime/178025)
+- [**Gall Force 1: Eternal Story**](https://anilist.co/anime/2060)
+- [**Gall Force 2: Destruction**](https://anilist.co/anime/2061)
+- [**Gall Force 3: Stardust War**](https://anilist.co/anime/2062)
+- [**Gall Force: Earth Chapter**](https://anilist.co/anime/2064)
+- [**Gall Force: New Era**](https://anilist.co/anime/2065)
+- [**Gamers!**](https://anilist.co/anime/97766)
+- [**Gargantia on the Verdurous Planet**](https://anilist.co/anime/16524)
+- [**GATE**](https://anilist.co/anime/20994)
+- [**GATE Part 2**](https://anilist.co/anime/21364)
+- [**Genocyber**](https://anilist.co/anime/2775)
+- [**Ghost in the Shell 2: Innocence**](https://anilist.co/anime/468)
+- [**Ghost in the Shell: Stand Alone Complex - Solid State Society**](https://anilist.co/anime/1566)
+- [**Go! Go! Loser Ranger!**](https://anilist.co/anime/158417)
+- [**Gods' Game We Play**](https://anilist.co/anime/144176)
+- [**Goku II: Midnight Eye**](https://anilist.co/anime/1880)
+- [**Goku: Midnight Eye**](https://anilist.co/anime/1879)
+- [**Good Bye, Dragon Life**](https://anilist.co/anime/176053)
+- [**Gosick**](https://anilist.co/anime/8425)
+- [**Gundam Build Divers**](https://anilist.co/anime/101036)
+- [**Gurren Lagann**](https://anilist.co/anime/2001)
+- [**Guyver: Out of Control**](https://anilist.co/anime/2293)
 
 ### H
-- [**Hunter x Hunter (2011)**](https://anilist.co/anime/11061) - TV ⭐ 10 | 🗡️ Adventure, Action
-- [**Haikyuu!!**](https://anilist.co/anime/20583) - TV ⭐ 8.8 | 🏐 Sports, Comedy
-- [**Horimiya**](https://anilist.co/anime/124194) - TV ⭐ 8.3 | 💕 Romance, Comedy
-- [**Hyouka**](https://anilist.co/anime/12189) - TV ⭐ 8.1 | 🕰️ Mystery, Slice of Life
-- [**Hellsing Ultimate**](https://anilist.co/anime/777) - OVA ⭐ 8.3 | 🔥 Action, Horror
-- [**Hyouka**](https://anilist.co/anime/12189) - TV ⭐ 8.1 | 🕰️ Mystery, Slice of Life
-- [**Hinamatsuri**](https://anilist.co/anime/101291) - TV ⭐ 8.3 | 😄 Comedy, Supernatural
-- [**Hajime no Ippo**](https://anilist.co/anime/263) - TV ⭐ 8.7 | 🥊 Sports, Comedy
-- [**Houseki no Kuni**](https://anilist.co/anime/98438) - TV ⭐ 8.4 | 🔥 Action, Fantasy
-- [**Highschool of the Dead**](https://anilist.co/anime/8074) - TV ⭐ 6.9 | 🔥 Action, Ecchi
-- [**HELL MODE: The Hardcore Gamer Dominates in Another World with Garbage Balancing**](https://anilist.co/anime/185262) - TV ⭐ 6.7 | 🔥 Action, Adventurer
+- [**Haikyu!! Movie: The Dumpster Battle**](https://anilist.co/anime/153658)
+- [**Headhunted to Another World: From Salaryman to Big Four!**](https://anilist.co/anime/179689)
+- [**Helck**](https://anilist.co/anime/145140)
+- [**Hell's Paradise Season 2**](https://anilist.co/anime/166613)
+- [**Hellsing**](https://anilist.co/anime/270)
+- [**Hero Without a Class: Who Even Needs Skills?!**](https://anilist.co/anime/169969)
+- [**Heroic Age**](https://anilist.co/anime/2002)
+- [**Hiiro no Kakera: The Tamayori Princess Saga**](https://anilist.co/anime/12461)
+- [**Hiiro no Kakera: The Tamayori Princess Saga Season 2**](https://anilist.co/anime/14645)
+- [**Hitsuji no Uta**](https://anilist.co/anime/258)
+- [**Horimiya: The Missing Pieces**](https://anilist.co/anime/163132)
+- [**How a Realist Hero Rebuilt the Kingdom**](https://anilist.co/anime/117612)
+- [**How a Realist Hero Rebuilt the Kingdom Part 2**](https://anilist.co/anime/139648)
+- [**Howl's Moving Castle**](https://anilist.co/anime/431)
+- [**Hundred**](https://anilist.co/anime/21362)
+- [**Hyouka**](https://anilist.co/anime/12189)
 
 ### I
-- [**Inuyasha**](https://anilist.co/anime/249) - TV ⭐ 7.8 | 🗡️ Adventure, Romance
-- [**I Want to Eat Your Pancreas**](https://anilist.co/anime/101291) - Movie ⭐ 8.7 | 💔 Drama, Romance
-- [**Is It Wrong to Try to Pick Up Girls in a Dungeon?**](https://anilist.co/anime/20657) - TV ⭐ 7.6 | ⚔️ Action, Fantasy
-- [**Iron-Blooded Orphans**](https://anilist.co/anime/20787) - TV ⭐ 8.1 | 🤖 Mecha, Action
-- [**ID: Invaded**](https://anilist.co/anime/108465) - TV ⭐ 7.9 | 🔬 Sci-Fi, Mystery
-- [**In/Spectre**](https://anilist.co/anime/108465) - TV ⭐ 7.3 | 🕰️ Mystery, Supernatural
-- [**Infinite Stratos**](https://anilist.co/anime/9041) - TV ⭐ 6.5 | 🤖 Mecha, Harem
-- [**Iroduku: The World in Colors**](https://anilist.co/anime/101291) - TV ⭐ 7.5 | 💕 Romance, Fantasy
-- [**Inuyashiki**](https://anilist.co/anime/98438) - TV ⭐ 7.8 | 🔬 Sci-Fi, Drama
-- [**Ikebukuro West Gate Park**](https://anilist.co/anime/108465) - TV ⭐ 6.9 | 🎭 Drama, Mystery
+- [**I Got a Cheat Skill in Another World and Became Unrivaled in The Real World, Too**](https://anilist.co/anime/153845)
+- [**I Left My A-Rank Party to Help My Former Students Reach the Dungeon Depths!**](https://anilist.co/anime/180812)
+- [**I Parry Everything**](https://anilist.co/anime/170695)
+- [**I Shall Survive Using Potions!**](https://anilist.co/anime/161992)
+- [**I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability**](https://anilist.co/anime/156415)
+- [**I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability Season 2**](https://anilist.co/anime/178090)
+- [**I'm a Noble on the Brink of Ruin, So I Might as Well Try Mastering Magic**](https://anilist.co/anime/176063)
+- [**I'm Standing on a Million Lives**](https://anilist.co/anime/116242)
+- [**I'm the Evil Lord of an Intergalactic Empire!**](https://anilist.co/anime/183274)
+- [**I've Been Killing Slimes for 300 Years and Maxed Out My Level**](https://anilist.co/anime/112608)
+- [**I've Been Killing Slimes for 300 Years and Maxed Out My Level Season 2**](https://anilist.co/anime/143337)
+- [**Iczelion**](https://anilist.co/anime/1831)
+- [**If It's for My Daughter, I'd Even Defeat a Demon Lord**](https://anilist.co/anime/107956)
+- [**In Another World With My Smartphone**](https://anilist.co/anime/98491)
+- [**In Another World With My Smartphone 2**](https://anilist.co/anime/147571)
+- [**In the Land of Leadale**](https://anilist.co/anime/130166)
+- [**Interstella5555: The 5tory of The 5ecret 5tar 5ystem**](https://anilist.co/anime/731)
+- [**InuYasha**](https://anilist.co/anime/249)
+- [**InuYasha the Movie 2: The Castle Beyond the Looking Glass**](https://anilist.co/anime/450)
+- [**InuYasha the Movie 4: Fire on the Mystic Island**](https://anilist.co/anime/449)
+- [**InuYasha the Movie: Affections Touching Across Time**](https://anilist.co/anime/452)
+- [**Is It Wrong to Try to Pick Up Girls in a Dungeon? V**](https://anilist.co/anime/170732)
+- [**Isekai Cheat Magician**](https://anilist.co/anime/101547)
+- [**I’m Standing on a Million Lives Season 2**](https://anilist.co/anime/127366)
 
 ### J
-- [**Jujutsu Kaisen**](https://anilist.co/anime/107922) - TV ⭐ 8.7 | ⚔️ Action, Horror
-- [**JoJo's Bizarre Adventure**](https://anilist.co/anime/14719) - TV ⭐ 8.0 | 🔥 Action, Supernatural
-- [**Jormungand**](https://anilist.co/anime/12413) - TV ⭐ 7.8 | 🔥 Action, Seinen
-- [**Just Because!**](https://anilist.co/anime/98438) - TV ⭐ 7.2 | 💕 Romance, Drama
-- [**Josee, the Tiger and the Fish**](https://anilist.co/anime/124194) - Movie ⭐ 8.4 | 💕 Romance, Drama
-- [**Jin-Roh: The Wolf Brigade**](https://anilist.co/anime/1012) - Movie ⭐ 7.8 | 🔬 Sci-Fi, Psychological
-- [**Junji Ito Collection**](https://anilist.co/anime/98438) - TV ⭐ 6.2 | 🎭 Horror, Supernatural
-- [**Jaku-Chara Tomozaki-kun**](https://anilist.co/anime/124194) - TV ⭐ 7.5 | 😄 Comedy, Drama
-- [**Juni Taisen: Zodiac War**](https://anilist.co/anime/98438) - TV ⭐ 6.5 | 🔥 Action, Supernatural
-- [**Jibaku Shounen Hanako-kun**](https://anilist.co/anime/107922) - TV ⭐ 8.1 | 😄 Comedy, Supernatural
-- [**Joker Game**](https://anilist.co/anime/21291) - TV ⭐ 8.2 | 🕵️ Mystery, Psychological
+- [**Jin-Roh: The Wolf Brigade**](https://anilist.co/anime/570)
+- [**Joker Game**](https://anilist.co/anime/21291)
+- [**Jujutsu Kaisen: Hidden Inventory/Premature Death**](https://anilist.co/anime/192809)
+- [**Jujutsu Kaisen: The Culling Game Part 1**](https://anilist.co/anime/172463)
 
 ### K
-- [**Kimetsu no Yaiba**](https://anilist.co/anime/101922) - TV ⭐ 8.5 | ⚔️ Action, Fantasy
-- [**Kaguya-sama: Love is War**](https://anilist.co/anime/101291) - TV ⭐ 8.7 | 💕 Romance, Comedy
-- [**K-On!**](https://anilist.co/anime/5680) - TV ⭐ 8.0 | 🎵 Music, Slice of Life
-- [**Kill la Kill**](https://anilist.co/anime/18689) - TV ⭐ 7.9 | 🔥 Action, Comedy
-- [**Kaichou wa Maid-sama!**](https://anilist.co/anime/7054) - TV ⭐ 8.2 | 💕 Romance, Comedy
-- [**Kuroko's Basketball**](https://anilist.co/anime/11771) - TV ⭐ 9.2 | 🏀 Sports, Comedy
-- [**Kakegurui**](https://anilist.co/anime/98314) - TV ⭐ 7.3 | 🧠 Psychological, Drama
-- [**Kabaneri of the Iron Fortress**](https://anilist.co/anime/21167) - TV ⭐ 7.3 | 🔥 Action, Horror
-- [**Kiznaiver**](https://anilist.co/anime/21507) - TV ⭐ 7.2 | 🔬 Sci-Fi, Drama
-- [**Katanagatari**](https://anilist.co/anime/6594) - TV ⭐ 8.3 | ⚔️ Action, Adventure
-- [**Kaiju No.8**](https://anilist.co/anime/153288) - TV ⭐ 9.2 | ⚔️ Action, Sci-Fi
+- [**Kaiju No. 8**](https://anilist.co/anime/153288)
+- [**Kaiju No. 8 Season 2**](https://anilist.co/anime/178754)
+- [**Kaiju No. 8: Mission Recon**](https://anilist.co/anime/179998)
+- [**Kakushigoto**](https://anilist.co/anime/113311)
+- [**Karasu Tengu Kabuto: Ougon no Me no Kemono**](https://anilist.co/anime/3726)
+- [**Kimagure Orange Road: I Want to Return to That Day**](https://anilist.co/anime/2454)
+- [**King's Raid: Successors of the Will**](https://anilist.co/anime/118376)
+- [**Kiznaiver**](https://anilist.co/anime/21421)
+- [**Knight's & Magic**](https://anilist.co/anime/97663)
+- [**Kunon the Sorcerer Can See**](https://anilist.co/anime/186333)
+- [**Kuroko's Basketball**](https://anilist.co/anime/11771)
+- [**Kuroko's Basketball 2**](https://anilist.co/anime/16894)
+- [**Kuroko's Basketball 3**](https://anilist.co/anime/20725)
 
 ### L
-- [**Love is War**](https://anilist.co/anime/101291) - TV ⭐ 8.7 | 💕 Romance, Comedy
-- [**Land of the Lustrous**](https://anilist.co/anime/98438) - TV ⭐ 8.4 | 🔥 Action, Fantasy
-- [**Log Horizon**](https://anilist.co/anime/17265) - TV ⭐ 7.9 | 🗡️ Adventure, Fantasy
-- [**Little Witch Academia**](https://anilist.co/anime/21507) - TV ⭐ 7.8 | 🧙 Fantasy, Comedy
-- [**Lucky Star**](https://anilist.co/anime/1887) - TV ⭐ 7.4 | 😄 Comedy, Slice of Life
-- [**Love, Chunibyo & Other Delusions**](https://anilist.co/anime/14741) - TV ⭐ 7.7 | 💕 Romance, Comedy
-- [**Legend of the Galactic Heroes**](https://anilist.co/anime/820) - OVA ⭐ 9.1 | 🔬 Sci-Fi, Drama
-- [**Lupin the Third**](https://anilist.co/anime/1244) - TV ⭐ 7.6 | 🔫 Action, Comedy
-- [**Lain Serial Experiments**](https://anilist.co/anime/339) - TV ⭐ 7.6 | 🧠 Psychological, Sci-Fi
-- [**Love Live! School Idol Project**](https://anilist.co/anime/15051) - TV ⭐ 7.5 | 🎵 Music, Slice of Life
+- [**Le Portrait de Petit Cossette**](https://anilist.co/anime/514)
+- [**Let This Grieving Soul Retire**](https://anilist.co/anime/175019)
+- [**Liar Liar**](https://anilist.co/anime/131863)
+- [**Like the Clouds, Like the Wind**](https://anilist.co/anime/1032)
+- [**Lily C.A.T.**](https://anilist.co/anime/3258)
+- [**Little Nemo: Adventures in Slumberland**](https://anilist.co/anime/2286)
+- [**Loner Life in Another World**](https://anilist.co/anime/173693)
+- [**Lookism**](https://anilist.co/anime/158539)
+- [**Lord of Mysteries**](https://anilist.co/anime/137667)
+- [**Lycoris Recoil: Friends are thieves of time.**](https://anilist.co/anime/179706)
 
 ### M
-- [**My Hero Academia**](https://anilist.co/anime/21459) - TV ⭐ 7.9 | 🦸 Action, Comedy
-- [**Mob Psycho 100**](https://anilist.co/anime/100243) - TV ⭐ 8.7 | 🔥 Action, Comedy
-- [**Made in Abyss**](https://anilist.co/anime/97986) - TV ⭐ 8.8 | 🗡️ Adventure, Fantasy
-- [**Monster**](https://anilist.co/anime/19) - TV ⭐ 8.8 | 🧠 Psychological, Thriller
-- [**Mushishi**](https://anilist.co/anime/457) - TV ⭐ 8.7 | 🧙 Fantasy, Mystery
-- [**March Comes in Like a Lion**](https://anilist.co/anime/21776) - TV ⭐ 8.7 | 🎭 Drama, Slice of Life
-- [**Madoka Magica**](https://anilist.co/anime/9756) - TV ⭐ 8.4 | 🧙 Fantasy, Psychological
-- [**Megalobox**](https://anilist.co/anime/100243) - TV ⭐ 7.8 | 🥊 Sports, Sci-Fi
-- [**Miss Kobayashi's Dragon Maid**](https://anilist.co/anime/101291) - TV ⭐ 8.0 | 😄 Comedy, Fantasy
-- [**My Teen Romantic Comedy SNAFU**](https://anilist.co/anime/14813) - TV ⭐ 8.1 | 😄 Comedy, Romance
-- [**My Roommate is a Cat**](https://anilist.co/anime/103874) - TV ⭐ 9.3 | 😃 Comedy, Slice of Life
+- [**Macross Plus**](https://anilist.co/anime/474)
+- [**Macross Zero**](https://anilist.co/anime/194)
+- [**Made in Abyss**](https://anilist.co/anime/97986)
+- [**Made in Abyss: The Golden City of the Scorching Sun**](https://anilist.co/anime/114745)
+- [**Magic Maker: How to Make Magic in Another World**](https://anilist.co/anime/179297)
+- [**Maquia: When the Promised Flower Blooms**](https://anilist.co/anime/99457)
+- [**Masamune-kun's Revenge R**](https://anilist.co/anime/146953)
+- [**Mashle: Magic and Muscles - The Divine Visionary Candidate Exam Arc**](https://anilist.co/anime/166610)
+- [**Mecha-Ude: Mechanical Arms**](https://anilist.co/anime/154673)
+- [**Medaka Kuroiwa is Impervious to My Charms**](https://anilist.co/anime/177552)
+- [**Megazone 23**](https://anilist.co/anime/1935)
+- [**Memories**](https://anilist.co/anime/1462)
+- [**Metal Skin Panic MADOX-01**](https://anilist.co/anime/2461)
+- [**Metropolis**](https://anilist.co/anime/522)
+- [**MF Ghost**](https://anilist.co/anime/143327)
+- [**MF Ghost Final Season**](https://anilist.co/anime/209876)
+- [**MF Ghost Season 2**](https://anilist.co/anime/171642)
+- [**Military!**](https://anilist.co/anime/20793)
+- [**Mission: Yozakura Family**](https://anilist.co/anime/158898)
+- [**Mobile Suit Gundam: GQuuuuuuX**](https://anilist.co/anime/185213)
+- [**Mobile Suit Gundam: The Witch from Mercury**](https://anilist.co/anime/139274)
+- [**Mobile Suit Gundam: The Witch from Mercury Season 2**](https://anilist.co/anime/155158)
+- [**Monster Girl Doctor**](https://anilist.co/anime/113286)
+- [**Moribito - Guardian of the Spirit**](https://anilist.co/anime/1827)
+- [**Mushoku Tensei: Jobless Reincarnation Part 2**](https://anilist.co/anime/127720)
+- [**Mushoku Tensei: Jobless Reincarnation Season 2 Part 2**](https://anilist.co/anime/166873)
+- [**My Dress-Up Darling Season 2**](https://anilist.co/anime/154768)
+- [**My Gift Lvl 9999 Unlimited Gacha: Backstabbed in a Backwater Dungeon, I'm Out for Revenge!**](https://anilist.co/anime/184322)
+- [**My Hero Academia Final Season**](https://anilist.co/anime/182896)
+- [**My Hero Academia Season 7**](https://anilist.co/anime/163139)
+- [**My Home Hero**](https://anilist.co/anime/151189)
+- [**My Instant Death Ability is So Overpowered, No One in This Other World Stands a Chance Against Me!**](https://anilist.co/anime/158028)
+- [**My Isekai Life: I Gained a Second Character Class and Became the Strongest Sage in the World**](https://anilist.co/anime/129192)
+- [**My Roommate is a Cat**](https://anilist.co/anime/103874)
+- [**My Status as an Assassin Obviously Exceeds the Hero's**](https://anilist.co/anime/186794)
+- [**My Teen Romantic Comedy SNAFU**](https://anilist.co/anime/14813)
+- [**My Teen Romantic Comedy SNAFU Climax!**](https://anilist.co/anime/108489)
+- [**My Teen Romantic Comedy SNAFU TOO!**](https://anilist.co/anime/20698)
+- [**My Unique Skill Makes Me OP Even at Level 1**](https://anilist.co/anime/148465)
+- [**My-Hime**](https://anilist.co/anime/98)
+- [**My-Otome Zwei**](https://anilist.co/anime/1609)
 
 ### N
-- [**Naruto Shippuden**](https://anilist.co/anime/1735) - TV ⭐ 8.2 | ⚔️ Action, Adventure
-- [**Neon Genesis Evangelion**](https://anilist.co/anime/30) - TV ⭐ 8.3 | 🤖 Mecha, Psychological
-- [**Nana**](https://anilist.co/anime/877) - TV ⭐ 8.6 | 🎵 Music, Romance
-- [**No Game No Life**](https://anilist.co/anime/19815) - TV ⭐ 8.1 | 🧠 Psychological, Fantasy
-- [**Noragami**](https://anilist.co/anime/20507) - TV ⭐ 7.9 | ⚔️ Action, Supernatural
-- [**Nisekoi**](https://anilist.co/anime/20665) - TV ⭐ 7.5 | 💕 Romance, Comedy
-- [**Nichijou**](https://anilist.co/anime/10165) - TV ⭐ 8.4 | 😄 Comedy, Slice of Life
-- [**Natsume's Book of Friends**](https://anilist.co/anime/4081) - TV ⭐ 8.4 | 🧙 Fantasy, Slice of Life
-- [**Nodame Cantabile**](https://anilist.co/anime/1690) - TV ⭐ 8.3 | 🎵 Music, Romance
-- [**Nausicaä of the Valley of the Wind**](https://anilist.co/anime/572) - Movie ⭐ 8.2 | 🗡️ Adventure, Fantasy
+- [**Najica Blitz Tactics**](https://anilist.co/anime/321)
+- [**Naruto Shippuden**](https://anilist.co/anime/1735)
+- [**Naruto Shippuden the Movie 3: The Will of Fire**](https://anilist.co/anime/6325)
+- [**Nausicaä of the Valley of the Wind**](https://anilist.co/anime/572)
+- [**Ne Zha**](https://anilist.co/anime/110464)
+- [**Ne Zha 2**](https://anilist.co/anime/186861)
+- [**Nekopara**](https://anilist.co/anime/106863)
+- [**Neon Genesis Evangelion**](https://anilist.co/anime/30)
+- [**Neon Genesis Evangelion: The End of Evangelion**](https://anilist.co/anime/32)
+- [**Netsuzou Trap -NTR-**](https://anilist.co/anime/97833)
+- [**New Saga**](https://anilist.co/anime/155838)
+- [**Night Warriors: Darkstalkers' Revenge**](https://anilist.co/anime/1952)
+- [**Ninja Kamui**](https://anilist.co/anime/151639)
+- [**Ninja Scroll**](https://anilist.co/anime/617)
+- [**Ninja Scroll: The Series**](https://anilist.co/anime/618)
+- [**No Game, No Life**](https://anilist.co/anime/19815)
+- [**No Longer Allowed in Another World**](https://anilist.co/anime/152137)
+- [**Noble Reincarnation: Born Blessed, So I'll Obtain Ultimate Power**](https://anilist.co/anime/185993)
+- [**Noir**](https://anilist.co/anime/272)
 
 ### O
-- [**One Piece**](https://anilist.co/anime/21) - TV ⭐ 8.6 | 🗡️ Adventure, Fantasy
-- [**One Punch Man**](https://anilist.co/anime/21087) - TV ⭐ 8.5 | 🦸 Action, Comedy
-- [**Oshi no Ko**](https://anilist.co/anime/145064) - TV ⭐ 9.0 | 🎭 Drama, Supernatural
-- [**Ouran High School Host Club**](https://anilist.co/anime/853) - TV ⭐ 8.3 | 😄 Comedy, Romance
-- [**Orange**](https://anilist.co/anime/21557) - TV ⭐ 7.9 | 💕 Romance, Sci-Fi
-- [**Overlord**](https://anilist.co/anime/20832) - TV ⭐ 7.8 | ⚔️ Action, Fantasy
-- [**Oregairu**](https://anilist.co/anime/14813) - TV ⭐ 8.1 | 😄 Comedy, Romance
-- [**Odd Taxi**](https://anilist.co/anime/124194) - TV ⭐ 8.5 | 🕰️ Mystery, Drama
-- [**Ore Monogatari!!**](https://anilist.co/anime/20787) - TV ⭐ 8.0 | 💕 Romance, Comedy
-- [**Outlaw Star**](https://anilist.co/anime/525) - TV ⭐ 7.6 | 🔫 Action, Sci-Fi
+- [**Once Upon a Time**](https://anilist.co/anime/1130)
+- [**One Stormy Night**](https://anilist.co/anime/1961)
+- [**Onmyo Kaiten Re:Birth Verse**](https://anilist.co/anime/187387)
+- [**Orb: On the Movements of the Earth**](https://anilist.co/anime/151514)
+- [**Origin: Spirits of the Past**](https://anilist.co/anime/1140)
+- [**Our Last Crusade or the Rise of a New World Season 2**](https://anilist.co/anime/139825)
+- [**Outlanders**](https://anilist.co/anime/1940)
+- [**Overlord**](https://anilist.co/anime/20832)
+- [**Overlord II**](https://anilist.co/anime/98437)
+- [**Overlord III**](https://anilist.co/anime/101474)
+- [**Overlord IV**](https://anilist.co/anime/133844)
+- [**Overlord: The Sacred Kingdom**](https://anilist.co/anime/133845)
 
 ### P
-- [**Parasyte: The Maxim**](https://anilist.co/anime/20687) - TV ⭐ 8.3 | 🔥 Action, Horror
-- [**Promised Neverland**](https://anilist.co/anime/101348) - TV ⭐ 8.5 | 🧠 Psychological, Horror
-- [**Psycho-Pass**](https://anilist.co/anime/13601) - TV ⭐ 8.3 | 🔬 Sci-Fi, Psychological
-- [**Princess Mononoke**](https://anilist.co/anime/164) - Movie ⭐ 8.8 | 🗡️ Adventure, Fantasy
-- [**Ping Pong the Animation**](https://anilist.co/anime/20687) - TV ⭐ 8.6 | 🏓 Sports, Psychological
-- [**Paranoia Agent**](https://anilist.co/anime/323) - TV ⭐ 7.7 | 🧠 Psychological, Mystery
-- [**Plastic Memories**](https://anilist.co/anime/20787) - TV ⭐ 7.8 | 🔬 Sci-Fi, Romance
-- [**Puella Magi Madoka Magica**](https://anilist.co/anime/9756) - TV ⭐ 8.4 | 🧙 Fantasy, Psychological
-- [**Panty & Stocking with Garterbelt**](https://anilist.co/anime/7711) - TV ⭐ 7.6 | 😄 Comedy, Action
-- [**Perfect Blue**](https://anilist.co/anime/437) - Movie ⭐ 8.2 | 🧠 Psychological, Thriller
+- [**Pale Cocoon**](https://anilist.co/anime/770)
+- [**Parallel World Pharmacy**](https://anilist.co/anime/136707)
+- [**Parasite Dolls**](https://anilist.co/anime/1350)
+- [**Perfect Blue**](https://anilist.co/anime/437)
+- [**Pet Shop of Horrors**](https://anilist.co/anime/326)
+- [**Phantom: The Animation**](https://anilist.co/anime/438)
+- [**Phoenix 2772**](https://anilist.co/anime/2793)
+- [**Plunderer**](https://anilist.co/anime/101168)
+- [**Ponyo**](https://anilist.co/anime/2890)
+- [**Possibly the Greatest Alchemist of All Time**](https://anilist.co/anime/177506)
+- [**Princess Arete**](https://anilist.co/anime/1028)
+- [**Princess Mononoke**](https://anilist.co/anime/164)
+- [**Problem Children Are Coming from Another World, Aren't They?**](https://anilist.co/anime/15315)
+- [**Psycho Diver: Soul Siren**](https://anilist.co/anime/1767)
 
 ### Q
-- [**Quintessential Quintuplets**](https://anilist.co/anime/101291) - TV ⭐ 8.0 | 💕 Romance, Comedy
-- [**Q Transformers: Return of the Mystery of Convoy**](https://anilist.co/anime/21856) - Movie ⭐ 5.5 | 🤖 Mecha, Comedy
-- [**Queen's Blade: Rurou no Senshi**](https://anilist.co/anime/4896) - TV ⭐ 5.8 | ⚔️ Action, Ecchi
-- [**Qin's Moon**](https://anilist.co/anime/8624) - TV ⭐ 6.5 | ⚔️ Action, Historical
-- [**Quiz Magic Academy**](https://anilist.co/anime/10165) - TV ⭐ 5.2 | 🧙 Fantasy, Game
+- [**Quality Assurance in Another World**](https://anilist.co/anime/163077)
 
 ### R
-- [**Re:Zero**](https://anilist.co/anime/21355) - TV ⭐ 8.2 | 💕 Drama, Fantasy
-- [**Rurouni Kenshin**](https://anilist.co/anime/45) - TV ⭐ 8.3 | ⚔️ Action, Adventure
-- [**Run with the Wind**](https://anilist.co/anime/101291) - TV ⭐ 8.6 | 🏃 Sports, Drama
-- [**Rascal Does Not Dream of Bunny Girl Senpai**](https://anilist.co/anime/101291) - TV ⭐ 8.3 | 💕 Romance, Supernatural
-- [**Redline**](https://anilist.co/anime/6675) - Movie ⭐ 8.4 | 🏎️ Action, Sci-Fi
-- [**ReLIFE**](https://anilist.co/anime/21507) - TV ⭐ 8.0 | 😄 Comedy, Romance
-- [**Romeo x Juliet**](https://anilist.co/anime/2030) - TV ⭐ 7.4 | 💕 Romance, Fantasy
-- [**RahXephon**](https://anilist.co/anime/365) - TV ⭐ 7.2 | 🤖 Mecha, Drama
-- [**Rage of Bahamut: Genesis**](https://anilist.co/anime/20787) - TV ⭐ 7.5 | 🗡️ Adventure, Fantasy
-- [**Recovery of an MMO Junkie**](https://anilist.co/anime/98438) - TV ⭐ 7.5 | 💕 Romance, Comedy
+- [**R.O.D - Read or Die**](https://anilist.co/anime/208)
+- [**Re:Monster**](https://anilist.co/anime/169417)
+- [**Re:ZERO -Starting Life in Another World- Season 3**](https://anilist.co/anime/163134)
+- [**Reborn as a Vending Machine, I Now Wander the Dungeon**](https://anilist.co/anime/153360)
+- [**Reborn as a Vending Machine, I Now Wander the Dungeon Season 2**](https://anilist.co/anime/169440)
+- [**Reborn to Master the Blade: From Hero-King to Extraordinary Squire ♀**](https://anilist.co/anime/142193)
+- [**Record of Lodoss War**](https://anilist.co/anime/207)
+- [**Recovery of an MMO Junkie**](https://anilist.co/anime/99726)
+- [**Reign of the Seven Spellblades**](https://anilist.co/anime/142598)
+- [**Reincarnated as a Sword**](https://anilist.co/anime/139587)
+- [**Relic Armor Legaciam**](https://anilist.co/anime/2094)
+- [**Remake Our Life!**](https://anilist.co/anime/114065)
+- [**Rent-a-Girlfriend Season 3**](https://anilist.co/anime/154745)
+- [**Restaurant to Another World**](https://anilist.co/anime/97617)
+- [**Revolutionary Girl Utena: The Adolescence of Utena**](https://anilist.co/anime/441)
+- [**Rhea Gall Force**](https://anilist.co/anime/2063)
+- [**Riding Bean**](https://anilist.co/anime/917)
+- [**Rising Impact**](https://anilist.co/anime/171115)
+- [**Rising Impact Season 2**](https://anilist.co/anime/184560)
+- [**Rurouni Kenshin**](https://anilist.co/anime/45)
 
 ### S
-- [**Steins;Gate**](https://anilist.co/anime/9253) - TV ⭐ 10 | 🔬 Sci-Fi, Thriller
-- [**Spy x Family**](https://anilist.co/anime/140752) - TV ⭐ 8.6 | 😄 Comedy, Action
-- [**Sword Art Online**](https://anilist.co/anime/11757) - TV ⭐ 7.2 | 💕 Action, Romance
-- [**Samurai Champloo**](https://anilist.co/anime/205) - TV ⭐ 8.5 | ⚔️ Action, Adventure
-- [**Shingeki no Kyojin**](https://anilist.co/anime/16498) - TV ⭐ 10 | 🔥 Action, Drama
-- [**Shouwa Genroku Rakugo Shinjuu**](https://anilist.co/anime/21473) - TV ⭐ 8.7 | 🎭 Drama, Historical
-- [**Serial Experiments Lain**](https://anilist.co/anime/339) - TV ⭐ 7.6 | 🧠 Psychological, Sci-Fi
-- [**Soul Eater**](https://anilist.co/anime/3588) - TV ⭐ 7.7 | ⚔️ Action, Comedy
-- [**Shimoneta**](https://anilist.co/anime/20787) - TV ⭐ 7.2 | 😄 Comedy, Ecchi
-- [**Shirobako**](https://anilist.co/anime/20832) - TV ⭐ 8.1 | 😄 Comedy, Drama
+- [**Saga of Tanya the Evil**](https://anilist.co/anime/21613)
+- [**Sailor Moon Sailor Stars**](https://anilist.co/anime/996)
+- [**Sakamoto Days**](https://anilist.co/anime/177709)
+- [**Samurai X: Reflection**](https://anilist.co/anime/401)
+- [**Samurai X: Trust and Betrayal**](https://anilist.co/anime/44)
+- [**Scarlet Nexus**](https://anilist.co/anime/131150)
+- [**Scooped Up by an S-Rank Adventurer!**](https://anilist.co/anime/179885)
+- [**Secrets of the Silent Witch**](https://anilist.co/anime/179966)
+- [**Seirei Gensouki: Spirit Chronicles Season 2**](https://anilist.co/anime/141182)
+- [**Sengoku Youko 2nd Season**](https://anilist.co/anime/176660)
+- [**Sentenced to Be a Hero**](https://anilist.co/anime/167152)
+- [**Serial Experiments Lain**](https://anilist.co/anime/339)
+- [**Seven Cities Story: Arctic Front**](https://anilist.co/anime/4617)
+- [**Seven Knights Revolution: Hero Successor**](https://anilist.co/anime/129386)
+- [**Shakugan no Shana: The Movie**](https://anilist.co/anime/1815)
+- [**Shangri-La Frontier**](https://anilist.co/anime/151970)
+- [**Shangri-La Frontier Season 2**](https://anilist.co/anime/176508)
+- [**She Professed Herself Pupil of the Wise Man**](https://anilist.co/anime/119056)
+- [**She, The Ultimate Weapon**](https://anilist.co/anime/529)
+- [**Shoot! Goal to the Future**](https://anilist.co/anime/141775)
+- [**Silent Möbius 2**](https://anilist.co/anime/2100)
+- [**Silent Möbius: The Motion Picture**](https://anilist.co/anime/2099)
+- [**Skeleton Knight in Another World**](https://anilist.co/anime/132474)
+- [**Sky Blue**](https://anilist.co/anime/548)
+- [**So I'm a Spider, So What?**](https://anilist.co/anime/103632)
+- [**Solo Leveling**](https://anilist.co/anime/151807)
+- [**Solo Leveling Season 2: Arise from the Shadow**](https://anilist.co/anime/176496)
+- [**Solo Leveling: ReAwakening**](https://anilist.co/anime/184694)
+- [**Someday's Dreamers**](https://anilist.co/anime/273)
+- [**Spice and Wolf: Merchant Meets the Wise Wolf**](https://anilist.co/anime/145728)
+- [**Spirit Warrior**](https://anilist.co/anime/3595)
+- [**Spirit Warrior**](https://anilist.co/anime/3599)
+- [**Spirited Away**](https://anilist.co/anime/199)
+- [**Spriggan**](https://anilist.co/anime/420)
+- [**Suicide Squad Isekai**](https://anilist.co/anime/166710)
+- [**Summer Wars**](https://anilist.co/anime/5681)
+- [**Sweet Reincarnation**](https://anilist.co/anime/153339)
+- [**Sword Art Online**](https://anilist.co/anime/11757)
+- [**Sword Art Online II**](https://anilist.co/anime/20594)
+- [**Sword Art Online: Alicization**](https://anilist.co/anime/100182)
+- [**Sword Art Online: Alicization - War of Underworld**](https://anilist.co/anime/108759)
+- [**Sword Art Online: Alicization - War of Underworld Part 2**](https://anilist.co/anime/114308)
+- [**Sword of the Demon Hunter: Kijin Gentosho**](https://anilist.co/anime/143598)
 
 ### T
-- [**Tokyo Ghoul**](https://anilist.co/anime/20687) - TV ⭐ 7.7 | 🎭 Horror, Psychological
-- [**Trigun**](https://anilist.co/anime/6) - TV ⭐ 8.2 | 🔫 Action, Sci-Fi
-- [**Toradora!**](https://anilist.co/anime/4224) - TV ⭐ 8.3 | 💕 Romance, Comedy
-- [**The Melancholy of Haruhi Suzumiya**](https://anilist.co/anime/849) - TV ⭐ 7.9 | 😄 Comedy, Mystery
-- [**Terror in Resonance**](https://anilist.co/anime/20687) - TV ⭐ 7.7 | 🧠 Psychological, Thriller
-- [**Tengen Toppa Gurren Lagann**](https://anilist.co/anime/2001) - TV ⭐ 8.6 | 🤖 Mecha, Action
-- [**That Time I Got Reincarnated as a Slime**](https://anilist.co/anime/101280) - TV ⭐ 8.0 | ⚔️ Action, Fantasy
-- [**The Disastrous Life of Saiki K.**](https://anilist.co/anime/21273) - TV ⭐ 8.3 | 😄 Comedy, Supernatural
-- [**Tokyo Revengers**](https://anilist.co/anime/124194) - TV ⭐ 7.8 | 🔥 Action, Drama
-- [**The Rising of the Shield Hero**](https://anilist.co/anime/101348) - TV ⭐ 7.5 | ⚔️ Action, Fantasy
-- [**The Water Magician**](https://anilist.co/anime/186052) - TV ⭐ 8.6 | 🌊 Adventure, Fantasy
+- [**Tales from Earthsea**](https://anilist.co/anime/1829)
+- [**That Time I Got Reincarnated as a Slime**](https://anilist.co/anime/101280)
+- [**That Time I Got Reincarnated as a Slime Season 2**](https://anilist.co/anime/108511)
+- [**That Time I Got Reincarnated as a Slime Season 2 Part 2**](https://anilist.co/anime/116742)
+- [**That Time I Got Reincarnated as a Slime Season 3**](https://anilist.co/anime/156822)
+- [**That Time I Got Reincarnated as a Slime: The Movie - Scarlet Bond**](https://anilist.co/anime/139498)
+- [**That Time I Got Reincarnated as a Slime: Visions of Coleus**](https://anilist.co/anime/161802)
+- [**The 100 Girlfriends Who Really, Really, Really, Really, Really Love You Season 2**](https://anilist.co/anime/172258)
+- [**The 8th Son? Are You Kidding Me?**](https://anilist.co/anime/106319)
+- [**The Ambition of Oda Nobuna**](https://anilist.co/anime/11933)
+- [**The Angel Next Door Spoils Me Rotten**](https://anilist.co/anime/143338)
+- [**The Apothecary Diaries**](https://anilist.co/anime/161645)
+- [**The Aristocrat's Otherworldly Adventure: Serving Gods Who Go Too Far**](https://anilist.co/anime/153332)
+- [**The Banished Former Hero Lives as He Pleases**](https://anilist.co/anime/166372)
+- [**The Beginning After the End**](https://anilist.co/anime/183161)
+- [**The Boy Who Saw the Wind**](https://anilist.co/anime/757)
+- [**The Brilliant Healer's New Life in the Shadows**](https://anilist.co/anime/175872)
+- [**The Cat Returns**](https://anilist.co/anime/597)
+- [**The Daily Life of a Middle-Aged Online Shopper in Another World**](https://anilist.co/anime/180292)
+- [**The Detective Is Already Dead**](https://anilist.co/anime/128712)
+- [**The Duke of Death and His Maid Season 2**](https://anilist.co/anime/139435)
+- [**The Elusive Samurai**](https://anilist.co/anime/162896)
+- [**The Eminence in Shadow**](https://anilist.co/anime/130298)
+- [**The Eminence in Shadow Season 2**](https://anilist.co/anime/161964)
+- [**The Faraway Paladin**](https://anilist.co/anime/132473)
+- [**The Faraway Paladin: The Lord of the Rust Mountains**](https://anilist.co/anime/143085)
+- [**The Fated Magical Princess: Who Made Me a Princess**](https://anilist.co/anime/165530)
+- [**The Foolish Angel Dances with the Devil**](https://anilist.co/anime/164244)
+- [**The Fruit of Evolution: Before I Knew It, My Life Had It Made**](https://anilist.co/anime/129068)
+- [**The Future Diary**](https://anilist.co/anime/10620)
+- [**The Garden of Sinners Chapter 1: Overlooking View**](https://anilist.co/anime/2593)
+- [**The Garden of Sinners Chapter 2: A Study in Murder - Part 1**](https://anilist.co/anime/3782)
+- [**The Garden of Sinners Chapter 3: Remaining Sense of Pain**](https://anilist.co/anime/3783)
+- [**The Garden of Sinners Chapter 4: The Hollow Shrine**](https://anilist.co/anime/4280)
+- [**The Garden of Sinners Chapter 5: Paradox Spiral**](https://anilist.co/anime/4282)
+- [**The Girl Who Leapt Through Time**](https://anilist.co/anime/2236)
+- [**The Gorilla God's Go-To Girl**](https://anilist.co/anime/182060)
+- [**The Great Cleric**](https://anilist.co/anime/155418)
+- [**The Greatest Demon Lord Is Reborn as a Typical Nobody**](https://anilist.co/anime/130586)
+- [**The Healer Who Was Banished From His Party, Is, in Fact, the Strongest**](https://anilist.co/anime/174043)
+- [**The Iceblade Sorcerer Shall Rule the World**](https://anilist.co/anime/148116)
+- [**The Irregular at Magic High School Season 3**](https://anilist.co/anime/143271)
+- [**The Kingdoms of Ruin**](https://anilist.co/anime/160900)
+- [**The Last Summoner**](https://anilist.co/anime/114108)
+- [**The Legendary Hero Is Dead!**](https://anilist.co/anime/148109)
+- [**The Master of Ragnarok & Blesser of Einherjar**](https://anilist.co/anime/101289)
+- [**The Most Notorious "Talker" Runs the World's Greatest Clan**](https://anilist.co/anime/177104)
+- [**The New Gate**](https://anilist.co/anime/170890)
+- [**The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible**](https://anilist.co/anime/163292)
+- [**The Red Ranger Becomes an Adventurer in Another World**](https://anilist.co/anime/180052)
+- [**The Reincarnation of the Strongest Exorcist in Another World**](https://anilist.co/anime/144553)
+- [**The Rising of the Shield Hero**](https://anilist.co/anime/99263)
+- [**The Rising of the Shield Hero Season 2**](https://anilist.co/anime/111321)
+- [**The Rising of the Shield Hero Season 3**](https://anilist.co/anime/111322)
+- [**The Rising of the Shield Hero Season 4**](https://anilist.co/anime/173780)
+- [**The Silver Guardian**](https://anilist.co/anime/21662)
+- [**The Silver Guardian 2**](https://anilist.co/anime/99148)
+- [**The Strongest Magician in the Demon Lord's Army Was a Human**](https://anilist.co/anime/173584)
+- [**The Twelve Kingdoms**](https://anilist.co/anime/153)
+- [**The Unaware Atelier Meister**](https://anilist.co/anime/183133)
+- [**The Unwanted Undead Adventurer**](https://anilist.co/anime/147642)
+- [**The Vexations of a Shut-In Vampire Princess**](https://anilist.co/anime/159808)
+- [**The Water Magician**](https://anilist.co/anime/186052)
+- [**The Weakest Tamer Began a Journey to Pick Up Trash**](https://anilist.co/anime/156891)
+- [**The Witch and the Beast**](https://anilist.co/anime/153818)
+- [**The Wrong Way to Use Healing Magic**](https://anilist.co/anime/137908)
+- [**There was a Cute Girl in the Hero's Party, so I Tried Confessing to Her**](https://anilist.co/anime/195515)
+- [**To Your Eternity Season 3**](https://anilist.co/anime/162669)
+- [**Toki no Tabibito: Time Stranger**](https://anilist.co/anime/3115)
+- [**Tokko**](https://anilist.co/anime/916)
+- [**Tokyo Ghoul**](https://anilist.co/anime/20605)
+- [**Tokyo Ravens**](https://anilist.co/anime/16011)
+- [**Tomodachi Game**](https://anilist.co/anime/141014)
+- [**Tougen Anki**](https://anilist.co/anime/177474)
+- [**Touhai: Ura Rate Mahjong Touhairoku**](https://anilist.co/anime/173263)
+- [**Tower of God Season 2: Return of the Prince**](https://anilist.co/anime/153406)
+- [**Trinity Seven**](https://anilist.co/anime/20631)
+- [**Tsukimichi -Moonlit Fantasy- Season 2**](https://anilist.co/anime/139518)
+- [**Tsukimichi: Moonlit Fantasy**](https://anilist.co/anime/125206)
+- [**Twilight of the Dark Master**](https://anilist.co/anime/1245)
 
 ### U
-- [**Usagi Drop**](https://anilist.co/anime/10165) - TV ⭐ 8.3 | 😄 Comedy, Slice of Life
-- [**Ushio and Tora**](https://anilist.co/anime/20787) - TV ⭐ 7.7 | ⚔️ Action, Supernatural
-- [**Utena Revolutionary Girl**](https://anilist.co/anime/440) - TV ⭐ 7.6 | 🧠 Psychological, Drama
-- [**Un-Go**](https://anilist.co/anime/10165) - TV ⭐ 7.0 | 🕰️ Mystery, Supernatural
-- [**Uma Musume: Pretty Derby**](https://anilist.co/anime/101291) - TV ⭐ 7.8 | 🏇 Sports, Comedy
-- [**Ulysses: Jeanne d'Arc and the Alchemist Knight**](https://anilist.co/anime/101291) - TV ⭐ 5.8 | ⚔️ Action, Fantasy
-- [**Ultraman**](https://anilist.co/anime/101291) - TV ⭐ 6.8 | 🔥 Action, Sci-Fi
-- [**UQ Holder!**](https://anilist.co/anime/98438) - TV ⭐ 6.7 | ⚔️ Action, Fantasy
-- [**Urusei Yatsura**](https://anilist.co/anime/940) - TV ⭐ 7.4 | 😄 Comedy, Romance
-- [**Unlimited Psychic Squad**](https://anilist.co/anime/20787) - TV ⭐ 6.5 | 🔥 Action, Supernatural
+- [**Ubel Blatt**](https://anilist.co/anime/175198)
+- [**Umamusume: Cinderella Gray**](https://anilist.co/anime/180516)
+- [**Unbreakable Machine-Doll**](https://anilist.co/anime/17247)
+- [**Uncle from Another World**](https://anilist.co/anime/135806)
 
 ### V
-- [**Vinland Saga**](https://anilist.co/anime/101348) - TV ⭐ 8.7 | ⚔️ Action, Drama
-- [**Violet Evergarden**](https://anilist.co/anime/21827) - TV ⭐ 8.7 | 💔 Drama, Slice of Life
-- [**Vivy: Fluorite Eye's Song**](https://anilist.co/anime/124194) - TV ⭐ 8.3 | 🔬 Sci-Fi, Action
-- [**Vampire Knight**](https://anilist.co/anime/3750) - TV ⭐ 6.7 | 💕 Romance, Supernatural
-- [**Valvrave the Liberator**](https://anilist.co/anime/17074) - TV ⭐ 6.5 | 🤖 Mecha, Action
-- [**Vandread**](https://anilist.co/anime/235) - TV ⭐ 7.0 | 🤖 Mecha, Romance
-- [**Visions of Escaflowne**](https://anilist.co/anime/97) - TV ⭐ 7.5 | 🤖 Mecha, Fantasy
-- [**Vexations of a Shut-In Vampire Princess**](https://anilist.co/anime/124194) - TV ⭐ 6.2 | 😄 Comedy, Fantasy
-- [**Vampire Hunter D**](https://anilist.co/anime/1142) - Movie ⭐ 7.2 | ⚔️ Action, Horror
-- [**Vatican Miracle Examiner**](https://anilist.co/anime/98438) - TV ⭐ 5.8 | 🕰️ Mystery, Supernatural
+- [**Vampire Hunter D: Bloodlust**](https://anilist.co/anime/543)
+- [**Venus Wars**](https://anilist.co/anime/544)
+- [**Vinland Saga**](https://anilist.co/anime/101348)
+- [**Vinland Saga Season 2**](https://anilist.co/anime/136430)
+- [**Violence Jack: Evil Town**](https://anilist.co/anime/1342)
+- [**Violet Evergarden**](https://anilist.co/anime/21827)
+- [**Violet Evergarden: Eternity and the Auto Memory Doll**](https://anilist.co/anime/109190)
+- [**Violet Evergarden: The Day You Understand "I Love You" Will Surely Come**](https://anilist.co/anime/101432)
+- [**Violet Evergarden: The Movie**](https://anilist.co/anime/103047)
+- [**Viral Hit**](https://anilist.co/anime/174653)
+- [**Vivy -Fluorite Eye's Song-**](https://anilist.co/anime/128546)
+- [**Voices of a Distant Star**](https://anilist.co/anime/256)
+- [**VTuber Legend: How I Went Viral after Forgetting to Turn Off My Stream**](https://anilist.co/anime/160488)
 
 ### W
-- [**Welcome to the N.H.K.**](https://anilist.co/anime/1214) - TV ⭐ 8.2 | 🧠 Psychological, Comedy
-- [**Wolf Children**](https://anilist.co/anime/12355) - Movie ⭐ 8.6 | 💔 Drama, Fantasy
-- [**Wotakoi: Love is Hard for Otaku**](https://anilist.co/anime/101291) - TV ⭐ 8.0 | 💕 Romance, Comedy
-- [**Witch Hunter Robin**](https://anilist.co/anime/389) - TV ⭐ 7.2 | 🧙 Fantasy, Mystery
-- [**WorldEnd**](https://anilist.co/anime/98438) - TV ⭐ 7.5 | 💔 Drama, Fantasy
-- [**Wise Man's Grandchild**](https://anilist.co/anime/101291) - TV ⭐ 6.5 | ⚔️ Action, Fantasy
-- [**Wandering Son**](https://anilist.co/anime/8408) - TV ⭐ 7.5 | 🎭 Drama, Slice of Life
-- [**World Trigger**](https://anilist.co/anime/20787) - TV ⭐ 7.7 | 🔥 Action, Sci-Fi
-- [**Wanna Be the Strongest in the World!**](https://anilist.co/anime/18497) - TV ⭐ 5.5 | 🥊 Sports, Ecchi
-- [**Witch Craft Works**](https://anilist.co/anime/19365) - TV ⭐ 6.7 | 🧙 Fantasy, Action
+- [**Welcome to Demon School! Iruma-kun**](https://anilist.co/anime/107693)
+- [**Welcome to Demon School! Iruma-kun Season 2**](https://anilist.co/anime/116338)
+- [**Welcome to Japan, Ms. Elf!**](https://anilist.co/anime/172439)
+- [**Welcome to the Ballroom**](https://anilist.co/anime/98005)
+- [**Welcome to the Outcast's Restaurant!**](https://anilist.co/anime/185544)
+- [**Why Does Nobody Remember Me in This World?**](https://anilist.co/anime/167419)
+- [**Wicked City**](https://anilist.co/anime/1107)
+- [**Wistoria: Wand and Sword**](https://anilist.co/anime/174576)
+- [**Wizardry**](https://anilist.co/anime/1076)
+- [**Wolf's Rain**](https://anilist.co/anime/202)
+- [**Wolf's Rain OVA**](https://anilist.co/anime/1023)
+- [**World Trigger**](https://anilist.co/anime/20729)
+- [**World Trigger 2nd Season**](https://anilist.co/anime/114087)
+- [**World Trigger 3rd Season**](https://anilist.co/anime/127400)
 
 ### X
-- [**XXXHOLiC**](https://anilist.co/anime/465) - TV ⭐ 7.6 | 🧙 Fantasy, Mystery
-- [**Xam'd: Lost Memories**](https://anilist.co/anime/4549) - TV ⭐ 7.3 | 🤖 Mecha, Adventure
-- [**X**](https://anilist.co/anime/99) - TV ⭐ 6.9 | ⚔️ Action, Fantasy
-- [**Xenosaga**](https://anilist.co/anime/1175) - TV ⭐ 5.8 | 🔬 Sci-Fi, Action
-- [**Xiaolin Showdown**](https://anilist.co/anime/20787) - TV ⭐ 6.5 | ⚔️ Action, Adventure
+- [**X**](https://anilist.co/anime/156)
+- [**xxxHOLiC The Movie: A Midsummer Night's Dream**](https://anilist.co/anime/793)
 
 ### Y
-- [**Your Name**](https://anilist.co/anime/21519) - Movie ⭐ 9.0 | 💕 Romance, Supernatural
-- [**Your Lie in April**](https://anilist.co/anime/20665) - TV ⭐ 8.6 | 💔 Drama, Music
-- [**Yona of the Dawn**](https://anilist.co/anime/20787) - TV ⭐ 8.0 | 🗡️ Adventure, Fantasy
-- [**Yu Yu Hakusho**](https://anilist.co/anime/392) - TV ⭐ 8.3 | ⚔️ Action, Supernatural
-- [**Yuri!!! on Ice**](https://anilist.co/anime/21327) - TV ⭐ 8.1 | ⛸️ Sports, Romance
-- [**Yowamushi Pedal**](https://anilist.co/anime/18139) - TV ⭐ 7.7 | 🚴 Sports, Comedy
-- [**Yakusoku no Neverland**](https://anilist.co/anime/101348) - TV ⭐ 8.5 | 🧠 Psychological, Horror
-- [**Yuru Camp**](https://anilist.co/anime/98438) - TV ⭐ 8.2 | 😄 Comedy, Slice of Life
-- [**Youjo Senki**](https://anilist.co/anime/21473) - TV ⭐ 7.8 | ⚔️ Action, Fantasy
-- [**Yamada-kun and the Seven Witches**](https://anilist.co/anime/20787) - TV ⭐ 7.5 | 😄 Comedy, Supernatural
+- [**Yamibo: Darkness, The Hat and the Travelers of the Books**](https://anilist.co/anime/497)
+- [**You are Ms. Servant.**](https://anilist.co/anime/172190)
+- [**YU-NO: A Girl Who Chants Love at the Bound of This World**](https://anilist.co/anime/97995)
 
 ### Z
-- [**Zankyou no Terror**](https://anilist.co/anime/20687) - TV ⭐ 8.0 | 🎭 Psychological, Thriller
-- [**Zetsuen no Tempest**](https://anilist.co/anime/14075) - TV ⭐ 7.7 | 🧠 Psychological, Fantasy
-- [**Zombie Land Saga**](https://anilist.co/anime/101291) - TV ⭐ 7.8 | 😄 Comedy, Supernatural
-- [**Zatch Bell!**](https://anilist.co/anime/1498) - TV ⭐ 7.3 | ⚔️ Action, Comedy
-- [**Zetman**](https://anilist.co/anime/11785) - TV ⭐ 6.5 | 🔥 Action, Horror
-- [**Zipang**](https://anilist.co/anime/504) - TV ⭐ 7.2 | 🔬 Sci-Fi, Historical
-- [**Zoids**](https://anilist.co/anime/1095) - TV ⭐ 6.3 | 🤖 Mecha, Action
-- [**Zombie Loan**](https://anilist.co/anime/2163) - TV ⭐ 6.2 | 🔥 Action, Horror
-- [**Z/X Ignition**](https://anilist.co/anime/20787) - TV ⭐ 5.5 | ⚔️ Action, Fantasy
-- [**Zombie Powder**](https://anilist.co/anime/20787) - TV ⭐ 5.0 | ⚔️ Action, Supernatural
+- [**Zillion: Burning Night**](https://anilist.co/anime/2689)
+
 
 ## 🤝 Recommendations Welcome!
 
@@ -385,10 +640,10 @@ This project is open source and available under the [MIT License](LICENSE).
   
   *For inquiries or collaborations*
      
-[![Telegram Badge](https://img.shields.io/badge/-Telegram-2CA5E0?style=flat&logo=Telegram&logoColor=white)](https://telegram.me/Shineii86 "Contact on Telegram")
-[![Instagram Badge](https://img.shields.io/badge/-Instagram-C13584?style=flat&logo=Instagram&logoColor=white)](https://instagram.com/ikx7.a "Follow on Instagram")
-[![Pinterest Badge](https://img.shields.io/badge/-Pinterest-E60023?style=flat&logo=Pinterest&logoColor=white)](https://pinterest.com/ikx7a "Follow on Pinterest")
-[![Gmail Badge](https://img.shields.io/badge/-Gmail-D14836?style=flat&logo=Gmail&logoColor=white)](mailto:ikx7a@hotmail.com "Send an Email")
+[![Telegram Badge](https://img.shields.io/badge/-Telegram-2CA5E0?style=for-the-badge&logo=Telegram&logoColor=white)](https://telegram.me/Shineii86 "Contact on Telegram")
+[![Instagram Badge](https://img.shields.io/badge/-Instagram-C13584?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/ikx7.a "Follow on Instagram")
+[![Pinterest Badge](https://img.shields.io/badge/-Pinterest-E60023?style=for-the-badge&logo=Pinterest&logoColor=white)](https://pinterest.com/ikx7a "Follow on Pinterest")
+[![Gmail Badge](https://img.shields.io/badge/-Gmail-D14836?style=for-the-badge&logo=Gmail&logoColor=white)](mailto:ikx7a@hotmail.com "Send an Email")
 
   <sup><b>Copyright © 2025 <a href="https://telegram.me/Shineii86">Shinei Nouzen</a> All Rights Reserved</b></sup>
 
