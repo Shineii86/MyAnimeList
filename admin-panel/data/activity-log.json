@@ -6,5 +6,21 @@
     "target": "Classroom of the Elite Season 2",
     "details": "TV • 7.9 • Drama, Mystery, Psychological",
     "user": "admin"
+  },
+  {
+    "id": "mov1mg1b78am",
+    "timestamp": "2026-05-07T05:26:04.463Z",
+    "action": "push",
+    "target": "Shineii86/MyAnimeList",
+    "details": "README.md + anime.json (269 entries)",
+    "user": "admin"
+  },
+  {
+    "id": "mov1mtyddj3w",
+    "timestamp": "2026-05-07T05:26:22.501Z",
+    "action": "add",
+    "target": "Classroom of the Elite Season 3",
+    "details": "TV • 7.8 • Drama, Psychological",
+    "user": "admin"
   }
 ]
