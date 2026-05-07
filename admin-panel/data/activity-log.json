@@ -638,5 +638,13 @@
     "target": "Delicious in Dungeon",
     "details": "TV • 0 • Adventure, Comedy, Fantasy, Gourmet",
     "user": "admin"
+  },
+  {
+    "id": "mov4vdljov51",
+    "timestamp": "2026-05-07T06:57:00.055Z",
+    "action": "add",
+    "target": "Demon Lord 2099",
+    "details": "TV • 0 • Action, Fantasy, Sci-Fi",
+    "user": "admin"
   }
 ]
