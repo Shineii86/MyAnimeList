@@ -630,5 +630,13 @@
     "target": "Deadman Wonderland",
     "details": "TV • 0 • Action, Sci-Fi, Supernatural, Suspense",
     "user": "admin"
+  },
+  {
+    "id": "mov4vcmjmaxm",
+    "timestamp": "2026-05-07T06:56:58.795Z",
+    "action": "add",
+    "target": "Delicious in Dungeon",
+    "details": "TV • 0 • Adventure, Comedy, Fantasy, Gourmet",
+    "user": "admin"
   }
 ]
