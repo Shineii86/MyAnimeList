@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { readFile, writeFile } from 'fs/promises';
 import { join } from 'path';
+import { syncToGitHub } from '@/lib/github';
 import type { Anime } from '@/lib/utils';
 
 const DATA_FILE = join(process.cwd(), 'data', 'anime.json');
@@ -43,7 +44,8 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
     };
 
     await writeAnime(anime);
-    return NextResponse.json(anime[index]);
+    const syncResult = await syncToGitHub(`chore: update "${anime[index].title}"`);
+    return NextResponse.json({ ...anime[index], githubSync: syncResult });
   } catch {
     return NextResponse.json({ error: 'Failed to update anime' }, { status: 500 });
   }
@@ -53,10 +55,13 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
   try {
     const id = parseInt(params.id);
     const anime = await readAnime();
+    const target = anime.find(a => a.id === id);
+    if (!target) return NextResponse.json({ error: 'Not found' }, { status: 404 });
+
     const filtered = anime.filter(a => a.id !== id);
-    if (filtered.length === anime.length) return NextResponse.json({ error: 'Not found' }, { status: 404 });
     await writeAnime(filtered);
-    return NextResponse.json({ success: true });
+    const syncResult = await syncToGitHub(`chore: remove "${target.title}" from collection`);
+    return NextResponse.json({ success: true, githubSync: syncResult });
   } catch {
     return NextResponse.json({ error: 'Failed to delete anime' }, { status: 500 });
   }

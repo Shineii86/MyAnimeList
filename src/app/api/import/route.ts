@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { readFile, writeFile } from 'fs/promises';
 import { join } from 'path';
 import { importFromAniListUser, formatAniListDate, mapAniListFormat, mapAniListScore } from '@/lib/anilist';
+import { syncToGitHub } from '@/lib/github';
 import type { Anime } from '@/lib/utils';
 
 const DATA_FILE = join(process.cwd(), 'data', 'anime.json');
@@ -56,8 +57,9 @@ export async function POST(request: NextRequest) {
     }
 
     await writeAnime(existing);
-    return NextResponse.json({ added, total: existing.length, skipped: entries.length - added });
-  } catch (err) {
+    const syncResult = await syncToGitHub(`feat: import ${added} anime from AniList user "${username}"`);
+    return NextResponse.json({ added, total: existing.length, skipped: entries.length - added, githubSync: syncResult });
+  } catch {
     return NextResponse.json({ error: 'Import failed' }, { status: 500 });
   }
 }

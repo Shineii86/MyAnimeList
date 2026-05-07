@@ -1,7 +1,8 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 const navItems = [
   { href: '/', label: 'Dashboard', icon: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6' },
@@ -15,6 +16,18 @@ const navItems = [
 
 export function Sidebar() {
   const pathname = usePathname();
+  const router = useRouter();
+  const [githubStatus, setGithubStatus] = useState<{ configured: boolean; owner?: string; repo?: string } | null>(null);
+
+  useEffect(() => {
+    fetch('/api/github/status').then(r => r.json()).then(setGithubStatus).catch(() => {});
+  }, []);
+
+  const handleLogout = async () => {
+    await fetch('/api/auth/logout', { method: 'POST' });
+    router.push('/login');
+    router.refresh();
+  };
 
   return (
     <aside className="hidden md:flex flex-col w-64 bg-white/80 dark:bg-dark-card/80 backdrop-blur-ios border-r border-ios-gray-5 dark:border-dark-separator h-screen sticky top-0">
@@ -47,8 +60,27 @@ export function Sidebar() {
           );
         })}
       </nav>
-      <div className="p-4 border-t border-ios-gray-5 dark:border-dark-separator">
-        <p className="text-xs text-ios-gray-1 dark:text-dark-tertiary text-center">Anime Admin v1.0</p>
+      <div className="p-4 border-t border-ios-gray-5 dark:border-dark-separator space-y-3">
+        {githubStatus && (
+          <div className={`flex items-center gap-2 px-3 py-2 rounded-ios text-xs ${githubStatus.configured ? 'bg-ios-green/10 text-ios-green' : 'bg-ios-gray-6 dark:bg-dark-elevated text-ios-gray-1 dark:text-dark-secondary'}`}>
+            <span className={`w-2 h-2 rounded-full ${githubStatus.configured ? 'bg-ios-green' : 'bg-ios-gray-3'}`} />
+            {githubStatus.configured ? (
+              <span>GitHub: {githubStatus.owner}/{githubStatus.repo}</span>
+            ) : (
+              <span>GitHub: Not configured</span>
+            )}
+          </div>
+        )}
+        <button
+          onClick={handleLogout}
+          className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-ios text-xs font-medium text-ios-gray-1 dark:text-dark-secondary hover:text-ios-red hover:bg-ios-red/10 transition-colors"
+        >
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+          </svg>
+          Sign Out
+        </button>
+        <p className="text-xs text-ios-gray-2 dark:text-dark-tertiary text-center">Anime Admin v1.0</p>
       </div>
     </aside>
   );

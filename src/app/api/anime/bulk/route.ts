@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { readFile, writeFile } from 'fs/promises';
 import { join } from 'path';
+import { syncToGitHub } from '@/lib/github';
 import type { Anime } from '@/lib/utils';
 
 const DATA_FILE = join(process.cwd(), 'data', 'anime.json');
@@ -47,7 +48,8 @@ export async function POST(request: NextRequest) {
 
     const updated = [...existing, ...toAdd];
     await writeAnime(updated);
-    return NextResponse.json({ added: toAdd.length, total: updated.length });
+    const syncResult = await syncToGitHub(`feat: bulk add ${toAdd.length} anime to collection`);
+    return NextResponse.json({ added: toAdd.length, total: updated.length, githubSync: syncResult });
   } catch {
     return NextResponse.json({ error: 'Failed to bulk add' }, { status: 500 });
   }

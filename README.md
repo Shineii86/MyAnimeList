@@ -16,11 +16,79 @@
 
 
 ## 📋 Table of Contents
+- [🖥️ Admin Panel](#️-admin-panel)
 - [📊 Statistics](#-statistics)
 - [🏆 Top Recommendations](#-top-recommendations)
 - [📺 Complete Anime List](#-complete-anime-list)
 - [🤝 Recommendations](#recommendations-welcome)
 - [📝 License](#license)
+
+---
+
+## 🖥️ Admin Panel
+
+A full-featured **Next.js 14 admin dashboard** for managing this anime collection with iOS-style UI, AniList integration, and automatic GitHub sync.
+
+### ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| 📊 **Dashboard** | Live stats, recent additions, quick actions |
+| 📋 **Anime List** | Search, filter by letter, sort, grid/list view, pagination |
+| ➕ **Add Anime** | Single add with auto-fill from AniList search |
+| 📦 **Bulk Add** | Add multiple anime at once (CSV format) |
+| 🔍 **AniList Search** | Search AniList API, one-click add with full metadata |
+| 📥 **Import/Export** | Import from AniList username, export as JSON/CSV |
+| 🔐 **Basic Auth** | Username/password login (configurable via `.env`) |
+| 🔄 **GitHub Sync** | Auto-push `anime.json` changes to this repo |
+| 🌙 **Dark Mode** | Light / Dark / System theme with smooth transitions |
+| 🔊 **Sound Effects** | iOS-style UI sounds (toggleable) |
+
+### 🚀 Quick Start
+
+```bash
+# Clone the repo
+git clone https://github.com/Shineii86/MyAnimeList.git
+cd MyAnimeList
+
+# Install dependencies
+npm install
+
+# Create .env file
+cp .env.example .env
+# Edit .env with your credentials:
+#   ADMIN_USERNAME=admin
+#   ADMIN_PASSWORD=your_password
+#   GITHUB_TOKEN=ghp_your_token
+#   GITHUB_OWNER=Shineii86
+#   GITHUB_REPO=MyAnimeList-repo
+
+# Start the dev server
+npm run dev
+```
+
+Open **http://localhost:3000** and log in with your credentials.
+
+### 🔑 Environment Variables
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `ADMIN_USERNAME` | Yes | Login username (default: `admin`) |
+| `ADMIN_PASSWORD` | Yes | Login password (default: `changeme`) |
+| `GITHUB_TOKEN` | No | GitHub personal access token (for auto-sync) |
+| `GITHUB_OWNER` | No | GitHub username/org (e.g. `Shineii86`) |
+| `GITHUB_REPO` | No | Repository name (e.g. `MyAnimeList-repo`) |
+| `GITHUB_BRANCH` | No | Branch to push to (default: `main`) |
+
+### 📁 Tech Stack
+
+- **Next.js 14** (App Router) + **TypeScript** + **Tailwind CSS v3**
+- **iOS-style UI** — frosted glass, rounded cards, micro-animations
+- **AniList GraphQL API** — search, auto-fill, bulk import
+- **GitHub API** — automatic commit & push on every change
+- **JSON file storage** — no database needed
+
+---
 
 ## 📊 Statistics
 

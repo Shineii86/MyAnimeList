@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 ## [2026-05-07] - Admin Panel Dashboard
 
 ### Added
+- Basic authentication system with username/password login via .env configuration
+- Login page with iOS-style UI and cookie-based session management
+- Middleware-based route protection (pages redirect to login, API returns 401)
+- Logout functionality from sidebar, header, and settings page
+- GitHub sync integration — auto-push anime.json changes to repo on every add/edit/delete/import
+- GitHub status API endpoint for frontend sync status display
+- GitHub status indicator in sidebar (green dot when configured)
+- GitHub sync banner in Import/Export page
+- .env.example with all configuration variables documented
+- README.md updated with Admin Panel section, setup instructions, and environment variables table
+
+### Changed
+- All write API routes (add, update, delete, bulk add, import) now sync to GitHub after changes
+- Header component now includes logout button
+- Sidebar now shows GitHub connection status and sign-out button
+- Settings page enhanced with GitHub sync status, export buttons, and account section
+- .gitignore updated to exclude .env files
+
 - Full Next.js 14 Admin Panel Dashboard with App Router and TypeScript
 - Dashboard page with stats cards (total anime, TV shows, movies, OVAs, avg score, episodes, completed, top picks)
 - Anime List page with search, filter by letter, sort, pagination (50/page), grid/list view toggle

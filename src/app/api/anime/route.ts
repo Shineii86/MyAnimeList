@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { readFile, writeFile } from 'fs/promises';
 import { join } from 'path';
+import { syncToGitHub } from '@/lib/github';
 import type { Anime } from '@/lib/utils';
 
 const DATA_FILE = join(process.cwd(), 'data', 'anime.json');
@@ -52,7 +53,11 @@ export async function POST(request: NextRequest) {
 
     anime.push(newAnime);
     await writeAnime(anime);
-    return NextResponse.json(newAnime, { status: 201 });
+
+    // Sync to GitHub in background
+    const syncResult = await syncToGitHub(`feat: add "${newAnime.title}" to anime collection`);
+
+    return NextResponse.json({ ...newAnime, githubSync: syncResult }, { status: 201 });
   } catch {
     return NextResponse.json({ error: 'Failed to add anime' }, { status: 500 });
   }
