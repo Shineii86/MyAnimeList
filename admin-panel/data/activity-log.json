@@ -2334,5 +2334,13 @@
     "target": "Princess Arete",
     "details": "TV • 0 • Fantasy",
     "user": "admin"
+  },
+  {
+    "id": "mov53trts2v1",
+    "timestamp": "2026-05-07T07:03:34.265Z",
+    "action": "add",
+    "target": "Princess Mononoke",
+    "details": "TV • 0 • Action, Adventure, Award Winning, Fantasy",
+    "user": "admin"
   }
 ]
