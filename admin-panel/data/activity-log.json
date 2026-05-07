@@ -110,5 +110,13 @@
     "target": "Astro Boy (1980)",
     "details": "TV • 0 • Action, Adventure, Sci-Fi",
     "user": "admin"
+  },
+  {
+    "id": "mov4t92gr0qw",
+    "timestamp": "2026-05-07T06:55:20.872Z",
+    "action": "add",
+    "target": "Attack on Titan",
+    "details": "TV • 0 • Action, Award Winning, Drama, Suspense",
+    "user": "admin"
   }
 ]
