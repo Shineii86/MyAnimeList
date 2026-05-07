@@ -1278,5 +1278,13 @@
     "target": "Hundred",
     "details": "TV • 0 • Action, Romance, Sci-Fi, Ecchi",
     "user": "admin"
+  },
+  {
+    "id": "mov4zpwoqjp3",
+    "timestamp": "2026-05-07T07:00:22.632Z",
+    "action": "add",
+    "target": "Hyouka",
+    "details": "TV • 0 • Mystery, Slice of Life",
+    "user": "admin"
   }
 ]
