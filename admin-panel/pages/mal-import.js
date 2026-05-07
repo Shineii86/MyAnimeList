@@ -100,51 +100,21 @@ export default function MalImport({ showToast }) {
 
     setLoading(true);
     try {
-      // Use MAL's direct JSON API with pagination
-      const allAnime = [];
-      let offset = 0;
-      const limit = 300;
-      let hasMore = true;
+      // Use server-side proxy to avoid CORS issues with MAL
+      const res = await apiPost('/api/anime/mal-fetch', { username: username.trim() });
+      const data = await res.json();
 
-      while (hasMore) {
-        const res = await fetch(`https://myanimelist.net/animelist/${encodeURIComponent(username)}/load.json?status=7&offset=${offset}`, {
-          headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
-        });
-        
-        if (!res.ok) throw new Error(`MAL returned ${res.status}. Is the profile public?`);
-        const data = await res.json();
-        
-        if (!Array.isArray(data) || data.length === 0) break;
-        
-        allAnime.push(...data);
-        offset += data.length;
-        hasMore = data.length >= limit;
-        
-        // Rate limit: MAL needs a small delay between pages
-        if (hasMore) await new Promise(r => setTimeout(r, 1000));
+      if (!res.ok) {
+        throw new Error(data.error || 'Failed to fetch MAL data');
       }
 
-      const parsed = allAnime
-        .filter(e => e.status === 2) // Only completed
-        .map(e => ({
-          title: e.anime_title_eng || e.anime_title,
-          episodes: e.anime_num_episodes || e.num_watched_episodes || 0,
-          score: e.score || 0,
-          status: 'Completed',
-          malId: e.anime_id,
-          type: e.anime_airing_status === 3 ? 'Movie' : 'TV',
-          genres: (e.genres || []).map(g => g.name),
-          source: 'MAL'
-        }))
-        .filter(a => a.title);
-
-      if (parsed.length === 0) {
+      if (!data.anime || data.anime.length === 0) {
         showToast?.('No completed anime found. Is the profile public?', 'error');
       } else {
-        setResults(parsed);
-        setSelected(new Set(parsed.map((_, i) => i)));
+        setResults(data.anime);
+        setSelected(new Set(data.anime.map((_, i) => i)));
         setStep('preview');
-        showToast?.(`Found ${parsed.length} completed anime for ${username}`, 'success');
+        showToast?.(`Found ${data.anime.length} completed anime for ${username}`, 'success');
       }
     } catch (err) {
       showToast?.(err.message || 'Failed to fetch MAL data', 'error');

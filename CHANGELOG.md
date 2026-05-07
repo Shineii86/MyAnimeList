@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Fix: MAL Username Import CORS & Error Handling
+
+### Fixed
+- **MAL Username Import not working** — Direct client-side fetch to `myanimelist.net` failed due to browser CORS restrictions. Created server-side proxy route (`/api/anime/mal-fetch.js`) that fetches MAL data server-side and returns it to the client.
+- **"User not found" for valid usernames** — The client-side request was blocked by CORS before MAL could respond. Now all MAL API calls go through the server proxy with proper headers.
+- **Better error messages** — Server proxy returns specific errors for 404 (user not found), 403 (private profile), timeouts, and empty lists instead of generic failures.
+- **Input validation** — Username is sanitized and validated (alphanumeric, 1-32 chars) before making any external requests.
+- **Pagination safety limit** — Added max 20 pages cap to prevent runaway loops for users with massive lists.
+
+### Changed
+- `pages/mal-import.js` — Username import now uses `apiPost('/api/anime/mal-fetch', ...)` instead of direct `fetch()` to MAL
+- MAL fetch now goes through the server-side proxy, consistent with how AniList search already works via `/api/anilist/search`
+
+### Added
+- `pages/api/anime/mal-fetch.js` — New server-side API route that proxies MAL username lookups, bypassing CORS restrictions
+
 ## [2026-05-07] - Major Feature Update: 15 New Features & Improvements
 
 ### Added
