@@ -3,7 +3,7 @@
 <img src="https://raw.githubusercontent.com/Shineii86/MyAnimeList/refs/heads/main/assets/image.png" alt="LOGO" width="200" height="200"/>
 </a>
 
-![Anime Count](https://img.shields.io/badge/Anime%20Watched-271-blueviolet?style=for-the-badge)
+![Anime Count](https://img.shields.io/badge/Anime%20Watched-272-blueviolet?style=for-the-badge)
 ![Days Watched](https://img.shields.io/badge/Days%20Watched-3.5+-important?style=for-the-badge)
 [![GitHub Stars](https://img.shields.io/github/stars/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/fork)
@@ -12,7 +12,7 @@
 
 </div> 
 
-> I began my anime-watching journey in **2020**, and since then I have watched and completed over **271 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
+> I began my anime-watching journey in **2020**, and since then I have watched and completed over **272 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
 
 
 ## 📋 Table of Contents
@@ -27,10 +27,10 @@
 
 | Statistic | Value |
 |-----------|-------|
-| Total Anime | 271 |
-| Total Episodes | 4,046 |
+| Total Anime | 272 |
+| Total Episodes | 4,047 |
 | TV Shows | 244 |
-| Movies Watched | 20 |
+| Movies Watched | 21 |
 | OVAs/Specials | 4 |
 | ONA | 3 |
 | Average Score | 7.9 |
@@ -269,6 +269,7 @@ These are my personal 10/10 masterpieces:
 - [**Recovery of an MMO Junkie**](https://anilist.co/anime/99726) - TV ⭐ 7.5 | 💕 Romance, 😄 Comedy
 - [**Redline**](https://anilist.co/anime/6675) - Movie ⭐ 8.4 | ⚔️ Action, 🔬 Sci-Fi
 - [**ReLIFE**](https://anilist.co/anime/21049) - ONA ⭐ 8 | 😄 Comedy, 💕 Romance
+- [**Road to Ninja: Naruto the Movie**](https://anilist.co/anime/13667) - Movie ⭐ 7.4 | ⚔️ Action, 🗡️ Adventure
 - [**Road to Ninja: Naruto the Movie**](https://anilist.co/anime/13667) - Movie ⭐ 7.4 | ⚔️ Action, 🗡️ Adventure
 - [**Romeo x Juliet**](https://anilist.co/anime/2030) - TV ⭐ 7.4 | 💕 Romance, 🧙 Fantasy
 - [**Run with the Wind**](https://anilist.co/anime/101903) - TV ⭐ 8.6 | 🏐 Sports, 💔 Drama
