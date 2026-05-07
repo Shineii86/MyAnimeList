@@ -24,7 +24,7 @@ All notable changes to this project will be documented in this file.
 ### Improved
 - **Mobile Responsive** — Hamburger menu, responsive breakpoints, touch-friendly UI
 - **Analytics Dashboard** — 6 summary stats, genre heatmap, timeline, studios, genre avg scores
-- **Auth Optional** — If ADMIN_PASSWORD not set, auth is bypassed (open access)
+- **Auth Security** — Auth always required; if ADMIN_PASSWORD not set, shows setup instructions instead of bypassing
 - **Activity Log** — Only logs adds, deletes, pushes, and imports (no view spam)
 
 ### Changed

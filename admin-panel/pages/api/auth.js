@@ -31,6 +31,12 @@ function recordAttempt(ip) {
 
 export default function handler(req, res) {
   try {
+    // GET: check if password is configured
+    if (req.method === 'GET') {
+      const hasPassword = !!process.env.ADMIN_PASSWORD;
+      return res.status(200).json({ configured: hasPassword, noPassword: !hasPassword });
+    }
+
     if (req.method !== 'POST') {
       return res.status(405).json({ error: 'Method not allowed' });
     }
