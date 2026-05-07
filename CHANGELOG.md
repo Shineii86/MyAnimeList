@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - MAL Import: AniList ID Resolution for Consistency
+
+### Fixed
+- **MAL imports now resolve AniList IDs** — Server-side proxy batches MAL IDs through AniList's GraphQL API (`idMal` lookup) to get `anilistId` and `anilistUrl` for every imported entry, matching the format of all 272 existing entries.
+- **`handleImport()` now passes AniList data** — Individual anime adds from MAL import now include `anilistId`, `anilistUrl`, and `genres` instead of dropping them.
+- **All entries use consistent URL format** — Every anime in the collection now has AniList URLs, regardless of whether it was added manually, via AniList search, or via MAL import.
+
+### Changed
+- `pages/api/anime/mal-fetch.js` — Added `resolveAniListIds()` that batch-queries AniList GraphQL (5 IDs per request, rate-limited) to map MAL IDs → AniList IDs
+- `pages/mal-import.js` — `handleImport()` now forwards `anilistId`, `anilistUrl`, and `genres` from MAL data to the add API
+
+### Technical
+- AniList resolution is best-effort: MAL data is still returned even if AniList lookup fails
+- Response includes `resolved` count so the UI can show how many IDs were matched
+- Batched queries (5 MAL IDs per GraphQL request) with 800ms delay between batches
+
 ## [2026-05-07] - Fix: MAL Username Import CORS & Error Handling
 
 ### Fixed

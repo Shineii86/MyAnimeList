@@ -137,11 +137,13 @@ export default function MalImport({ showToast }) {
       try {
         const res = await apiPost('/api/anime', {
           title: anime.title,
+          anilistId: anime.anilistId || null,
+          anilistUrl: anime.anilistUrl || (anime.anilistId ? `https://anilist.co/anime/${anime.anilistId}` : ''),
           type: anime.type || 'TV',
           score: anime.score || 0,
           episodes: anime.episodes || 0,
           status: anime.status || 'Completed',
-          genres: []
+          genres: anime.genres || []
         });
         if (res.ok) success++;
         else failed++;
