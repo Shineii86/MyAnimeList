@@ -350,5 +350,13 @@
     "target": "Bye Bye, Earth",
     "details": "TV • 0 • Action, Adventure, Fantasy",
     "user": "admin"
+  },
+  {
+    "id": "mov4uczb8c6d",
+    "timestamp": "2026-05-07T06:56:12.599Z",
+    "action": "add",
+    "target": "Call of the Night",
+    "details": "TV • 0 • Romance, Supernatural",
+    "user": "admin"
   }
 ]
