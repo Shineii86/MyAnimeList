@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "288",
-    "totalEpisodes": "4,209+",
+    "totalAnime": "289",
+    "totalEpisodes": "4,210+",
     "moviesWatched": "21",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 288,
+      "Completed": 289,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -4507,6 +4507,29 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 6,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b112625-5Qi2PEQqITCa.jpg"
+    },
+    {
+      "id": 1778137952109,
+      "title": "The Garden of Sinners Chapter 2: A Study in Murder - Part 1",
+      "anilistUrl": "https://anilist.co/anime/null",
+      "anilistId": null,
+      "type": "TV",
+      "score": 0,
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Mystery",
+        "Romance",
+        "Suspense"
+      ],
+      "episodes": 1,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "T",
+      "coverImage": null,
+      "addedAt": "2026-05-07T07:12:32.109Z",
+      "updatedAt": "2026-05-07T07:12:32.109Z"
     },
     {
       "id": 16870,
