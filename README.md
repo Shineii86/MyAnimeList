@@ -3,7 +3,7 @@
 <img src="https://raw.githubusercontent.com/Shineii86/MyAnimeList/refs/heads/main/assets/image.png" alt="LOGO" width="200" height="200"/>
 </a>
 
-![Anime Count](https://img.shields.io/badge/Anime%20Watched-280-blueviolet?style=for-the-badge)
+![Anime Count](https://img.shields.io/badge/Anime%20Watched-281-blueviolet?style=for-the-badge)
 ![Days Watched](https://img.shields.io/badge/Days%20Watched-3.5+-important?style=for-the-badge)
 [![GitHub Stars](https://img.shields.io/github/stars/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/fork)
@@ -12,7 +12,7 @@
 
 </div> 
 
-> I began my anime-watching journey in **2020**, and since then I have watched and completed over **280 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
+> I began my anime-watching journey in **2020**, and since then I have watched and completed over **281 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
 
 
 ## 📋 Table of Contents
@@ -27,9 +27,9 @@
 
 | Statistic | Value |
 |-----------|-------|
-| Total Anime | 280 |
-| Total Episodes | 4,134 |
-| TV Shows | 252 |
+| Total Anime | 281 |
+| Total Episodes | 4,146 |
+| TV Shows | 253 |
 | Movies Watched | 21 |
 | OVAs/Specials | 4 |
 | ONA | 3 |
@@ -157,6 +157,7 @@ These are my personal 10/10 masterpieces:
 - [**Headhunted to Another World: From Salaryman to Big Four!**](https://anilist.co/anime/null) - TV ⭐ 0 | 🗡️ Adventure, 😄 Comedy, 🧙 Fantasy
 - [**HELL MODE: The Hardcore Gamer Dominates in Another World with Garbage Balancing**](https://anilist.co/anime/185262) - TV ⭐ 6.7 | ⚔️ Action, 🏷️ Adventurer
 - [**Hell’s Paradise**](https://anilist.co/anime/128893) - TV ⭐ 8 | ⚔️ Action, 🗡️ Adventure, 🕰️ Mystery, 🔥 Supernatural
+- [**Hell's Paradise Season 2**](https://anilist.co/anime/null) - TV ⭐ 0 | ⚔️ Action, 🗡️ Adventure, 🔥 Supernatural
 - [**Hellsing Ultimate**](https://anilist.co/anime/777) - OVA ⭐ 8.3 | ⚔️ Action, 🎭 Horror
 - [**Highschool of the Dead**](https://anilist.co/anime/8074) - TV ⭐ 6.9 | ⚔️ Action, 😈 Ecchi
 - [**Hinamatsuri**](https://anilist.co/anime/100077) - TV ⭐ 8.3 | 😄 Comedy, 🔥 Supernatural
