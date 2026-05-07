@@ -2686,5 +2686,13 @@
     "target": "Shoot! Goal to the Future",
     "details": "TV • 0 • Sports",
     "user": "admin"
+  },
+  {
+    "id": "mov558lle1za",
+    "timestamp": "2026-05-07T07:04:40.137Z",
+    "action": "add",
+    "target": "Silent Möbius 2",
+    "details": "TV • 0 • Adventure, Fantasy, Sci-Fi",
+    "user": "admin"
   }
 ]
