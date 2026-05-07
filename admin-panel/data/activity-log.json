@@ -1798,5 +1798,13 @@
     "target": "Metropolis",
     "details": "TV • 0 • Adventure, Drama, Romance, Sci-Fi",
     "user": "admin"
+  },
+  {
+    "id": "mov51p3wfa5t",
+    "timestamp": "2026-05-07T07:01:54.908Z",
+    "action": "add",
+    "target": "MF Ghost",
+    "details": "TV • 0 • Drama",
+    "user": "admin"
   }
 ]
