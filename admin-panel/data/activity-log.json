@@ -86,5 +86,21 @@
     "target": "The Future Diary",
     "details": "TV • 0 • Action, Supernatural, Suspense",
     "user": "admin"
+  },
+  {
+    "id": "mov5cwpgei9h",
+    "timestamp": "2026-05-07T07:10:37.972Z",
+    "action": "add",
+    "target": "The Garden of Sinners Chapter 1: Overlooking View",
+    "details": "TV • 0 • Action, Fantasy, Mystery, Suspense",
+    "user": "admin"
+  },
+  {
+    "id": "mov5fe9dxmuy",
+    "timestamp": "2026-05-07T07:12:34.033Z",
+    "action": "add",
+    "target": "The Garden of Sinners Chapter 2: A Study in Murder - Part 1",
+    "details": "TV • 0 • Action, Fantasy, Mystery, Romance, Suspense",
+    "user": "admin"
   }
 ]
