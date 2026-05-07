@@ -46,5 +46,13 @@
     "target": ".hack//Sign",
     "details": "TV • 0 • Adventure, Fantasy, Mystery",
     "user": "admin"
+  },
+  {
+    "id": "mov4rjw9i0b2",
+    "timestamp": "2026-05-07T06:54:01.593Z",
+    "action": "add",
+    "target": ".hack//Unison",
+    "details": "TV • 0 • Adventure, Comedy, Fantasy, Sci-Fi",
+    "user": "admin"
   }
 ]
