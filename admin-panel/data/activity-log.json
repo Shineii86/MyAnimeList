@@ -14,5 +14,13 @@
     "target": "Appleseed (Movie)",
     "details": "TV • 0 • Sci-Fi",
     "user": "admin"
+  },
+  {
+    "id": "mov4sql98szy",
+    "timestamp": "2026-05-07T06:54:56.925Z",
+    "action": "add",
+    "target": "Aquarion",
+    "details": "TV • 0 • Fantasy, Romance, Sci-Fi",
+    "user": "admin"
   }
 ]
