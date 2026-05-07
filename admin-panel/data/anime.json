@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "272",
-    "totalEpisodes": "4,047+",
+    "totalAnime": "273",
+    "totalEpisodes": "4,059+",
     "moviesWatched": "21",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 272,
+      "Completed": 273,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -42,6 +42,25 @@
     }
   ],
   "anime": [
+    {
+      "id": 158287,
+      "title": "#Compass2.0: Animation Project",
+      "anilistUrl": "https://anilist.co/anime/158287",
+      "anilistId": 158287,
+      "type": "TV",
+      "score": 0,
+      "genres": [
+        "Action"
+      ],
+      "episodes": 12,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "#",
+      "coverImage": null,
+      "addedAt": "2026-05-07T06:53:51.052Z",
+      "updatedAt": "2026-05-07T06:53:51.052Z"
+    },
     {
       "id": 6213,
       "title": "A Certain Scientific Railgun",
