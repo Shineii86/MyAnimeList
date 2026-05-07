@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "270",
-    "totalEpisodes": "4,030+",
+    "totalAnime": "271",
+    "totalEpisodes": "4,046+",
     "moviesWatched": "20",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 270,
+      "Completed": 271,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -613,6 +613,26 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 0,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx98659-WNyPLIZDpGGY.jpg"
+    },
+    {
+      "id": 180745,
+      "title": "Classroom of the Elite 4th Season: Second Year, First Semester",
+      "anilistUrl": "https://anilist.co/anime/180745",
+      "anilistId": 180745,
+      "type": "TV",
+      "score": 7.9,
+      "genres": [
+        "Drama",
+        "Psychological"
+      ],
+      "episodes": 16,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "C",
+      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx180745-OEZaBeEdWozn.png",
+      "addedAt": "2026-05-07T05:26:52.870Z",
+      "updatedAt": "2026-05-07T05:26:52.870Z"
     },
     {
       "id": 145545,
