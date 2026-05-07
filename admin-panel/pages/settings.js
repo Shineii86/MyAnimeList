@@ -192,6 +192,54 @@ export default function SettingsPage({ showToast }) {
         </div>
       </div>
 
+      {/* Auto-Backup */}
+      <div className="card" style={{ marginBottom: 24 }}>
+        <div className="card-header">
+          <h2 className="card-title"><SaveIcon size={18} style={{ marginRight: 6 }} /> Auto-Backup to GitHub</h2>
+        </div>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: 20 }}>
+          Automatically back up your anime.json to a <code>backups/</code> folder in your repository.
+        </p>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 20 }}>
+          <button
+            onClick={() => handleChange('autoBackup', !settings.autoBackup)}
+            style={{
+              width: 56, height: 30, borderRadius: 15, border: 'none', cursor: 'pointer',
+              background: settings.autoBackup ? 'var(--success)' : 'var(--border)',
+              position: 'relative', transition: 'all 0.2s'
+            }}
+          >
+            <div style={{
+              width: 24, height: 24, borderRadius: 12, background: 'white',
+              position: 'absolute', top: 3, left: settings.autoBackup ? 29 : 3,
+              transition: 'left 0.2s', boxShadow: '0 2px 4px rgba(0,0,0,0.3)'
+            }} />
+          </button>
+          <span style={{ fontWeight: 600, color: settings.autoBackup ? 'var(--success)' : 'var(--text-muted)' }}>
+            {settings.autoBackup ? 'Enabled' : 'Disabled'}
+          </span>
+        </div>
+        {settings.autoBackup && (
+          <div className="form-group">
+            <label className="form-label">Backup Interval</label>
+            <select className="form-input" value={settings.backupInterval || 'daily'} onChange={e => handleChange('backupInterval', e.target.value)}>
+              <option value="daily">Daily</option>
+              <option value="weekly">Weekly</option>
+            </select>
+          </div>
+        )}
+        <button className="btn btn-outline" style={{ marginTop: 8 }} onClick={async () => {
+          const settings = JSON.parse(localStorage.getItem('mal_admin_settings') || '{}');
+          try {
+            const res = await apiPost('/api/backup', { action: 'backup', github_token: settings.githubToken, owner: settings.owner, repo: settings.repo });
+            if (res.ok) { const d = await res.json(); showToast?.(`Backup saved: ${d.path}`, 'success'); }
+            else showToast?.('Backup failed', 'error');
+          } catch { showToast?.('Backup error', 'error'); }
+        }}>
+          <DownloadIcon size={16} /> Backup Now
+        </button>
+      </div>
+
       {/* Save */}
       <div style={{ display: 'flex', gap: 12 }}>
         <button className="btn btn-success" onClick={handleSave}>

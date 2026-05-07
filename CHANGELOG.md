@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-05-07] - Major Feature Update: 15 New Features & Improvements
+
+### Added
+- **Pagination** — Anime list paginated (24/page) with page controls and item counts
+- **Seasonal Tracker** (`/seasonal`) — Track anime by season with year navigation and stats
+- **What to Watch** (`/discover`) — Personalized AniList recommendations based on top-rated genres
+- **Custom Lists** (`/lists`) — Create themed collections with emoji icons and anime selection
+- **MAL Import** (`/mal-import`) — Import from MyAnimeList via XML, JSON, or username lookup
+- **Genre & Score Filters** — Filter by genre dropdown and score range on anime list
+- **Episodes Column** — Table view now shows episode count
+- **Genre × Score Heatmap** — New heatmap chart in Analytics
+- **Watching Timeline** — Bar chart showing anime added per year
+- **Top Studios** — Studio ranking chart in Analytics
+- **Genre Avg Score** — Top genres by average score (min 3 anime)
+- **PWA Support** — Installable as app with offline caching (manifest + service worker)
+- **Webhook Notifications** — Discord/Telegram/generic webhook support (`/api/webhooks`)
+- **Auto-Backup** — Backup to `backups/` folder in GitHub (manual + scheduled)
+- **Backup API** — `/api/backup` endpoint for manual and scheduled backups
+
+### Improved
+- **Mobile Responsive** — Hamburger menu, responsive breakpoints, touch-friendly UI
+- **Analytics Dashboard** — 6 summary stats, genre heatmap, timeline, studios, genre avg scores
+- **Auth Optional** — If ADMIN_PASSWORD not set, auth is bypassed (open access)
+- **Activity Log** — Only logs adds, deletes, pushes, and imports (no view spam)
+
+### Changed
+- **Sidebar** — Added "Discover" section (Seasonal, What to Watch, Custom Lists) and MAL Import
+- **CSS** — Added scrollbar, selection, heatmap, tabs, seasonal grid, list card styles
+
 ## [2026-05-07] - Fix: Vercel Data Persistence
 
 ### Fixed

@@ -5,13 +5,14 @@ import { useRouter } from 'next/router';
 import { PlusIcon, SearchIcon, TrashIcon, EditIcon, StarIcon, GridIcon, ListIcon, EyeIcon, CheckCircleIcon, ClockIcon, WarningIcon, NoteIcon, FilterIcon, DiceIcon, DownloadIcon, RocketIcon } from '../../lib/icons';
 import { apiFetch, apiGet, apiPost, apiPut, apiDelete } from '../../lib/api';
 
-// Color from title string (deterministic)
 function titleColor(title) {
   let hash = 0;
   for (let i = 0; i < title.length; i++) hash = title.charCodeAt(i) + ((hash << 5) - hash);
   const h = Math.abs(hash) % 360;
   return `hsl(${h}, 50%, 25%)`;
 }
+
+const ITEMS_PER_PAGE = 24;
 
 export default function AnimeList({ showToast }) {
   const router = useRouter();
@@ -22,6 +23,8 @@ export default function AnimeList({ showToast }) {
   const [activeLetter, setActiveLetter] = useState('');
   const [typeFilter, setTypeFilter] = useState('');
   const [statusFilter, setStatusFilter] = useState('');
+  const [genreFilter, setGenreFilter] = useState('');
+  const [scoreFilter, setScoreFilter] = useState('');
   const [sortBy, setSortBy] = useState('title');
   const [viewMode, setViewMode] = useState('table');
   const [deleteModal, setDeleteModal] = useState(null);
@@ -29,6 +32,7 @@ export default function AnimeList({ showToast }) {
   const [bulkDeleteModal, setBulkDeleteModal] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [pushing, setPushing] = useState(false);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     const stored = localStorage.getItem('mal_view_mode');
@@ -47,25 +51,22 @@ export default function AnimeList({ showToast }) {
         (a.genres && a.genres.some(g => g.toLowerCase().includes(q)))
       );
     }
-    if (activeLetter) {
-      result = result.filter(a => a.letter === activeLetter);
+    if (activeLetter) result = result.filter(a => a.letter === activeLetter);
+    if (typeFilter) result = result.filter(a => a.type === typeFilter);
+    if (statusFilter) result = result.filter(a => (a.status || 'Completed') === statusFilter);
+    if (genreFilter) result = result.filter(a => a.genres && a.genres.some(g => g.toLowerCase() === genreFilter.toLowerCase()));
+    if (scoreFilter) {
+      const [min, max] = scoreFilter.split('-').map(Number);
+      result = result.filter(a => a.score >= min && a.score <= max);
     }
-    if (typeFilter) {
-      result = result.filter(a => a.type === typeFilter);
-    }
-    if (statusFilter) {
-      result = result.filter(a => (a.status || 'Completed') === statusFilter);
-    }
-    if (sortBy === 'score') {
-      result.sort((a, b) => b.score - a.score);
-    } else if (sortBy === 'title') {
-      result.sort((a, b) => a.title.localeCompare(b.title));
-    } else if (sortBy === 'recent') {
-      result.sort((a, b) => new Date(b.addedAt) - new Date(a.addedAt));
-    }
+    if (sortBy === 'score') result.sort((a, b) => b.score - a.score);
+    else if (sortBy === 'title') result.sort((a, b) => a.title.localeCompare(b.title));
+    else if (sortBy === 'recent') result.sort((a, b) => new Date(b.addedAt) - new Date(a.addedAt));
+    else if (sortBy === 'episodes') result.sort((a, b) => (b.episodes || 0) - (a.episodes || 0));
     
     setFiltered(result);
-  }, [search, activeLetter, typeFilter, statusFilter, sortBy, anime]);
+    setPage(1);
+  }, [search, activeLetter, typeFilter, statusFilter, genreFilter, scoreFilter, sortBy, anime]);
 
   async function loadAnime() {
     try {
@@ -145,10 +146,11 @@ export default function AnimeList({ showToast }) {
   }
 
   function toggleSelectAll() {
-    if (selected.size === filtered.length) {
-      setSelected(new Set());
+    const pageItems = paginatedItems.map(a => a.id);
+    if (pageItems.every(id => selected.has(id))) {
+      setSelected(prev => { const next = new Set(prev); pageItems.forEach(id => next.delete(id)); return next; });
     } else {
-      setSelected(new Set(filtered.map(a => a.id)));
+      setSelected(prev => { const next = new Set(prev); pageItems.forEach(id => next.add(id)); return next; });
     }
   }
 
@@ -193,6 +195,16 @@ export default function AnimeList({ showToast }) {
   const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
   const statuses = ['', 'Completed', 'Watching', 'Plan to Watch', 'Dropped', 'On Hold'];
   const types = ['', 'TV', 'Movie', 'OVA', 'ONA'];
+  const scoreRanges = ['', '9-10', '8-8.9', '7-7.9', '6-6.9', '1-5.9'];
+  
+  // Extract unique genres
+  const allGenres = [...new Set(anime.flatMap(a => a.genres || []))].sort();
+
+  // Pagination
+  const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+  const paginatedItems = filtered.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
+  const pageStart = (page - 1) * ITEMS_PER_PAGE + 1;
+  const pageEnd = Math.min(page * ITEMS_PER_PAGE, filtered.length);
 
   // Quick stats
   const stats = {
@@ -226,12 +238,15 @@ export default function AnimeList({ showToast }) {
         <span><StarIcon size={12} style={{ color: '#fbbf24', verticalAlign: 'middle' }} /> {stats.avgScore} Avg</span>
       </div>
 
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 24 }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 24, flexWrap: 'wrap', gap: 12 }}>
         <div>
           <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 4 }}>All Anime</h1>
-          <p style={{ color: 'var(--text-muted)' }}>{filtered.length} of {anime.length} entries</p>
+          <p style={{ color: 'var(--text-muted)' }}>
+            {filtered.length === anime.length ? `${anime.length} entries` : `${filtered.length} of ${anime.length} entries`}
+            {totalPages > 1 && ` • Page ${page}/${totalPages}`}
+          </p>
         </div>
-        <div style={{ display: 'flex', gap: 8 }}>
+        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
           <div style={{ display: 'flex', border: '1px solid var(--border)', borderRadius: 8, overflow: 'hidden' }}>
             <button 
               onClick={() => toggleView('table')}
@@ -287,10 +302,19 @@ export default function AnimeList({ showToast }) {
         <select className="form-input" style={{ width: 120 }} value={typeFilter} onChange={e => setTypeFilter(e.target.value)}>
           {types.map(t => <option key={t} value={t}>{t || 'All Types'}</option>)}
         </select>
+        <select className="form-input" style={{ width: 130 }} value={genreFilter} onChange={e => setGenreFilter(e.target.value)}>
+          <option value="">All Genres</option>
+          {allGenres.map(g => <option key={g} value={g}>{g}</option>)}
+        </select>
+        <select className="form-input" style={{ width: 120 }} value={scoreFilter} onChange={e => setScoreFilter(e.target.value)}>
+          <option value="">All Scores</option>
+          {scoreRanges.map(r => <option key={r} value={r}>{r ? `${r}★` : 'All Scores'}</option>)}
+        </select>
         <select className="form-input" style={{ width: 130 }} value={sortBy} onChange={e => setSortBy(e.target.value)}>
           <option value="title">Sort: Title</option>
           <option value="score">Sort: Score</option>
           <option value="recent">Sort: Recent</option>
+          <option value="episodes">Sort: Episodes</option>
         </select>
       </div>
 
@@ -312,154 +336,204 @@ export default function AnimeList({ showToast }) {
           <p>Try adjusting your filters or add a new anime entry.</p>
         </div>
       ) : viewMode === 'grid' ? (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 16 }}>
-          {filtered.map(a => (
-            <div key={a.id} style={{
-              background: 'var(--bg-card)', border: selected.has(a.id) ? '2px solid var(--accent)' : '1px solid var(--border)',
-              borderRadius: 12, overflow: 'hidden', transition: 'all 0.2s', cursor: 'pointer', position: 'relative'
-            }}
-              onClick={() => toggleSelect(a.id)}
-              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.3)'; }}
-              onMouseLeave={e => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.boxShadow = 'none'; }}
-            >
-              {/* Selection checkbox */}
-              <div style={{
-                position: 'absolute', top: 8, left: 8, zIndex: 5,
-                width: 22, height: 22, borderRadius: 6,
-                background: selected.has(a.id) ? 'var(--accent)' : 'rgba(0,0,0,0.5)',
-                border: selected.has(a.id) ? 'none' : '2px solid rgba(255,255,255,0.3)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                transition: 'all 0.15s'
-              }}>
-                {selected.has(a.id) && <CheckCircleIcon size={14} style={{ color: 'white' }} />}
-              </div>
-
-              <div style={{ height: 220, background: a.coverImage ? 'transparent' : titleColor(a.title), position: 'relative', overflow: 'hidden' }}>
-                {a.coverImage ? (
-                  <img src={a.coverImage} alt={a.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" />
-                ) : (
-                  <div style={{
-                    width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontSize: 48, fontWeight: 800, color: 'rgba(255,255,255,0.15)'
-                  }}>
-                    {a.title.charAt(0)}
-                  </div>
-                )}
-                {a.score > 0 && (
-                  <div style={{
-                    position: 'absolute', top: 8, right: 8,
-                    background: 'rgba(0,0,0,0.8)', padding: '4px 8px', borderRadius: 6,
-                    fontSize: 13, fontWeight: 700, color: getScoreColor(a.score),
-                    display: 'flex', alignItems: 'center', gap: 4
-                  }}>
-                    <StarIcon size={12} style={{ color: '#fbbf24' }} /> {a.score}
-                  </div>
-                )}
-                <div style={{
-                  position: 'absolute', bottom: 8, left: 8,
-                  background: `${getStatusColor(a.status)}dd`, padding: '3px 8px', borderRadius: 6,
-                  fontSize: 10, fontWeight: 600, color: 'white'
-                }}>
-                  {a.status || 'Completed'}
-                </div>
-              </div>
-              <div style={{ padding: 12 }}>
-                <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 4, lineHeight: 1.3, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                  {a.title}
-                </div>
-                <div style={{ fontSize: 11, color: 'var(--text-muted)', marginBottom: 6 }}>
-                  {a.type} {a.episodes > 0 && `• ${a.episodes} ep`}
-                </div>
-                <div className="genre-tags" style={{ marginBottom: 0 }}>
-                  {(a.genres || []).slice(0, 2).map(g => <span key={g} className="genre-tag" style={{ fontSize: 10 }}>{g}</span>)}
-                </div>
-              </div>
-              <div style={{
-                position: 'absolute', bottom: 0, left: 0, right: 0,
-                background: 'linear-gradient(transparent, rgba(0,0,0,0.9))', padding: '40px 12px 12px',
-                display: 'flex', gap: 6, opacity: 0, transition: 'opacity 0.2s'
+        <>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 16 }}>
+            {paginatedItems.map(a => (
+              <div key={a.id} style={{
+                background: 'var(--bg-card)', border: selected.has(a.id) ? '2px solid var(--accent)' : '1px solid var(--border)',
+                borderRadius: 12, overflow: 'hidden', transition: 'all 0.2s', cursor: 'pointer', position: 'relative'
               }}
-                onMouseEnter={e => e.currentTarget.style.opacity = 1}
-                onMouseLeave={e => e.currentTarget.style.opacity = 0}
+                onClick={() => toggleSelect(a.id)}
+                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.3)'; }}
+                onMouseLeave={e => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.boxShadow = 'none'; }}
               >
-                <Link href={`/anime/${a.id}`} className="btn btn-sm btn-primary" style={{ flex: 1, justifyContent: 'center', fontSize: 11 }} onClick={e => e.stopPropagation()}><EditIcon size={12} /> Edit</Link>
-                <button className="btn btn-sm btn-danger" style={{ fontSize: 11 }} onClick={e => { e.stopPropagation(); setDeleteModal(a); }}><TrashIcon size={12} /></button>
-              </div>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div className="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th style={{ width: 36 }}>
-                  <input type="checkbox" checked={selected.size === filtered.length && filtered.length > 0} onChange={toggleSelectAll}
-                    style={{ cursor: 'pointer', accentColor: 'var(--accent)' }} />
-                </th>
-                <th style={{ width: '35%' }}>Title</th>
-                <th>Status</th>
-                <th>Type</th>
-                <th>Score</th>
-                <th>Genres</th>
-                <th style={{ width: 80 }}>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filtered.map(a => (
-                <tr key={a.id} style={selected.has(a.id) ? { background: 'rgba(124, 58, 237, 0.08)' } : {}}>
-                  <td>
-                    <input type="checkbox" checked={selected.has(a.id)} onChange={() => toggleSelect(a.id)}
-                      style={{ cursor: 'pointer', accentColor: 'var(--accent)' }} />
-                  </td>
-                  <td>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                      {a.coverImage ? (
-                        <img src={a.coverImage} alt="" style={{ width: 32, height: 44, borderRadius: 4, objectFit: 'cover' }} loading="lazy" />
-                      ) : (
-                        <div style={{
-                          width: 32, height: 44, borderRadius: 4, background: titleColor(a.title),
-                          display: 'flex', alignItems: 'center', justifyContent: 'center',
-                          fontSize: 14, fontWeight: 700, color: 'rgba(255,255,255,0.3)', flexShrink: 0
-                        }}>
-                          {a.title.charAt(0)}
-                        </div>
-                      )}
-                      <div>
-                        <a href={a.anilistUrl} target="_blank" rel="noopener" style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>
-                          {a.title}
-                        </a>
-                        {a.notes && <div style={{ fontSize: 11, color: 'var(--text-muted)', maxWidth: 300, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 4 }}><NoteIcon size={10} /> {a.notes}</div>}
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <span style={{ 
-                      padding: '4px 10px', borderRadius: 20, fontSize: 11, fontWeight: 600,
-                      background: `${getStatusColor(a.status)}20`, color: getStatusColor(a.status)
+                <div style={{
+                  position: 'absolute', top: 8, left: 8, zIndex: 5,
+                  width: 22, height: 22, borderRadius: 6,
+                  background: selected.has(a.id) ? 'var(--accent)' : 'rgba(0,0,0,0.5)',
+                  border: selected.has(a.id) ? 'none' : '2px solid rgba(255,255,255,0.3)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  transition: 'all 0.15s'
+                }}>
+                  {selected.has(a.id) && <CheckCircleIcon size={14} style={{ color: 'white' }} />}
+                </div>
+
+                <div style={{ height: 220, background: a.coverImage ? 'transparent' : titleColor(a.title), position: 'relative', overflow: 'hidden' }}>
+                  {a.coverImage ? (
+                    <img src={a.coverImage} alt={a.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" />
+                  ) : (
+                    <div style={{
+                      width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      fontSize: 48, fontWeight: 800, color: 'rgba(255,255,255,0.15)'
                     }}>
-                      {a.status || 'Completed'}
-                    </span>
-                  </td>
-                  <td><span className={`badge badge-${a.type?.toLowerCase()}`}>{a.type}</span></td>
-                  <td><span style={{ fontWeight: 700, color: getScoreColor(a.score), display: 'inline-flex', alignItems: 'center', gap: 4 }}><StarIcon size={12} style={{ color: '#fbbf24' }} /> {a.score}</span></td>
-                  <td>
-                    <div className="genre-tags">
-                      {(a.genres || []).slice(0, 2).map(g => <span key={g} className="genre-tag">{g}</span>)}
-                      {(a.genres || []).length > 2 && <span className="genre-tag">+{a.genres.length - 2}</span>}
+                      {a.title.charAt(0)}
                     </div>
-                  </td>
-                  <td>
-                    <div style={{ display: 'flex', gap: 6 }}>
-                      <Link href={`/anime/${a.id}`} className="btn-icon" title="Edit"><EditIcon size={16} /></Link>
-                      <button className="btn-icon" title="Delete" onClick={() => setDeleteModal(a)} style={{ color: 'var(--danger)' }}><TrashIcon size={16} /></button>
+                  )}
+                  {a.score > 0 && (
+                    <div style={{
+                      position: 'absolute', top: 8, right: 8,
+                      background: 'rgba(0,0,0,0.8)', padding: '4px 8px', borderRadius: 6,
+                      fontSize: 13, fontWeight: 700, color: getScoreColor(a.score),
+                      display: 'flex', alignItems: 'center', gap: 4
+                    }}>
+                      <StarIcon size={12} style={{ color: '#fbbf24' }} /> {a.score}
                     </div>
-                  </td>
+                  )}
+                  <div style={{
+                    position: 'absolute', bottom: 8, left: 8,
+                    background: `${getStatusColor(a.status)}dd`, padding: '3px 8px', borderRadius: 6,
+                    fontSize: 10, fontWeight: 600, color: 'white'
+                  }}>
+                    {a.status || 'Completed'}
+                  </div>
+                </div>
+                <div style={{ padding: 12 }}>
+                  <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 4, lineHeight: 1.3, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    {a.title}
+                  </div>
+                  <div style={{ fontSize: 11, color: 'var(--text-muted)', marginBottom: 6 }}>
+                    {a.type} {a.episodes > 0 && `• ${a.episodes} ep`}
+                  </div>
+                  <div className="genre-tags" style={{ marginBottom: 0 }}>
+                    {(a.genres || []).slice(0, 2).map(g => <span key={g} className="genre-tag" style={{ fontSize: 10 }}>{g}</span>)}
+                  </div>
+                </div>
+                <div style={{
+                  position: 'absolute', bottom: 0, left: 0, right: 0,
+                  background: 'linear-gradient(transparent, rgba(0,0,0,0.9))', padding: '40px 12px 12px',
+                  display: 'flex', gap: 6, opacity: 0, transition: 'opacity 0.2s'
+                }}
+                  onMouseEnter={e => e.currentTarget.style.opacity = 1}
+                  onMouseLeave={e => e.currentTarget.style.opacity = 0}
+                >
+                  <Link href={`/anime/${a.id}`} className="btn btn-sm btn-primary" style={{ flex: 1, justifyContent: 'center', fontSize: 11 }} onClick={e => e.stopPropagation()}><EditIcon size={12} /> Edit</Link>
+                  <button className="btn btn-sm btn-danger" style={{ fontSize: 11 }} onClick={e => { e.stopPropagation(); setDeleteModal(a); }}><TrashIcon size={12} /></button>
+                </div>
+              </div>
+            ))}
+          </div>
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="pagination">
+              <button className="page-btn" disabled={page <= 1} onClick={() => setPage(1)}>«</button>
+              <button className="page-btn" disabled={page <= 1} onClick={() => setPage(p => p - 1)}>‹</button>
+              {Array.from({ length: Math.min(7, totalPages) }, (_, i) => {
+                let pageNum;
+                if (totalPages <= 7) pageNum = i + 1;
+                else if (page <= 4) pageNum = i + 1;
+                else if (page >= totalPages - 3) pageNum = totalPages - 6 + i;
+                else pageNum = page - 3 + i;
+                return (
+                  <button key={pageNum} className={`page-btn ${page === pageNum ? 'active' : ''}`} onClick={() => setPage(pageNum)}>
+                    {pageNum}
+                  </button>
+                );
+              })}
+              <button className="page-btn" disabled={page >= totalPages} onClick={() => setPage(p => p + 1)}>›</button>
+              <button className="page-btn" disabled={page >= totalPages} onClick={() => setPage(totalPages)}>»</button>
+            </div>
+          )}
+        </>
+      ) : (
+        <>
+          <div className="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th style={{ width: 36 }}>
+                    <input type="checkbox" checked={paginatedItems.length > 0 && paginatedItems.every(a => selected.has(a.id))} onChange={toggleSelectAll}
+                      style={{ cursor: 'pointer', accentColor: 'var(--accent)' }} />
+                  </th>
+                  <th style={{ width: '35%' }}>Title</th>
+                  <th>Status</th>
+                  <th>Type</th>
+                  <th>Score</th>
+                  <th>Episodes</th>
+                  <th>Genres</th>
+                  <th style={{ width: 80 }}>Actions</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+              <tbody>
+                {paginatedItems.map(a => (
+                  <tr key={a.id} style={selected.has(a.id) ? { background: 'rgba(124, 58, 237, 0.08)' } : {}}>
+                    <td>
+                      <input type="checkbox" checked={selected.has(a.id)} onChange={() => toggleSelect(a.id)}
+                        style={{ cursor: 'pointer', accentColor: 'var(--accent)' }} />
+                    </td>
+                    <td>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                        {a.coverImage ? (
+                          <img src={a.coverImage} alt="" style={{ width: 32, height: 44, borderRadius: 4, objectFit: 'cover' }} loading="lazy" />
+                        ) : (
+                          <div style={{
+                            width: 32, height: 44, borderRadius: 4, background: titleColor(a.title),
+                            display: 'flex', alignItems: 'center', justifyContent: 'center',
+                            fontSize: 14, fontWeight: 700, color: 'rgba(255,255,255,0.3)', flexShrink: 0
+                          }}>
+                            {a.title.charAt(0)}
+                          </div>
+                        )}
+                        <div>
+                          <a href={a.anilistUrl} target="_blank" rel="noopener" style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>
+                            {a.title}
+                          </a>
+                          {a.notes && <div style={{ fontSize: 11, color: 'var(--text-muted)', maxWidth: 300, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 4 }}><NoteIcon size={10} /> {a.notes}</div>}
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span style={{ 
+                        padding: '4px 10px', borderRadius: 20, fontSize: 11, fontWeight: 600,
+                        background: `${getStatusColor(a.status)}20`, color: getStatusColor(a.status)
+                      }}>
+                        {a.status || 'Completed'}
+                      </span>
+                    </td>
+                    <td><span className={`badge badge-${a.type?.toLowerCase()}`}>{a.type}</span></td>
+                    <td><span style={{ fontWeight: 700, color: getScoreColor(a.score), display: 'inline-flex', alignItems: 'center', gap: 4 }}><StarIcon size={12} style={{ color: '#fbbf24' }} /> {a.score}</span></td>
+                    <td style={{ color: 'var(--text-secondary)' }}>{a.episodes || '—'}</td>
+                    <td>
+                      <div className="genre-tags">
+                        {(a.genres || []).slice(0, 2).map(g => <span key={g} className="genre-tag">{g}</span>)}
+                        {(a.genres || []).length > 2 && <span className="genre-tag">+{a.genres.length - 2}</span>}
+                      </div>
+                    </td>
+                    <td>
+                      <div style={{ display: 'flex', gap: 6 }}>
+                        <Link href={`/anime/${a.id}`} className="btn-icon" title="Edit"><EditIcon size={16} /></Link>
+                        <button className="btn-icon" title="Delete" onClick={() => setDeleteModal(a)} style={{ color: 'var(--danger)' }}><TrashIcon size={16} /></button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="pagination">
+              <button className="page-btn" disabled={page <= 1} onClick={() => setPage(1)}>«</button>
+              <button className="page-btn" disabled={page <= 1} onClick={() => setPage(p => p - 1)}>‹</button>
+              {Array.from({ length: Math.min(7, totalPages) }, (_, i) => {
+                let pageNum;
+                if (totalPages <= 7) pageNum = i + 1;
+                else if (page <= 4) pageNum = i + 1;
+                else if (page >= totalPages - 3) pageNum = totalPages - 6 + i;
+                else pageNum = page - 3 + i;
+                return (
+                  <button key={pageNum} className={`page-btn ${page === pageNum ? 'active' : ''}`} onClick={() => setPage(pageNum)}>
+                    {pageNum}
+                  </button>
+                );
+              })}
+              <button className="page-btn" disabled={page >= totalPages} onClick={() => setPage(p => p + 1)}>›</button>
+              <button className="page-btn" disabled={page >= totalPages} onClick={() => setPage(totalPages)}>»</button>
+              <span style={{ fontSize: 13, color: 'var(--text-muted)', marginLeft: 8 }}>
+                {pageStart}-{pageEnd} of {filtered.length}
+              </span>
+            </div>
+          )}
+        </>
       )}
 
       {/* Delete Modal */}

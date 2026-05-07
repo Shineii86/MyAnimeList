@@ -115,7 +115,12 @@ function pushToGitHub(entries, gh) {
   attemptPush(0);
 }
 
+// Only log important actions: add, delete, push, import
+const LOGGED_ACTIONS = ['add', 'delete', 'bulk-delete', 'push', 'import'];
+
 function addEntry({ action, target, details, user, gh }) {
+  if (!LOGGED_ACTIONS.includes(action)) return null; // Skip noisy actions
+
   const entries = readLog();
   const entry = {
     id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),

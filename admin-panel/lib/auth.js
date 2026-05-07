@@ -72,7 +72,9 @@ function getTokenFromCookie(cookieHeader) {
 }
 
 // Middleware-style auth check
+// If ADMIN_PASSWORD is not set, auth is completely bypassed (open access)
 function requireAuth(req) {
+  if (!ADMIN_PASSWORD) return true; // No password = open access
   const token = getTokenFromCookie(req.headers.cookie);
   return verifyToken(token);
 }

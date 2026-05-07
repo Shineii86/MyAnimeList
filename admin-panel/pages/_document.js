@@ -8,6 +8,13 @@ export default function Document() {
         <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
 
+        {/* PWA Manifest */}
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#7c3aed" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="MAL Admin" />
+
         {/* Open Graph / Social Sharing */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="MyAnimeList Admin Panel" />
@@ -24,12 +31,24 @@ export default function Document() {
         <meta name="twitter:image" content="https://raw.githubusercontent.com/Shineii86/MyAnimeList/main/assets/logo.png" />
 
         {/* Theme Color */}
-        <meta name="theme-color" content="#7c3aed" />
         <meta name="description" content="MyAnimeList Admin Panel — manage your anime collection" />
       </Head>
       <body>
         <Main />
         <NextScript />
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').then(function(reg) {
+                  console.log('SW registered:', reg.scope);
+                }).catch(function(err) {
+                  console.log('SW registration failed:', err);
+                });
+              });
+            }
+          `
+        }} />
       </body>
     </Html>
   );
