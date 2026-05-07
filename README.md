@@ -3,7 +3,7 @@
 <img src="https://raw.githubusercontent.com/Shineii86/MyAnimeList/refs/heads/main/assets/image.png" alt="LOGO" width="200" height="200"/>
 </a>
 
-![Anime Count](https://img.shields.io/badge/Anime%20Watched-283-blueviolet?style=for-the-badge)
+![Anime Count](https://img.shields.io/badge/Anime%20Watched-284-blueviolet?style=for-the-badge)
 ![Days Watched](https://img.shields.io/badge/Days%20Watched-3.5+-important?style=for-the-badge)
 [![GitHub Stars](https://img.shields.io/github/stars/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/fork)
@@ -12,7 +12,7 @@
 
 </div> 
 
-> I began my anime-watching journey in **2020**, and since then I have watched and completed over **283 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
+> I began my anime-watching journey in **2020**, and since then I have watched and completed over **284 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
 
 
 ## 📋 Table of Contents
@@ -27,9 +27,9 @@
 
 | Statistic | Value |
 |-----------|-------|
-| Total Anime | 283 |
-| Total Episodes | 4,159 |
-| TV Shows | 255 |
+| Total Anime | 284 |
+| Total Episodes | 4,172 |
+| TV Shows | 256 |
 | Movies Watched | 21 |
 | OVAs/Specials | 4 |
 | ONA | 3 |
@@ -229,6 +229,7 @@ These are my personal 10/10 masterpieces:
 - [**My Hero Academia**](https://anilist.co/anime/21459) - TV ⭐ 7.9 | ⚔️ Action, 😄 Comedy
 - [**My Roommate is a Cat**](https://anilist.co/anime/103874) - TV ⭐ 9.3 | 😄 Comedy, 😃 Slice of Life
 - [**My Teen Romantic Comedy SNAFU**](https://anilist.co/anime/14813) - TV ⭐ 8.1 | 😄 Comedy, 💕 Romance
+- [**My Teen Romantic Comedy SNAFU TOO!**](https://anilist.co/anime/null) - TV ⭐ 0 | 😄 Comedy, 💕 Romance
 
 ### N
 - [**Nana**](https://anilist.co/anime/877) - TV ⭐ 8.6 | 🎵 Music, 💕 Romance
