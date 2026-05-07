@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "274",
-    "totalEpisodes": "4,083+",
+    "totalAnime": "275",
+    "totalEpisodes": "4,084+",
     "moviesWatched": "21",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 274,
+      "Completed": 275,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -180,6 +180,27 @@
       "updatedAt": "2026-05-06T15:26:54.150Z",
       "episodes": 1,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx47-4CR68arv452h.jpg"
+    },
+    {
+      "id": 47,
+      "title": "Akira",
+      "anilistUrl": "https://anilist.co/anime/47",
+      "anilistId": 47,
+      "type": "TV",
+      "score": 0,
+      "genres": [
+        "Action",
+        "Horror",
+        "Sci-Fi"
+      ],
+      "episodes": 1,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "A",
+      "coverImage": null,
+      "addedAt": "2026-05-07T06:54:29.696Z",
+      "updatedAt": "2026-05-07T06:54:29.696Z"
     },
     {
       "id": 21410,
