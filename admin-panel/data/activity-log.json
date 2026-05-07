@@ -422,5 +422,13 @@
     "target": "Candy Candy",
     "details": "TV • 0 • Drama, Romance",
     "user": "admin"
+  },
+  {
+    "id": "mov4um9mnqbl",
+    "timestamp": "2026-05-07T06:56:24.634Z",
+    "action": "add",
+    "target": "Candy Candy (Movie)",
+    "details": "TV • 0 • Drama, Romance",
+    "user": "admin"
   }
 ]
