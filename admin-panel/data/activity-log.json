@@ -70,5 +70,13 @@
     "target": "The Apothecary Diaries",
     "details": "TV • 0 • Drama, Mystery",
     "user": "admin"
+  },
+  {
+    "id": "mov5c10e5tz4",
+    "timestamp": "2026-05-07T07:09:56.894Z",
+    "action": "add",
+    "target": "The Aristocrat's Otherworldly Adventure: Serving Gods Who Go Too Far",
+    "details": "TV • 0 • Action, Fantasy, Romance",
+    "user": "admin"
   }
 ]
