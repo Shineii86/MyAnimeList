@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "284",
-    "totalEpisodes": "4,172+",
+    "totalAnime": "285",
+    "totalEpisodes": "4,184+",
     "moviesWatched": "21",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 284,
+      "Completed": 285,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -4282,6 +4282,25 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 0,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx9253-tIUXF2gfU8Sg.jpg"
+    },
+    {
+      "id": 1778137511280,
+      "title": "Sweet Reincarnation",
+      "anilistUrl": "https://anilist.co/anime/null",
+      "anilistId": null,
+      "type": "TV",
+      "score": 0,
+      "genres": [
+        "Fantasy"
+      ],
+      "episodes": 12,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "S",
+      "coverImage": null,
+      "addedAt": "2026-05-07T07:05:11.280Z",
+      "updatedAt": "2026-05-07T07:05:11.280Z"
     },
     {
       "id": 11757,
