@@ -2286,5 +2286,13 @@
     "target": "Pet Shop of Horrors",
     "details": "TV • 0 • Horror, Mystery, Supernatural",
     "user": "admin"
+  },
+  {
+    "id": "mov53nc5uca4",
+    "timestamp": "2026-05-07T07:03:25.926Z",
+    "action": "add",
+    "target": "Phantom: The Animation",
+    "details": "TV • 0 • Action, Drama",
+    "user": "admin"
   }
 ]
