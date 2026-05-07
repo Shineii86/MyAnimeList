@@ -1,26 +1,10 @@
 [
   {
-    "id": "mov4rzvuflgf",
-    "timestamp": "2026-05-07T06:54:22.314Z",
+    "id": "mov4s76d28pe",
+    "timestamp": "2026-05-07T06:54:31.765Z",
     "action": "add",
-    "target": "Accel World",
-    "details": "TV • 0 • Action, Romance, Sci-Fi",
-    "user": "admin"
-  },
-  {
-    "id": "mov4s1a65c1n",
-    "timestamp": "2026-05-07T06:54:24.126Z",
-    "action": "add",
-    "target": "AD Police Files",
-    "details": "TV • 0 • Adventure, Horror, Mystery, Sci-Fi, Suspense",
-    "user": "admin"
-  },
-  {
-    "id": "mov4s2xsqxm8",
-    "timestamp": "2026-05-07T06:54:26.272Z",
-    "action": "add",
-    "target": "Agent AIKa",
-    "details": "TV • 0 • Action, Adventure, Comedy, Sci-Fi, Ecchi",
+    "target": "Akira",
+    "details": "TV • 0 • Action, Horror, Sci-Fi",
     "user": "admin"
   }
 ]
