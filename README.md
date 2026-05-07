@@ -3,7 +3,7 @@
 <img src="https://raw.githubusercontent.com/Shineii86/MyAnimeList/refs/heads/main/assets/image.png" alt="LOGO" width="200" height="200"/>
 </a>
 
-![Anime Count](https://img.shields.io/badge/Anime%20Watched-282-blueviolet?style=for-the-badge)
+![Anime Count](https://img.shields.io/badge/Anime%20Watched-283-blueviolet?style=for-the-badge)
 ![Days Watched](https://img.shields.io/badge/Days%20Watched-3.5+-important?style=for-the-badge)
 [![GitHub Stars](https://img.shields.io/github/stars/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/fork)
@@ -12,7 +12,7 @@
 
 </div> 
 
-> I began my anime-watching journey in **2020**, and since then I have watched and completed over **282 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
+> I began my anime-watching journey in **2020**, and since then I have watched and completed over **283 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
 
 
 ## 📋 Table of Contents
@@ -27,9 +27,9 @@
 
 | Statistic | Value |
 |-----------|-------|
-| Total Anime | 282 |
-| Total Episodes | 4,147 |
-| TV Shows | 254 |
+| Total Anime | 283 |
+| Total Episodes | 4,159 |
+| TV Shows | 255 |
 | Movies Watched | 21 |
 | OVAs/Specials | 4 |
 | ONA | 3 |
@@ -223,6 +223,7 @@ These are my personal 10/10 masterpieces:
 - [**Megalobox**](https://anilist.co/anime/100298) - TV ⭐ 7.8 | 🏐 Sports, 🔬 Sci-Fi
 - [**Miss Kobayashi's Dragon Maid**](https://anilist.co/anime/21816) - TV ⭐ 8 | 😄 Comedy, 🧙 Fantasy
 - [**Mob Psycho 100**](https://anilist.co/anime/21507) - TV ⭐ 8.7 | ⚔️ Action, 😄 Comedy
+- [**Mobile Suit Gundam: The Witch from Mercury Season 2**](https://anilist.co/anime/null) - TV ⭐ 0 | 🔬 Sci-Fi
 - [**Monster**](https://anilist.co/anime/19) - TV ⭐ 8.8 | 🧠 Psychological, 🎭 Thriller
 - [**Mushishi**](https://anilist.co/anime/457) - TV ⭐ 8.7 | 🧙 Fantasy, 🕰️ Mystery
 - [**My Hero Academia**](https://anilist.co/anime/21459) - TV ⭐ 7.9 | ⚔️ Action, 😄 Comedy
