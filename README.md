@@ -3,7 +3,7 @@
 <img src="https://raw.githubusercontent.com/Shineii86/MyAnimeList/refs/heads/main/assets/image.png" alt="LOGO" width="200" height="200"/>
 </a>
 
-![Anime Count](https://img.shields.io/badge/Anime%20Watched-284-blueviolet?style=for-the-badge)
+![Anime Count](https://img.shields.io/badge/Anime%20Watched-286-blueviolet?style=for-the-badge)
 ![Days Watched](https://img.shields.io/badge/Days%20Watched-3.5+-important?style=for-the-badge)
 [![GitHub Stars](https://img.shields.io/github/stars/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/fork)
@@ -12,7 +12,7 @@
 
 </div> 
 
-> I began my anime-watching journey in **2020**, and since then I have watched and completed over **284 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
+> I began my anime-watching journey in **2020**, and since then I have watched and completed over **286 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
 
 
 ## 📋 Table of Contents
@@ -27,9 +27,9 @@
 
 | Statistic | Value |
 |-----------|-------|
-| Total Anime | 284 |
-| Total Episodes | 4,172 |
-| TV Shows | 256 |
+| Total Anime | 286 |
+| Total Episodes | 4,196 |
+| TV Shows | 258 |
 | Movies Watched | 21 |
 | OVAs/Specials | 4 |
 | ONA | 3 |
@@ -299,12 +299,14 @@ These are my personal 10/10 masterpieces:
 - [**Soul Eater**](https://anilist.co/anime/3588) - TV ⭐ 7.7 | ⚔️ Action, 😄 Comedy
 - [**Spy x Family**](https://anilist.co/anime/140752) - TV ⭐ 8.6 | 😄 Comedy, ⚔️ Action
 - [**Steins;Gate**](https://anilist.co/anime/9253) - TV ⭐ 10 | 🔬 Sci-Fi, 🎭 Thriller
+- [**Sweet Reincarnation**](https://anilist.co/anime/null) - TV ⭐ 0 | 🧙 Fantasy
 - [**Sword Art Online**](https://anilist.co/anime/11757) - TV ⭐ 7.2 | ⚔️ Action, 💕 Romance
 
 ### T
 - [**Tengen Toppa Gurren Lagann**](https://anilist.co/anime/2001) - TV ⭐ 8.6 | 🤖 Mecha, ⚔️ Action
 - [**Terror in Resonance**](https://anilist.co/anime/20661) - TV ⭐ 7.7 | 🧠 Psychological, 🎭 Thriller
 - [**That Time I Got Reincarnated as a Slime**](https://anilist.co/anime/101280) - TV ⭐ 8 | ⚔️ Action, 🧙 Fantasy
+- [**That Time I Got Reincarnated as a Slime Season 2 Part 2**](https://anilist.co/anime/null) - TV ⭐ 0 | ⚔️ Action, 😄 Comedy, 🧙 Fantasy
 - [**The Beginning After the End**](https://anilist.co/anime/144176) - TV ⭐ 0 | ⚔️ Action, 🗡️ Adventure, 🧙 Fantasy
 - [**The Beginning After the End Season 2**](https://anilist.co/anime/169822) - TV ⭐ 0 | ⚔️ Action, 🗡️ Adventure, 🧙 Fantasy
 - [**The Disastrous Life of Saiki K.**](https://anilist.co/anime/112625) - ONA ⭐ 8.3 | 😄 Comedy, 🔥 Supernatural
