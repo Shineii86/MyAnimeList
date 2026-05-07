@@ -742,5 +742,13 @@
     "target": "Dragon Ball",
     "details": "TV • 0 • Action, Adventure, Comedy, Fantasy",
     "user": "admin"
+  },
+  {
+    "id": "mov4vqtbpkf3",
+    "timestamp": "2026-05-07T06:57:17.183Z",
+    "action": "add",
+    "target": "Dragon Ball GT",
+    "details": "TV • 0 • Action, Adventure, Comedy, Fantasy",
+    "user": "admin"
   }
 ]
