@@ -1,34 +1,10 @@
 [
   {
-    "id": "mov1sgxaw2yq",
-    "timestamp": "2026-05-07T05:30:45.550Z",
+    "id": "mov4rcxsurya",
+    "timestamp": "2026-05-07T06:53:52.576Z",
     "action": "add",
-    "target": "Road to Ninja: Naruto the Movie",
-    "details": "Movie • 7.4 • Action, Adventure",
-    "user": "admin"
-  },
-  {
-    "id": "mov1shxmyhv0",
-    "timestamp": "2026-05-07T05:30:46.858Z",
-    "action": "add",
-    "target": "Naruto Shippuden the Movie",
-    "details": "Movie • 7 • Action, Adventure, Comedy, Fantasy",
-    "user": "admin"
-  },
-  {
-    "id": "mov1sivy62lx",
-    "timestamp": "2026-05-07T05:30:48.094Z",
-    "action": "add",
-    "target": "Naruto Shippuden the Movie: Blood Prison",
-    "details": "Movie • 7.2 • Action, Adventure, Mystery",
-    "user": "admin"
-  },
-  {
-    "id": "mov1sk8gs1ek",
-    "timestamp": "2026-05-07T05:30:49.840Z",
-    "action": "add",
-    "target": "Naruto Shippuden the Movie: The Lost Tower",
-    "details": "Movie • 7.1 • Action, Comedy",
+    "target": "#Compass2.0: Animation Project",
+    "details": "TV • 0 • Action",
     "user": "admin"
   }
 ]
