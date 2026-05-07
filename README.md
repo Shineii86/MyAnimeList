@@ -3,7 +3,7 @@
 <img src="https://raw.githubusercontent.com/Shineii86/MyAnimeList/refs/heads/main/assets/image.png" alt="LOGO" width="200" height="200"/>
 </a>
 
-![Anime Count](https://img.shields.io/badge/Anime%20Watched-270-blueviolet?style=for-the-badge)
+![Anime Count](https://img.shields.io/badge/Anime%20Watched-271-blueviolet?style=for-the-badge)
 ![Days Watched](https://img.shields.io/badge/Days%20Watched-3.5+-important?style=for-the-badge)
 [![GitHub Stars](https://img.shields.io/github/stars/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/Shineii86/MyAnimeList?style=for-the-badge)](https://github.com/Shineii86/MyAnimeList/fork)
@@ -12,7 +12,7 @@
 
 </div> 
 
-> I began my anime-watching journey in **2020**, and since then I have watched and completed over **270 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
+> I began my anime-watching journey in **2020**, and since then I have watched and completed over **271 Anime Titles**, ranging from the most popular shounen series to niche Isekai, Dramas, Psychological Thrillers, and Unforgettable Movies. This repository serves as a **Comprehensive Archive** of everything I've experienced in anime—my personal ratings, favorite recommendations, and a full **A–Z list** with official AniList links for every series.
 
 
 ## 📋 Table of Contents
@@ -27,9 +27,9 @@
 
 | Statistic | Value |
 |-----------|-------|
-| Total Anime | 270 |
-| Total Episodes | 4,030 |
-| TV Shows | 243 |
+| Total Anime | 271 |
+| Total Episodes | 4,046 |
+| TV Shows | 244 |
 | Movies Watched | 20 |
 | OVAs/Specials | 4 |
 | ONA | 3 |
@@ -82,6 +82,7 @@ These are my personal 10/10 masterpieces:
 - [**Charlotte**](https://anilist.co/anime/20997) - TV ⭐ 7.5 | 🔬 Sci-Fi, 💔 Drama
 - [**Clannad: After Story**](https://anilist.co/anime/4181) - TV ⭐ 9.1 | 💔 Drama, 💕 Romance
 - [**Classroom of the Elite**](https://anilist.co/anime/98659) - TV ⭐ 8 | 🧠 Psychological, 💔 Drama
+- [**Classroom of the Elite 4th Season: Second Year, First Semester**](https://anilist.co/anime/180745) - TV ⭐ 7.9 | 💔 Drama, 🧠 Psychological
 - [**Classroom of the Elite Season 2**](https://anilist.co/anime/145545) - TV ⭐ 7.9 | 💔 Drama, 🕰️ Mystery, 🧠 Psychological
 - [**Classroom of the Elite Season 3**](https://anilist.co/anime/146066) - TV ⭐ 7.8 | 💔 Drama, 🧠 Psychological
 - [**Clevatess: The King of Devil BeastsThe Baby and the Brave of Undead**](https://anilist.co/anime/178869) - TV ⭐ 9.1 | ⚔️ Action, 🧙 Fantasy
