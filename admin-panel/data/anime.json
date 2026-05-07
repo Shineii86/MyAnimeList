@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "273",
-    "totalEpisodes": "4,059+",
+    "totalAnime": "274",
+    "totalEpisodes": "4,083+",
     "moviesWatched": "21",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 273,
+      "Completed": 274,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -119,6 +119,27 @@
       "updatedAt": "2026-05-06T15:26:54.150Z",
       "episodes": 1,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20954-sYRfE5jQRtSB.jpg"
+    },
+    {
+      "id": 11759,
+      "title": "Accel World",
+      "anilistUrl": "https://anilist.co/anime/11759",
+      "anilistId": 11759,
+      "type": "TV",
+      "score": 0,
+      "genres": [
+        "Action",
+        "Romance",
+        "Sci-Fi"
+      ],
+      "episodes": 24,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "A",
+      "coverImage": null,
+      "addedAt": "2026-05-07T06:54:20.761Z",
+      "updatedAt": "2026-05-07T06:54:20.761Z"
     },
     {
       "id": 20787,
