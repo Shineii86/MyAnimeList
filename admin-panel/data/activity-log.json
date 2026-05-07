@@ -166,5 +166,13 @@
     "target": "Uncle from Another World",
     "details": "TV • 0 • Comedy, Fantasy",
     "user": "admin"
+  },
+  {
+    "id": "mov5saoqnezw",
+    "timestamp": "2026-05-07T07:22:35.930Z",
+    "action": "add",
+    "target": "Vampire Hunter D: Bloodlust",
+    "details": "TV • 0 • Action, Drama, Fantasy, Horror, Romance, Sci-Fi",
+    "user": "admin"
   }
 ]
