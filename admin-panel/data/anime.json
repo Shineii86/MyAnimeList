@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "287",
-    "totalEpisodes": "4,197+",
+    "totalAnime": "288",
+    "totalEpisodes": "4,209+",
     "moviesWatched": "21",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 287,
+      "Completed": 288,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -4466,6 +4466,27 @@
       "coverImage": null,
       "addedAt": "2026-05-07T07:10:06.817Z",
       "updatedAt": "2026-05-07T07:10:06.817Z"
+    },
+    {
+      "id": 1778137813306,
+      "title": "The Detective Is Already Dead",
+      "anilistUrl": "https://anilist.co/anime/null",
+      "anilistId": null,
+      "type": "TV",
+      "score": 0,
+      "genres": [
+        "Comedy",
+        "Mystery",
+        "Romance"
+      ],
+      "episodes": 12,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "T",
+      "coverImage": null,
+      "addedAt": "2026-05-07T07:10:13.306Z",
+      "updatedAt": "2026-05-07T07:10:13.306Z"
     },
     {
       "id": 21273,
