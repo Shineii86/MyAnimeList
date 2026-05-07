@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "285",
-    "totalEpisodes": "4,184+",
+    "totalAnime": "286",
+    "totalEpisodes": "4,196+",
     "moviesWatched": "21",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 285,
+      "Completed": 286,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -4381,6 +4381,27 @@
       "updatedAt": "2026-05-06T15:26:54.151Z",
       "episodes": 24,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101280-tDxCVJm714nt.jpg"
+    },
+    {
+      "id": 1778137777701,
+      "title": "That Time I Got Reincarnated as a Slime Season 2 Part 2",
+      "anilistUrl": "https://anilist.co/anime/null",
+      "anilistId": null,
+      "type": "TV",
+      "score": 0,
+      "genres": [
+        "Action",
+        "Comedy",
+        "Fantasy"
+      ],
+      "episodes": 12,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "T",
+      "coverImage": null,
+      "addedAt": "2026-05-07T07:09:37.701Z",
+      "updatedAt": "2026-05-07T07:09:37.701Z"
     },
     {
       "id": 144176,
