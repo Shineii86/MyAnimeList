@@ -15,3 +15,4 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 - Removed "+" from all statistics — now showing exact numbers
+- Corrected Total Episodes from 1,240 to 7,183 (real count from 511 completed anime)
