@@ -1190,5 +1190,13 @@
     "target": "Helck",
     "details": "TV • 0 • Action, Fantasy",
     "user": "admin"
+  },
+  {
+    "id": "mov4ze0qppfg",
+    "timestamp": "2026-05-07T07:00:07.226Z",
+    "action": "add",
+    "target": "Hellsing",
+    "details": "TV • 0 • Action, Horror, Supernatural",
+    "user": "admin"
   }
 ]
