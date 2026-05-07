@@ -1070,5 +1070,13 @@
     "target": "GATE Part 2",
     "details": "TV • 0 • Action, Adventure, Fantasy",
     "user": "admin"
+  },
+  {
+    "id": "mov4yvtlukoa",
+    "timestamp": "2026-05-07T06:59:43.641Z",
+    "action": "add",
+    "target": "Genocyber",
+    "details": "TV • 0 • Horror, Sci-Fi",
+    "user": "admin"
   }
 ]
