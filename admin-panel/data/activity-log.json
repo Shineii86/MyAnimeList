@@ -1046,5 +1046,13 @@
     "target": "Gamers!",
     "details": "TV • 0 • Comedy, Romance",
     "user": "admin"
+  },
+  {
+    "id": "mov4ysvt6lha",
+    "timestamp": "2026-05-07T06:59:39.833Z",
+    "action": "add",
+    "target": "Gargantia on the Verdurous Planet",
+    "details": "TV • 0 • Adventure, Sci-Fi",
+    "user": "admin"
   }
 ]
