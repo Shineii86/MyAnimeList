@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "269",
-    "totalEpisodes": "4,017+",
+    "totalAnime": "270",
+    "totalEpisodes": "4,030+",
     "moviesWatched": "20",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 269,
+      "Completed": 270,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -634,6 +634,26 @@
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx145545-DGl3LVvFlnHi.png",
       "addedAt": "2026-05-07T05:25:59.067Z",
       "updatedAt": "2026-05-07T05:25:59.067Z"
+    },
+    {
+      "id": 146066,
+      "title": "Classroom of the Elite Season 3",
+      "anilistUrl": "https://anilist.co/anime/146066",
+      "anilistId": 146066,
+      "type": "TV",
+      "score": 7.8,
+      "genres": [
+        "Drama",
+        "Psychological"
+      ],
+      "episodes": 13,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "C",
+      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx146066-zzKl6P6OeEjy.jpg",
+      "addedAt": "2026-05-07T05:26:20.914Z",
+      "updatedAt": "2026-05-07T05:26:20.914Z"
     },
     {
       "id": 178869,
