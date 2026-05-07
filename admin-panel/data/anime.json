@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "totalAnime": "267",
-    "totalEpisodes": "4,003+",
-    "moviesWatched": "19",
+    "totalAnime": "268",
+    "totalEpisodes": "4,004+",
+    "moviesWatched": "20",
     "ovasSpecials": "4",
     "averageScore": "7.9",
     "completionRate": "100%",
     "statusCounts": {
-      "Completed": 267,
+      "Completed": 268,
       "Watching": 0,
       "Plan to Watch": 0,
       "Dropped": 0,
@@ -4118,6 +4118,26 @@
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16870-BD4K9rzlhCP4.jpg",
       "addedAt": "2026-05-07T05:14:32.282Z",
       "updatedAt": "2026-05-07T05:14:32.282Z"
+    },
+    {
+      "id": 16870,
+      "title": "The Last: Naruto the Movie",
+      "anilistUrl": "https://anilist.co/anime/16870",
+      "anilistId": 16870,
+      "type": "Movie",
+      "score": 7.6,
+      "genres": [
+        "Action",
+        "Romance"
+      ],
+      "episodes": 1,
+      "status": "Completed",
+      "notes": "",
+      "tags": [],
+      "letter": "T",
+      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16870-BD4K9rzlhCP4.jpg",
+      "addedAt": "2026-05-07T05:14:41.787Z",
+      "updatedAt": "2026-05-07T05:14:41.787Z"
     },
     {
       "id": 849,
